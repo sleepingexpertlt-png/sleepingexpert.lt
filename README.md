@@ -32,8 +32,6 @@ Mūsų **[miego blogas](https://sleepingexpert.lt/blogas/)** — ekspertų patar
 ## 🔗 Susisiekite
 
 - 🌐 **Svetainė:** [sleepingexpert.lt](https://sleepingexpert.lt)
-- 📧 **El. paštas:** info@sleepingexpert.lt
-- 📱 **Telefonas:** +370 624 08 677
 
 ---
 
