@@ -37,4 +37,6 @@ Mūsų **[miego blogas](https://sleepingexpert.lt/blogas/)** — ekspertų patar
 
 ---
 
+**Sleeping Expert** prekės ženklą valdo paslaugų teikimo įmonė **[MB „Maršalas"](MARSALAS.md)** ([marsalas.lt](https://marsalas.lt)).
+
 © 2026 Sleeping Expert. Visos teisės saugomos.
