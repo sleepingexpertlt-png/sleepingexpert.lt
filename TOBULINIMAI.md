@@ -37,6 +37,10 @@
 | B6 | **Higgsfield AI MCP video generavimui** | Alternatyva fal.ai/Kling (05-31 balanso krizė su tyliu zoom-fallback) | Radaras 2026-05-23 |
 | B7 | **NotebookLM 7 promptų rinkinys** | B2B sleep coaching niša (€100–300 vizitas) — nauja Maršalas paslaugų linija | Radaras 2026-05-23 |
 | B8 | **ASSET MAP aktyvavimas** | Turtas sužymėtas nišoms (TPNC→medicina, 6 kalbos→užsieniečiai, MBSR→menopauzė, ortopedija→post-surgery, B2B hospitality) — parinkti 1 nišą ir paleisti bandomąją kampaniją | Letta 2026-05-23 |
+| B9 | **stop-slop skill** | Išima AI pattern'us iš blogo teksto; pritaikyti LT + brandbook. Į blogo kokybės grandinę | RADAR-SIGNALAI.md 2026-07-02 |
+| B10 | **awesome eval framework** | Agentų vertinimas — atskirti tikrą darbą nuo „apsimestinio" (dispatch→success, bet 0 outcomes). Į OCL kilpą | RADAR-SIGNALAI.md 2026-07-02 |
+| B11 | **ECC idėjos OCL kilpai** | agent-eval, continuous-agent-loop mechanizmai — peržiūrėti kaip šaltinį, NE aklas diegimas | RADAR-SIGNALAI.md 2026-07-02 |
+| B12 | **Twenty CRM + Cybersecurity Skills** | Maršalas paslaugų linijai (B2B/coaching klientų valdymas; security scanning priedas) — po SE core stabilizavimo | RADAR-SIGNALAI.md 2026-07-02 |
 
 ## 🔺 Piramidės kryptis (savininko sprendimas 2026-07-02)
 
