@@ -8,7 +8,7 @@
 |---|--------|-------------|----------|
 | 1 | **GBP telefono mygtukas** — skambučiai 0 per 7 d. visose 3 parduotuvėse (Vilnius 18 maršrutų/0 skamb., Klaipėda 5/0, Ukmergė 3/0) | Tiesioginis pajamų nutekėjimas; sistema pažymėjo `alert: true` | hermes_status (salon_signal) |
 | 2 | **Council eskalacija laukia** — „llms.txt regression fix" (balas 5.7, nuo 2026-07-01 19:39) | AEO strategijos failas užstrigęs be sprendimo; `/council_approve` arba `/council_reject` per Telegram | hermes_activity_feed |
-| 3 | **Šios paros blogo klaida** — 1 error, 0 published (vakar taryba patvirtino 4 straipsnius — grandinė gyva, užstrigo šiandien) | Kasdienė turinio gamyba = AEO strategijos pagrindas | hermes_status (blog_today) |
+| 3 | **Šios paros blogo klaida** — publikavimas nulūžta PO Council PROCEED: 06:17 patvirtintas „Latekso čiužiniai: atsiliepimai ir ekspertų verdiktas 2026" (7.3), bet error=1, published=0. Klaida publikavimo žingsnyje (WP?). 11:57 paleistas master_run tyrimui | Kasdienė turinio gamyba = AEO strategijos pagrindas | hermes_status + hermes_activity_feed |
 | 4 | **Hermes MCP įrankių leidimai** — pusė funkcijų už „requires approval" (agents, blog_today, synergy, radar, brandbook, promises, council_pending); Supabase MCP — taip pat | Be jų neįmanoma pilna kontrolė ir auditas | MCP auditas 2026-07-02 |
 
 ## 🟡 P1 — Greita grąža (šią savaitę)
