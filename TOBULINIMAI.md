@@ -20,6 +20,28 @@
 | 7 | **cookking Organization schema** — trūksta pilnų Maršalas MB rekvizitų | Adresas ir kodas jau žinomi (Pylimo g. 23, 304859731); trūksta PVM kodo iš savininko | project_cookking.md |
 | 8 | **cookking FAQPage + MerchantReturnPolicy** | Reikia savininko patvirtintų pristatymo/garantijos/grąžinimo terminų (nefabrikuota) | project_cookking.md |
 
+## 🔴 P0-B — Pastatyta, bet nenaudojama (patvirtinta savininko 2026-07-02)
+
+| # | Darbas | Detalės | Šaltinis |
+|---|--------|---------|----------|
+| B1 | **DUK snippet'o rankinis pataisymas** ⚠️ teisinė rizika | Code Snippet 16: draudžiamas teiginys „gamintojų garantijos iki 20 metų" tebėra gyvas — plugin'as tyliai ignoruoja PUT (HTTP 200 false success). Taisyti per WP admin rankiniu būdu | Correction 2026-06-03 |
+| B2 | **Radaro → veiksmo kilpa** | 10 tier-1 signalų, 0 reakcijų (radar_to_metacog sinergija 0.3). Įjungti: signalas → council pasiūlymas → backlog automatiškai | Štabo 2026-06-15 |
+| B3 | **Chroniškas blog publikavimas** | Ta pati klaida fiksuota 06-15 („CHRONIC 8d") ir 07-02 — root cause serveryje, dengia MOKYMOSI-AUDITAS.md F blokas | Štabo 2026-06-15 |
+| B4 | **Klaipėdos GBP konversijos diagnostika** | 18% konversija vs Vilnius 34%, Ukmergė 35%. Hipotezės: senas listing'as, kategorijos, neatsakyti reviews, multi-tenant adresas, Photos sekcija | Letta 2026-05-27 |
+
+## 🟡 P1-B — Upgrade kandidatai (radaro pastebėti, neįdiegti)
+
+| # | Darbas | Detalės | Šaltinis |
+|---|--------|---------|----------|
+| B5 | **Memory Palace vietoj Letta** | Letta mėtė HTTP 500 (07-02), chat išjungtas („LLM auth dead"). Memory Palace: self-hosted, MCP-compatible, rollback + Write Guard. Vertinimo blokas — MOKYMOSI-AUDITAS.md H | Radaras 2026-05-24 |
+| B6 | **Higgsfield AI MCP video generavimui** | Alternatyva fal.ai/Kling (05-31 balanso krizė su tyliu zoom-fallback) | Radaras 2026-05-23 |
+| B7 | **NotebookLM 7 promptų rinkinys** | B2B sleep coaching niša (€100–300 vizitas) — nauja Maršalas paslaugų linija | Radaras 2026-05-23 |
+| B8 | **ASSET MAP aktyvavimas** | Turtas sužymėtas nišoms (TPNC→medicina, 6 kalbos→užsieniečiai, MBSR→menopauzė, ortopedija→post-surgery, B2B hospitality) — parinkti 1 nišą ir paleisti bandomąją kampaniją | Letta 2026-05-23 |
+
+## 🔺 Piramidės kryptis (savininko sprendimas 2026-07-02)
+
+Kilti ne aukštyn (L7 Self-Mod), o užlopyti apačią — mokymosi lygį (trait 4 = -0.077, vienintelis raudonas). Seka: (1) mokymosi auditas serveryje → (2) radaro→veiksmo kilpa (B2) → (3) Memory Palace vertinimas (B5) → (4) DUK snippet fix (B1). Pagal pamoką: „AGI-research-tier ≠ Hermès strategos, prioritetas — pelnas."
+
 ## 🟢 P2 — Suplanuoti (šį mėnesį)
 
 | # | Darbas | Detalės | Šaltinis |

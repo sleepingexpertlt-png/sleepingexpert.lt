@@ -114,6 +114,41 @@ Dabar lessons.md pamokos taikomos tik tada, kai jas kas nors perskaito. Kad tapt
 2. Minimalus variantas: savaitinis cron, kuris paima naujas lessons.md sekcijas → siunčia LLM su prompt'u „paversk vykdoma quality_guards taisykle arba atsakyk NEAUTOMATIZUOJAMA" → sukuria PR/patch žmogaus peržiūrai.
 3. Matavimas: `adapt_rules.json` taisyklių skaičius ir amžius rodomi `hermes_status` išvestyje — kad mokymosi sveikata būtų matoma kasdien, ne kartą per mėnesį.
 
+## H. Memory Palace vertinimas (Letta pakaitalas — patvirtinta savininko 2026-07-02)
+
+Kontekstas: Letta grąžina HTTP 500 (2026-07-02), chat išjungtas („LLM auth dead"). Radaro signalas 2026-05-24: Memory Palace (github.com/AGI-is-going-to-arrive/Memory-Palace) — self-hosted, SQLite, 9 MCP tools, rollback/Write Guard, forgetting curve.
+
+```bash
+# H1. Kiek Letta faktų turime (migracijos apimtis)?
+# Per MCP: hermes_letta_query įvairiais raktažodžiais arba tiesiogiai Letta API
+# Užfiksuoti: faktų skaičių, seniausio/naujausio datą
+
+# H2. Bandomasis diegimas (atskirai nuo prod):
+git clone https://github.com/AGI-is-going-to-arrive/Memory-Palace /root/eval/memory-palace
+# Perskaityti README: DB schema, MCP tools sąrašas, resource requirements
+# KRITERIJAI: (1) ar semantic search prilygsta Letta? (2) ar Write Guard apsaugo nuo
+# haliucinuotų faktų? (3) ar rollback veikia? (4) kiek RAM/CPU?
+
+# H3. Migracijos testas: eksportuoti 10 Letta faktų → importuoti → palyginti search rezultatus
+# SPRENDIMAS: jei H2-H3 teigiami → migracija į Hermès v2 planą; jei ne → taisyti Letta LLM auth
+```
+
+## I. Radaro → veiksmo kilpa (B2 iš backlog'o)
+
+Problema (Štabo 2026-06-15): 10 tier-1 signalų, 0 reakcijų — radar_to_metacog sinergija 0.3.
+
+```bash
+# I1. Kur radaras rašo signalus ir kas juos turėtų skaityti?
+grep -rn "radar" /root/frontier-agent/src/agents/*.py -l
+grep -rn "tier.*1\|tier1" /root/frontier-agent/src/agents/radar*.py | head
+
+# I2. Ar egzistuoja consumer'is? (pagal 2026-04-05 pamoką — modulis gali būti parašytas, bet ne crontab'e)
+crontab -l | grep -i radar
+
+# I3. Minimalus fix: tier-1 signalas → automatinis hermes_council pasiūlymas (proposal_type='general')
+# → jei council PROCEED → įrašas į backlog/Linear. Tada signalai nebemiega Letta atmintyje.
+```
+
 ---
 
 ## Sėkmės kriterijai (po pataisymų tikrinti po 1-2 savaičių)
@@ -125,6 +160,8 @@ Dabar lessons.md pamokos taikomos tik tada, kai jas kas nors perskaito. Kad tapt
 | CB būsena po cron restarto | ? (tikrinti B) | Išlieka |
 | `blog_quality_slope_30d` | **-0.077** 🔴 | **> 0** ✅ |
 | Traits šaltinis | ? (tikrinti D1) | shared_state.db |
+| Radaro tier-1 signalai → reakcijos | 10 → 0 🔴 | Kiekvienas tier-1 gauna council sprendimą |
+| Letta/Memory Palace | Letta HTTP 500 🔴 | Veikianti ilgalaikė atmintis be klaidų |
 
 ---
 
