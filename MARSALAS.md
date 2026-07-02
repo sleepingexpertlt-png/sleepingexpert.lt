@@ -2,12 +2,15 @@
 
 **[MB „Maršalas"](https://marsalas.lt)** — Vilniuje registruota paslaugų teikimo įmonė, kurianti ir valdanti mažmeninės bei elektroninės prekybos projektus Lietuvoje.
 
+> **Maršalas — tiltas tarp AI ir žmogaus.** Esame AI Empowered įmonė: dirbtinis intelektas dirba kasdienėse operacijose, o žmogus diriguoja — priima sprendimus ir prisiima atsakomybę. Žr. [AI agentų organizacijos schemą](AI-ORG.md).
+
 ## 🛠️ Teikiamos Paslaugos
 
 - **Elektroninės prekybos valdymas** — internetinių parduotuvių kūrimas, priežiūra ir plėtra
 - **Mažmeninės prekybos operacijos** — fizinių parduotuvių tinklo valdymas prekybos centruose
 - **Prekių ženklų vystymas** — nuo koncepcijos iki veikiančio prekybos tinklo
 - **Klientų aptarnavimas** — konsultacijos, užsakymų administravimas, garantinis aptarnavimas
+- **AI diegimas versle** — AI agentų orkestravimas kasdienėms verslo operacijoms (turinys, analitika, klientų aptarnavimas), sukaupta patirtis taikoma savo valdomiems prekių ženklams
 
 ## 🏷️ Valdomi Prekių Ženklai
 
