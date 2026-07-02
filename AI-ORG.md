@@ -20,16 +20,16 @@ flowchart TB
     EKOM --> E2["Kainodara ir asortimentas"]
     EKOM --> E3["sleepingexpert.lt / cookking.online priežiūra"]
 
-    MARK --> M1["Blogo agentai<br/>(miego žinių straipsniai)"]
-    MARK --> M2["Įrašų distribucija<br/>(soc. tinklai, Telegram)"]
-    MARK --> M3["Video / YouTube įkėlimas"]
+    MARK --> M1["blog_scheduler → blog_agent<br/>(straipsnių gamyba)"]
+    MARK --> M2["quick_win_optimizer<br/>content_gap · internal_linking (SEO)"]
+    MARK --> M3["Distribucija: soc. tinklai,<br/>Telegram, YouTube"]
 
     KLIENT --> K1["Užklausų atsakymai"]
     KLIENT --> K2["Konsultacijos dėl čiužinių parinkimo"]
 
-    DATA --> D1["Verslo metrikos"]
-    DATA --> D2["Kokybės kontrolė ir vertinimas"]
-    DATA --> D3["Agentų taryba (council)<br/>sprendimų peržiūra"]
+    DATA --> D1["performance_learner<br/>trend_analyzer (metrikos)"]
+    DATA --> D2["content_decay<br/>(turinio senėjimo kontrolė)"]
+    DATA --> D3["hermes_council<br/>(sprendimų peržiūra prieš publikavimą)"]
 
     OPS --> O1["Vilnius — PC Baldų Rojus"]
     OPS --> O2["Klaipėda — PC Helios"]
@@ -57,7 +57,7 @@ flowchart TB
 | 3 | **Sričių agentai** | Kiekviena verslo funkcija turi savo agentų komandą |
 | 4 | **Kokybės grandinė** | Taryba (council) ir metrikos tikrina rezultatus prieš publikavimą |
 
-> ✍️ Ši schema — atspirties taškas. Papildykite ją tikraisiais Hermes agentų pavadinimais (iš viso ~25 agentai) ir fazėmis (Phase 1 → Phase 2 → Phase 3 → AI-Native), kaip daroma „Conducting AI" šablonuose.
+> ✍️ Marketingo ir analitikos šakose — tikri Hermes agentų vardai (šaltinis: hermes_activity_feed, 2026-07-02). Likusias šakas papildykite savo agentais (iš viso 26) ir fazėmis (Phase 1 → Phase 2 → Phase 3 → AI-Native), kaip daroma „Conducting AI" šablonuose.
 
 ---
 
