@@ -51,6 +51,8 @@ Kilti ne aukštyn (L7 Self-Mod), o užlopyti apačią — mokymosi lygį (trait 
 | 11 | Hidra klasterio užbaigimas | node2-4 onboarding + `llm_router.py` wiring pc_hidra→:11430 su fallback | project_hidra_cluster.md |
 | 12 | Letta pakaitalo vertinimas — Memory Palace | Self-hosted agent memory OS, MCP-compatible; Letta jau kartą mėtė HTTP 500 | Radar signalas 2026-05-24 |
 | 13 | SE pagrindinio puslapio PSI 50-60 | Atidėta dėl žemo ROI (WP temos apribojimai) — tik jei savininkas prioritetizuoja | project_sites_status_2026-06-07.md |
+| 14 | `hermes_master_run` asinchroninis režimas | Per MCP 5-node pipeline nukertamas 60 s limito (2 nepavykę bandymai 07-02). Fix: paleidimas grąžina run_id, rezultatas paimamas atskiru kvietimu | MCP auditas 2026-07-02 |
+| 15 | Supermetrics — NEpirkti | Trial baigėsi 05-22; GSC duomenis serveris traukia nemokamai per savo integraciją. Sprendimas 07-02: nemokėti | Savininkas 2026-07-02 |
 
 ## ✅ Atlikta šioje sesijoje (2026-07-02)
 
