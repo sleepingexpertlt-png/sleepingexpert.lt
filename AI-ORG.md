@@ -1,6 +1,6 @@
 # 🤖 Maršalas — Conducting AI: Agentų Organizacijos Schema
 
-**MB „Maršalas"** — AI Empowered paslaugų įmonė: tiltas tarp AI ir žmogaus. Ši schema rodo, kaip AI agentai įsilieja į įmonės struktūrą (pagal „Conducting AI" org chart principą: kiekviena verslo funkcija turi savo agentų komandą, o žmogus lieka dirigentu).
+**MB „Maršalas"** — AI Empowered paslaugų įmonė: tiltas tarp AI ir žmogaus. Ši schema rodo Maršalas įdiegtą ir prižiūrimą Hermes agentų sistemą, veikiančią partnerinėje įmonėje **Sleeping Expert LT, MB** (pagal „Conducting AI" org chart principą: kiekviena verslo funkcija turi savo agentų komandą, o žmogus lieka dirigentu).
 
 ```mermaid
 flowchart TB

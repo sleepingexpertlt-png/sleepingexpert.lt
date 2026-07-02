@@ -6,18 +6,18 @@
 
 ## 🛠️ Teikiamos Paslaugos
 
-- **Elektroninės prekybos valdymas** — internetinių parduotuvių kūrimas, priežiūra ir plėtra
-- **Mažmeninės prekybos operacijos** — fizinių parduotuvių tinklo valdymas prekybos centruose
-- **Prekių ženklų vystymas** — nuo koncepcijos iki veikiančio prekybos tinklo
-- **Klientų aptarnavimas** — konsultacijos, užsakymų administravimas, garantinis aptarnavimas
-- **AI diegimas versle** — AI agentų orkestravimas kasdienėms verslo operacijoms (turinys, analitika, klientų aptarnavimas), sukaupta patirtis taikoma savo valdomiems prekių ženklams
+- **„Done-for-you" AI agentų diegimas** — instaliuojame, integruojame ir prižiūrime AI agentus jūsų versle; jūs tik naudojatės rezultatu
+- **AI Visibility + AEO** — matomumo didinimas AI paieškos atsakymuose (ChatGPT, Gemini, Perplexity) ir rinkodaros automatizavimas
+- **AI platforma [marsalas.lt](https://marsalas.lt)** — daugiamodelis AI pokalbių sprendimas su įterpiamu widget'u verslo svetainėms
+- **Elektroninė prekyba** — [cookking.online](https://cookking.online) (lauko virtuvės ir laužavietės)
 
-## 🏷️ Valdomi Prekių Ženklai
+## 🏷️ Projektai ir Diegimai
 
-| Prekės ženklas | Sritis | Svetainė |
-|----------------|--------|----------|
-| **Sleeping Expert** | Čiužiniai ir miego prekės (3 parduotuvės: Vilnius, Klaipėda, Ukmergė) | [sleepingexpert.lt](https://sleepingexpert.lt) |
-| **CookKing** | Lauko virtuvės ir laužavietės | [cookking.online](https://cookking.online) |
+| Projektas | Vaidmuo | Svetainė |
+|-----------|---------|----------|
+| **CookKing** | Nuosavas e-prekybos ženklas | [cookking.online](https://cookking.online) |
+| **Marsalas AI platforma** | Nuosava AI pokalbių platforma | [marsalas.lt](https://marsalas.lt) |
+| **Sleeping Expert** | Partnerinė įmonė (Sleeping Expert LT, MB — atskiras juridinis asmuo): AI agentų sistemos diegimas ir priežiūra | [sleepingexpert.lt](https://sleepingexpert.lt) |
 
 ## 📇 Rekvizitai
 

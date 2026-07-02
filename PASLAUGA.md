@@ -4,20 +4,20 @@
 
 ---
 
-## Problema
+## Problema: „installation gap"
 
-Dauguma Lietuvos smulkaus ir vidutinio verslo įmonių žino, kad AI gali padėti, bet nežino, nuo ko pradėti. ChatGPT prenumerata — dar ne AI diegimas. Trūksta sistemos: kas atsakingas, kas kontroliuoja kokybę, kaip matuojamas rezultatas.
+AI agentai jau egzistuoja — bet kažkas juos turi instaliuoti, integruoti į jūsų sistemas ir prižiūrėti, kad veiktų. ChatGPT prenumerata — dar ne AI diegimas. Būtent šitą spragą ir uždarome.
 
-## Sprendimas: AI agentų sistema su žmogumi prie vairo
+## Sprendimas: „done-for-you" — mes instaliuojam, integruojam ir sukam agentus jūsų versle. Jūs tik naudojatės.
 
-Diegiame tai, ką kasdien naudojame savo pačių versle — ne skaidres, o veikiančią sistemą:
+Ką gaunate (rezultatai, ne technologijos):
 
-1. **Auditas** — kurios jūsų verslo funkcijos tinka agentams (turinys, SEO, analitika, klientų užklausos)
-2. **Agentų diegimas** — kiekviena funkcija gauna savo agentų komandą su orkestratoriumi
-3. **Kokybės vartai** — agentų taryba (council) peržiūri kiekvieną sprendimą prieš publikavimą; žmogus tvirtina svarbiausius
-4. **Matavimas** — verslo metrikos ir agentų veiklos rodikliai kasdien
+1. **Daugiau klientų** — turinys ir SEO, kurį agentai gamina ir prižiūri kasdien
+2. **Matomumas Google ir AI atsakymuose** — AEO: kad jūsų verslą cituotų ChatGPT, Gemini, Perplexity
+3. **24/7 klientų aptarnavimas** — AI pokalbių sprendimas jūsų svetainėje
+4. **Kontrolė ir matavimas** — agentų taryba peržiūri sprendimus prieš publikavimą, žmogus tvirtina svarbiausius, rodikliai matomi kasdien
 
-## Įrodymas: mūsų pačių sistema (gyvi duomenys, 2026-07-02)
+## Įrodymas: veikianti sistema partnerio versle (gyvi duomenys, 2026-07-02)
 
 | Rodiklis | Reikšmė |
 |----------|---------|
@@ -30,17 +30,18 @@ Diegiame tai, ką kasdien naudojame savo pačių versle — ne skaidres, o veiki
 
 *Šaltinis: Hermes sistemos telemetrija (hermes_status, hermes_traits, hermes_business_metrics).*
 
-Sistema kasdien rašo ir peržiūri turinį trims fizinėms parduotuvėms ir e-parduotuvei [sleepingexpert.lt](https://sleepingexpert.lt): kiekvienas straipsnis pereina agentų tarybos vertinimą (balai fiksuojami), SEO agentai (content_gap, internal_linking, quick_win_optimizer) dirba automatiškai kas rytą.
+Sistemą įdiegėme ir prižiūrime partnerinėje įmonėje **Sleeping Expert LT, MB** ([sleepingexpert.lt](https://sleepingexpert.lt) — 3 fizinės parduotuvės ir e-parduotuvė): agentai kasdien rašo ir peržiūri turinį, kiekvienas straipsnis pereina agentų tarybos vertinimą (balai fiksuojami), SEO agentai (content_gap, internal_linking, quick_win_optimizer) dirba automatiškai kas rytą.
 
 ## Kodėl Maršalas, o ne konsultantas su skaidrėmis
 
-- **Valgome savo pačių maistą** — sistema pirmiausia veikia mūsų versle, su tikromis pajamomis ir tikra atsakomybe
+- **Sistema veikia kasdien** — realiame versle, su tikromis pajamomis ir tikra atsakomybe, ne demo aplinkoje
 - **Žmogus lieka dirigentu** — AI neperima sprendimų; svarbiausi veiksmai eskaluojami savininkui
 - **Matuojame, ne pasakojame** — kiekvienas agentas turi rezultato balą, kiekviena diena — metrikas
+- **Konkretūs darbai su aiškia kaina** — kiekvienas pasiūlymas su apibrėžtu rezultatu ir SLA; kainą pateikiame po užklausos, įvertinę apimtį
 
 ## Pirmas žingsnis
 
-Nemokamas 60 min. pokalbis: parodome savo sistemą gyvai ir įvertiname, kuri jūsų verslo funkcija duotų greičiausią grąžą.
+Nemokamas 60 min. pokalbis: parodome veikiančią sistemą gyvai ir įvertiname, kuri jūsų verslo funkcija duotų greičiausią grąžą.
 
 📧 info@marsalas.lt | 📱 +370 630 70001
 
