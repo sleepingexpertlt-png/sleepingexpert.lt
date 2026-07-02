@@ -149,6 +149,20 @@ crontab -l | grep -i radar
 # → jei council PROCEED → įrašas į backlog/Linear. Tada signalai nebemiega Letta atmintyje.
 ```
 
+## J. ai_visibility_agent savaitinis cron (savininko GO 2026-07-02)
+
+Savininkas patvirtino diegimą. Agentas: `src/agents/ai_visibility_agent.py` (SLE-157, 4 probe surfaces: Perplexity, ChatGPT, DataForSEO, Gemini), dabar staging.
+
+```bash
+# J1. Įdiegti cron (absoliutūs keliai — 2026-05-28 pamoka!):
+# trečiadieniais 08:00, pagal project_ai_visibility_agent.md rekomendaciją
+(crontab -l; echo "0 8 * * 3 /root/frontier-agent/venv/bin/python3 /root/frontier-agent/src/agents/ai_visibility_agent.py >> /root/frontier-agent/logs/ai_visibility.log 2>&1") | crontab -
+# J2. Bandomasis paleidimas dabar + patikrinti, kad outcomes fiksuojami shared_state.db
+# J3. Rezultatus rodyti hermes_status išvestyje (AI matomumo spragos = AEO backlog kuras)
+```
+
+**F bloko patikslinimas po 07-02 audito:** publish vykdiklis — darbas #1. Šiandien 7 draft (q 74–88) su 5 Council PROCEED ir 0 published; `capture_outcome` kabinamas po `published += 1`, todėl kartu nefiksuojamas ir mokymosi signalas. Council #169 (AEO architektūra) ir #170 (llms.txt) — savininko APPROVED 07-02 per council_decide, callback_triggered=false, tad darbus paleisti rankiniu būdu.
+
 ---
 
 ## Sėkmės kriterijai (po pataisymų tikrinti po 1-2 savaičių)
