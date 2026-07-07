@@ -30,6 +30,10 @@ Skriptas atlieka visus žingsnius:
 
 1. **`cloudflared tunnel login`** — terminale parodys URL; atidarykite jį
    naršyklėje, pasirinkite zoną `sleepingexpert.lt` ir patvirtinkite.
+   *Alternatyva:* jei autorizavotės naršyklėje kitur ir ji atsisiuntė
+   `cert.pem`, įkelkite jį į serverį prieš paleisdami skriptą —
+   `~/.cloudflared/cert.pem` (pvz., `scp cert.pem root@serveris:/root/.cloudflared/`).
+   Radęs sertifikatą skriptas login žingsnį praleis.
 2. **`cloudflared tunnel create hermes`** — sukuria named tunelį.
 3. **config.yml** — `api.sleepingexpert.lt` → `localhost:9130` (auth proxy)
    → `localhost:$HERMES_PORT`. Įrašoma į `/etc/cloudflared/config.yml`.
