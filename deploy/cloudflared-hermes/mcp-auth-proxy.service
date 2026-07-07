@@ -1,0 +1,17 @@
+[Unit]
+Description=Hermes MCP Bearer auth proxy
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/hermes-mcp/proxy.env
+ExecStart=/usr/bin/env python3 /opt/hermes-mcp/mcp-auth-proxy.py
+Restart=on-failure
+RestartSec=3
+# Saugumo apribojimai
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

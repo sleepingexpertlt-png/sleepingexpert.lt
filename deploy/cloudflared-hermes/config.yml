@@ -1,0 +1,14 @@
+# Cloudflare Tunnel konfigūracija — Hermes MCP
+# Diegiama į /etc/cloudflared/config.yml (setup.sh įrašo TUNNEL_ID automatiškai)
+tunnel: __TUNNEL_ID__
+credentials-file: /etc/cloudflared/hermes.json
+
+ingress:
+  # api.sleepingexpert.lt -> Bearer auth proxy -> Hermes MCP
+  - hostname: api.sleepingexpert.lt
+    service: http://localhost:9130
+    originRequest:
+      noTLSVerify: true
+      # SSE/ilgoms MCP sesijoms
+      disableChunkedEncoding: false
+  - service: http_status:404

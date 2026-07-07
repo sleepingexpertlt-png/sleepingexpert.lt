@@ -1,0 +1,14 @@
+[Unit]
+Description=Cloudflare Tunnel (hermes) - api.sleepingexpert.lt
+After=network-online.target mcp-auth-proxy.service
+Wants=network-online.target
+
+[Service]
+Type=notify
+ExecStart=/usr/local/bin/cloudflared --no-autoupdate tunnel --config /etc/cloudflared/config.yml run hermes
+Restart=on-failure
+RestartSec=5
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
