@@ -59,6 +59,15 @@ def auth_ok(header_block: bytes) -> bool:
         if line.lower().startswith(b"authorization:"):
             value = line.split(b":", 1)[1].strip()
             return hmac.compare_digest(value, expected)
+    # Alternatyva klientams be antraščių palaikymo (pvz., claude.ai
+    # jungtys): tokenas URL užklausos parametre ?key=<token>
+    request_line = header_block.split(b"\r\n", 1)[0]
+    parts = request_line.split(b" ")
+    if len(parts) == 3 and b"?" in parts[1]:
+        query = parts[1].split(b"?", 1)[1]
+        for pair in query.split(b"&"):
+            if pair.startswith(b"key="):
+                return hmac.compare_digest(pair[4:], TOKEN.encode())
     return False
 
 
