@@ -1,5 +1,7 @@
 # 🛏️ Sleeping Expert — Kokybiški Čiužiniai ir Miego Prekės
 
+🌐 *Kalbos / Języki:* **Lietuvių** | [Polski](README.pl.md)
+
 **[Sleeping Expert](https://sleepingexpert.lt)** — didžiausia miego prekių parduotuvė Lietuvoje. Siūlome aukščiausios kokybės čiužinius, pagalves, antčiužinius ir miego aksesuarus.
 
 ## 🏪 Mūsų Parduotuvės
