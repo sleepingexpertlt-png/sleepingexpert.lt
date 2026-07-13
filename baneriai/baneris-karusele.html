@@ -16,15 +16,25 @@
   <div class="se-banner-track">
 
     <a class="se-banner-slide" href="https://sleepingexpert.lt/produkto-kategorija/ciuziniai/">
-      <img src="https://sleepingexpert.lt/wp-content/uploads/2026/07/graikiski-materace-1440x450-1.webp"
-           alt="Graikiški čiužiniai ir pagalvės CANDIA — iki -15% pigiau, pasiūlymas galioja 10.07–08.08"
-           loading="eager">
+      <picture>
+        <!-- Telefone rodoma mobili versija (didesnis tekstas). Jei WordPress įkeliant
+             failą pakeis pavadinimą (pvz., pridės -1), atnaujinkite srcset nuorodą. -->
+        <source media="(max-width: 767px)"
+                srcset="https://sleepingexpert.lt/wp-content/uploads/2026/07/graikiski-mobile-800x500.webp">
+        <img src="https://sleepingexpert.lt/wp-content/uploads/2026/07/graikiski-materace-1440x450-1.webp"
+             alt="Graikiški čiužiniai ir pagalvės CANDIA — iki -15% pigiau, pasiūlymas galioja 10.07–08.08"
+             loading="eager">
+      </picture>
     </a>
 
     <a class="se-banner-slide" href="https://sleepingexpert.lt/produkto-kategorija/ciuziniai/">
-      <img src="https://sleepingexpert.lt/wp-content/uploads/2026/07/italiski-materace-1440x450-1.webp"
-           alt="Itališki čiužiniai ir pagalvės FlexyFlex — iki -15% pigiau, pasiūlymas galioja 10.07–08.08"
-           loading="lazy">
+      <picture>
+        <source media="(max-width: 767px)"
+                srcset="https://sleepingexpert.lt/wp-content/uploads/2026/07/italiski-mobile-800x500.webp">
+        <img src="https://sleepingexpert.lt/wp-content/uploads/2026/07/italiski-materace-1440x450-1.webp"
+             alt="Itališki čiužiniai ir pagalvės FlexyFlex — iki -15% pigiau, pasiūlymas galioja 10.07–08.08"
+             loading="lazy">
+      </picture>
     </a>
 
   </div>
@@ -53,6 +63,11 @@
     min-width:100%;
     display:block;
     aspect-ratio:1440/450;
+  }
+  .se-banner-slide picture{
+    display:block;
+    width:100%;
+    height:100%;
   }
   .se-banner-slide img{
     width:100%;
@@ -99,6 +114,7 @@
   }
   @media (max-width:767px){
     .se-banner-slider{border-radius:10px;}
+    .se-banner-slide{aspect-ratio:8/5;} /* mobilios versijos proporcija 800×500 */
     .se-banner-arrow{display:none;} /* mobiliajame — braukimas pirštu ir taškeliai */
     .se-banner-dots{bottom:8px;}
     .se-banner-dot{width:8px;height:8px;}

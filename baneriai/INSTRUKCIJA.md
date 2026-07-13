@@ -26,23 +26,19 @@ Failas `baneris-karusele.html` — paruošta banerių karuselė pagrindiniam pus
 | Pridėti trečią banerį | Nukopijuokite vieną `<a class="se-banner-slide">...</a>` bloką ir pakeiskite paveikslėlio URL — taškeliai atsiras automatiškai |
 | Pakeisti banerį pasibaigus akcijai | Įkelkite naują paveikslėlį į Medija ir pakeiskite `src="..."` nuorodą |
 
-## Patarimas dėl mobiliųjų
+## Mobiliosios banerių versijos
 
-Dabar mobiliajame rodomas tas pats 1440×450 baneris (viskas telpa, niekas nenukerpama,
-tik tekstas mažesnis). Jei norėsite dar geresnio skaitomumo telefone, sukurkite banerių
-mobilias versijas (pvz., 800×500) ir pakeiskite `<img ...>` į:
+Kataloge `baneriai/mobile/` yra dvi paruoštos mobiliosios versijos (800×500,
+su gerokai didesniu tekstu telefonams):
 
-```html
-<picture>
-  <source media="(max-width: 767px)" srcset="MOBILAUS-BANERIO-URL.webp">
-  <img src="https://sleepingexpert.lt/wp-content/uploads/2026/07/graikiski-materace-1440x450-1.webp" alt="...">
-</picture>
-```
+- `graikiski-mobile-800x500.webp`
+- `italiski-mobile-800x500.webp`
 
-ir CSS bloke pridėkite:
+**Ką padaryti:**
 
-```css
-@media (max-width:767px){
-  .se-banner-slide{aspect-ratio:8/5;}
-}
-```
+1. Atsisiųskite abu failus ir įkelkite į **WP Administravimas → Medija**
+   (nekeiskite failų pavadinimų).
+2. Karuselės kodas jau paruoštas — telefonuose (ekranas iki 767 px) jis
+   automatiškai rodys mobiliąją versiją, o kompiuteryje — pilną 1440×450 banerį.
+3. Jei WordPress įkeliant pakeis failo pavadinimą (pvz., pridės `-1`),
+   atnaujinkite `srcset="..."` nuorodas kode (jos pažymėtos komentaru).
