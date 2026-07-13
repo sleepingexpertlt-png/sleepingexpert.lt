@@ -1,0 +1,171 @@
+<!-- ============================================================
+     SLEEPING EXPERT — banerių karuselė
+     Įklijuokite VISĄ šio failo turinį į WPBakery „Raw HTML"
+     elementą (arba Gutenberg „Custom HTML" bloką).
+
+     Banerių paveikslėliai (1440×450) jau įrašyti žemiau.
+     Jei reikia — pakeiskite href="..." nuorodas, į kuriuos
+     puslapius veda baneriai.
+
+     Naują banerį pridėsite nukopijavę vieną <a class="se-banner-slide">
+     bloką ir pakeitę paveikslėlio URL — taškeliai ir keitimasis
+     prisitaikys automatiškai.
+     ============================================================ -->
+
+<div class="se-banner-slider" id="seBannerSlider" aria-label="Akcijų baneriai">
+  <div class="se-banner-track">
+
+    <a class="se-banner-slide" href="https://sleepingexpert.lt/produkto-kategorija/ciuziniai/">
+      <img src="https://sleepingexpert.lt/wp-content/uploads/2026/07/graikiski-materace-1440x450-1.webp"
+           alt="Graikiški čiužiniai ir pagalvės CANDIA — iki -15% pigiau, pasiūlymas galioja 10.07–08.08"
+           loading="eager">
+    </a>
+
+    <a class="se-banner-slide" href="https://sleepingexpert.lt/produkto-kategorija/ciuziniai/">
+      <img src="https://sleepingexpert.lt/wp-content/uploads/2026/07/italiski-materace-1440x450-1.webp"
+           alt="Itališki čiužiniai ir pagalvės FlexyFlex — iki -15% pigiau, pasiūlymas galioja 10.07–08.08"
+           loading="lazy">
+    </a>
+
+  </div>
+
+  <button type="button" class="se-banner-arrow se-banner-prev" aria-label="Ankstesnis baneris">&#10094;</button>
+  <button type="button" class="se-banner-arrow se-banner-next" aria-label="Kitas baneris">&#10095;</button>
+  <div class="se-banner-dots" role="tablist" aria-label="Banerių pasirinkimas"></div>
+</div>
+
+<style>
+  .se-banner-slider{
+    position:relative;
+    max-width:1440px;
+    margin:0 auto;
+    overflow:hidden;
+    border-radius:16px;
+    box-shadow:0 6px 24px rgba(20,43,111,.12);
+  }
+  .se-banner-track{
+    display:flex;
+    transition:transform .55s cubic-bezier(.4,0,.2,1);
+    will-change:transform;
+  }
+  .se-banner-slide{
+    flex:0 0 100%;
+    min-width:100%;
+    display:block;
+    aspect-ratio:1440/450;
+  }
+  .se-banner-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    border:0;
+  }
+  .se-banner-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:44px;height:44px;
+    border:0;border-radius:50%;
+    background:rgba(255,255,255,.75);
+    color:#142b6f;
+    font-size:18px;line-height:44px;text-align:center;
+    cursor:pointer;
+    transition:background .2s;
+    z-index:2;
+    padding:0;
+  }
+  .se-banner-arrow:hover{background:#fff;}
+  .se-banner-prev{left:14px;}
+  .se-banner-next{right:14px;}
+  .se-banner-dots{
+    position:absolute;
+    left:0;right:0;bottom:12px;
+    display:flex;justify-content:center;gap:8px;
+    z-index:2;
+  }
+  .se-banner-dot{
+    width:10px;height:10px;
+    border-radius:50%;
+    border:0;padding:0;
+    background:rgba(255,255,255,.55);
+    box-shadow:0 1px 3px rgba(0,0,0,.25);
+    cursor:pointer;
+    transition:background .2s, transform .2s;
+  }
+  .se-banner-dot.is-active{
+    background:#fff;
+    transform:scale(1.25);
+  }
+  @media (max-width:767px){
+    .se-banner-slider{border-radius:10px;}
+    .se-banner-arrow{display:none;} /* mobiliajame — braukimas pirštu ir taškeliai */
+    .se-banner-dots{bottom:8px;}
+    .se-banner-dot{width:8px;height:8px;}
+  }
+</style>
+
+<script>
+(function(){
+  var slider = document.getElementById('seBannerSlider');
+  if (!slider) return;
+  var track = slider.querySelector('.se-banner-track');
+  var slides = track.children;
+  var n = slides.length;
+  if (n < 2) return;
+
+  var DELAY = 5000; /* kas kiek ms keičiasi baneris — keiskite pagal poreikį */
+  var i = 0, timer = null;
+
+  var dotsWrap = slider.querySelector('.se-banner-dots');
+  var dots = [];
+  for (var k = 0; k < n; k++) {
+    (function(idx){
+      var d = document.createElement('button');
+      d.type = 'button';
+      d.className = 'se-banner-dot';
+      d.setAttribute('aria-label', 'Rodyti ' + (idx + 1) + ' banerį');
+      d.addEventListener('click', function(){ go(idx); restart(); });
+      dotsWrap.appendChild(d);
+      dots.push(d);
+    })(k);
+  }
+
+  function go(idx){
+    i = (idx + n) % n;
+    track.style.transform = 'translateX(' + (-i * 100) + '%)';
+    for (var k = 0; k < n; k++) dots[k].classList.toggle('is-active', k === i);
+  }
+  function next(){ go(i + 1); }
+  function prev(){ go(i - 1); }
+  function start(){
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    stop();
+    timer = setInterval(next, DELAY);
+  }
+  function stop(){ if (timer) { clearInterval(timer); timer = null; } }
+  function restart(){ stop(); start(); }
+
+  slider.querySelector('.se-banner-prev').addEventListener('click', function(){ prev(); restart(); });
+  slider.querySelector('.se-banner-next').addEventListener('click', function(){ next(); restart(); });
+  slider.addEventListener('mouseenter', stop);
+  slider.addEventListener('mouseleave', start);
+  document.addEventListener('visibilitychange', function(){ document.hidden ? stop() : start(); });
+
+  /* Braukimas pirštu (mobiliesiems) */
+  var startX = null, dx = 0;
+  slider.addEventListener('touchstart', function(e){
+    startX = e.touches[0].clientX; dx = 0; stop();
+  }, {passive:true});
+  slider.addEventListener('touchmove', function(e){
+    if (startX !== null) dx = e.touches[0].clientX - startX;
+  }, {passive:true});
+  slider.addEventListener('touchend', function(){
+    if (Math.abs(dx) > 40) { if (dx < 0) { next(); } else { prev(); } }
+    startX = null; dx = 0; start();
+  });
+
+  go(0);
+  start();
+})();
+</script>
