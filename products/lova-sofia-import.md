@@ -1,52 +1,65 @@
-# Lova „Sofia" — importas iš sleepingexpert.pl į sleepingexpert.lt
+# Lova „Sofia" — naujas produktas sleepingexpert.lt
 
-**Statusas:** RUOŠIAMA — trūksta PLN kainų iš PL puslapio (žr. „Trūkstami duomenys")
+**Statusas:** DRAFT — laukia savininko patvirtinimo (aprašymo specifikacijos pažymėtos ⚠️ pasitikrinti prieš publikuojant)
 
 ## Šaltinis
 
-- PL produktas: https://sleepingexpert.pl/453-9512-lozko-sofia.html
-- Pasirinktas variantas: **200x200 cm**, audinys **Maya 06** (grupė „kolory_sofia")
+- PL produktas: https://sleepingexpert.pl/453-9512-lozko-sofia.html (t. p. /lozka/4420-lozko-sofia.html)
+- Bazinis variantas: 140x200 cm, audinys **Maya 06** (grupė „kolory_sofia")
 
-## Kainodaros taisyklė (patvirtinta savininko 2026-08-05)
+## Kainos (galutinės, EUR, su 21 % LT PVM — patvirtinta savininko 2026-08-05)
 
-```
-EUR kaina = PLN kaina × 1,06 / 4,20
-```
+Kainodaros taisyklė taikyta savininko: PL kaina +6 %, kursas 4,20 PLN/EUR.
 
-- Antkainis: **+6 %**
-- Valiutos kursas: **4,20 PLN / 1 EUR**
-- Koeficientas: PLN × **0,252381** = EUR
-- Rekomendacija: galutinę EUR kainą apvalinti iki psichologinės ribos (pvz., 630,95 € → 629 € arba 639 €) — sprendžia savininkas.
+| Dydis | Kaina € (su PVM) | Priemoka nuo bazinės |
+|-------|-----------------:|---------------------:|
+| 140x200 | **805 €** | bazinė |
+| 160x200 | **845 €** | +40 € |
+| 180x200 | **885 €** | +80 € |
+| 200x200 | **925 €** | +120 € |
 
-### Konvertavimo pavyzdžiai (formulės iliustracija, NE realios Sofia kainos)
+Pasiūlymas svarstymui (nekeista be patvirtinimo): psichologinės kainos 799 / 839 / 879 / 919 €.
 
-| PLN | ×1,06 | EUR (÷4,20) |
-|-----:|------:|------------:|
-| 2 000 | 2 120 | 504,76 € |
-| 2 500 | 2 650 | 630,95 € |
-| 3 000 | 3 180 | 757,14 € |
-| 3 500 | 3 710 | 883,33 € |
-| 4 000 | 4 240 | 1 009,52 € |
+## WooCommerce produkto duomenys
 
-## Variantų kainų lentelė (PILDYTI iš PL puslapio / PrestaShop admin)
+- **Tipas:** Variable product (variacijos pagal dydį)
+- **Pavadinimas:** Minkšta lova „Sofia"
+- **Slug:** `lova-sofia`
+- **SKU:** SOFIA (variacijos: SOFIA-140, SOFIA-160, SOFIA-180, SOFIA-200)
+- **Kategorija:** Lovos (https://sleepingexpert.lt/produkto-kategorija/lovos/)
+- **Atributas 1 (variacijoms):** Dydis — 140x200, 160x200, 180x200, 200x200
+- **Atributas 2 (informacinis):** Audinys — Maya 06 (kiti atspalviai — pagal užklausą salone)
+- **Importo failas:** `products/lova-sofia-woocommerce.csv` (paruoštas WC importeriui: Produktai → Importuoti)
+- **Nuotraukos:** perkelti iš PL PrestaShop (Maya 06 varianto nuotraukos) — CSV stulpelis Images paliktas tuščias
 
-| Dydis | Audinių grupė | PLN kaina | EUR kaina (×1,06÷4,20) |
-|-------|---------------|-----------|------------------------|
-| 140x200 | Maya (bazinė?) | PILDYTI | — |
-| 160x200 | Maya | PILDYTI | — |
-| 180x200 | Maya | PILDYTI | — |
-| **200x200** | **Maya 06** | **PILDYTI** | — |
+## Meta (SEO)
 
-## Produkto duomenys LT puslapiui (PILDYTI iš PL puslapio)
+- **Meta title:** Minkšta lova Sofia 140–200x200 cm | Sleeping Expert
+- **Meta description:** Minkšta lova Sofia su Maya audiniu. Dydžiai nuo 140x200 iki 200x200 cm, kaina nuo 805 €. Apžiūrėkite salonuose Vilniuje, Klaipėdoje ir Ukmergėje.
 
-- **Pavadinimas (LT):** Lova „Sofia"
-- **Kategorija:** Lovos → minkštos (tapicetuotos) lovos
-- **Aprašymas (LT):** PILDYTI — išversti iš PL puslapio aprašymo (nekurti iš naujo, kad atitiktų faktines specifikacijas)
-- **Specifikacijos:** PILDYTI (rėmo konstrukcija, grotelės, patalynės dėžė taip/ne, kojelės, galvūgalio aukštis)
-- **Nuotraukos:** perkelti iš PL PrestaShop (Maya 06 varianto nuotraukos)
+## Aprašymas (LT) — DRAFT
 
-## Pastabos / rizikos
+**Trumpas aprašymas:**
+Minkšta lova „Sofia" — aptraukta švelniu Maya audiniu, keturi dydžiai nuo 140x200 iki 200x200 cm. Pagaminta Lenkijoje.
 
-- PL kainos yra su 23 % PVM (PL), LT — 21 % PVM. Taikant tiesioginę konversiją +6 % faktinis antkainis prieš mokesčius yra ~8 % — įvertinta savininko pasirinktoje formulėje, papildomai nekoreguojama.
-- NBP referencinis kursas 2026-04-28 buvo 4,2445 PLN/EUR — pasirinktas 4,20 kursas yra konservatyvesnis (EUR kaina ~1 % aukštesnė). OK.
-- Prieš publikuojant LT puslapyje — patikrinti konkurentų (lonas.lt, miegocentras.lt) analogiškų 200x200 minkštų lovų kainas.
+**Pilnas aprašymas:**
+
+Minkšta lova „Sofia" derina paprastą, šiuolaikišką dizainą su praktiškumu. Lova aptraukta minkštu Maya audiniu (06 atspalvis) — kitus atspalvius iš „Sofia" paletės galima užsisakyti mūsų salonuose.
+
+⚠️ ŠIAS SPECIFIKACIJAS PATVIRTINTI pagal PL puslapį prieš publikuojant (automatiškai nuskaityti nepavyko):
+- [ ] Patalynės dėžė: yra / nėra / pasirenkama
+- [ ] Grotelės (stelažas): įskaičiuotos / atskirai
+- [ ] Galvūgalio tipas ir aukštis
+- [ ] Kojelės (medžiaga, aukštis)
+- [ ] Rėmo konstrukcija (medžio masyvas / plokštė)
+- [ ] Maksimali apkrova, čiužinio aukščio rekomendacija
+
+Galimi dydžiai: 140x200, 160x200, 180x200, 200x200 cm.
+
+Lovą galite apžiūrėti mūsų salonuose Vilniuje (PC Baldų Rojus), Klaipėdoje (PC Helios) ir Ukmergėje (Kauno g. 9).
+
+## Pastabos
+
+- Kainos yra galutinės EUR su 21 % LT PVM (savininko patvirtinta 2026-08-05).
+- Aprašymo brand voice: be draudžiamų teiginių („premium", „exclusive" ir pan.).
+- Prieš publikuojant — palyginti su lonas.lt / miegocentras.lt analogiškų minkštų lovų kainomis.
