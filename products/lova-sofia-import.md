@@ -11,14 +11,14 @@
 
 Kainodaros taisyklė taikyta savininko: PL kaina +6 %, kursas 4,20 PLN/EUR.
 
-| Dydis | Kaina € (su PVM) | Priemoka nuo bazinės |
-|-------|-----------------:|---------------------:|
-| 140x200 | **805 €** | bazinė |
-| 160x200 | **845 €** | +40 € |
-| 180x200 | **885 €** | +80 € |
-| 200x200 | **925 €** | +120 € |
+Savininko sprendimas (2026-08-05): taikomos psichologinės kainos.
 
-Pasiūlymas svarstymui (nekeista be patvirtinimo): psichologinės kainos 799 / 839 / 879 / 919 €.
+| Dydis | Skaičiuota € | Galutinė kaina € (su PVM) |
+|-------|-------------:|--------------------------:|
+| 140x200 | 805 € | **799 €** |
+| 160x200 | 845 € | **839 €** |
+| 180x200 | 885 € | **879 €** |
+| 200x200 | 925 € | **919 €** |
 
 ## WooCommerce produkto duomenys
 
@@ -35,7 +35,7 @@ Pasiūlymas svarstymui (nekeista be patvirtinimo): psichologinės kainos 799 / 8
 ## Meta (SEO)
 
 - **Meta title:** Minkšta lova Sofia 140–200x200 cm | Sleeping Expert
-- **Meta description:** Minkšta lova Sofia su Maya audiniu. Dydžiai nuo 140x200 iki 200x200 cm, kaina nuo 805 €. Apžiūrėkite salonuose Vilniuje, Klaipėdoje ir Ukmergėje.
+- **Meta description:** Minkšta lova Sofia su Maya audiniu. Dydžiai nuo 140x200 iki 200x200 cm, kaina nuo 799 €. Apžiūrėkite salonuose Vilniuje, Klaipėdoje ir Ukmergėje.
 
 ## Aprašymas (LT) — DRAFT
 
