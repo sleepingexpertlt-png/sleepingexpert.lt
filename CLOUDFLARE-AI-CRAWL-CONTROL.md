@@ -1,5 +1,7 @@
 # Cloudflare AI Crawl Control — konfigūracija AI matomumui (AEO/GEO)
 
+> **✅ IŠSPRĘSTA 2026-08-06 ~16:30:** visi Cloudflare AI blokai išjungti (Block AI bots, Bot Fight Mode, AI Labyrinth, Managed robots.txt → „Disable robots.txt configuration"), per-crawler blokai AI Crawl Control lentelėje — off. Gyvas robots.txt — švarus v2.1 be Cloudflare Managed Content sekcijos. AI Crawl Control statistika patvirtino srautą: Claude-User 105 allowed/0 blocked, ChatGPT-User 23 allowed. Hostinger patikrintas — nekaltas (užklausos serverio nepasiekdavo). Likutis: AI sistemų robots.txt kešai (iki ~24 h) išsivalys savaime.
+
 **Data:** 2026-08-06
 **Problema:** Cloudflare tinklo lygiu (403) blokuoja AI botus, kuriuos robots.txt v2.1 leidžia.
 **Tikslas (G4):** GPTBot / ClaudeBot / PerplexityBot ir „user request" fetcher'iai turi gauti 200, kad AI galėtų skaityti ir cituoti sleepingexpert.lt.
