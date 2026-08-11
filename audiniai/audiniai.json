@@ -1,0 +1,60 @@
+{
+  "_saltinis": "Hermes vault — reference_alina_pricing_rules.md:40-166 (Lozka 2026 GRUPY TKANIN)",
+  "_pastaba": "Sarasa reikia sutikrinti su WYKAZ-TKANIN-SALONY-2026.pdf pries publikuojant.",
+  "_atnaujinta": "2026-08-11",
+  "grupes": {
+    "1": { "pavadinimas": "1 grupė", "aprasymas": "Bazinė grupė — įskaičiuota į lovos kainą" },
+    "2": { "pavadinimas": "2 grupė", "aprasymas": "Priemoka pagal lovos modelį ir dydį" },
+    "3": { "pavadinimas": "3 grupė", "aprasymas": "Priemoka pagal lovos modelį ir dydį" },
+    "4": { "pavadinimas": "4 grupė", "aprasymas": "Priemoka pagal lovos modelį ir dydį" }
+  },
+  "tiekejai": [
+    {
+      "vardas": "DAVIS",
+      "slug": "davis",
+      "audiniai": {
+        "1": ["ALOVA", "ARAGON", "BARREL", "CASTEL", "CORTO", "COVER", "CURIO", "DOT LN", "WISH", "FANCY", "GELATO", "GEMMA", "GUSTO", "HYGGE", "INARI", "JASMINE", "LARS", "LINCOLN", "LUMI", "LUIS WR", "LUKKA", "MADRYT", "MALLMONEV", "MELVA", "MISTERIO", "MONOLITH", "MONTE", "MOSSA", "NEVE", "OPIUM", "ORINOCO", "QUELLE", "POINT WR", "PORTLAND", "PRIMO", "RAMBO", "RINO", "RIVIERA", "RUN AGAIN", "SAVANA", "SCALA", "SCALA NV", "SEAL WR", "SOLID WR", "SORELLA", "SORO", "STORM", "SUNLIGHT OUTDOOR", "TERRA WR", "TEXAS LC", "TILIA", "VELA WR", "VERITA", "VIBE", "WIND"],
+        "2": ["ADVENTURE", "AULLA", "BOSCO", "CITY", "CLOUD SC", "CREMONA", "DIOSA", "ELEGANT", "GAVA", "LANDSCAPE", "LETTO", "LORIS", "MATTVELVET", "MIKA", "MOLY WR", "NOW OR NEVER", "NUBE", "OVER THE HORIZON", "PERFECT HARMONY", "PICO OUTDOOR", "PRESTON", "PUENTE", "RETROBLISS", "RUNO WR", "SILENCIO", "SOLAR EC", "TENDER WAY", "TEXAS", "TODAY", "VEGA"],
+        "3": ["COCO", "GRACE"]
+      }
+    },
+    {
+      "vardas": "PIK",
+      "slug": "pik",
+      "audiniai": {
+        "1": ["ADEL", "ALEX", "ANAFI", "ASTI", "ASTI PLUS", "BAKU", "CAPRI", "COMO", "CRUZ", "ELMA", "ERIKA", "FABIO", "FIBI", "FLORIA", "GLAM", "GOBI", "LOCO", "LUIS", "MEGAN", "MILO", "PUERTO", "RIVA", "ROMA", "ROSA", "ROUGE", "RUBI", "SALLY", "SARA", "SESIKA", "SOFIA", "SUZI", "TAVILA", "TORRES", "TULA", "TYTUS", "VASCO", "VENA"],
+        "2": ["BELLINI", "BRANDO", "DOHA", "DONNA", "ESITO", "LAMBI", "LIVIA", "SOLEN", "VEGA", "NEW NEAPOL", "OLAF", "PERFECTO", "POLA"]
+      }
+    },
+    {
+      "vardas": "ELASTRON",
+      "slug": "elastron",
+      "audiniai": {
+        "1": ["ALPINE", "ARTICO", "BARCELONA", "BELFAST", "BROOKLYN", "BUDAPEST", "CASINO", "COWBOY", "DUBAI", "FUSION", "GUILTY", "HERITAGE", "KENYA", "LISBON", "LIVERPOOL", "LOGAN", "LOTUS", "MADEIRA", "MAYA", "MEMPHIS", "MEXICO", "MILANO", "MUSA", "NAIROBI", "NORDIC", "OPERA", "PRINCE", "QUEENS", "ROYAL SUEDE", "SAVANA", "SCOTT", "SEOUL", "SHANGHAI", "SPIRIT", "SWING", "URBAN", "VIENNA", "ZURICH"],
+        "2": ["ALLEGRO", "AMORE", "ARIZONA", "AUSTIN", "BALI", "BALTIC", "BALTIMORE", "BANGKOK", "BOSTON", "BRONX", "BULL", "CANYON", "COLORADO", "DELTA", "DENVER", "LONDON", "MACAU", "MADRAS", "MANILA", "MONET", "MOZART", "NATURA", "NEOSUEDE", "PARIS", "PAVAROTTI", "PEGASUS", "PORTLAND", "SCALA", "SEATTLE", "STELLA", "SUNSET", "TRIBU", "URUGUAY", "WONDER"],
+        "3": ["APOLLO", "ASCOT", "BABEL", "BLISS", "BRISTOL", "BRUTUS", "CHANEL", "COCOON", "DANUBIO", "DUBLIN", "FALCON", "FOX", "GALLILEU", "GLASSGOW", "GRACE", "HABANA", "IPANEMA", "JONES STIPES", "KELLY STRIPES", "LASER", "MAJESTIC", "MUNICH HYDRO", "MUNICH SUEDE", "OXFORD", "PACIFICO", "PICASSO", "RODEO", "SCOTLAND", "STRACCIATELLA", "SUPERSOFT", "TAILOR STRIPES", "VENUS", "VIVALDI", "VOGUE", "YOGA"],
+        "4": ["CHLOE", "CLUB", "FLORENCE", "GRACE GALLERY", "IBIZA", "NAPPATECH", "PRADO", "SUNSET STRIPES", "VALENCIA"]
+      }
+    },
+    {
+      "vardas": "FARGOTEX",
+      "slug": "fargotex",
+      "audiniai": {
+        "1": ["ELLI", "TARO", "FINN", "PERA", "KINGSTONE"],
+        "2": ["NESS", "ALIA", "LUET", "DITRA NEW", "EMMA", "VERA", "MILTON NEW"],
+        "3": ["GOLDEN", "TULIA NEW", "NOMA", "SOLE", "CORBETT", "MANZA", "MOKKA", "TIA", "ALTARA", "BLOOM", "DAZZA", "FLASH NEW", "FORRES", "FORTIS", "LEO", "MANSILA", "ORION", "ROSS", "STRONG", "TIERRA", "TULIA", "ZOYA", "LINEA", "PIANO", "SPELLO"],
+        "4": ["ALFIO", "BALZAC", "MONDO", "AGOSTO", "ANGOLA", "AVENA", "CABRERA", "CEDAR", "CLAUDE", "CRUSO", "DANTE", "DEGNO", "DRAGONERA", "ELBA", "ETNA", "FUTURRO", "HAZEL", "LAND", "LEMMA", "LORETO", "LUNA", "METIS", "NAPOLI", "NEBBIA", "NEON", "STARK", "TENDER", "VAMOS", "VELIERO", "VEN", "VENI", "VIENNA", "VIENTO", "VOCAL"]
+      }
+    },
+    {
+      "vardas": "TOP TEXTIL",
+      "slug": "top-textil",
+      "audiniai": {
+        "1": ["BONITA", "BRAID", "BRISTOL", "CASABLANCA", "CLARA", "CORD", "DRAGON", "EUREKA", "FREYA", "HEVIA", "HYGGE", "MARGO", "NAZAR", "PRESTIGE", "RALPH", "RUGGIA", "SANDU"],
+        "2": ["AURORA", "HORTON", "KONGO", "MAGNI", "MIU", "JAGUAR", "MAGIC VELVET", "SMART VELVET", "TRILLA", "TUNIS", "UTTARIO VELVET", "ZORA"],
+        "3": ["AGNES", "ATOS", "BALOO", "BIZON", "DREAM VELVET", "DROP", "FLORENCJA", "GRETA", "KENIA", "WAFFLE"],
+        "4": ["BOMBAJ", "BUNNY", "PETTIT", "VENUS VELVET"]
+      }
+    }
+  ]
+}
