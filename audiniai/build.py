@@ -46,23 +46,26 @@ def build(with_images: bool) -> str:
     suppliers = data["tiekejai"]
     groups = data["grupes"]
 
+    group_order = sorted(groups, key=lambda g: groups[g]["eile"])
+
     items = []
-    for supplier in suppliers:
-        for group, fabrics in sorted(supplier["audiniai"].items()):
+    for supplier_index, supplier in enumerate(suppliers):
+        for group, fabrics in supplier["audiniai"].items():
             for fabric in fabrics:
                 items.append(
                     {
                         "name": fabric,
                         "supplier": supplier["vardas"],
                         "supplier_slug": supplier["slug"],
+                        "supplier_index": supplier_index,
                         "group": group,
                         "slug": slugify(fabric),
                     }
                 )
-    items.sort(key=lambda i: (i["supplier"], int(i["group"]), i["name"]))
+    items.sort(key=lambda i: (i["supplier_index"], groups[i["group"]]["eile"], i["name"]))
 
     total = len(items)
-    group_counts = {g: sum(1 for i in items if i["group"] == g) for g in sorted(groups)}
+    group_counts = {g: sum(1 for i in items if i["group"] == g) for g in group_order}
     supplier_counts = {s["vardas"]: sum(1 for i in items if i["supplier"] == s["vardas"]) for s in suppliers}
 
     # --- filtrų mygtukai ---
@@ -74,7 +77,7 @@ def build(with_images: bool) -> str:
         )
 
     group_chips = ['<button type="button" class="se-fab__chip is-active" data-filter="group" data-value="all">Visos grupės</button>']
-    for group in sorted(groups):
+    for group in group_order:
         group_chips.append(
             '<button type="button" class="se-fab__chip" data-filter="group" data-value="%s">%s <span>%d</span></button>'
             % (esc(group), esc(groups[group]["pavadinimas"]), group_counts.get(group, 0))
@@ -117,7 +120,7 @@ def build(with_images: bool) -> str:
 
     group_legend = "".join(
         '<li><strong>%s</strong> — %s</li>' % (esc(groups[g]["pavadinimas"]), esc(groups[g]["aprasymas"]))
-        for g in sorted(groups)
+        for g in group_order
     )
 
     return TEMPLATE % {
@@ -163,7 +166,7 @@ TEMPLATE = """<!-- Sleeping Expert — lovų audinių katalogas. Generuota: audi
     .se-fab__media{position:relative;display:flex;align-items:center;justify-content:center;
       aspect-ratio:4/3;background:#eef0f7}
     .se-fab__img{width:100%%;height:100%%;object-fit:cover;display:block}
-    .se-fab__ph{font-size:1.6rem;font-weight:700;letter-spacing:.05em;color:#aab0c4}
+    .se-fab__ph{font-size:1.6rem;font-weight:700;letter-spacing:.05em;color:#aab0c4;text-transform:uppercase}
     .se-fab__badge{position:absolute;top:.5rem;right:.5rem;background:var(--lemon);color:var(--navy);
       font-size:.72rem;font-weight:700;padding:.2rem .45rem;border-radius:5px}
     .se-fab__meta{padding:.7rem .8rem;display:flex;flex-direction:column;gap:.15rem}
@@ -183,7 +186,7 @@ TEMPLATE = """<!-- Sleeping Expert — lovų audinių katalogas. Generuota: audi
   <div class="se-fab__controls">
     <label class="screen-reader-text" for="se-fab-search">Ieškoti audinio pagal pavadinimą</label>
     <input class="se-fab__search" id="se-fab-search" type="search" autocomplete="off"
-           placeholder="Ieškoti audinio, pvz. VELVET, SORO, MAYA…">
+           placeholder="Ieškoti audinio, pvz. Velvet, Aragon, Maya…">
     <div class="se-fab__row" role="group" aria-label="Filtruoti pagal tiekėją">
       %(supplier_chips)s
     </div>
