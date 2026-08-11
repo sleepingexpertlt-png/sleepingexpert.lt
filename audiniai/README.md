@@ -30,6 +30,27 @@ Paruoštas blokas puslapiui
 Blokas savarankiškas: CSS ir JS viduje, jokių išorinių bibliotekų, jokių
 užklausų. Klasės su prefiksu `se-fab__`, kad nesikirstų su tema.
 
+## Gamintojo spalvų kodai
+
+Užsakymai vykdomi pagal gamintojo kodą, todėl kortelėje turi būti ne tik
+kolekcijos pavadinimas, bet ir konkretus kodas (`Monolith 48`).
+
+Audinys `audiniai.json` faile gali būti aprašytas dviem būdais:
+
+```jsonc
+"I": [
+  "Castel",                                        // kolekcija be kodų
+  { "vardas": "Aragon", "spalvos": ["03", "06"] }  // kolekcija su kodais
+]
+```
+
+Kai nurodytos `spalvos`, kiekvienas kodas gauna **atskirą kortelę** su užrašu
+`Kodas: Aragon 03`, o paieška randa ir pagal pavadinimą, ir pagal kodą.
+
+⚠️ **Kodus rašyti tik iš gamintojo katalogo.** Neteisingas kodas = ne ta
+spalva užsakyme. Šiuo metu nė vienam iš 80 audinių kodų nėra — laukiama
+tiekėjų duomenų.
+
 ## Duomenų atnaujinimas
 
 Redaguoti `audiniai.json` → paleisti `build.py` → perkopijuoti HTML.
@@ -66,6 +87,9 @@ Pagal nutylėjimą nuotraukų nėra — rodomi raidiniai vietos rezervai.
 
 Slug taisyklė: mažosios raidės, ne raidiniai simboliai → `-`
 (`Now or Never` → `now-or-never`, `Grace Collection` → `grace-collection`).
+
+Kai audinys turi spalvų kodus, slug'as jungia pavadinimą ir kodą:
+`Aragon` + `03` → `aragon-03.webp`.
 
 Nuotraukų teisės: swatch'ai priklauso tiekėjams. Prieš keliant turėti raštišką
 leidimą arba fotografuoti savo salonų pavyzdžius.

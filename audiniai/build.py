@@ -52,17 +52,31 @@ def build(with_images: bool) -> str:
     for supplier_index, supplier in enumerate(suppliers):
         for group, fabrics in supplier["audiniai"].items():
             for fabric in fabrics:
-                items.append(
-                    {
-                        "name": fabric,
-                        "supplier": supplier["vardas"],
-                        "supplier_slug": supplier["slug"],
-                        "supplier_index": supplier_index,
-                        "group": group,
-                        "slug": slugify(fabric),
-                    }
-                )
-    items.sort(key=lambda i: (i["supplier_index"], groups[i["group"]]["eile"], i["name"]))
+                # Audinys gali buti paprasta eilute (kolekcija be spalvu kodu) arba
+                # objektas {"vardas": ..., "spalvos": ["48", ...]} — tada kiekvienas
+                # gamintojo kodas gauna atskira kortele, nes uzsakymai eina pagal koda.
+                if isinstance(fabric, dict):
+                    name = fabric["vardas"]
+                    codes = fabric.get("spalvos") or [None]
+                else:
+                    name, codes = fabric, [None]
+
+                for code in codes:
+                    items.append(
+                        {
+                            "name": name,
+                            "code": code,
+                            "label": "%s %s" % (name, code) if code else name,
+                            "supplier": supplier["vardas"],
+                            "supplier_slug": supplier["slug"],
+                            "supplier_index": supplier_index,
+                            "group": group,
+                            "slug": slugify("%s-%s" % (name, code) if code else name),
+                        }
+                    )
+    items.sort(
+        key=lambda i: (i["supplier_index"], groups[i["group"]]["eile"], i["name"], i["code"] or "")
+    )
 
     total = len(items)
     group_counts = {g: sum(1 for i in items if i["group"] == g) for g in group_order}
@@ -94,7 +108,7 @@ def build(with_images: bool) -> str:
                     IMG_BASE,
                     item["supplier_slug"],
                     item["slug"],
-                    esc(item["name"]),
+                    esc(item["label"]),
                     esc(item["supplier"]),
                     esc(groups[item["group"]]["pavadinimas"]),
                 )
@@ -102,18 +116,25 @@ def build(with_images: bool) -> str:
         else:
             media = '<span class="se-fab__ph" aria-hidden="true">%s</span>' % esc(item["name"][:2])
 
+        code_html = (
+            '<span class="se-fab__code">Kodas: <b>%s</b></span>' % esc(item["label"])
+            if item["code"]
+            else ""
+        )
+
         cards.append(
             '<li class="se-fab__card" data-supplier="%s" data-group="%s" data-name="%s">'
             '<span class="se-fab__media">%s<span class="se-fab__badge">%s gr.</span></span>'
-            '<span class="se-fab__meta"><strong class="se-fab__name">%s</strong>'
+            '<span class="se-fab__meta"><strong class="se-fab__name">%s</strong>%s'
             '<span class="se-fab__supplier">%s</span></span></li>'
             % (
                 esc(item["supplier"]),
                 esc(item["group"]),
-                esc(item["name"].lower()),
+                esc(item["label"].lower()),
                 media,
                 esc(item["group"]),
                 esc(item["name"]),
+                code_html,
                 esc(item["supplier"]),
             )
         )
@@ -171,6 +192,8 @@ TEMPLATE = """<!-- Sleeping Expert — lovų audinių katalogas. Generuota: audi
       font-size:.72rem;font-weight:700;padding:.2rem .45rem;border-radius:5px}
     .se-fab__meta{padding:.7rem .8rem;display:flex;flex-direction:column;gap:.15rem}
     .se-fab__name{font-size:.92rem;line-height:1.25}
+    .se-fab__code{font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums}
+    .se-fab__code b{color:var(--navy);font-weight:700}
     .se-fab__supplier{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
     .se-fab__empty{padding:2.5rem 1rem;text-align:center;color:var(--muted)}
     .se-fab__empty[hidden]{display:none}
