@@ -38,20 +38,20 @@ Redaguoti `audiniai.json` → paleisti `build.py` → perkopijuoti HTML.
 (`reference_alina_pricing_rules.md`) yra pilnas gamintojų sąrašas su 367
 audiniais ir tiekėju PIK — **jis čia sąmoningai nenaudojamas**.
 
-### Padaryti pataisymai
+Pavadinimai, tiekėjai ir grupės perrašyti **pažodžiui** iš salonų sąrašo —
+savininko sprendimu niekas netaisoma.
 
-| Sąraše | Faile | Kodėl |
-|---|---|---|
-| `Seatlle` | `Seattle` | Rašybos klaida — gamintojo katalogas rašo Seattle |
+### Neatitikimai su vault (žinomi, sąmoningai palikti)
 
-### Neatitikimai su vault (paliktas salonų sąrašo variantas)
+| Salonų sąraše | `reference_alina_pricing_rules.md` |
+|---|---|
+| `Seatlle` (Elastron II) | `SEATTLE` |
+| `Kingston` (Fargotex I) | `KINGSTONE` |
+| `Maya` — Fargotex III | `MAYA` — Elastron I |
+| `Adventure` — Davis I | Davis II |
+| `Smart Velvet` — Top Textil I | Top Textil II |
 
-- **Kingston** (Fargotex) — vault rašo `KINGSTONE`
-- **Maya** priskirtas Fargotex III — vault turi `MAYA` prie Elastron I
-- **Adventure** (Davis) I grupėje — vault turi II grupėje
-- **Smart Velvet** (Top Textil) I grupėje — vault turi II grupėje
-
-Verta sutikrinti prieš publikuojant, ypač Maya — skiriasi ir tiekėjas, ir grupė.
+Fiksuota 2026-08-11. Jei kada bus sutikrinta su Alina — atnaujinti čia.
 
 ## Swatch nuotraukos
 
