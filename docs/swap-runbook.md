@@ -151,3 +151,56 @@ sudo findmnt --verify
 ```
 Jei ištrynei seną swapfile'ą, atkurti paprasta:
 `fallocate` → `chmod 600` → `mkswap` → `swapon`.
+
+---
+
+## Priedas — zram tuning (kiek dar galima išspausti)
+
+`zram` jau yra suspaudimas. Klausimas tik toks: ar naudoji geriausią algoritmą.
+
+```bash
+cat /sys/block/zram0/comp_algorithm      # laužtiniuose skliaustuose = aktyvus
+```
+
+Tipiniai santykiai mišriam serverio krūviui:
+
+| Algoritmas | Santykis | Greitis | Kada rinktis |
+|---|---|---|---|
+| `lz4` | ~2.0× | greičiausias | CPU yra butelio kaklelis |
+| `lzo-rle` | ~2.1–2.7× | greitas | numatytasis, geras vidurkis |
+| `zstd` | ~2.7–3.7× | ~30 % lėtesnis | RAM yra butelio kaklelis ← dažniausiai tavo atvejis |
+
+**Tikrąjį savo santykį matai `swap-diagnose.sh` 3 skiltyje** — jis skaičiuojamas iš
+`mm_stat`, ne iš lentelės. Jei ten jau ~3×, keisti nėra ko.
+
+Perjungimas (įrenginį reikia išvalyti, todėl PIRMA įsitikink, kad likęs swap talpina):
+
+```bash
+sudo swapoff /dev/zram0            # tik jei diagnostika sako SAUGU
+echo zstd  | sudo tee /sys/block/zram0/comp_algorithm
+echo 6G    | sudo tee /sys/block/zram0/disksize
+sudo mkswap /dev/zram0
+sudo swapon --priority 100 /dev/zram0
+```
+
+Nuolatiniam nustatymui — `/etc/systemd/zram-generator.conf`:
+
+```ini
+[zram0]
+zram-size = ram / 2
+compression-algorithm = zstd
+swap-priority = 100
+```
+
+Realus laimėjimas keičiant `lzo-rle` → `zstd` ant 4 GB zram: maždaug **+1 GB**
+efektyvios atminties. Naudinga, bet tai ne 900 % — ir tai ne sprendimas, jei
+tikroji problema yra servisas, kuris nuolat auga.
+
+### Ko zram nepadarys
+
+- Nesuspaus jau suspaustų duomenų (JPEG, gzip, modelių svoriai) — jie eina 1.0×.
+- Nesuspaus šifruotų buferių.
+- Nepadės, jei nutekėjimas (memory leak) — tik atidės OOM keliomis valandomis.
+
+Jei `mm_stat` rodo santykį < 1.5×, tavo krūvis nesispaudžia ir zram tau
+nepadeda — geriau tą RAM atiduoti procesams tiesiogiai (sumažink `disksize`).
