@@ -20,8 +20,11 @@ nenutoltų nuo upstream.
 
 ## Atviri punktai (ne blokeriai)
 
-1. 🔐 GOOGLE_CLIENT_SECRET rotacija (nutekėjo į transkriptą) — GCP reset →
-   secrets.env + /root/gbp-review-agent/.env.
+1. 🔐 GOOGLE_CLIENT_SECRET rotacija — **ATIDĖTA owner sprendimu (2026-08-25)**
+   iki pilno rezultato. Rizikos įvertis: vien secret be refresh tokeno GBP
+   prieigos neduoda; liekamoji rizika — OAuth phishing prisidengiant app'u.
+   PERŽIŪRA: kartu su 60 d. ciklo rezultatais (≈2026-10-24) arba anksčiau,
+   jei pastebimas įtartinas OAuth aktyvumas GCP audit loguose.
 2. 🔐 Maps API raktas guli plaintext crontab'e IR buvo transkriptuose —
    kompensuojama GCP apribojimais (Places-only + VPS IP). PATIKRINTI, kad
    apribojimai uždėti ant TEISINGO rakto (paskutinių 4 simbolių sutapimas su
