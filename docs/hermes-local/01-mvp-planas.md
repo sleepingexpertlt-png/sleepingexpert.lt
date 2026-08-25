@@ -33,8 +33,10 @@ ant savų 3 parduotuvių. Tik su rezultatais rankoje kalbamės apie partnerystę
 
 ## Fazės
 
-**F0 — Atblokavimas (owner, ~30 min):**
-- 🔴 Sutvarkyti Ukmergės GBP dublikatą (420 impressions / 0 directions — žr. 00 failą).
+**F0 — Atblokavimas (~30 min):**
+- 🔴 Patikrinti `gmb_agent.py`: ar UKM directions skaitomos iš teisingo location ID
+  po dublikato ištrynimo (R-026). Dublikatas JAU ištrintas — netvarkyti iš naujo.
+- 🟠 P-064 (owner): Vilniaus GBP kategorijos lenkiškai → pakeisti į LT per GBP UI.
 - Įdiegti geo-grid įrankį (žr. 02 failą) ir paleisti pirmą skenavimą.
 - (Windsor GBP NEREIKALINGAS — GMB API prijungtas tiesiogiai per Hermès.)
 

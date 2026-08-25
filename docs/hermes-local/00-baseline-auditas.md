@@ -35,9 +35,14 @@ Telefonas: +370 630 70001 · El. paštas: info@sleepingexpert.lt
 | Klaipėda | 312 | 13 | 1 | 4.2 % ✅ |
 | Ukmergė | 420 | 0 | 0 | **0 %** 🔴 |
 
-🔴 **Ukmergė: 420 parodymų, 0 maršrutų, 0 skambučių.** Žinomas profilio dublikatas
-(location 5771168054047785891) — įtariama pagrindinė priežastis; spręsti pirmiausia.
-⚠️ Vilnius konvertuoja 5× prasčiau nei Klaipėda — tikrinti profilio pilnumą/nuotraukas.
+🔴 **Ukmergė: 420 parodymų, 0 maršrutų (7 d.).** AUDITO PATAISA (2026-08-25):
+dublikatas JAU IŠTRINTAS (PROMISES R-026/P-067) — tai NE priežastis. Istorija:
+06-04 UKM=2 dir/7d, 06-25 UKM=15 dir/14d, dabar 0/7d su gyvomis impressions.
+Hipotezė tikrinimui: `gmb_agent.py` gali skaityti directions iš seno/ištrinto
+location ID. Patikrinti kodą prieš darant išvadas apie realų srautą.
+⚠️ Vilnius konvertuoja 5× prasčiau nei Klaipėda — žinoma priežastis kandidatė:
+P-064 (OPEN) — Vilniaus GBP kategorijos rodomos lenkiškai, keisti per GBP UI.
+Pastaba: skambučiai NE KPI pagal G2 sprendimą (R-028) — nenaudoti kaip alarmo.
 
 ## Kas jau žinoma (vieši duomenys)
 
