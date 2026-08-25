@@ -8,7 +8,7 @@ ant savų 3 parduotuvių. Tik su rezultatais rankoje kalbamės apie partnerystę
 
 ```
 ┌─ DATA LAYER ────────────────────────────────────────────┐
-│ GBP API (Windsor google_my_business — prijungti!)       │
+│ GBP API — TIESIOGINĖ integracija (gmb_agent.py, veikia) │
 │ GSC · GA4 (Windsor / tiesiogiai)                        │
 │ Geo-grid: GBP Rank Tracker (open source) / Apify actor  │
 │ AI probes: ai-visibility skill (ChatGPT/Gemini/Perplexity)│
@@ -34,8 +34,9 @@ ant savų 3 parduotuvių. Tik su rezultatais rankoje kalbamės apie partnerystę
 ## Fazės
 
 **F0 — Atblokavimas (owner, ~30 min):**
-- Windsor: prijungti `google_my_business`; sutvarkyti Free plano account limitą.
+- 🔴 Sutvarkyti Ukmergės GBP dublikatą (420 impressions / 0 directions — žr. 00 failą).
 - Įdiegti geo-grid įrankį (žr. 02 failą) ir paleisti pirmą skenavimą.
+- (Windsor GBP NEREIKALINGAS — GMB API prijungtas tiesiogiai per Hermès.)
 
 **F1 — Baseline (1 savaitė):** užfiksuoti visas 00 faile išvardintas metrikas.
 Niekas neoptimizuojama, kol nėra „prieš" nuotraukos.

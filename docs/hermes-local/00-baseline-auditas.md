@@ -13,6 +13,32 @@ visibility sistemą ant savų 3 parduotuvių ir įrodyti, kad ji veikia.
 
 Telefonas: +370 630 70001 · El. paštas: info@sleepingexpert.lt
 
+## Kas JAU veikia (tiesioginė GMB API integracija — Windsor nereikalingas)
+
+Šaltinis: hermes_cag + hermes_status, 2026-08-25.
+
+- **3 lokacijos prijungtos tiesiogiai** per GBP API (account 112003996596356655394;
+  location ID žr. `reference_gmb_posts_api.md` Hermès atmintyje).
+- **Postai automatizuoti:** `src/agents/blog_agent.py` (6c) kryžmina blog įrašus į GBP;
+  `gbp_post_publisher.py` skelbia akcijas pagal `data/frontier.db` (`gbp_post_schedule`),
+  su dedup apsauga ir taisykle „OFFER tik su nuotrauka".
+- **Reitingo ženkliukas + AggregateRating schema** svetainėje (Snippet #187) iš realių
+  GBP atsiliepimų (4.8/5, 118 atsiliepimų).
+- **Insights** naudojami savaitinėms peržiūroms (salon_signal: directions/calls/impressions
+  per store), bet analizė nepilnai automatizuota.
+
+## Salon signal baseline (7 d., 2026-08-25)
+
+| Lokacija | Impressions | Directions | Calls | Konversija imp→dir |
+|---|---|---|---|---|
+| Vilnius | 604 | 5 | 0 | 0.8 % ⚠️ |
+| Klaipėda | 312 | 13 | 1 | 4.2 % ✅ |
+| Ukmergė | 420 | 0 | 0 | **0 %** 🔴 |
+
+🔴 **Ukmergė: 420 parodymų, 0 maršrutų, 0 skambučių.** Žinomas profilio dublikatas
+(location 5771168054047785891) — įtariama pagrindinė priežastis; spręsti pirmiausia.
+⚠️ Vilnius konvertuoja 5× prasčiau nei Klaipėda — tikrinti profilio pilnumą/nuotraukas.
+
 ## Kas jau žinoma (vieši duomenys)
 
 - Google atsiliepimai: bent vienas GBP įrašas turi **5.0★ / 25 atsiliepimai** (šaltinis:
@@ -22,14 +48,19 @@ Telefonas: +370 630 70001 · El. paštas: info@sleepingexpert.lt
 - Baldų Rojus salono puslapis (baldurojus.lt/salonas/sleeping-expert/) — citata,
   kurią reikia įtraukti į NAP nuoseklumo patikrą.
 
-## Blokeriai (reikia owner'io veiksmo)
+## Spragos ir blokeriai
 
-| # | Blokeris | Sprendimas |
+GBP prieiga TURIMA tiesiogiai (Windsor nereikalingas). Likusios spragos:
+
+| # | Spraga | Sprendimas |
 |---|---|---|
-| 1 | **Windsor: `google_my_business` connector NEprijungtas** — be jo nėra GBP postų/atsiliepimų automatizacijos | Prijungti GBP per Windsor onboard |
-| 2 | **Windsor Free planas**: „more accounts than your Free plan allows" — GSC/GA4 užklausos per Windsor grąžina klaidą | Atjungti nenaudojamus account'us (lamele.lt, cookking.online, Maršalas Bing?) arba upgrade |
-| 3 | **Ahrefs planas**: organic keywords API grąžina „Insufficient plan" | Naudoti GSC tiesiogiai (kai išspręstas #2) arba DataForSEO |
-| 4 | Geo-grid duomenų šaltinio nėra | Žr. `02-open-source-irankiai.md` — GBP Rank Tracker (nemokamas) arba Apify pay-per-scan |
+| 1 | 🔴 Ukmergės profilio dublikatas + 0 directions | Pašalinti/sujungti dublikatą per GBP, patikrinti pagrindinio profilio pilnumą |
+| 2 | Atsakymai į atsiliepimus neautomatizuoti | Review Agent (skeleton: gbp-review-agent MCP, žr. 02 failą) per esamą OAuth |
+| 3 | Geo-grid duomenų šaltinio nėra | GBP Rank Tracker (nemokamas) arba mcp-google-map |
+| 4 | Nuotraukų kėlimas rankinis; Q&A API nebeveikia (tik rankiniu) | Photos — per GBP media API iš WP medijos; Q&A — rankinė SOP |
+| 5 | Insights analizė nepilnai automatizuota | Visibility Agent: savaitinis salon_signal → trend ataskaita |
+| 6 | AI share-of-voice nematuojamas | `ai-visibility` skill baseline |
+| 7 | (Duomenų įrankiai) Windsor Free limitas ir Ahrefs planas blokuoja GSC/keyword API šioje aplinkoje | GSC duomenis imti per Hermès tiesiogiai; Windsor/Ahrefs nebekritiniai |
 
 ## Baseline metrikos, kurias reikia užfiksuoti PRIEŠ optimizavimą
 
