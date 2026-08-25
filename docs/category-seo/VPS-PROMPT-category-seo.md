@@ -1,55 +1,48 @@
-# VPS Deploy Prompt — Kategorijų SEO (copy-paste į VPS Claude sesiją)
+# VPS Prompt — GSC 5–15 → question_bank / TAISYTI (v2, suvienodinta)
+
+v1 (atskira seo_opportunities lentelė + naujas cron) ATŠAUKTA — pagal owner
+kanoninį kontekstą iš kokybes-auditas sesijos naudojama esama sistema.
 
 ```
-Jungi kategorijų SEO sluoksnį prie Hermès. Žingsniai eilės tvarka, po kiekvieno
-patikrink. Jokių WP/GBP rašymo veiksmų be mano patvirtinimo.
+Jungi GSC 5–15 pozicijų sluoksnį į ESAMĄ sistemą (question_bank_master.json +
+kokybes-auditas recommend.py). Jokių naujų lentelių, failų, cron'ų ar config
+pakeitimų be owner GO. Jokių publikavimų — tik draft'ai, ir tik po owner GO.
 
-KONTEKSTAS:
-- GSC duomenys jau traukiami (traits_business_fetcher.py, cron 06:30) — reuse
-  tą pačią autentifikaciją, nekurk naujos.
-- Blog pipeline veikia (blog_agent.py, quality gate q>=90) — jo logikos NEKEISTI.
-- Brand voice: be draudžiamų teiginių (premium, exclusive, Italijos dizaineriai).
+PRIEŠ PRADEDANT: patikrink, ar ankstesnis hermes_master_run bandymas (2026-08-25
+vakaras, goal apie seo_opportunities) nepaliko dalinių artefaktų (lentelė
+seo_opportunities ar data/seo_opportunities_*.json). Jei paliko — peržiūrėk ir
+įtrauk į šį darbą, dublikatų nekurk.
 
-ŽINGSNIS 1 — Ištraukimas:
-Iš GSC API paimk 90 d. užklausas su: avg position 4.5–15, impressions >= 50,
-be brand užklausų (išfiltruok: sleeping expert, sleepingexpert ir variantus).
-Kiekvienai: keyword, geriausias landing page, position, impressions, clicks.
-Išsaugok data/seo_opportunities_2026-08-25.json.
+ŽINGSNIS 1 — Ištraukimas (read-only, be kaštų):
+GSC API (esama autentifikacija iš traits_business_fetcher.py): 90 d. užklausos,
+avg position 4.5–15, impressions >= 50, be brand (sleeping expert / 
+sleepingexpert variantai). Kiekvienai: keyword, geriausias landing page,
+position, impressions, clicks.
 
-ŽINGSNIS 2 — Kategorizavimas:
-Priskirk kiekvienai užklausai category pagal landing page path:
-/produkto-kategorija/<X>/ → X; /parduotuve/... → product; kita → blog.
-Ir action_type: jei landing = kategorijos puslapis → onpage;
-jei landing = blog įrašas arba tinkamo puslapio nėra → content;
-jei puslapis geras, bet pozicija 8–15 → links (vidinės nuorodos).
+ŽINGSNIS 2 — Merge į question_bank_master.json (NE naujas failas):
+Kiekvieną užklausą dedup'ink pagal text prieš esamus 5889 įrašus.
+Naujiems: {text, source:["gsc_5_15"], gsc_impressions, gsc_position,
+landing_page, ar_jau_matuojamas:false}. Esamiems (pvz., iš GSC 167 šaltinio) —
+papildyk source ir gsc_position/landing_page laukus. Prieš rašymą — backup
+kopija; po rašymo parodyk diff santrauką (kiek naujų, kiek papildytų).
 
-ŽINGSNIS 3 — Lentelė:
-shared_state.db sukurk seo_opportunities(keyword PK, page, category, position,
-impressions, clicks, action_type, status DEFAULT 'new', added_at, last_position,
-last_checked). Supilk žingsnio 1–2 duomenis.
+ŽINGSNIS 3 — Klasifikacija per recommend.py:
+Paleisk kokybes-auditas tools/recommend.py ant atnaujinto bank'o (read-only).
+Lauktina: dauguma 5–15 → TAISYTI (turinys yra, trūksta citabilumo:
+Trumpai: blokas, palyginimo lentelė, DUK+FAQPage schema); be landing → RAŠYTI.
 
-ŽINGSNIS 4 — Jungtis į blog pipeline (TIK eilė, ne logika):
-Išsiaiškink, iš kur blog_agent.py ima keyword'us (frontier.db / config eilė).
-Top 10 action_type='content' užklausų įrašyk į tą eilę su žyma
-source='seo_opportunities', status='queued'. NEPUBLIKUOK nieko pats — pipeline
-su savo QA padarys savo darbą įprasta tvarka.
+ŽINGSNIS 4 — Pasiūlymas owner'iui (NE vykdymas):
+Pagal VYKDYMAS.md procesą suformuok top-10 TAISYTI sąrašą su: keyword,
+puslapis, pozicija, impressions, konkretus citabilumo darbas, kaina (LLM
+kaštai draft'ui). Įtrauk jau GO gavusį taikinį „koks geriausias čiužinys
+lietuvoje" (#4, AIO cituoja konkurentus) kaip #1 — jam draft'ą daryk iškart.
 
-ŽINGSNIS 5 — Savaitinis matavimas:
-Naujas scripts/seo_opportunities_weekly.py (pagal local_visibility_weekly.py
-šabloną): pirmadieniais 07:15 atnaujina last_position visiems sekamiems
-keyword'ams iš GSC (7 d. langas), Telegram žinutėje (toje pačioje pirmadienio
-suvestinėje) prideda bloką: top 3 pagerėjimai, top 3 kritimai, kiek užklausų
-top3 zonoje. Cron eilutė BE jokių raktų (GSC auth — per esamą mechanizmą).
+ŽINGSNIS 5 — Verifikacija:
+(a) question_bank_master.json count prieš/po + backup egzistuoja,
+(b) recommend.py output klasės pasiskirstymas, (c) taikinio #1 draft
+(TIK draft statusu WP), (d) top-10 pasiūlymo lentelė owner'iui.
 
-ŽINGSNIS 6 — Verifikacija (išoriniai įrodymai):
-(a) JSON failas su >=20 užklausų, (b) SELECT COUNT(*) iš seo_opportunities,
-(c) blog eilėje matosi 10 įrašų su source='seo_opportunities',
-(d) crontab -l rodo 07:15 eilutę, (e) rankinis seo_opportunities_weekly.py
-paleidimas praeina be klaidų. Parodyk visus 5.
-
-PABAIGOJE: grąžink man top-30 užklausų lentelę (keyword, category, position,
-impressions, action_type) — ją perduosim strateginiam planui.
+GELEŽINĖS: jokio auto-publish; business faktai tik iš owner; draudžiami
+premium/exclusive/Italijos dizaineriai/geriausi pasaulyje; matavimų
+nepaleidinėti (savaitinis ciklas jau yra, kaštų taisyklė ≤1 €/parą).
 ```
-
-Gavus top-30 lentelę → grąžinti į claude.ai/code sesiją: ten daromas
-kategorijų prioritetų planas, turinio briefai ir on-page rekomendacijos.
