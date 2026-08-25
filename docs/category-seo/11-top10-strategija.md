@@ -13,9 +13,14 @@ wai_calc.py). Klasifikacija atlikta skaidria VPS euristika (dedikuotas turinio
 puslapis → TAISYTI; kategorija/homepage/tag → RAŠYTI). Grąžinti šį faktą į
 kokybes-auditas sesiją, kad ledgeris atitiktų realybę.
 
-REKOMENDACIJA (laukia owner GO): formalizuoti euristiką kaip
-`kokybes-auditas/tools/recommend.py` — deterministinis, be LLM kaštų, kad
-klasės būtų stabilios savaitė iš savaitės ir atitiktų kanoninį aprašą.
+✅ IŠSPRĘSTA (2026-08-25, owner GO): `tools/recommend.py` v1.0 sukurtas ir
+commit'intas (kokybes-auditas b7ac7d1). Deterministinis, read-only (MD5
+patikra prieš/po), output → reports/recommend.json (negit'inamas).
+Rezultatas ant 5971 bank'o: 178 kvalifikuoja (64 TAISYTI / 114 RAŠYTI).
+Skirtumas nuo rankinės analizės (191/71/120) — merge paliko senesnes
+gsc_impressions reikšmes esamiems įrašams. Divergence su kanoniniu kontekstu
+UŽDARYTA. Patvirtinta: recommend.py grandinė izoliuota nuo blog pipeline /
+orchestratoriaus — integracija tik su atskiru owner GO.
 
 ## Prioritetų logika: € tikslas > srautas
 
