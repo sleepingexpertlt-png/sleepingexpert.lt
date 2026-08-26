@@ -12,6 +12,18 @@ Pasekmė: potencialiai VISI postai su schema post_content viduje (standartinis
 blog_agent.py būdas) turi sugadintą schemą live'e. Tai paaiškintų, kodėl
 struktūruotas turinys yra, o AIO/AI citavimas žemas.
 
+## SKENO REZULTATAI (2026-08-26, VPS): 349 items, 1447 blokų, 98.2 % validūs
+
+- **A klasė (5 psl., 16 blokų):** <script> žyma DINGSTA render metu, JSON tampa
+  MATOMU tekstu lankytojui su lenktomis kabutėmis. Paveikti: 16084 (pos 4.58!),
+  klaidos-renkantis, lova-spintoje, kaip-daznai-keisti-patalyne, vesinantys.
+  Fix: mu-plugin (bet turi spręsti ir TAG STRIPPING, ne vien texturize).
+- **B klasė (10 psl., 10 blokų):** žyma sveika, bet JSON sintaksės klaidos iš
+  GENERAVIMO laiko (neescape'intos kabutės LT tekste, control chars; vienas —
+  visiškai tuščias). Šaknis: blog_agent.py schema statoma string'ais, ne
+  json.dumps. Fix: generatoriuje + 10 psl. schema regeneravimas.
+- 1421 blokai sveiki — fix'ai privalo jų nesugadinti (regresijos patikra).
+
 ## Rekomenduota veiksmų seka (svarbi tvarka!)
 
 1. **Read-only skenas VISIEMS publikuotiems postams:** fetch rendered HTML →
