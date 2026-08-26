@@ -11,6 +11,30 @@
 
 ---
 
+## 0. Kas rasta gyvai puslapyje (2026-08-26)
+
+Savininkas atsiuntė, ką rodo produkto puslapis. Patvirtinti radiniai:
+
+| Laukas | Būsena |
+|---|---|
+| Pavadinimas | ✅ „Vaikiška lova Teddy“ — teisingas |
+| Aprašymas | 🔴 tebėra **originalo (Nico)** tekstas: „vertikalios siūlės“, „ištraukiamas gultas su čiužiniu“, „šoninė apsauga (papildomai)“ |
+| Kaina | 700,00 € |
+| Finansavimas | Esto, 3 lygiomis dalimis per 3 mėn. |
+| Auto nuorodų blokas | ⚠️ „📖 Skaitykite daugiau: Lovatiešė lovai 160×200 \| Triaukste Lova…“ — nesusijusios nuorodos, tekstas nukirstas |
+
+**Produktas kopijuotas iš „Vaikiška lova Nico“.** Todėl paveldėti ne tik slug/SKU/kategorijos, bet ir visas aprašymas.
+
+⚠️ **Neatsakytas klausimas:** ar Teddy turi ištraukiamą gultą ir šoninę apsaugą? Gamintojo tekste (PL)
+jų NĖRA — minimas tik modulinis apmuštas galvūgalis, 7 Sandu spalvos ir patalynės dėžė. Žemiau esantis
+aprašymas parašytas BE ištraukiamo gulto. Jei Teddy jį turi — aprašymą reikia papildyti.
+
+**Bandymas per Hermes master_run (2026-08-26 ~16:20):** iškvietimas nutrūko po 60 s (MCP timeout),
+activity feed nerodė nei master_run, nei shop agento įrašų, o puslapyje aprašymas liko Nico.
+Išvada: pipeline turinio neperrašė. Naudoti `scripts/wp-update-teddy.py`.
+
+---
+
 ## 1. URL / slug
 
 ```
