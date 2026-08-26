@@ -4,9 +4,28 @@ Parašyta po Gemini 403 incidento, kur owner 6 val. buvo kurjeris tarp dviejų a
 
 ## 1. Tikslas
 
-**Verslo:** daugiau maršrutų (directions) į 3 salonus ir WC užsakymų — R-028 KPI;
-skambučiai NĖRA KPI. Svertai: GBP kategorijos/atsiliepimai, GSC 5–15 zona, AI
-citavimas.
+**PAGRINDINIS (terminas 2026-10-24, 60 d. ciklas nuo 08-25):**
+maršrutai (directions) į salonus **+30 % bent 2 iš 3 parduotuvių**.
+
+| Salonas | Bazė 7 d. (08-25) | Tikslas 7 d. |
+|---|---|---|
+| Klaipėda | 13 | 17 |
+| Ukmergė | 13 | 17 |
+| Vilnius | 8 | 10 |
+| **Viso** | **34** | **44** |
+
+**ANTRINIS (tas pats terminas):** iš GSC 5–15 zonos bent **3 komerciniai
+raktažodžiai** įkopia į top 5. Pradinės pozicijos: spyruokliniai 4.58,
+„kur pirkti" 5.6, pagalvės, alergiškiems, užvalkalas.
+
+**Stebimi, bet ne tikslas:** WC užsakymai (11 per 7 d. — imtis per maža
+patikimam 60 d. pokyčiui). Skambučiai — NE KPI (R-028).
+
+**Filtras kiekvienam darbui:** jei veiksmas nedirba nė vienam iš šių dviejų
+skaičių — jis antraeilis. Naujų blog postų tempas jiems tiesiogiai nedirba;
+todėl T2 (taisyti > rašyti) ir 1 banga yra pirmiau už pipeline apimtį.
+
+Svertai: GBP kategorijos/atsiliepimai/nuotraukos, GSC 5–15 zona, AI citavimas.
 
 **Sisteminis:** veikti be kasdienio owner dalyvavimo. Matas —
 **owner intervencijų skaičius per savaitę**. Jei jis auga, sistema degraduoja,
