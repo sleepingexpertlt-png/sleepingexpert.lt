@@ -18,10 +18,19 @@ struktūruotas turinys yra, o AIO/AI citavimas žemas.
   MATOMU tekstu lankytojui su lenktomis kabutėmis. Paveikti: 16084 (pos 4.58!),
   klaidos-renkantis, lova-spintoje, kaip-daznai-keisti-patalyne, vesinantys.
   Fix: mu-plugin (bet turi spręsti ir TAG STRIPPING, ne vien texturize).
-- **B klasė (10 psl., 10 blokų):** žyma sveika, bet JSON sintaksės klaidos iš
-  GENERAVIMO laiko (neescape'intos kabutės LT tekste, control chars; vienas —
-  visiškai tuščias). Šaknis: blog_agent.py schema statoma string'ais, ne
-  json.dumps. Fix: generatoriuje + 10 psl. schema regeneravimas.
+- **B klasė (10 psl.):** PATIKSLINTA ŠAKNIS (mano json.dumps hipotezė buvo
+  klaidinga): blog_agent.py „Auto-boost internal links" (~4930 eil.) įterpia
+  <a href> į VISĄ content, įskaitant anksčiau (4602–4866 eil.) pridėtus JSON-LD
+  blokus — nuoroda įkrenta į JSON string reikšmę ir sulaužo sintaksę.
+  ✅ FIX: script-blokų placeholder apsauga prieš auto-link (įdiegta, patikrinta
+  atkartojant tikslų korupcijos atvejį). Puslapiai: 9/10 sutaisyti su backup,
+  paskutinis (miego-architektura, TinyMCE šiukšlės) atkuriamas.
+- **A klasės BLOKERIS:** VPS neturi hostingo FS/SSH prieigos (svetainė kitame
+  serveryje už Cloudflare; tik WP REST API) → mu-plugin agentas įdiegti negali.
+  Keliai: (1) owner įdiegia mu-plugin ranka (precedentas: se-gcr-optin.php
+  2026-08-04), (2) REKOMENDUOJAMA — schema perkelti iš post_content į RankMath
+  meta/wp_head kelią, kuris the_content filtrų grandinę apeina (įrodyta:
+  RankMath sitewide schema renderinasi be klaidų).
 - 1421 blokai sveiki — fix'ai privalo jų nesugadinti (regresijos patikra).
 
 ## Rekomenduota veiksmų seka (svarbi tvarka!)
