@@ -1,4 +1,28 @@
-# Kritinis radinys: JSON-LD texturize bug + queue saugumo sprendimas (2026-08-26)
+# Kritinis radinys: JSON-LD bug — ✅ UŽDARYTA 2026-08-26
+
+## FINALAS: 1456/1456 validūs, 0 broken, 0 matomo JSON (visi 349 items)
+
+- **B klasė 10/10** pataisyta (3 korupcijos variantai; šaknis — auto-link
+  rašė <a> į JSON; fix blog_agent.py su script-block apsauga, patikrintas
+  reprodukciniu testu).
+- **A klasė 5/5** pataisyta. GALUTINĖ diagnozė (dvi ankstesnės — filtrai,
+  texturize — buvo klaidingos): raw DB turinys apskritai NETURĖJO <script>
+  apvalkalo — generatorius/autorius jį pamiršo. Jokio mu-plugin nereikėjo,
+  viskas per REST. Pasekmė mano ankstesnei rekomendacijai: schema
+  post_content viduje su TVARKINGU apvalkalu yra OK — migracija į RankMath
+  meta nebėra būtina, tik pasirinktina ateities tvarkai.
+- **Prevencija:** te45 kriterijus site_scorer.py + check_jsonld_daily.py
+  (kasdien 05:00, Telegram alert) — commit 948baf9 kokybes-auditas repo.
+  Tokia klaida nebegali tyliai gyventi ilgiau nei parą.
+
+Likę atviri (smulkūs): Rich Results Test 16084 (owner ranka); „n" bug'as po
+</h1> (≥2 psl., netirta); recommend.py --source necommit'intas;
+criteria_registry formatavimo triukšmas commit'e; client secret rotacija
+(atidėta iki ~10-24).
+
+---
+(žemiau — istorinė analizės eiga)
+
 
 ## 🔴 RADINYS #1 — tikėtina „ai_discovery 0/6" šaknis
 
