@@ -88,3 +88,33 @@ Ką lokacijų puslapiuose tikrinti: ar maršruto mygtukas matomas be scroll'o,
 ar yra darbo laikas/telefonas/adresas struktūruotai, LocalBusiness JSON-LD,
 ar yra atsakymai į „ką galiu išbandyti vietoje", ar yra nuoroda į GBP profilį,
 ar puslapis atsako į klausimą, su kuriuo AI žmogų atsiuntė.
+
+---
+
+## 2026-08-27: P-064 patikra pagal owner'io pateiktą GBP profilį
+
+Owner pateikė pilną Vilniaus GBP profilio turinį. Patikra prieš P-064:
+
+| Elementas | Būsena | Vertinimas |
+|---|---|---|
+| Pagrindinė kategorija | **„Čiužinių parduotuvė"** | ✅ **SUTVARKYTA** — atitinka auditą (07-gbp-reitingo-svertai.md:13) |
+| Antrinės kategorijos | Lovų / Patalynės / Miegamojo baldų parduotuvė | ✅ tiksliai kaip planuota |
+| **Paslaugų sritis** | **„Litwa / Łotwa / Estonia"** | 🔴 **VIS DAR LENKIŠKAI + neteisinga** |
+| Aprašas | LT, mini ir Klaipėdą, ir Ukmergę | ⚠️ kryžminis skiedimas |
+| Telefonas | „(0-630) 70001" | ⚠️ NAP formatas nesutampa su svetaine |
+| Atidarymo data | tuščia | ⚠️ pilnumo signalas |
+| **Produktai** | **0** | 🔴 didžiausia neišnaudota vieta profilyje |
+| Stovėjimo aikštelė | „Nemokama stovėjimo aikštelė" | ✅ **realus GBP atributas** — lokacijų puslapių teiginys teisėtas, įspėjimas 03-publikavimo-eile.md uždaromas |
+
+**Išvada dėl P-064:** kategorijos dalis UŽDARYTA (data 08-27). Lieka
+kalbos dalis — paslaugų sritis. Pirmadienio patikroje Vilniaus maršrutų
+pokytis turi būti skaitomas kaip kategorijos + lokacijos puslapio efektas
+kartu, ne atskirai — abu pakeitimai įvyko tą pačią dieną.
+
+### Kodėl „Łotwa / Estonia" yra ne tik kalbos klaida
+
+Paslaugų sritis su Latvija ir Estija siunčia Google signalą, kad
+aptarnaujam šalis, kuriose neturim nei salono, nei pristatymo pažado.
+Fizinei parduotuvei, į kurią klientas ateina, paslaugų sritis apskritai
+nebūtina — o klaidinga sritis skiedžia vietinį relevantiškumą Vilniuje.
+Tai tiesiogiai liečia pirminį tikslą (maršrutai į Vilniaus saloną).
