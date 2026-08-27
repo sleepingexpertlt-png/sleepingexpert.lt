@@ -66,3 +66,13 @@ K8. **Draft yra būsimas viešas puslapis, ne užrašų lapelis.** Vidinės past
 
 K7. **Owner laikas — brangiausias resursas.** Jei sprendimas reikalauja iš owner
     daugiau nei vieno veiksmo, sprendimas suprojektuotas blogai.
+
+K9. **Nekomitintas skriptas su vykdymo teise = nematoma skylė.**
+    2026-08-27: `queue_watcher.sh` (paleidžia užduotis headless, be žmogaus)
+    egzistavo tik serveryje ir NIEKADA nebuvo git'e — todėl niekas jo neperžiūrėjo.
+    Kartu `sync_repo.sh` kas 15 min. darė `git pull` į tą patį katalogą, kurį
+    watcher laikė „patvirtintu". Rezultatas: bet koks commit'as iš bet kur būtų
+    pasileidęs per valandą. Skylė buvo GYVA, kai vakar vetavom mano dizainą kaip
+    „standing backdoor" — vetas buvo teisingas, bet skylė jau egzistavo kitoje vietoje.
+    Taisyklė: bet kas, kas turi teisę vykdyti, privalo gyventi git'e ir būti peržiūrėtas.
+    Uždaryta commit'u 6dbbb7e5 (queue v2: pending/ + owner approve + autorių allowlist).
