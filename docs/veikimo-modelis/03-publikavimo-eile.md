@@ -3,7 +3,7 @@
 Visas šios savaitės turinys guli draft'uose. Publikuoja TIK owner (geležinė
 taisyklė). WP admin → kiekviena nuoroda → peržiūra → Atnaujinti/Publikuoti.
 
-## 1. Lokacijų puslapiai (PRIORITETAS — 32 % AI srauto, veda į maršrutus)
+## 1. Lokacijų puslapiai — ✅ PUBLIKUOTA (owner, 2026-08-27)
 
 | Puslapis | Nuoroda | Pastaba |
 |---|---|---|
