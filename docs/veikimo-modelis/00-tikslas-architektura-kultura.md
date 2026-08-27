@@ -105,3 +105,22 @@ K12. **Spec su placeholder'iu vertės elemente = suplanuotas thin content.**
      ar duomenys realiai pasiekiami sistemoje (WooCommerce, esami puslapiai,
      GBP). Jei ne — arba kitas vertės šaltinis, arba puslapis nedaromas.
      Pilnas auditas: docs/veikimo-modelis/04-auditas-banga1-thin-content.md
+
+### K13 — prieigos klausiam VPS, ne trečių šalių konektoriaus
+
+**2026-08-27, owner:** „TIESIAI TURI PASIJUNGIMUS NE PER WINDSOR!!! ĮSIRAŠYK"
+
+Klaida: pasakiau owner'iui „prie GBP neturiu rašymo prieigos", nes
+Windsor konektorių sąraše nebuvo `google_my_business` paskyros. Tai
+neteisinga išvada iš neteisingos vietos.
+
+Windsor yra tik vienas iš kelių. **Tikrosios prieigos gyvena VPS'e**
+(Hermès infrastruktūra: servisiniai raktai, OAuth, tiesioginiai API
+klientai). Šis repo yra tik dokumentai — jame integracijų kodo nėra ir
+nebus, todėl repo tyla apie prieigą nieko neįrodo.
+
+Taisyklė: prieš sakant „neturiu prieigos prie X", privaloma paklausti
+VPS agento, kokios tiesioginės X prieigos jau egzistuoja. „Nėra Windsor
+konektoriaus" ≠ „nėra prieigos". Pasakyti owner'iui, kad kažko negalima,
+neturint VPS patvirtinimo — tai to paties tipo klaida kaip K10
+(nepatikrintas „padaryta").
