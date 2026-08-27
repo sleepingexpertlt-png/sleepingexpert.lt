@@ -84,3 +84,15 @@ K10. **Nepatikrintas „padaryta" yra ne padaryta.** 2026-08-27: 3 lokacijų
      nepriklausomo patikrinimo (live HTML arba API readback), ne po pranešimo.
      Techninė pamoka: turinį tiekti kaip revision/draft, ne autosave —
      autosave reikalauja atskiro atkūrimo žingsnio, kurio žmogus nemato.
+
+K11. **Thin content niekada neteikiamas peržiūrai.** 2026-08-27: B1 (#24373)
+     buvo pateiktas owner publikavimui su vien intro + DUK — palyginimo lentelė,
+     kuri ir yra to puslapio unikali vertė, liko neužpildyta (nurodymas užpildyti
+     iš WooCommerce nebuvo įvykdytas, o placeholder'is pašalintas pagal K8).
+     Rezultatas: SEO 7/100, tuščias puslapis, tiksliai toks, kokius baudžia
+     2026-08 spam update.
+     Taisyklė: jei trūksta pagrindinio vertės elemento — puslapis LIEKA draft'e
+     ir apie tai pranešama AIŠKIAI. Niekada nepateikiamas kaip „paruošta".
+     Ir: „paruošta" reikalauja TURINIO kokybės patikros (ar yra lentelė, ar yra
+     konkretūs skaičiai), ne tik ID + statuso readback. Tai K10 išplėtimas —
+     ta pati klaida pasikartojo trečią kartą per vieną dieną.
