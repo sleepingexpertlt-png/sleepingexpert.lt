@@ -3,64 +3,26 @@
 Visas šios savaitės turinys guli draft'uose. Publikuoja TIK owner (geležinė
 taisyklė). WP admin → kiekviena nuoroda → peržiūra → Atnaujinti/Publikuoti.
 
-## 1. Lokacijų puslapiai — ⚠️ DAR NEGYVI (patikrinta 2026-08-27)
+## 1. Lokacijų puslapiai — ✅ GYVI IR PATIKRINTI (2026-08-27, VPS readback)
 
-Owner paspaudė „Atnaujinti", bet autosave versijos nebuvo ATKURTOS — WP
-išsaugojo tai, kas buvo redaktoriaus lauke (senas turinys). Live puslapiuose
-maršruto mygtuko nėra (owner patvirtino vizualiai; VPS patvirtino
-byte-for-byte, kad turinys nepakito).
+| Puslapis | Naujas turinys | Maršruto mygtukas | DUK | JSON-LD | Mojibake |
+|---|---|---|---|---|---|
+| Vilnius 12434 | ✅ | ✅ | ✅ | ✅ FAQPage + FurnitureStore | nėra |
+| Klaipėda 12438 | ✅ (perdaryta) | ✅ | ✅ | ✅ | nėra |
+| Ukmergė 12440 | ✅ (pataisyta) | ✅ | ✅ | ✅ | nėra |
 
-**Pamoka (K10): „Atnaujinti" ≠ autosave atkūrimas.** Autosave yra atskira
-versija šalia; ją reikia PIRMA atkurti per geltoną juostelę „Atkurti šią
-automatinę versiją", ir tik tada spausti Atnaujinti. Ateityje turinį tiekti
-kaip įprastą revision arba draft, ne autosave — autosave reikalauja žingsnio,
-kurio žmogus nemato.
+**Klaipėdos tikroji priežastis (ne restore klaida):** jos autosave NIEKADA
+neturėjo naujo turinio — buvo senas šablonas (location-page, ne v2), su
+neatitinkančiais DUK tarp HTML ir JSON-LD, sena Place+BreadcrumbList schema
+ir sulaužyta telefono nuoroda `href="http://+37060240202"` (rodė KITĄ numerį
+nei matomas tekstas). Atkurti nebuvo ko — perdaryta iš generavimo skripto.
 
-| Puslapis | Nuoroda | Pastaba |
-|---|---|---|
-| Vilnius (12434) | /wp-admin/post.php?post=12434&action=edit | autosave 12436 |
-| Klaipėda (12438) | /wp-admin/post.php?post=12438&action=edit | autosave 24372 |
-| Ukmergė (12440) | /wp-admin/post.php?post=12440&action=edit | autosave 19031 |
+**K8 pažeidimas buvo GYVAS:** Ukmergės puslapyje viešai matėsi
+`[OWNER FAKTAS — atsakymas dar nepatvirtintas...]`. Jį įnešė pats
+`build_location_drafts.py`, o owner restore iškėlė į live. Pašalintas pagal
+K8 (nėra atsakymo → blokas šalinamas, ne rodomas su žyma).
 
-Redaktoriuje viršuje bus autosave/revision pranešimas — peržiūrėti skirtumus,
-atstatyti, Atnaujinti.
+**Pastaba dėl dokumentų:** `docs/hermes-local/08-lokaciju-puslapiu-turinys.md`
+gyvena ŠIAME repo (sleepingexpert.lt), ne frontier-agent repo — todėl VPS jo
+`find` nerado. Ateityje nuorodas VPS'ui duoti kaip raw URL, ne kaip kelią.
 
-## 2. 1 bangos puslapiai (GSC 5–15 → top 5)
-
-| # | Tema | ID |
-|---|---|---|
-| B1 | Spyruokliniai čiužiniai | 24373 |
-| B2 | Kur pirkti čiužinį internetu | 24374 |
-| B3 | Pagalvės (esamas 10908) | autosave 24377 |
-| B4 | Čiužinys alergiškiems | 24375 |
-| B5 | Užvalkalas 160x200 | 24376 |
-| B7 | Kategorijų intro PASIŪLYMAS | 24378 (skaityti, intro perkelti ranka — taksonomija draft'ų neturi) |
-
-## 3. Blog draft (nuo 08-25)
-
-- „Koks geriausias čiužinys Lietuvoje" — 24326 → Publikuoti.
-
-## ⚠️ Owner patikrinimas PRIEŠ lokacijų publikavimą
-
-VPS radinys: visi 3 LIVE lokacijų puslapiai jau dabar teigia „nemokama
-automobilių aikštelė" / „nemokama 2 val." — ir tekste, ir Place JSON-LD
-(amenityFeature). GBP šio fakto nepatvirtina (API lauko nėra). Tai buvo
-puslapiuose PRIEŠ mūsų darbą. **Patikrinti su PC Baldų Rojus / PC HELIOS /
-Ukmergės vieta, ar parkavimo sąlygos tebegalioja** — klaidingas pažadas
-puslapyje, į kurį AI siunčia žmones, kainuoja pasitikėjimą.
-
-## Atviri [OWNER FAKTAS] (atsakius, VPS užpildys prieš/po publikavimo)
-
-1. Pristatymo terminai (dienos)
-2. Grąžinimo sąlygos
-3. 0 % finansavimo sąlygos (partneris, terminas)
-4. Ar dėmės ant čiužinio naikina garantiją
-5. Ar pristatot į Ukmergės rajoną
-6. Ar keisti /geriausios-pagalves-2025/ URL į be metų / 2026
-
-## Būsena po šio prisėdimo
-
-Publikavus 1–3: visa savaitės produkcija gyva — 3 lokacijos (pagrindinis
-tikslas), 5+1 puslapiai (antrinis), 1 blog postas. Poveikio matavimas —
-savaitinėje pirmadienio patikroje (maršrutai vs bazė 34, Vilnius stebimas
-atskirai).
