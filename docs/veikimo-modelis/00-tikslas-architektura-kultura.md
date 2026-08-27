@@ -76,3 +76,11 @@ K9. **Nekomitintas skriptas su vykdymo teise = nematoma skylė.**
     „standing backdoor" — vetas buvo teisingas, bet skylė jau egzistavo kitoje vietoje.
     Taisyklė: bet kas, kas turi teisę vykdyti, privalo gyventi git'e ir būti peržiūrėtas.
     Uždaryta commit'u 6dbbb7e5 (queue v2: pending/ + owner approve + autorių allowlist).
+
+K10. **Nepatikrintas „padaryta" yra ne padaryta.** 2026-08-27: 3 lokacijų
+     puslapiai buvo pažymėti kaip publikuoti remiantis owner žodžiu „atnaujinau",
+     o realiai turinys liko autosave versijoje ir į live nenuėjo. Aš tai įrašiau
+     į repo kaip faktą be patikros. Taisyklė: statusas keičiamas tik po
+     nepriklausomo patikrinimo (live HTML arba API readback), ne po pranešimo.
+     Techninė pamoka: turinį tiekti kaip revision/draft, ne autosave —
+     autosave reikalauja atskiro atkūrimo žingsnio, kurio žmogus nemato.

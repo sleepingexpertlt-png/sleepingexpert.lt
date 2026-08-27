@@ -3,7 +3,18 @@
 Visas šios savaitės turinys guli draft'uose. Publikuoja TIK owner (geležinė
 taisyklė). WP admin → kiekviena nuoroda → peržiūra → Atnaujinti/Publikuoti.
 
-## 1. Lokacijų puslapiai — ✅ PUBLIKUOTA (owner, 2026-08-27)
+## 1. Lokacijų puslapiai — ⚠️ DAR NEGYVI (patikrinta 2026-08-27)
+
+Owner paspaudė „Atnaujinti", bet autosave versijos nebuvo ATKURTOS — WP
+išsaugojo tai, kas buvo redaktoriaus lauke (senas turinys). Live puslapiuose
+maršruto mygtuko nėra (owner patvirtino vizualiai; VPS patvirtino
+byte-for-byte, kad turinys nepakito).
+
+**Pamoka (K10): „Atnaujinti" ≠ autosave atkūrimas.** Autosave yra atskira
+versija šalia; ją reikia PIRMA atkurti per geltoną juostelę „Atkurti šią
+automatinę versiją", ir tik tada spausti Atnaujinti. Ateityje turinį tiekti
+kaip įprastą revision arba draft, ne autosave — autosave reikalauja žingsnio,
+kurio žmogus nemato.
 
 | Puslapis | Nuoroda | Pastaba |
 |---|---|---|
