@@ -55,3 +55,51 @@ vertė) ir E-E-A-T. Net 20 klausimų sąrašas vertingesnis už pirktą įrankį
 - Jei kuris šaltinis neprieinamas — pasakyti, neapeiti tyliai (K4).
 - Raktažodžių NEKELTI į topic_bank automatiškai — pirma owner peržiūra
   (T2: tempas pagal paklausą, ne pagal pajėgumą).
+
+---
+
+## REZULTATAI (VPS, 2026-08-27) — pilna ataskaita: `data/keyword_gap_report_2026-08-27.md`
+
+| Šaltinis | Kiekis |
+|---|---|
+| GSC (impressions ≥3) | 1179 frazių iš 2382 |
+| — long tail (≥4 žodžiai) | 152 |
+| — spragos (atsako tik homepage) | 79 (1 klaidingai teigiamas — brand) |
+| **Vidinė paieška** | **499 terminų — LOGINA, GO nereikėjo** |
+| Elmo | 111 |
+| **Sujungta unikalių** | **1675, iš jų 53 aukšto prioriteto (≥2 šaltiniai)** |
+
+### Top 3 prioritetai 2 bangai
+
+1. **Čiužinys alergiškiems / didelio svorio žmonėms** — 307 impr., svorio tema
+   NEDENGTA. Tai patvirtina owner įžvalgą: svoris = individualiausias kriterijus,
+   dėl kurio einama konsultuotis, ir mes į jį neatsakom niekur.
+2. **„Kur pirkti / kaina / pigiausia čiužinį internetu LT"** klasė — >1200 impr.
+   sudėjus variantus, krenta į kategoriją/homepage, nėra dedikuoto gido.
+   **B2 draft #24374 jau parašytas šia tema** — greičiausias laimėjimas.
+3. Rankų darbo medinės lovos — 134 impr., nišinė.
+
+### Artefaktas
+
+Kelios top frazės turi uodegą „in lithuania?" — panašu į AI-asistento
+performuluotas užklausas GSC duomenyse, ne tikrą vartotojo įvestį. Temą imti
+pagal pagrindinį lietuvišką klausimą, frazių NEKOPIJUOTI pažodžiui.
+
+## IŠVADA: parinkimo įrankis vietoj straipsnių
+
+Owner: *„4 tai labai individualu — dėl to ateina konsultuotis pas pardavėjus."*
+
+Duomenys tai patvirtina. Individualių klausimų nepaversi raktažodžiais, bet
+juos dabar žmonės užduoda AI vietoj to, kad ateitų į saloną. Sprendimas — ne
+straipsnis kiekvienam atvejui, o **parinkimo įrankis**: svoris + miego poza +
+problema → rekomendacija + „išbandyk salone".
+
+Kodėl tai teisingas formatas:
+- padengia šimtus individualių derinių vienu puslapiu
+- unikalu (logika gimė iš 600+ modelių ir 3 salonų patirties)
+- struktūruota → tokį turinį AI ir cituoja
+- pabaigoje vis tiek veda į saloną → dirba PAGRINDINIAM tikslui (maršrutai)
+
+Iš owner reikia ne klausimų sąrašo, o **sprendimo logikos**: pagal ką pardavėjas
+renkasi (svoris → kietumo klasė; poza → aukštis; nugaros skausmas → ...;
+prakaitavimas → ...; po operacijos → ko vengti). ~10–15 taisyklių, ne šimtai atvejų.
