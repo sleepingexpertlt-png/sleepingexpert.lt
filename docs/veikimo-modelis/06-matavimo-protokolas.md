@@ -1,0 +1,35 @@
+# Matavimo protokolas — kada galima sakyti „krenta"
+
+Priežastis: 2026-08-27 visą dieną teigiau „maršrutai krenta −6 %".
+Realiai tai buvo 08-26 vakarinio ir 08-27 rytinio matavimo atimtis
+7 dienų slenkančiame lange. Neįrodyta. K10 pažeidimas skaičiams.
+
+## Taisyklės
+
+**M1. Fiksuotas laikas.** Maršrutai (`salon_signal`) fiksuojami kartą per
+parą, **07:30 vietos laiku**, iš to paties šaltinio. Kitu paros metu paimtas
+skaičius į eilutę nerašomas — tik informacijai.
+
+**M2. Snapshot senumas rodomas visada.** Cituojant skaičių privaloma
+nurodyti `last_updated`. Jei senesnis nei 30 val. — skaičius negalioja
+sprendimams.
+
+**M3. Trendas reikalauja 7 taškų.** Jokio „krenta" / „auga" / „%" teiginio,
+kol nėra 7 dienų iš eilės tuo pačiu laiku. Iki tol tik: „šiandien X,
+bazė Y, imtis per maža išvadai".
+
+**M4. 7 d. slenkantis langas ≠ paros rodiklis.** `directions_7d` keitimasis
+per parą yra vienos dienos įėjimas minus vienos dienos išėjimas. ±3 čia yra
+normalus svyravimas, ne signalas.
+
+**M5. Bazė užšaldyta.** Bazė = 34 (2026-08-26). Ji nekeičiama ir
+neperskaičiuojama. Tikslas = 44 iki 2026-10-24.
+
+## Eilutė (pildoma tik 07:30 matavimais)
+
+| Data | Laikas | Klaipėda | Ukmergė | Vilnius | Viso | WC 7d | Snapshot amžius |
+|---|---|---|---|---|---|---|---|
+| 08-26 | — | 13 | 13 | 8 | 34 | 11 | bazė |
+| 08-27 | 07:20 | 13 | 13 | 6 | 32 | 8 | 0,2 val. |
+
+Išvada apie trendą galima nuo **09-02** (7 taškai).
