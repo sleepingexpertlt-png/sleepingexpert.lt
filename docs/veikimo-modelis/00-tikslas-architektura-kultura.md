@@ -58,5 +58,11 @@ K5. **TAISYTI > RAŠYTI.** Išsemtas temų bankas = teisingas „ne", ne bug'as
     (žr. T2 spam-update vadovėlyje).
 K6. **Klaida taisoma iškart, be gynybos.** Šioje sesijoje: 3 klaidingos diagnozės
     ir 1 klaidingas nurodymas VPS'ui — kiekvieną kartą greičiau pripažinti.
+K8. **Draft yra būsimas viešas puslapis, ne užrašų lapelis.** Vidinės pastabos,
+    „laukiama duomenų" žymos, [OWNER FAKTAS] ir bet koks darbinis tekstas
+    NIEKADA nepatenka į `post_content`. Jei duomenų nėra — blokas ar klausimas
+    iš puslapio ŠALINAMAS, o ne rodomas su technine žyma. WP įrašų vidiniam
+    darbui ar pasiūlymams nekurti (incidentas 2026-08-27, įrašas 24378).
+
 K7. **Owner laikas — brangiausias resursas.** Jei sprendimas reikalauja iš owner
     daugiau nei vieno veiksmo, sprendimas suprojektuotas blogai.
