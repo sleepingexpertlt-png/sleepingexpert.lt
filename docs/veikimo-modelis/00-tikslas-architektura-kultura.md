@@ -124,3 +124,8 @@ VPS agento, kokios tiesioginės X prieigos jau egzistuoja. „Nėra Windsor
 konektoriaus" ≠ „nėra prieigos". Pasakyti owner'iui, kad kažko negalima,
 neturint VPS patvirtinimo — tai to paties tipo klaida kaip K10
 (nepatikrintas „padaryta").
+
+- **K14** — skambučiai NĖRA metrika. Owner sprendimas 2026-08-01 (G2, R-028)
+  išėmė juos iš North Star. North Star = GBP maršrutai + WC užsakymai.
+  Niekada nekelti `calls=0` kaip radinio ar prioriteto. Tai buvo parašyta
+  `hermes_status` dokumentacijoje — perskaityta ir nepastebėta.

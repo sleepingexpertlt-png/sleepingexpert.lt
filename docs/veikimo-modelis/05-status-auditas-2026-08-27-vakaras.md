@@ -31,22 +31,14 @@ Visą dieną owner'iui kartojau „judam ne ta kryptimi, −6 %". Tai nebuvo
 **Ką reikia:** fiksuotas matavimo laikas kas parą + bent 7 dienų eilutė
 prieš darant išvadą apie trendą. Iki tol jokių „krentam" teiginių.
 
-## RADINYS 2: calls_7d = 0 visuose trijuose salonuose
+## RADINYS 2 — ATŠAUKTAS (owner, 2026-08-27)
 
-| Salonas | Maršrutai | Skambučiai | Impresijos |
-|---|---|---|---|
-| Klaipėda | 13 | **0** | 192 |
-| Ukmergė | 13 | **0** | 260 |
-| Vilnius | 6 | **0** | 329 |
+Buvau įrašęs „calls_7d = 0" kaip radinį. **Tai ne radinys.**
+Owner sprendimas 2026-08-01 (G2, R-028): skambučiai išimti iš North Star.
+Tai net parašyta `hermes_status` dokumentacijoje, kurią pats skaičiau.
 
-Trys parduotuvės, septynios dienos, nulis skambučių iš GBP. `hermes_status`
-dokumentacija pati sako: „warn if calls=0 (potential GBP setup gap)".
-Bet `alert = false`. **Įspėjimas neveikia** — logika neatitinka savo pačios
-specifikacijos.
-
-Arba skambučių sekimas neveikia, arba GBP telefono numeris nesusietas taip,
-kad Google jį skaičiuotų. Vilniuje telefonas įvestas formatu „(0-630) 70001" —
-nestandartinis. Tai kandidatas į priežastį, bet neįrodyta.
+North Star = **GBP maršrutai + WC užsakymai.** Skambučiai — ne metrika,
+niekada nekelti jų kaip problemos. Taisyklė K14.
 
 ## RADINYS 3: pažadų registras meluoja
 
@@ -67,8 +59,7 @@ iš kurio ją traukiu.
 1. **Sutvarkyti pažadų registrą** — kol jis meluoja, kiekvienas prioritetų
    sąrašas bus klaidingas. Tai ne biurokratija, tai duomenų šaltinis.
 2. **Fiksuotas matavimo laikas** maršrutams + 7 dienų eilutė prieš išvadas.
-3. **Ištirti calls = 0** — jei sekimas neveikia, mes nematom pusės piltuvo.
-4. Tik tada — kanibalizacijos auditas ir WC atributai.
+3. Tik tada — kanibalizacijos auditas ir WC atributai.
 
 ## Ko NEBUVO padaryta šiandien (be gražinimo)
 
