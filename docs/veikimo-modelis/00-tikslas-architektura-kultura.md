@@ -96,3 +96,12 @@ K11. **Thin content niekada neteikiamas peržiūrai.** 2026-08-27: B1 (#24373)
      Ir: „paruošta" reikalauja TURINIO kokybės patikros (ar yra lentelė, ar yra
      konkretūs skaičiai), ne tik ID + statuso readback. Tai K10 išplėtimas —
      ta pati klaida pasikartojo trečią kartą per vieną dieną.
+
+K12. **Spec su placeholder'iu vertės elemente = suplanuotas thin content.**
+     2026-08-27: 4 iš 5 pirmos bangos puslapių turėjo unikalios vertės elementą
+     (lentelę arba DUK) pažymėtą `[OWNER FAKTAS]`/`[WC]`. Kartu su K8 (žymos
+     šalinamos) tai GARANTAVO tuščius puslapius — bet kuris vykdytojas būtų
+     gavęs tą patį rezultatą. Prieš rašant turinio spec'ą privaloma patikrinti,
+     ar duomenys realiai pasiekiami sistemoje (WooCommerce, esami puslapiai,
+     GBP). Jei ne — arba kitas vertės šaltinis, arba puslapis nedaromas.
+     Pilnas auditas: docs/veikimo-modelis/04-auditas-banga1-thin-content.md
