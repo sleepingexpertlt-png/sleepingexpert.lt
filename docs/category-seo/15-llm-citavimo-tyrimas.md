@@ -16,6 +16,27 @@ citavimo pattern'as matomas. Iš jos imame **struktūrą, ne turinį**.
 ar tekstą DRAUDŽIAMA. Perkeliame tik atsakymą į klausimą „kokios formos
 puslapiai cituojami" — lentelės, specifikacijos, DUK, forumai, agregatoriai.
 
+## ŽINGSNIS 0 — NEMOKAMAS, DAROMAS PIRMA (be jo nepirkti)
+
+Mes JAU turim citavimo įrodymų: GA4 rodo, į kuriuos mūsų puslapius ateina
+ChatGPT lankytojai (`/locations/sleeping-expert-vilnius/` 15,
+`/produkto-kategorija/pagalves/latekso-pagalves/` 11, realūs produktų psl.).
+Tai atsako į dalį klausimo nemokamai.
+
+BET tie duomenys dabar **klaidingi 5×**: `aeo_reverse_discovery.py:575`
+`is_ai = ... or "ai" in medium` — substring'as įskaito „(data not available)"
+(83 sesijos), `fb` (431), `ig` (33). Realus AI srautas ≈127, ne 684.
+
+**0.1** Pataisyti tą sąlygą (tikslus atitikmuo vietoj substring'o) +
+reprodukcinis testas: „(data not available)" neturi patekti į AI lentelę. 0 €.
+**0.2** Su švariais duomenimis surinkti: kokio TIPO mūsų puslapiai gauna AI
+srautą (lokacijos / kategorijos / produktai / blogas). 0 €.
+**0.3** Tik jei po 0.2 lieka neatsakyta „ko mums trūksta, ko turi kiti" —
+pirkti žemiau aprašytą tyrimą.
+
+Priežastis, kodėl tai pirma: pirkti duomenis prieš išnaudojant turimus yra
+ta pati klaida, kaip griebtis Ahrefs, kai GSC po ranka.
+
 ## Eksperimento apimtis (viena partija, be cron)
 
 | Grupė | Kiek | Pavyzdžiai |
@@ -33,6 +54,29 @@ puslapiai cituojami" — lentelės, specifikacijos, DUK, forumai, agregatoriai.
 5. Ar yra **konkretūs skaičiai/specifikacijos** pirmuose 200 žodžių?
 6. Ar yra **struktūruoti duomenys** (JSON-LD)?
 7. Apytikslis ilgis
+
+## Kas tikrina struktūrą (spraga, kurią reikėjo užpildyti)
+
+API grąžina URL, ne puslapio sandarą. 3–7 punktai reikalauja atskiro crawl
+žingsnio — **VPS pusėje**, nes claude.ai sesijai dauguma domenų uždaryti per
+egress proxy. Be šio žingsnio 3–7 punktai lieka neužpildyti.
+
+## Minimali imtis (kitaip — triukšmas, pateiktas kaip žinojimas)
+
+- <15 skirtingų cituotų URL → išvada yra **„nepakanka duomenų"**, taisyklių
+  NEKURIAME.
+- ≥15 → taisyklė formuluojama tik jei pattern'as pasikartoja ≥70 % atvejų.
+- PL duomenys duoda **hipotezes, ne išvadas**. EN kontrolė atskiria kalbos
+  efektą nuo rinkos efekto, bet neįrodo, kad PL pattern'as veiks LT.
+
+## Sprendimai IŠ ANKSTO (kitaip tai smalsumo pirkinys)
+
+| Rezultatas | Ką darom |
+|---|---|
+| LT citatų ~0, PL turtingos | Laukas tuščias → formatas svarbiau už autoritetą. Taikom PL formų pamokas 1 bangoje, greitai. |
+| LT citatos yra, bet ne mūsų | Konkurentai užėmė → lyginam jų formą su mūsų, taisom konkrečius puslapius. |
+| LT citatos yra ir mūsų tarpe | Mūsų probe (0 % ChatGPT) melavo → keičiam matavimo metodiką, ne turinį. |
+| Duomenų per mažai visose grupėse | DataForSEO LT rinkai netinka → uždarom kryptį, negrįžtam. |
 
 ## Rezultatas, kurio siekiam
 
