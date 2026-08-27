@@ -45,3 +45,46 @@ triukšmas — jis matėsi ir 08-26.
 
 Stiprūs: `radar_to_metacog` 1.0, `agents_to_business` 1.0 (474 agentų
 paleidimai → 43 clicks).
+
+---
+
+## RADINYS 2026-08-27: lokacijų puslapiai = AI srauto ir maršrutų sankirta
+
+Po `aeo_reverse_discovery.py` substring bug'o fix'o (commit 349cf5e6) gavom
+švarius GA4 duomenis: **172 realios AI sesijos / 28 d.** (ne 684).
+
+Pasiskirstymas per puslapio tipą (125 klasifikuotų sesijų):
+
+| Tipas | Sesijos | Puslapių | **Sesijų / puslapį** |
+|---|---|---|---|
+| **Lokacijos** | 40 (32 %) | **3** | **13,3** |
+| Blogas/gidai | 12 (9,6 %) | 3 | 4,0 |
+| Kategorijos | 18 (14,4 %) | 6 | 3,0 |
+| Produktai | 42 (33,6 %) | 17 | 2,5 |
+
+**Lokacijų puslapiai 5× efektyvesni už produktų puslapius.**
+
+### Kodėl tai keičia prioritetus
+
+Pagrindinis tikslas = maršrutai į salonus. AI srautas ateina būtent į
+lokacijų puslapius. Tai ta pati piltuvo vieta — vadinasi AEO darbas maitina
+NE tik antrinį tikslą (raktažodžiai), bet tiesiogiai pirminį (maršrutai),
+per lokacijų puslapius.
+
+Iki šiol tie 3 puslapiai nebuvo nė karto optimizuoti. Jie traukia trečdalį AI
+srauto atsitiktinai.
+
+Vilnius: mažiausi maršrutai (6), didžiausios impresijos (329). AI atveda —
+žmogus nepaspaudžia maršruto. Konversijos problema tiksliai ten, kur turim
+daugiausiai svertų.
+
+### Naujas turinio prioritetas
+
+1. **3 lokacijų puslapiai** (buvo neprioritetas) — pirminis tikslas
+2. 1 bangos blog puslapiai — antrinis tikslas
+3. Kategorijos — antrinis
+
+Ką lokacijų puslapiuose tikrinti: ar maršruto mygtukas matomas be scroll'o,
+ar yra darbo laikas/telefonas/adresas struktūruotai, LocalBusiness JSON-LD,
+ar yra atsakymai į „ką galiu išbandyti vietoje", ar yra nuoroda į GBP profilį,
+ar puslapis atsako į klausimą, su kuriuo AI žmogų atsiuntė.
