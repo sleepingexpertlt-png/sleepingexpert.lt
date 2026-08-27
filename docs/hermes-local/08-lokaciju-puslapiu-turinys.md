@@ -1,4 +1,17 @@
-# Lokacijų puslapiai — PARUOŠTAS TURINYS (prioritetas #1, 2026-08-27)
+# Lokacijų puslapiai — ✅ DRAFT'AI PARUOŠTI (2026-08-27)
+
+**Vykdymas (VPS, 2026-08-27 11:49):** Vilnius 12434 (autosave 12436) ·
+Klaipėda 12438 (autosave 24372) · Ukmergė 12440 (autosave 19031).
+Visi kaip WP autosave, live NEPALIESTA (patikrinta: senas turinys vietoje).
+Telefonas +370 630 70001 ir darbo laikai paimti gyvu GBP pull'u
+(mybusinessbusinessinformation v1) — visi sutapo su esamais. Parkavimo GBP
+neturi — puslapiuose pažymėta kaip nepatvirtinta, NEIŠGALVOTA.
+
+**LAUKIA OWNER:** peržiūrėti 3 autosave'us WP admin'e ir publikuoti.
+Tai vienintelis likęs žingsnis iki gyvo pakeitimo.
+
+---
+(žemiau — originalus turinio paketas)
 
 Pagrindas: po AI-referrer fix'o (349cf5e6) paaiškėjo, kad **3 lokacijų puslapiai
 traukia 32 % viso AI srauto** — 13,3 sesijos/puslapį, 5× daugiau nei produktų
