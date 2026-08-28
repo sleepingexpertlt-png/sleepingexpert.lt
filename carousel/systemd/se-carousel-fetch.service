@@ -1,0 +1,14 @@
+# Vienkartinis produktu atnaujinimas is sleepingexpert.lt (paleidzia .timer).
+[Unit]
+Description=Sleeping Expert produktu atnaujinimas
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=pi
+WorkingDirectory=/opt/se-carousel
+ExecStart=/usr/bin/python3 /opt/se-carousel/fetch_products.py
+# jei svetaine neatsako — bandome dar karta po 2 min
+Restart=on-failure
+RestartSec=120

@@ -1,0 +1,54 @@
+{
+  "_comment": "Nukopijuok i config.json ir prisitaikyk. Nieko nereikia diegti — tik Python 3.",
+
+  "site_url": "https://sleepingexpert.lt",
+
+  "auth": {
+    "_comment": "Nebutina. Reikia tik jei WooCommerce Store API isjungtas. Galima naudoti WC_KEY / WC_SECRET aplinkos kintamuosius.",
+    "consumer_key": "",
+    "consumer_secret": ""
+  },
+
+  "categories": [],
+  "exclude_categories": [],
+
+  "only_on_sale": false,
+  "only_in_stock": true,
+  "min_discount_percent": 0,
+  "max_products": 120,
+  "sort": "discount",
+
+  "download_images": true,
+  "image_width": 1200,
+  "output_dir": "data",
+  "request_timeout": 30,
+  "max_pages": 30,
+  "user_agent": "SleepingExpert-Carousel/1.0 (+https://sleepingexpert.lt)",
+
+  "display": {
+    "slide_seconds": 9,
+    "sale_slide_seconds": 12,
+    "sale_ratio": 0.5,
+    "sale_first": true,
+    "shuffle": true,
+    "show_qr": true,
+    "show_stores": true,
+    "show_clock": true,
+    "summary_every": 8,
+    "transition_ms": 700,
+    "refresh_minutes": 15,
+    "reload_hours": 12,
+    "orientation": "auto",
+    "headline": "SLEEPING EXPERT",
+    "sale_badge_text": "AKCIJA",
+    "qr_caption": "Nuskenuok ir pamatyk",
+    "cta_text": "Klauskite konsultanto salone",
+    "sale_note": "",
+    "footer_text": "sleepingexpert.lt · Vilnius · Klaipėda · Ukmergė",
+    "stores": [
+      { "city": "Vilnius", "address": "Kalvarijų g. 125, PC Baldų Rojus" },
+      { "city": "Klaipėda", "address": "Taikos pr. 56, PC HELIOS" },
+      { "city": "Ukmergė", "address": "Kauno g. 9" }
+    ]
+  }
+}

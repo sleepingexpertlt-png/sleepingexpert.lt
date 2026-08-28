@@ -1,0 +1,14 @@
+# Parsisiusti duomenys ir nuotraukos — negeneruojami i repozitorija
+data/products.json
+data/products.json.bak
+data/display.json
+data/display.json.bak
+data/images/
+dist/
+
+# Vietiniai nustatymai (gali tureti API raktus)
+config.json
+
+# Python
+__pycache__/
+*.pyc

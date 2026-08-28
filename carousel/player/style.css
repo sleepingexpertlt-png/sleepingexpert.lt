@@ -1,0 +1,446 @@
+/* Sleeping Expert — karuseles stilius (TV ekranams ir el. stendams) */
+
+:root {
+  --blue: #142b6f;
+  --blue-deep: #0b1740;
+  --blue-soft: #23409c;
+  --lemon: #ffd602;
+  --ink: #ffffff;
+  --muted: rgba(255, 255, 255, 0.72);
+  --sale: #ff3b30;
+  --pad: clamp(20px, 2.6vmin, 56px);
+  --radius: clamp(14px, 1.6vmin, 30px);
+  --transition: 700ms;
+  --font: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Georgia", "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--blue-deep);
+  color: var(--ink);
+  font-family: var(--font);
+  cursor: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::after { /* svelnus vinjetavimas, kad tekstas butu kontrastingas */
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(120% 90% at 50% 40%, transparent 45%, rgba(0, 0, 0, 0.45) 100%);
+  z-index: 5;
+}
+
+/* ---------------- scena ---------------- */
+.stage { position: fixed; inset: 0; z-index: 1; }
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  opacity: 0;
+  transition: opacity var(--transition) ease;
+  background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue) 60%, #1c3a8f 100%);
+}
+.slide.is-active { opacity: 1; z-index: 2; }
+
+/* --- prekes skaidre: gulscias ekranas --- */
+.slide--product {
+  grid-template-columns: 56fr 44fr;
+  grid-template-areas: "photo info";
+}
+
+.photo {
+  grid-area: photo;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: clamp(10px, 2vmin, 40px);
+  transform: scale(1.01);
+  animation: kenburns var(--kb, 12s) ease-out forwards;
+}
+@keyframes kenburns {
+  from { transform: scale(1.01); }
+  to   { transform: scale(1.07); }
+}
+
+.badge {
+  position: absolute;
+  top: calc(var(--pad) * 2.4);   /* zemiau prekes zenklo virsuje */
+  left: var(--pad);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1em;
+  min-width: clamp(110px, 13vmin, 240px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: var(--sale);
+  color: #fff;
+  box-shadow: 0 clamp(6px, 1vmin, 18px) clamp(18px, 3vmin, 46px) rgba(0, 0, 0, 0.4);
+  animation: pulse 2.4s ease-in-out infinite;
+  z-index: 3;
+}
+.badge__label {
+  font-size: clamp(11px, 1.5vmin, 26px);
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.badge__value {
+  font-size: clamp(28px, 5.2vmin, 96px);
+  font-weight: 900;
+  line-height: 0.95;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.045); }
+}
+
+.info {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--pad) * 2.2) var(--pad) calc(var(--pad) * 2.6);
+  background: linear-gradient(160deg, rgba(20, 43, 111, 0.35), rgba(11, 23, 64, 0.9));
+  min-width: 0;
+}
+
+/* pagrindinis turinys centruojamas vertikaliai, apacia lieka prispausta */
+.info__main {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.6vmin, 28px);
+  min-width: 0;
+}
+
+.info__category {
+  font-size: clamp(12px, 1.7vmin, 30px);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--lemon);
+  font-weight: 700;
+}
+
+.info__name {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 4.4vmin, 82px);
+  line-height: 1.06;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.info__short {
+  font-size: clamp(13px, 1.85vmin, 32px);
+  line-height: 1.45;
+  color: var(--muted);
+  max-width: 22em;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.price { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.5em; margin-top: 0.2em; }
+.price__now {
+  font-size: clamp(40px, 7.6vmin, 140px);
+  font-weight: 900;
+  line-height: 0.95;
+  color: var(--lemon);
+  letter-spacing: -0.02em;
+}
+.price__prefix {
+  font-size: clamp(14px, 2vmin, 34px);
+  color: var(--muted);
+  font-weight: 600;
+  align-self: center;
+}
+.price__old {
+  font-size: clamp(18px, 2.8vmin, 50px);
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: line-through;
+  text-decoration-thickness: 0.08em;
+  font-weight: 600;
+}
+.price__save {
+  display: inline-block;
+  padding: 0.28em 0.7em;
+  border-radius: 999px;
+  background: var(--sale);
+  color: #fff;
+  font-size: clamp(13px, 1.85vmin, 32px);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  align-self: flex-start;
+  padding: 0.55em 1.1em;
+  border-radius: 999px;
+  background: var(--lemon);
+  color: var(--blue-deep);
+  font-size: clamp(12px, 1.7vmin, 30px);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.cta--ghost {
+  background: transparent;
+  color: var(--lemon);
+  border: 2px solid rgba(255, 214, 2, 0.55);
+}
+.info__note {
+  font-size: clamp(11px, 1.45vmin, 26px);
+  color: var(--muted);
+  font-style: italic;
+}
+
+.info__foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--pad);
+  margin-top: auto;
+}
+.info__meta { font-size: clamp(11px, 1.5vmin, 26px); color: var(--muted); line-height: 1.5; }
+.info__meta b { color: var(--ink); }
+
+.qr { text-align: center; flex: 0 0 auto; }
+.qr__box {
+  width: clamp(84px, 11vmin, 210px);
+  height: clamp(84px, 11vmin, 210px);
+  padding: clamp(4px, 0.7vmin, 12px);
+  background: #fff;
+  border-radius: clamp(6px, 1vmin, 16px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+.qr__box svg { width: 100%; height: 100%; display: block; }
+.qr__caption {
+  margin-top: 0.45em;
+  font-size: clamp(9px, 1.15vmin, 20px);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* --- akciju suvestines skaidre --- */
+.slide--summary {
+  grid-template-columns: minmax(0, 1fr);
+  align-content: center;
+  justify-items: stretch;
+  padding: calc(var(--pad) * 3) calc(var(--pad) * 2);
+  background:
+    radial-gradient(90% 70% at 20% 0%, rgba(255, 214, 2, 0.16), transparent 60%),
+    linear-gradient(135deg, var(--blue-deep), var(--blue));
+}
+.summary__kicker {
+  font-size: clamp(13px, 2vmin, 34px);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--lemon);
+  font-weight: 700;
+}
+.summary__title {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 7vmin, 130px);
+  line-height: 1;
+  margin: 0.18em 0 0.5em;
+  font-weight: 700;
+}
+.summary__title em { color: var(--lemon); font-style: normal; }
+.summary__inner { width: 100%; min-width: 0; }
+.summary__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(10px, 1.6vmin, 30px);
+}
+.card {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.2vmin, 22px);
+  padding: clamp(8px, 1.2vmin, 22px);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: var(--radius);
+}
+.card__img {
+  width: clamp(64px, 9vmin, 180px);
+  height: clamp(64px, 9vmin, 180px);
+  object-fit: contain;
+  background: #fff;
+  border-radius: clamp(6px, 0.9vmin, 16px);
+  padding: 4px;
+  flex: 0 0 auto;
+}
+.card__body { min-width: 0; flex: 1 1 auto; }
+.card__name {
+  font-size: clamp(13px, 1.9vmin, 34px);
+  font-weight: 600;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card__price {
+  margin-top: 0.3em;
+  font-size: clamp(17px, 2.6vmin, 48px);
+  font-weight: 900;
+  color: var(--lemon);
+}
+.card__old {
+  margin-left: 0.4em;
+  font-size: clamp(11px, 1.4vmin, 24px);
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: line-through;
+  font-weight: 600;
+}
+.card__cut {
+  margin-left: auto;
+  flex: 0 0 auto;
+  padding: 0.25em 0.6em;
+  border-radius: 999px;
+  background: var(--sale);
+  font-size: clamp(11px, 1.5vmin, 26px);
+  font-weight: 800;
+}
+
+/* ---------------- virsutinis / apatinis rėmelis ---------------- */
+.chrome {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--pad);
+  padding: calc(var(--pad) * 0.7) var(--pad);
+  pointer-events: none;
+}
+.chrome--top { top: 0; background: linear-gradient(rgba(6, 12, 36, 0.72), transparent); }
+.chrome--bottom { bottom: 0; background: linear-gradient(transparent, rgba(6, 12, 36, 0.78)); }
+
+.brand { display: flex; align-items: center; gap: 0.6em; }
+.brand__mark {
+  width: clamp(10px, 1.3vmin, 22px);
+  height: clamp(10px, 1.3vmin, 22px);
+  border-radius: 50%;
+  background: var(--lemon);
+  box-shadow: 0 0 0 clamp(3px, 0.45vmin, 8px) rgba(255, 214, 2, 0.22);
+}
+.brand__name {
+  font-size: clamp(13px, 1.8vmin, 32px);
+  letter-spacing: 0.28em;
+  font-weight: 800;
+}
+.clock { font-size: clamp(13px, 1.8vmin, 32px); font-weight: 700; letter-spacing: 0.05em; }
+
+.stores { display: flex; flex-wrap: wrap; gap: clamp(10px, 1.8vmin, 40px); }
+.store { font-size: clamp(10px, 1.35vmin, 24px); line-height: 1.35; }
+.store b { color: var(--lemon); letter-spacing: 0.1em; text-transform: uppercase; }
+.store span { display: block; color: var(--muted); }
+.footnote {
+  font-size: clamp(10px, 1.35vmin, 24px);
+  color: var(--muted);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.progress { position: fixed; left: 0; right: 0; bottom: 0; height: clamp(3px, 0.45vmin, 8px); background: rgba(255, 255, 255, 0.12); z-index: 7; }
+.progress__bar { display: block; height: 100%; width: 0; background: var(--lemon); }
+
+/* ---------------- pranesimai ---------------- */
+.toast {
+  position: fixed;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.7em 1.4em;
+  border-radius: 999px;
+  background: rgba(6, 12, 36, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: clamp(14px, 2vmin, 34px);
+  font-weight: 700;
+}
+
+.boot {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9em;
+  text-align: center;
+  padding: var(--pad);
+  background: linear-gradient(135deg, var(--blue-deep), var(--blue));
+}
+body.is-booting .boot, body.is-error .boot { display: flex; }
+.boot__logo { font-size: clamp(20px, 3.4vmin, 64px); letter-spacing: 0.3em; font-weight: 800; }
+.boot__msg { font-size: clamp(14px, 2vmin, 34px); color: var(--lemon); }
+.boot__hint { font-size: clamp(11px, 1.5vmin, 26px); color: var(--muted); max-width: 34em; line-height: 1.6; }
+.boot__hint code { background: rgba(255, 255, 255, 0.12); padding: 0.15em 0.45em; border-radius: 6px; }
+
+.help {
+  position: fixed;
+  z-index: 11;
+  right: var(--pad);
+  bottom: calc(var(--pad) * 3);
+  padding: 1.1em 1.5em;
+  border-radius: var(--radius);
+  background: rgba(6, 12, 36, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: clamp(12px, 1.5vmin, 24px);
+  line-height: 1.9;
+}
+.help h2 { font-size: 1.1em; margin-bottom: 0.4em; color: var(--lemon); }
+.help ul { list-style: none; }
+
+/* ---------------- stacio (portreto) orientacija: el. stendai ---------------- */
+@media (max-aspect-ratio: 1/1) {
+  .slide--product {
+    grid-template-columns: 1fr;
+    grid-template-rows: 52fr 48fr;
+    grid-template-areas: "photo" "info";
+  }
+  .info { padding: var(--pad) var(--pad) calc(var(--pad) * 3.4); }
+  .info__name { font-size: clamp(30px, 5.2vw, 90px); }
+  .price__now { font-size: clamp(48px, 11vw, 170px); }
+  .info__short { -webkit-line-clamp: 2; max-width: none; }
+  .chrome--bottom { flex-direction: column; align-items: flex-start; gap: 0.4em; }
+  .footnote { text-align: left; }
+  .summary__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .info { padding-bottom: calc(var(--pad) * 4.2); }
+}
+body.force-portrait .slide--product {
+  grid-template-columns: 1fr;
+  grid-template-rows: 52fr 48fr;
+  grid-template-areas: "photo" "info";
+}
+body.force-landscape .slide--product {
+  grid-template-columns: 56fr 44fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "photo info";
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo img { animation: none; }
+  .badge { animation: none; }
+}

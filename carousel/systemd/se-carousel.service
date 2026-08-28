@@ -1,0 +1,21 @@
+# Karuseles serveris (atiduoda player/ ir data/ narsyklei).
+# Idiegimas:
+#   sudo cp systemd/se-carousel.service /etc/systemd/system/
+#   sudo systemctl enable --now se-carousel.service
+[Unit]
+Description=Sleeping Expert karuseles serveris
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/opt/se-carousel
+ExecStart=/usr/bin/python3 /opt/se-carousel/serve.py --host 0.0.0.0 --port 8080
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

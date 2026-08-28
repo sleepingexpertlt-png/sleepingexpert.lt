@@ -1,0 +1,20 @@
+# Kiosko paleidimas per systemd (jei naudojama X sesija su autologin).
+# Idiegimas:
+#   sudo cp kiosk/se-carousel-kiosk.service /etc/systemd/system/
+#   sudo systemctl enable --now se-carousel-kiosk.service
+[Unit]
+Description=Sleeping Expert karuseles kioskas (Chromium)
+After=se-carousel.service graphical.target
+Wants=se-carousel.service
+
+[Service]
+Type=simple
+User=pi
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/pi/.Xauthority
+ExecStart=/opt/se-carousel/kiosk/start-kiosk.sh http://localhost:8080/
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=graphical.target

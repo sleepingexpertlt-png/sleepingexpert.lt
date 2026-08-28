@@ -1,0 +1,15 @@
+# Atnaujina produktus kas valanda + iskart po iranga ijungimo.
+# Idiegimas:
+#   sudo cp systemd/se-carousel-fetch.* /etc/systemd/system/
+#   sudo systemctl enable --now se-carousel-fetch.timer
+[Unit]
+Description=Sleeping Expert produktu atnaujinimas kas valanda
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=1h
+Persistent=true
+RandomizedDelaySec=5min
+
+[Install]
+WantedBy=timers.target
