@@ -140,6 +140,21 @@ Profilyje nustatoma viskas, kas skiriasi:
 | `display.theme` | **Spalvos ir šriftai** — žr. žemiau |
 | `demo_products` | Pavyzdinės prekės peržiūrai su `--demo` |
 
+### Kai ekrano mašina nepasiekia svetainės
+
+Užkardos ar izoliuoto tinklo atveju Store API atsakymą galima parsisiųsti kitur
+ir importuoti:
+
+```bash
+curl -s "https://cookking.online/wp-json/wc/store/v1/products?per_page=100" > raw.json
+curl -s "https://cookking.online/wp-json/wc/store/v1/products?on_sale=true" > sale.json
+python3 tools/import_json.py --config profiles/cookking.json --input raw.json --input sale.json
+```
+
+Normalizavimas, filtrai ir rūšiavimas identiški `fetch_products.py`. Jei
+`data-*/images/` jau yra failas, prasidedantis prekės ID (pvz. `6566-zeus3.jpg`),
+naudojama vietinė nuotrauka; kitu atveju – tiesioginė nuoroda į svetainę.
+
 ### Spalvos — `display.theme`
 
 | Raktas | Ką nuspalvina |
@@ -300,7 +315,8 @@ carousel/
 │   ├── app.js                 # rotacija, akcijų logika, atsparumas triktims
 │   └── qr.js                  # QR kodų generatorius (be interneto)
 ├── tools/
-│   └── build_standalone.py    # vienas HTML failas su viskuo viduje
+│   ├── build_standalone.py    # vienas HTML failas su viskuo viduje
+│   └── import_json.py         # importas iš jau turimo Store API atsakymo
 ├── systemd/                   # automatinis paleidimas ir atnaujinimas
 ├── kiosk/                     # Chromium kiosko paleidimas
 └── data/                      # parsisiųsti duomenys (į git nekeliama)
