@@ -1,0 +1,82 @@
+{
+  "_comment": "CookKing (cookking.online) profilis. Paleidimas: python3 fetch_products.py --config profiles/cookking.json",
+
+  "site_url": "https://cookking.online",
+
+  "auth": { "consumer_key": "", "consumer_secret": "" },
+
+  "categories": [],
+  "exclude_categories": [],
+  "only_on_sale": false,
+  "only_in_stock": true,
+  "min_discount_percent": 0,
+  "max_products": 120,
+  "sort": "discount",
+
+  "download_images": true,
+  "image_width": 1200,
+  "output_dir": "data-cookking",
+  "request_timeout": 30,
+  "max_pages": 30,
+  "user_agent": "CookKing-Carousel/1.0 (+https://cookking.online)",
+
+  "display": {
+    "slide_seconds": 9,
+    "sale_slide_seconds": 12,
+    "sale_ratio": 0.5,
+    "sale_first": true,
+    "shuffle": true,
+    "show_qr": true,
+    "show_stores": false,
+    "show_clock": true,
+    "summary_every": 8,
+    "transition_ms": 700,
+    "refresh_minutes": 15,
+    "reload_hours": 12,
+    "orientation": "auto",
+
+    "headline": "COOKKING",
+    "sale_badge_text": "AKCIJA",
+    "qr_caption": "Nuskenuok ir užsisakyk",
+    "cta_text": "Užsisakyk cookking.online",
+    "sale_note": "",
+    "footer_text": "cookking.online · pristatymas visoje Lietuvoje",
+
+    "_stores_comment": "Įrašyk realius adresus ir įjunk show_stores, jei yra fizinė parduotuvė",
+    "stores": [],
+
+    "_theme_comment": "Spalvos — anglies ir žarijų paletė. Pakeisk į realias prekės ženklo spalvas.",
+    "theme": {
+      "brand": "#2a1e18",
+      "brand_deep": "#14100e",
+      "brand_soft": "#4a3226",
+      "accent": "#ff8a1f",
+      "sale": "#e02b20",
+      "font_display": "\"Helvetica Neue\", Arial, sans-serif"
+    }
+  },
+
+  "_demo_comment": "Tik peržiūrai su --demo. Tikros prekės imamos iš svetainės automatiškai.",
+  "demo_products": [
+    { "name": "Kamado grilis Ceramic Pro 56 cm", "regular": 899.0, "price": 649.0, "category": "Kamado griliai",
+      "short": "Keraminis korpusas, temperatūra 70–400 °C, tinka rūkymui ir kepimui." },
+    { "name": "Dujinis grilis Master 4 degiklių", "regular": 749.0, "price": 599.0, "category": "Dujiniai griliai",
+      "short": "Keturi nerūdijančio plieno degikliai, šoninis viryklės degiklis, ketaus grotelės." },
+    { "name": "Anglinis grilis Kettle 57 cm", "regular": 249.0, "price": 179.0, "category": "Angliniai griliai",
+      "short": "Emaliuotas dangtis, oro sklendės, pelenų surinkimo indas." },
+    { "name": "Rūkykla Smoker Offset XL", "regular": 1190.0, "price": 949.0, "category": "Rūkyklos",
+      "short": "Šoninė pakura, termometras dangtyje, ilgo rūkymo režimas." },
+    { "name": "Ketaus keptuvė 30 cm su rankena", "regular": 79.0, "price": 55.0, "category": "Ketaus indai",
+      "short": "Iš anksto įsotinta aliejumi, tinka ant grilio ir atviros ugnies." },
+    { "name": "Grilio termometras Bluetooth 4 zondų", "regular": 129.0, "price": 89.0, "category": "Priedai",
+      "short": "Keturi zondai, programėlė telefone, garso signalas pasiekus temperatūrą." },
+    { "name": "Medžio anglys ąžuolinės 10 kg", "regular": 24.0, "price": 24.0, "category": "Anglys ir briketai",
+      "short": "Ilgai laiko karštį, mažai dūmų, tinka steikams." },
+    { "name": "Grilio įrankių rinkinys 5 dalių", "regular": 69.0, "price": 44.0, "category": "Priedai",
+      "short": "Nerūdijantis plienas, ilgos rankenos, dėklas nešiojimui." },
+    { "name": "Pjaustymo lenta ąžuolinė 45x30", "regular": 89.0, "price": 69.0, "category": "Virtuvės reikmenys",
+      "short": "Masyvus ąžuolas, grioveliai sultims, alyvuota danga." },
+    { "name": "Grilio uždangalas atsparus orams", "regular": 45.0, "price": 29.0, "category": "Priedai",
+      "short": "Neperšlampamas audinys, tvirtinimo dirželiai, UV atsparumas." }
+  ]
+}

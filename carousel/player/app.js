@@ -24,7 +24,8 @@
     cta_text: "Klauskite konsultanto salone",
     sale_note: "",
     footer_text: "sleepingexpert.lt",
-    stores: []
+    stores: [],
+    theme: {}
   };
 
   var CACHE_KEY = "se_carousel_payload_v1";
@@ -336,8 +337,28 @@
   }
 
   /* ------------------------- rėmelis ------------------------- */
+  var THEME_VARS = {
+    brand: "--brand",
+    brand_deep: "--brand-deep",
+    brand_soft: "--brand-soft",
+    accent: "--accent",
+    sale: "--sale",
+    ink: "--ink",
+    font: "--font",
+    font_display: "--font-display"
+  };
+
+  function applyTheme(theme) {
+    if (!theme) return;
+    var root = document.documentElement;
+    Object.keys(THEME_VARS).forEach(function (key) {
+      if (theme[key]) root.style.setProperty(THEME_VARS[key], theme[key]);
+    });
+  }
+
   function applyChrome() {
     var display = state.display;
+    applyTheme(display.theme);
     el.headline.textContent = display.headline || "";
     document.body.classList.toggle("force-portrait", display.orientation === "portrait");
     document.body.classList.toggle("force-landscape", display.orientation === "landscape");

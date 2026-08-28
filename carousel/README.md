@@ -115,6 +115,61 @@ gali atsidaryti bet kuris tame pačiame tinkle esantis TV ar planšetė.
 
 ---
 
+## 🏢 Kita parduotuvė / kitas klientas
+
+Tas pats kodas tinka bet kuriai WooCommerce parduotuvei — keičiasi tik vienas
+profilio failas. Pavyzdys jau paruoštas: `profiles/cookking.json`.
+
+```bash
+# peržiūra be interneto (pavyzdinės prekės iš profilio)
+python3 fetch_products.py --config profiles/cookking.json --demo
+python3 serve.py --data data-cookking --port 8081
+
+# tikros prekės iš svetainės
+python3 fetch_products.py --config profiles/cookking.json
+```
+
+Profilyje nustatoma viskas, kas skiriasi:
+
+| Laukas | Ką keičia |
+|---|---|
+| `site_url` | Iš kurios svetainės imamos prekės |
+| `output_dir` | Atskiras duomenų katalogas (`data-cookking`), kad klientai nesimaišytų |
+| `display.headline`, `footer_text`, `cta_text` | Užrašai ekrane |
+| `display.stores` | Adresų juosta apačioje (tuščias sąrašas + `show_stores: false` — nerodoma) |
+| `display.theme` | **Spalvos ir šriftai** — žr. žemiau |
+| `demo_products` | Pavyzdinės prekės peržiūrai su `--demo` |
+
+### Spalvos — `display.theme`
+
+| Raktas | Ką nuspalvina |
+|---|---|
+| `brand` | Pagrindinė fono spalva |
+| `brand_deep` | Tamsiausias fono atspalvis |
+| `brand_soft` | Šviesesnis fono atspalvis (perėjimas) |
+| `accent` | Kaina, kategorija, CTA juosta, logotipo taškas |
+| `sale` | Nuolaidos ženklas ir „Sutaupote…“ |
+| `font_display` | Prekės pavadinimo šriftas |
+
+Pavyzdys — anglies ir žarijų paletė grilių parduotuvei:
+
+```json
+"theme": {
+  "brand": "#2a1e18", "brand_deep": "#14100e", "brand_soft": "#4a3226",
+  "accent": "#ff8a1f", "sale": "#e02b20",
+  "font_display": "\"Helvetica Neue\", Arial, sans-serif"
+}
+```
+
+Keli ekranai vienoje mašinoje — tiesiog skirtingi prievadai:
+
+```bash
+python3 serve.py --data data           --port 8080   # Sleeping Expert
+python3 serve.py --data data-cookking  --port 8081   # CookKing
+```
+
+---
+
 ## 🎛️ Nustatymai — `config.json`
 
 Nukopijuok `config.example.json` → `config.json`.
@@ -235,8 +290,10 @@ python3 serve.py --port 8000              # kitas prievadas
 ```
 carousel/
 ├── fetch_products.py          # produktų parsisiuntimas (WooCommerce → JSON + nuotraukos)
-├── serve.py                   # vietinis serveris (be priklausomybių)
-├── config.example.json        # visi nustatymai su paaiškinimais
+├── serve.py                   # vietinis serveris (--data pasirenka klientą)
+├── config.example.json        # visi nustatymai su paaiškinimais (Sleeping Expert)
+├── profiles/
+│   └── cookking.json          # kito kliento profilis: kita svetainė, kitos spalvos
 ├── player/
 │   ├── index.html             # ekrano karkasas
 │   ├── style.css              # dizainas (Hortense Blue #142b6f + Lemon Chrome #ffd602)

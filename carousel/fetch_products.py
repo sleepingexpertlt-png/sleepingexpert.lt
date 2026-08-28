@@ -54,6 +54,7 @@ DEFAULTS = {
     "request_timeout": 30,
     "max_pages": 30,
     "user_agent": "SleepingExpert-Carousel/1.0 (+https://sleepingexpert.lt)",
+    "demo_products": [],
     "display": {},
 }
 
@@ -82,6 +83,8 @@ DISPLAY_DEFAULTS = {
         {"city": "Klaipėda", "address": "Taikos pr. 56, PC HELIOS"},
         {"city": "Ukmergė", "address": "Kauno g. 9"},
     ],
+    # spalvos ir sriftai — leidzia ta pati kodą naudoti bet kuriai parduotuvei
+    "theme": {},
 }
 
 
@@ -438,16 +441,26 @@ def sync_images(http: Http, products: list, out_dir: str, force: bool) -> None:
 # demo duomenys (be interneto)
 # --------------------------------------------------------------------------- #
 DEMO = [
-    ("Ortopedinis čiužinys Comfort Plus 160x200", 549.0, 399.0, "Čiužiniai", "Kišeninės spyruoklės, 7 zonų palaikymas, nuimamas užvalkalas."),
-    ("Latekso čiužinys Natural Sleep 180x200", 899.0, 719.0, "Čiužiniai", "Natūralus lateksas, itin kvėpuojantis, tinka alergiškiems."),
-    ("Atminties putų pagalvė Memory Soft", 79.0, 49.0, "Pagalvės", "Prisitaiko prie kaklo linijos, tinka miegantiems ant šono."),
-    ("Antčiužinis Hotel Line 160x200", 149.0, 149.0, "Antčiužiniai", "Papildomas minkštumo sluoksnis viešbučio standartu."),
-    ("Kontinentinė lova Elegance 160x200", 1290.0, 990.0, "Lovos", "Su spyruokliniu pagrindu ir topperiu, aksomo apmušalas."),
-    ("Čiužinio apsauga Aqua Stop 90x200", 45.0, 32.0, "Čiužinių apsaugos", "Neperšlampama, kvėpuojanti, skalbiama 60°C."),
-    ("Pūkinė antklodė Nordic 200x220", 219.0, 219.0, "Patalynė", "Natūralūs pūkai, keturių sezonų sprendimas."),
-    ("Spyruoklinis čiužinys Basic 140x200", 329.0, 249.0, "Čiužiniai", "Bonelio spyruoklės, vidutinio kietumo, greitas pristatymas."),
-    ("Vaikiškas čiužinys Junior 80x160", 189.0, 149.0, "Čiužiniai", "Hipoalerginis, be kenksmingų medžiagų, plonas profilis."),
-    ("Miego kaukė Deep Rest", 19.0, 12.0, "Miego aksesuarai", "Visiškai neperšviečiama, minkšti kraštai."),
+    {"name": "Ortopedinis čiužinys Comfort Plus 160x200", "regular": 549.0, "price": 399.0,
+     "category": "Čiužiniai", "short": "Kišeninės spyruoklės, 7 zonų palaikymas, nuimamas užvalkalas."},
+    {"name": "Latekso čiužinys Natural Sleep 180x200", "regular": 899.0, "price": 719.0,
+     "category": "Čiužiniai", "short": "Natūralus lateksas, itin kvėpuojantis, tinka alergiškiems."},
+    {"name": "Atminties putų pagalvė Memory Soft", "regular": 79.0, "price": 49.0,
+     "category": "Pagalvės", "short": "Prisitaiko prie kaklo linijos, tinka miegantiems ant šono."},
+    {"name": "Antčiužinis Hotel Line 160x200", "regular": 149.0, "price": 149.0,
+     "category": "Antčiužiniai", "short": "Papildomas minkštumo sluoksnis viešbučio standartu."},
+    {"name": "Kontinentinė lova Elegance 160x200", "regular": 1290.0, "price": 990.0,
+     "category": "Lovos", "short": "Su spyruokliniu pagrindu ir topperiu, aksomo apmušalas."},
+    {"name": "Čiužinio apsauga Aqua Stop 90x200", "regular": 45.0, "price": 32.0,
+     "category": "Čiužinių apsaugos", "short": "Neperšlampama, kvėpuojanti, skalbiama 60°C."},
+    {"name": "Pūkinė antklodė Nordic 200x220", "regular": 219.0, "price": 219.0,
+     "category": "Patalynė", "short": "Natūralūs pūkai, keturių sezonų sprendimas."},
+    {"name": "Spyruoklinis čiužinys Basic 140x200", "regular": 329.0, "price": 249.0,
+     "category": "Čiužiniai", "short": "Bonelio spyruoklės, vidutinio kietumo, greitas pristatymas."},
+    {"name": "Vaikiškas čiužinys Junior 80x160", "regular": 189.0, "price": 149.0,
+     "category": "Čiužiniai", "short": "Hipoalerginis, be kenksmingų medžiagų, plonas profilis."},
+    {"name": "Miego kaukė Deep Rest", "regular": 19.0, "price": 12.0,
+     "category": "Miego aksesuarai", "short": "Visiškai neperšviečiama, minkšti kraštai."},
 ]
 
 SVG_TEMPLATE = (
@@ -462,31 +475,43 @@ SVG_TEMPLATE = (
     'text-anchor="middle" opacity="0.92">{cat}</text>'
     '<text x="600" y="530" font-family="Georgia,serif" font-size="46" fill="#ffffff" '
     'text-anchor="middle">{name}</text>'
-    '<text x="600" y="800" font-family="Georgia,serif" font-size="34" fill="#ffd602" '
+    '<text x="600" y="800" font-family="Georgia,serif" font-size="34" fill="{accent}" '
     'text-anchor="middle">DEMO nuotrauka</text></svg>'
 )
 
 
 def build_demo(cfg: dict, out_dir: str) -> list:
+    """Testiniai duomenys be interneto. Prekes ir spalvas galima nurodyti config faile."""
     img_dir = os.path.join(out_dir, "images")
     os.makedirs(img_dir, exist_ok=True)
-    palette = [("#142b6f", "#2b4bb0"), ("#1b1f3b", "#3a2f6b"), ("#0f3b52", "#1f7a8c")]
+
+    items = cfg.get("demo_products") or DEMO
+    theme = (cfg.get("display") or {}).get("theme") or {}
+    base = theme.get("brand_deep") or "#142b6f"
+    soft = theme.get("brand_soft") or theme.get("brand") or "#2b4bb0"
+    accent = theme.get("accent") or "#ffd602"
+    palette = [(base, soft), (soft, base), (base, accent + "40")]
+
     products = []
-    for idx, (name, regular, price, cat, short) in enumerate(DEMO, 1):
+    for idx, item in enumerate(items, 1):
+        name = item["name"]
+        regular = float(item.get("regular", item.get("price", 0)))
+        price = float(item.get("price", regular))
+        category = item.get("category", "")
         colors = palette[idx % len(palette)]
         fname = "demo-%02d.svg" % idx
         short_name = name if len(name) <= 34 else name[:33] + "…"
         with open(os.path.join(img_dir, fname), "w", encoding="utf-8") as fh:
             fh.write(SVG_TEMPLATE.format(
-                c1=colors[0], c2=colors[1],
-                cat=html.escape(cat), name=html.escape(short_name)))
+                c1=colors[0], c2=colors[1], accent=accent,
+                cat=html.escape(category), name=html.escape(short_name)))
         prod = build_product(
             pid=9000 + idx, name=name,
-            url="https://sleepingexpert.lt/produktas/%s/" % slugify(name),
+            url="%s/produktas/%s/" % (cfg.get("site_url", "").rstrip("/"), slugify(name)),
             image="", price=price, regular=regular, sale=price if price < regular else None,
             on_sale=price < regular, in_stock=True, sku="DEMO-%03d" % idx,
-            categories=[cat], category_slugs=[slugify(cat)], short=short,
-            currency="€", price_from=False)
+            categories=[category] if category else [], category_slugs=[slugify(category)] if category else [],
+            short=item.get("short", ""), currency="€", price_from=False)
         prod["image"] = "images/" + fname
         products.append(prod)
     return products

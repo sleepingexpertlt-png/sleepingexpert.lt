@@ -45,7 +45,13 @@ def main() -> int:
     parser.add_argument("--out", default=os.path.join(ROOT, "dist", "karusele.html"))
     parser.add_argument("--limit", type=int, default=0, help="kiek prekiu itraukti (0 = visos)")
     parser.add_argument("--only-sale", action="store_true", help="itraukti tik akcijines prekes")
+    parser.add_argument("--data", default=None,
+                        help="duomenu katalogas (numatyta: data/); naudinga, kai keli klientai")
     args = parser.parse_args()
+
+    global DATA
+    if args.data:
+        DATA = args.data if os.path.isabs(args.data) else os.path.join(ROOT, args.data)
 
     products_path = os.path.join(DATA, "products.json")
     if not os.path.exists(products_path):

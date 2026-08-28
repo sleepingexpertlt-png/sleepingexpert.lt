@@ -19,7 +19,7 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PLAYER_DIR = os.path.join(HERE, "player")
-DATA_DIR = os.path.join(HERE, "data")
+DATA_DIR = os.path.join(HERE, "data")   # perrasoma su --data
 
 EXTRA_TYPES = {
     ".webp": "image/webp",
@@ -77,10 +77,17 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Sleeping Expert karuseles serveris")
     parser.add_argument("--host", default="0.0.0.0")
     parser.add_argument("--port", type=int, default=8080)
+    parser.add_argument("--data", default=None,
+                        help="duomenu katalogas (numatyta: data/). Naudinga, kai keli klientai vienoje masinoje")
     args = parser.parse_args()
 
+    global DATA_DIR
+    if args.data:
+        DATA_DIR = args.data if os.path.isabs(args.data) else os.path.join(HERE, args.data)
+
     if not os.path.exists(os.path.join(DATA_DIR, "products.json")):
-        print("! Nerasta data/products.json — pirmiausia paleisk:  python3 fetch_products.py --demo")
+        print("! Nerasta %s/products.json — pirmiausia paleisk:  python3 fetch_products.py --demo"
+              % os.path.relpath(DATA_DIR, HERE))
 
     server = ThreadingHTTPServer((args.host, args.port), CarouselHandler)
     print("Karuselė veikia:")

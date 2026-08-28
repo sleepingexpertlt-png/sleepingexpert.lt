@@ -4,6 +4,7 @@ data/products.json.bak
 data/display.json
 data/display.json.bak
 data/images/
+data-*/
 dist/
 
 # Vietiniai nustatymai (gali tureti API raktus)
