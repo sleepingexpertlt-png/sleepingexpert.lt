@@ -140,6 +140,22 @@ Profilyje nustatoma viskas, kas skiriasi:
 | `display.theme` | **Spalvos ir šriftai** — žr. žemiau |
 | `demo_products` | Pavyzdinės prekės peržiūrai su `--demo` |
 
+### Windows: paleidimas vienu paspaudimu
+
+`windows/PALEISTI.bat` — parsisiunčia prekes, paleidžia serverį, atidaro naršyklę
+per visą ekraną ir fone kas valandą atnaujina kainas. `windows/SUSTABDYTI.bat`
+sustabdo. Instrukcija lietuviškai — `windows/KAIP-PALEISTI.txt`.
+
+Reikia Python 3 (Microsoft Store → „Python 3.12" → Get).
+
+### Televizorius
+
+Prijunk kompiuterį prie TV per HDMI (Win + P → Duplicate) — taip kainos lieka
+gyvos. **Smart TV iš USB šios programos nepaleis**: televizoriai iš USB atidaro
+tik vaizdo ir nuotraukų failus, ne programas; be to, iš USB kainos
+neatsinaujintų. Gyvoms kainoms reikia HDMI prijungto kompiuterio, mini PC arba
+Raspberry Pi (žr. sisteminį diegimą aukščiau).
+
 ### Kai ekrano mašina nepasiekia svetainės
 
 Užkardos ar izoliuoto tinklo atveju Store API atsakymą galima parsisiųsti kitur
@@ -318,7 +334,8 @@ carousel/
 │   ├── build_standalone.py    # vienas HTML failas su viskuo viduje
 │   └── import_json.py         # importas iš jau turimo Store API atsakymo
 ├── systemd/                   # automatinis paleidimas ir atnaujinimas
-├── kiosk/                     # Chromium kiosko paleidimas
+├── kiosk/                     # Chromium kiosko paleidimas (Linux)
+├── windows/                   # PALEISTI.bat — vienas paspaudimas Windows'e
 └── data/                      # parsisiųsti duomenys (į git nekeliama)
 ```
 

@@ -1,0 +1,76 @@
+COOKKING - PRODUKTU EKRANAS
+===========================
+
+KAS TAI
+-------
+Programa pati pasiima prekes is cookking.online (kainas, nuolaidas,
+nuotraukas) ir rodo jas per visa ekrana kaip reklamos karusele.
+
+Kainas atnaujini svetaineje -> ekranas pasikeicia pats. Nieko vesti
+ranka nereikia.
+
+
+PALEIDIMAS (3 zingsniai)
+------------------------
+1. Nukopijuok visa sita aplanka i kompiuteri (pvz. i "Dokumentai").
+2. Atidaryk aplanka "windows" ir du kartus spustelek PALEISTI.bat
+3. Viskas. Atsidarys ekranas per visa ekrana.
+
+Sustabdyti: SUSTABDYTI.bat (arba Alt+F4 narsykleje).
+
+
+JEI PARASO, KAD NERA PYTHON
+---------------------------
+Atidaryk Microsoft Store, ieskok "Python 3.12", spausk "Get".
+Uztrunka apie minute. Po to paleisk PALEISTI.bat is naujo.
+
+
+KAIP UZDETI ANT TELEVIZORIAUS
+-----------------------------
+Prijunk kompiuteri prie TV HDMI laidu ir nustatyk TV kaip antra ekrana
+(Windows klavisai: Win + P -> "Duplicate" arba "Extend").
+Naršykle nutempk i TV langa ir spausk F.
+
+SVARBU: is USB atmintuko Smart TV NEPALEIS sios programos - televizoriai
+is USB atidaro tik video ir nuotraukas, ne programas. Ir net jei
+paleistu, is USB kainos neatsinaujintu. Gyvoms kainoms reikia
+kompiuterio (arba pigaus mini PC / Raspberry Pi) prijungto HDMI laidu.
+
+
+VALDYMAS EKRANE
+---------------
+Tarpas    - pauze / testi
+Rodykles  - ankstesne / kita preke
+F         - visas ekranas
+R         - is karto pasiimti naujas kainas
+S         - rodyti tik akcijas / visas prekes
+
+
+KA GALIMA PASIKEISTI
+--------------------
+Failas: profiles\cookking.json
+
+  slide_seconds     kiek sekundziu rodoma preke
+  only_on_sale      true = ekrane tik akcijos
+  categories        pvz. ["lauzavietes"] - tik si kategorija
+  exclude_categories  pvz. ["peiliai"] - sios nerodomos
+  max_products      kiek prekiu is viso
+  headline          uzrasas virsuje
+  cta_text          geltona juosta su raginimu
+  theme             spalvos (brand, accent, sale)
+
+Pakeitus - paleisk PALEISTI.bat is naujo.
+
+
+PROBLEMOS
+---------
+"Kraunami produktai..." nedingsta
+  -> nepavyko pasiekti cookking.online. Patikrink interneta.
+
+Nera nuotrauku
+  -> paleisk komandine eilute siame aplanke:
+     python fetch_products.py --config profiles\cookking.json --force
+
+Noriu paleisti automatiskai ijungus kompiuteri
+  -> Win + R, ivesk: shell:startup
+     ikelk ten PALEISTI.bat nuoroda (Right click -> Create shortcut)

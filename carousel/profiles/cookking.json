@@ -5,12 +5,14 @@
 
   "auth": { "consumer_key": "", "consumer_secret": "" },
 
+  "_categories_comment": "Tuscias sarasas = visos kategorijos. Galimi: lauzavietes, betonines-lauko-kepsnines, groteles, dangciai, rukykla, sodo-griliai, grilio-lekstes, priedai, peiliai, rinkiniai, lauko-zidiniai, apsaugos",
   "categories": [],
-  "exclude_categories": [],
+  "_exclude_comment": "Peiliu nuotraukos kataloge yra 165 px plocio - TV ekrane atrodo prastai. Dovanu kuponas nera prekė reklamai. Istrink is sarašo, jei nori juos rodyti.",
+  "exclude_categories": ["peiliai", "dovanu-kuponas"],
   "only_on_sale": false,
   "only_in_stock": true,
   "min_discount_percent": 0,
-  "max_products": 120,
+  "max_products": 60,
   "sort": "discount",
 
   "download_images": true,
