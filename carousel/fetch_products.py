@@ -65,6 +65,7 @@ DISPLAY_DEFAULTS = {
     "sale_first": True,
     "shuffle": True,
     "show_qr": True,
+    "show_description": True,
     "show_stores": True,
     "show_clock": True,
     "summary_every": 8,
@@ -350,6 +351,9 @@ def build_product(pid, name, url, image, price, regular, sale, on_sale, in_stock
         return None  # 0 EUR prekes (pvz. "kaina pagal uzklausa") ekranui netinka
     if regular is None or regular <= 0:
         regular = price
+    # Store API `price` laukas kartais atiduoda pasenusia (talpykloje likusia)
+    # iprasta kaina, nors akcija galioja ir puslapyje rodoma perbraukta sena kaina.
+    # Todel galiojancia kaina imame is `sale_price`, kai ji zemesne uz iprasta.
     if sale is not None and sale > 0 and sale < regular:
         price = min(price, sale)
     discount = 0
@@ -357,9 +361,10 @@ def build_product(pid, name, url, image, price, regular, sale, on_sale, in_stock
     if regular > price > 0:
         discount = int(round((regular - price) / regular * 100))
         save = round(regular - price, 2)
-    # WooCommerce zymi variantine preke kaip "akcijoje" net kai pigiausio varianto
-    # kaina nesumazejusi. Ekranui akcija yra tik tai, ka galima parodyti skaiciumi —
-    # kitaip uzsidegtu "AKCIJA" be jokios matomos nuolaidos.
+    # Lieka prekiu, pazymetu kaip akcijos, kuriu akcijos kaina lygi iprastai —
+    # nuolaidos nera nei ekrane, nei svetaineje. Ekranui akcija yra tik ta,
+    # kuria pirkejas realiai sumoka maziau.
+    flagged_only = bool(on_sale) and discount == 0
     on_sale = discount > 0
     return {
         "id": pid,
@@ -372,6 +377,7 @@ def build_product(pid, name, url, image, price, regular, sale, on_sale, in_stock
         "regular_price": round(regular, 2),
         "price_from": bool(price_from),
         "on_sale": on_sale,
+        "sale_flag_no_discount": flagged_only,
         "discount_percent": discount,
         "save_amount": save,
         "in_stock": bool(in_stock),
@@ -617,6 +623,14 @@ def main() -> int:
         return 3
 
     on_sale = [p for p in products if p.get("on_sale")]
+    flagged = [p for p in products if p.get("sale_flag_no_discount")]
+    if flagged:
+        log("! %d prekes pazymetos kaip akcijos, taciau ju akcijos kaina lygi iprastai"
+            " — nuolaidos nera nei ekrane, nei svetaineje:" % len(flagged))
+        for prod in flagged[:10]:
+            log("    %s (%.2f %s)" % (prod["name"][:56], prod["price"], prod["currency"]))
+        if len(flagged) > 10:
+            log("    … ir dar %d" % (len(flagged) - 10))
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "source": source,

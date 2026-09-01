@@ -11,6 +11,7 @@
     sale_first: true,
     shuffle: true,
     show_qr: true,
+    show_description: true,
     show_stores: true,
     show_clock: true,
     summary_every: 8,
@@ -230,7 +231,8 @@
         '<div class="info__main">' +
           '<div class="info__category">' + esc(category) + "</div>" +
           '<h1 class="info__name">' + esc(product.name) + "</h1>" +
-          (product.short ? '<p class="info__short">' + esc(product.short) + "</p>" : "") +
+          (display.show_description !== false && product.short
+            ? '<p class="info__short">' + esc(product.short) + "</p>" : "") +
           '<div class="price">' +
             (product.price_from ? '<span class="price__prefix">nuo</span>' : "") +
             '<span class="price__now">' + esc(money(product.price)) + "</span>" +
