@@ -126,6 +126,25 @@ def strip_html(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+# emoji ir piktogramos: TV ekrane atrodo netvarkingai ir daznai yra svetaines
+# nuorodos ("Skaitykite daugiau"), o ne prekes aprasymas
+EMOJI = re.compile(
+    "[\U0001F000-\U0001FAFF\U00002190-\U000021FF\U00002300-\U000027BF"
+    "\U00002B00-\U00002BFF\U0000FE00-\U0000FE0F\U0001F1E6-\U0001F1FF]+")
+
+# svetaines raginimai, likę aprasymo gale
+TAIL = re.compile(
+    r"[\s.,;:–—-]*(skaitykite|skaityti|placiau|plačiau|suzinokite|sužinokite|"
+    r"read more|learn more)\b.*$", re.IGNORECASE)
+
+
+def clean_description(text: str) -> str:
+    """Isvalo aprasyma rodymui ekrane: be emoji ir be 'Skaitykite daugiau'."""
+    text = EMOJI.sub(" ", strip_html(text))
+    text = TAIL.sub("", text)
+    return re.sub(r"\s+", " ", text).strip(" .,;:–—-")
+
+
 def slugify(text: str) -> str:
     text = unicodedata.normalize("NFKD", text or "")
     text = "".join(ch for ch in text if not unicodedata.combining(ch))
@@ -298,7 +317,7 @@ def normalize_store(raw: dict, cfg: dict) -> dict | None:
         sku=raw.get("sku") or "",
         categories=[c.get("name") for c in (raw.get("categories") or []) if c.get("name")],
         category_slugs=[c.get("slug") for c in (raw.get("categories") or []) if c.get("slug")],
-        short=strip_html(raw.get("short_description")),
+        short=clean_description(raw.get("short_description")),
         currency=prices.get("currency_symbol") or "€",
         price_from=price_from,
     )
@@ -319,7 +338,7 @@ def normalize_v3(raw: dict, cfg: dict) -> dict | None:
         sku=raw.get("sku") or "",
         categories=[c.get("name") for c in (raw.get("categories") or []) if c.get("name")],
         category_slugs=[c.get("slug") for c in (raw.get("categories") or []) if c.get("slug")],
-        short=strip_html(raw.get("short_description")),
+        short=clean_description(raw.get("short_description")),
         currency="€",
         price_from=bool(raw.get("type") == "variable"),
     )
@@ -327,8 +346,8 @@ def normalize_v3(raw: dict, cfg: dict) -> dict | None:
 
 def build_product(pid, name, url, image, price, regular, sale, on_sale, in_stock,
                   sku, categories, category_slugs, short, currency, price_from) -> dict | None:
-    if not name or price is None:
-        return None
+    if not name or price is None or price <= 0:
+        return None  # 0 EUR prekes (pvz. "kaina pagal uzklausa") ekranui netinka
     if regular is None or regular <= 0:
         regular = price
     if sale is not None and sale > 0 and sale < regular:
@@ -338,7 +357,10 @@ def build_product(pid, name, url, image, price, regular, sale, on_sale, in_stock
     if regular > price > 0:
         discount = int(round((regular - price) / regular * 100))
         save = round(regular - price, 2)
-    on_sale = bool(on_sale or discount > 0)
+    # WooCommerce zymi variantine preke kaip "akcijoje" net kai pigiausio varianto
+    # kaina nesumazejusi. Ekranui akcija yra tik tai, ka galima parodyti skaiciumi —
+    # kitaip uzsidegtu "AKCIJA" be jokios matomos nuolaidos.
+    on_sale = discount > 0
     return {
         "id": pid,
         "name": name,

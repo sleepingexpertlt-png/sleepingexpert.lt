@@ -1,9 +1,9 @@
-COOKKING - PRODUKTU EKRANAS
+SLEEPING EXPERT - PRODUKTU EKRANAS
 ===========================
 
 KAS TAI
 -------
-Programa pati pasiima prekes is cookking.online (kainas, nuolaidas,
+Programa pati pasiima prekes is sleepingexpert.lt (kainas, nuolaidas,
 nuotraukas) ir rodo jas per visa ekrana kaip reklamos karusele.
 
 Kainas atnaujini svetaineje -> ekranas pasikeicia pats. Nieko vesti
@@ -48,7 +48,7 @@ S         - rodyti tik akcijas / visas prekes
 
 KA GALIMA PASIKEISTI
 --------------------
-Failas: profiles\cookking.json
+Failas: profiles\sleepingexpert.json
 
   slide_seconds     kiek sekundziu rodoma preke
   only_on_sale      true = ekrane tik akcijos
@@ -65,12 +65,21 @@ Pakeitus - paleisk PALEISTI.bat is naujo.
 PROBLEMOS
 ---------
 "Kraunami produktai..." nedingsta
-  -> nepavyko pasiekti cookking.online. Patikrink interneta.
+  -> nepavyko pasiekti sleepingexpert.lt. Patikrink interneta.
 
 Nera nuotrauku
   -> paleisk komandine eilute siame aplanke:
-     python fetch_products.py --config profiles\cookking.json --force
+     python fetch_products.py --config profiles\sleepingexpert.json --force
 
 Noriu paleisti automatiskai ijungus kompiuteri
   -> Win + R, ivesk: shell:startup
      ikelk ten PALEISTI.bat nuoroda (Right click -> Create shortcut)
+
+
+KITA PARDUOTUVE
+---------------
+Tas pats paketas tinka ir kitai WooCommerce parduotuvei.
+Faile windows\PALEISTI.bat virsuje pakeisk dvi eilutes:
+
+  set PROFILE=profiles\cookking.json
+  set DATA=data-cookking

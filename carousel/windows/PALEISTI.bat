@@ -1,11 +1,16 @@
 @echo off
 chcp 65001 >nul
-title CookKing ekranas
+title Produktu ekranas
 cd /d "%~dp0.."
+
+rem ==== KLIENTAS: pakeisk sias dvi eilutes, jei naudoji kita parduotuve ====
+set PROFILE=profiles\sleepingexpert.json
+set DATA=data-se
+rem =======================================================================
 
 echo.
 echo   ============================================
-echo     COOKKING - produktu ekranas
+echo     SLEEPING EXPERT - produktu ekranas
 echo   ============================================
 echo.
 
@@ -21,8 +26,8 @@ if errorlevel 1 (
   exit /b 1
 )
 
-echo   [1/3] Siunciamos prekes is cookking.online...
-python fetch_products.py --config profiles\cookking.json
+echo   [1/3] Siunciamos prekes is svetaines...
+python fetch_products.py --config %PROFILE%
 if errorlevel 1 (
   echo.
   echo   [!] Nepavyko atnaujinti. Rodomos paskutines issaugotos kainos.
@@ -30,8 +35,8 @@ if errorlevel 1 (
 )
 
 echo   [2/3] Paleidziamas ekranas...
-start "CookKing serveris" /min python serve.py --data data-cookking --port 8080
-start "CookKing atnaujinimas" /min cmd /c "%~dp0atnaujinimas.bat"
+start "Ekrano serveris" /min python serve.py --data %DATA% --port 8080
+start "Kainu atnaujinimas" /min cmd /c "%~dp0atnaujinimas.bat" %PROFILE%
 
 timeout /t 3 /nobreak >nul
 
