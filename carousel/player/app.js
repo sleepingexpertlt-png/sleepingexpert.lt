@@ -12,6 +12,8 @@
     shuffle: true,
     show_qr: true,
     show_description: true,
+    always_price_from: false,
+    price_from_text: "nuo",
     show_stores: true,
     show_clock: true,
     summary_every: 8,
@@ -191,6 +193,7 @@
   function renderProduct(product) {
     var display = state.display;
     var discounted = product.on_sale && product.discount_percent > 0;
+    var showFrom = product.price_from || display.always_price_from === true;
     var category = (product.categories && product.categories[0]) || "Sleeping Expert";
 
     var badge = discounted
@@ -234,7 +237,7 @@
           (display.show_description !== false && product.short
             ? '<p class="info__short">' + esc(product.short) + "</p>" : "") +
           '<div class="price">' +
-            (product.price_from ? '<span class="price__prefix">nuo</span>' : "") +
+            (showFrom ? '<span class="price__prefix">' + esc(display.price_from_text || "nuo") + "</span>" : "") +
             '<span class="price__now">' + esc(money(product.price)) + "</span>" +
             oldPrice +
           "</div>" + note + cta +
@@ -245,11 +248,15 @@
 
   function renderSummary(entry) {
     var counts = (entry.payload && entry.payload.counts) || {};
+    var fromLabel = state.display.always_price_from === true
+      ? (state.display.price_from_text || "nuo") : "";
     var cards = entry.items.map(function (product) {
       return '<div class="card">' +
         '<img class="card__img" src="' + esc(imgSrc(product)) + '" alt="">' +
         '<div class="card__body"><div class="card__name">' + esc(product.name) + "</div>" +
-        '<div class="card__price">' + esc(money(product.price)) +
+        '<div class="card__price">' +
+        (fromLabel ? '<span class="card__from">' + esc(fromLabel) + "</span> " : "") +
+        esc(money(product.price)) +
         '<span class="card__old">' + esc(money(product.regular_price)) + "</span></div></div>" +
         '<div class="card__cut">-' + (product.discount_percent || 0) + "%</div></div>";
     }).join("");

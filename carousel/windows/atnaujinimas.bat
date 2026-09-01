@@ -1,7 +1,7 @@
 @echo off
 rem Kas valanda pasiima naujas kainas is svetaines.
 setlocal
-title Kainu atnaujinimas
+title NEUZDARYTI - kainu atnaujinimas
 cd /d "%~dp0.."
 
 set "PROFILE=%~1"

@@ -303,6 +303,12 @@ body::after { /* svelnus vinjetavimas, kad tekstas butu kontrastingas */
   font-weight: 900;
   color: var(--accent);
 }
+.card__from {
+  font-size: 0.6em;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
 .card__old {
   margin-left: 0.4em;
   font-size: clamp(11px, 1.4vmin, 24px);

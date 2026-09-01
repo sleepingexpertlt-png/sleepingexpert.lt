@@ -29,6 +29,11 @@
     "sale_first": true,
     "shuffle": true,
     "show_qr": true,
+
+    "_price_comment": "Kainos rodomos su priesaga \"nuo\" — dydziu pasirinkimas keicia galutine kaina",
+    "always_price_from": true,
+    "price_from_text": "nuo",
+
     "show_stores": true,
     "show_clock": true,
     "summary_every": 8,

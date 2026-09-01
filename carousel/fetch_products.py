@@ -66,6 +66,8 @@ DISPLAY_DEFAULTS = {
     "shuffle": True,
     "show_qr": True,
     "show_description": True,
+    "always_price_from": False,
+    "price_from_text": "nuo",
     "show_stores": True,
     "show_clock": True,
     "summary_every": 8,

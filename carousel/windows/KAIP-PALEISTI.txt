@@ -83,3 +83,18 @@ Faile windows\PALEISTI.bat virsuje pakeisk dvi eilutes:
 
   set PROFILE=profiles\cookking.json
   set DATA=data-cookking
+
+KURIE LANGAI TURI LIKTI ATIDARYTI
+---------------------------------
+Paleidus lieka du maziuliai langai uzduociu juostoje:
+
+  "NEUZDARYTI - ekrano serveris"       <- atiduoda vaizda narsyklei
+  "NEUZDARYTI - kainu atnaujinimas"    <- kas valanda siunciasi naujas kainas
+
+Siuos DU langus reikia palikti. Uzdarius pirmaji, ekranas nustos rodyti;
+uzdarius antraji, kainos nebeatsinaujins.
+
+Didysis juodas langas, kuriame matai [1/3] [2/3] [3/3], uzsidaro pats -
+ji uzdaryti galima laisvai.
+
+Viska isjungti vienu kartu: SUSTABDYTI.bat

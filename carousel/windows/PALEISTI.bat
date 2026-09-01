@@ -52,8 +52,8 @@ if not exist "%DATA%\products.json" (
 )
 
 echo   [2/3] Paleidziamas ekranas...
-start "Ekrano serveris" /min %PY% serve.py --data "%DATA%" --port 8080
-start "Kainu atnaujinimas" /min cmd /c call "%~dp0atnaujinimas.bat" "%PROFILE%"
+start "NEUZDARYTI - ekrano serveris" /min %PY% serve.py --data "%DATA%" --port 8080
+start "NEUZDARYTI - kainu atnaujinimas" /min cmd /c call "%~dp0atnaujinimas.bat" "%PROFILE%"
 
 timeout /t 3 /nobreak >nul
 
@@ -72,7 +72,13 @@ if defined BROWSER (
 
 echo.
 echo   Veikia. Ekranas pats atsinaujins kas valanda.
-echo   Isjungti: SUSTABDYTI.bat arba Alt+F4 narsykleje.
+echo.
+echo   SVARBU: uzduociu juostoje liko du maziuliai langai,
+echo   pavadinti "NEUZDARYTI ...". Jie turi likti atidaryti -
+echo   vienas atiduoda ekrana, kitas siunia naujas kainas.
+echo   Sitas langas uzsidarys pats, ji uzdaryti galima.
+echo.
+echo   Viska isjungti: SUSTABDYTI.bat
 echo.
 timeout /t 10 /nobreak >nul
 exit /b 0
