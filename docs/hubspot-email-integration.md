@@ -16,6 +16,7 @@ ir prijungti darbinį paštą info@sleepingexpert.lt.
 | Savininkai (owners) | 1 | Sleeping Expert (92125541) | Komandų nėra |
 
 Paskyros nustatymai: laiko juosta **US/Eastern**, valiuta **USD**, onboarding **nepradėtas**.
+Atnaujinimai 2026-09-03 (264 kontaktai, 22 sandoriai) įvykdyti per API po 10 įrašų, 0 klaidų, patikrinta atsitiktine imtimi.
 Visi sandoriai be `deal_currency_code`, todėl 660 331 (realiai EUR) rodomi kaip USD.
 
 ### 1.1 Sandorių etapai (WooCommerce statusas → HubSpot stage)
@@ -151,6 +152,7 @@ pagal originalų siuntėją.
 - [ ] Prijungti info@sleepingexpert.lt prie HubSpot (2.1)
 - [ ] Time zone → Europe/Vilnius, valiuta → EUR (2.2)
 - [ ] Ištrinti 37 sisteminius kontaktus (filtras Lead status = Unqualified)
+- [ ] Ištrinti 2 HubSpot pavyzdinius kontaktus („Maria Johnson (Sample Contact)“, „Brian Halligan (Sample Contact)“) ir 2 pavyzdinius laiškus
 - [ ] Ištrinti 125 įmones iš `docs/hubspot-cleanup/companies_to_delete.csv`
 - [ ] Peržiūrėti 120 privačių asmenų be užsakymų (`contacts_private_no_order_review.csv`)
 - [ ] Sukurti WooCommerce pipeline'ą ir pataisyti Hermes CRM Sync etapų atnaujinimą; patikrinti, kodėl nuo
