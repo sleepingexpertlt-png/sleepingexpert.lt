@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+hubspot_backfill_state.json
+hubspot_backfill_report.csv
