@@ -82,7 +82,7 @@ Valdas Skėrys), 18 — pagal el. pašto adresą (pvz. „#10145 — info@marsal
 
 | Dėžutė | Kur hostinama | Prijungta prie Claude | Prijungta prie HubSpot |
 |---|---|---|---|
-| info@sleepingexpert.lt (darbinis, WooCommerce siuntėjas, HubSpot vartotojas) | **Hostinger Email** (autodiscover/autoconfig → mail.hostinger.com), naudojama per Outlook programą | Ne | Ne — reikia prijungti |
+| info@sleepingexpert.lt (darbinis, WooCommerce siuntėjas, HubSpot vartotojas) | **Hostinger Email** (autodiscover/autoconfig → mail.hostinger.com), naudojama per Outlook programą | Ne | **Taip — prijungta 2026-09-03 per IMAP** (imap.hostinger.com:993 / smtp.hostinger.com:465) |
 | sleepingexpertlt@gmail.com (Google paskyra reklamos įrankiams) | Gmail | Taip | Ne — **nejungiame** (sprendimas 2026-09-03: ten tik Google Ads / Merchant / SaaS triukšmas) |
 
 ### 2.1 Kaip prijungti info@sleepingexpert.lt prie HubSpot (Hostinger = IMAP)
@@ -149,7 +149,8 @@ pagal originalų siuntėją.
 
 ## 4. Kas liko padaryti rankiniu būdu (checklist)
 
-- [ ] Prijungti info@sleepingexpert.lt prie HubSpot (2.1)
+- [x] Prijungti info@sleepingexpert.lt prie HubSpot (2.1) — padaryta 2026-09-03
+- [ ] Įjungti Log + Track ir užpildyti „Never log“ domenų sąrašą (2.1, 4–5 žingsniai)
 - [ ] Time zone → Europe/Vilnius, valiuta → EUR (2.2)
 - [ ] Ištrinti 37 sisteminius kontaktus (filtras Lead status = Unqualified)
 - [ ] Ištrinti 2 HubSpot pavyzdinius kontaktus („Maria Johnson (Sample Contact)“, „Brian Halligan (Sample Contact)“) ir 2 pavyzdinius laiškus
