@@ -104,6 +104,18 @@ Valdas Skėrys), 18 — pagal el. pašto adresą (pvz. „#10145 — info@marsal
 
 Svarbu: HubSpot prijungus dėžutę **istorijos neimportuoja** — logina tik naujus laiškus. Praeitis — 3 skyriuje.
 
+### 2.1.1 Ką „Never log“ daro ir ko nedaro
+
+„Never log“ **nekeičia pašto srauto**. Laiškai iš tų domenų kaip atėjo į info@sleepingexpert.lt ir Outlook,
+taip ir ateis — HubSpot jų netrina, neblokuoja ir neperima. Sąrašas reiškia tik tai, kad HubSpot tų laiškų
+**nekopijuos į CRM** kontaktų korteles, kur jie būtų šiukšlės (pvz. sąskaita prisikabintų prie kontakto
+„pagalba@ivesk.lt“).
+
+Sąskaitų persiuntimas buhalterijai — atskiras dalykas, daromas **pašto pusėje**, ne HubSpot'e:
+Hostinger webmail (mail.hostinger.com) → Settings → Filters → taisyklė pagal siuntėją (ivesk.lt,
+every-pay.com, luminor.lt ir kt.) → persiųsti buhalterio adresu. Dabar tai daroma rankiniu būdu
+persiunčiant į sleepingexpertlt@gmail.com su žyma „Apskaitai“.
+
 ### 2.2 Paskyros nustatymai, kuriuos reikia pakeisti UI (MCP negali)
 
 - Settings → Account Defaults → Time zone: **Europe/Vilnius** (dabar US/Eastern).
@@ -150,7 +162,10 @@ pagal originalų siuntėją.
 ## 4. Kas liko padaryti rankiniu būdu (checklist)
 
 - [x] Prijungti info@sleepingexpert.lt prie HubSpot (2.1) — padaryta 2026-09-03
-- [ ] Įjungti Log + Track ir užpildyti „Never log“ domenų sąrašą (2.1, 4–5 žingsniai)
+- [x] Įjungtas Inbox automation prie info@ (2026-09-03)
+- [x] „Never log“ įrašyti 9 domenai: anthropic.com, every-pay.com, fastspring.com, hubspot.com, ivesk.lt, linkedin.com, microsoft.com, paddle.com, worldline-solutions.com
+- [ ] Į „Never log“ pridėti dar `google.com` (Google Ads / Merchant Center / saugumo įspėjimai) ir `luminor.lt` (banko išrašai)
+- [ ] Hostinger webmail filtrai: sąskaitų persiuntimas buhalterijai automatiškai (šiuo metu daroma rankomis)
 - [ ] Time zone → Europe/Vilnius, valiuta → EUR (2.2)
 - [ ] Ištrinti 37 sisteminius kontaktus (filtras Lead status = Unqualified)
 - [ ] Ištrinti 2 HubSpot pavyzdinius kontaktus („Maria Johnson (Sample Contact)“, „Brian Halligan (Sample Contact)“) ir 2 pavyzdinius laiškus
