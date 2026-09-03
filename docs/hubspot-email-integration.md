@@ -132,6 +132,8 @@ Skriptas `scripts/hubspot_imap_backfill.py` (tik standartinė Python 3 bibliotek
 per IMAP ir sukuria HubSpot „Email“ veiklas prie atitinkamų kontaktų. Idempotentiškas (pagal Message-ID),
 numatytas režimas — dry run, sisteminiai/noreply laiškai ir ignoruojami domenai praleidžiami.
 
+Detali žingsnis-po-žingsnio instrukcija su komandomis: `docs/PALEIDIMAS.md`.
+
 Reikalavimai:
 - HubSpot **Private App** token: Settings → Integrations → Private Apps → Create → scopes
   `crm.objects.contacts.read`, `crm.objects.contacts.write`, `sales-email-read` (ir `crm.objects.contacts.write`
