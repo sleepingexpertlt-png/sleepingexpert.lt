@@ -129,10 +129,11 @@ Fiksuoju, kad būtų žinoma, kas veikė.
 | Data | Kas | Poveikis maršrutams |
 |---|---|---|
 | ~08-28 → 09-01 | Google Ads sustabdyta (mokėjimo slenkstis), atnaujinta 09-01 | −, paskui atsistatymas į bazę |
-| **09-03** | **5 PMax kampanijų `shopping_setting.feed_label` = LT** (buvo tuščias → 0 produktų → „Nėra produktų sistemoje Google Ads", 6,6 % opt. balas, 8 € iš 28 €/d išleista). Mutate per Google Ads API, patikrinta nepriklausomu GAQL. Kampanijos: 23085196755, 23231305809, 23739524386, 24208858994, 24214064113 | + (laukiama): PMax su produktais, iki ~20 €/d **jau suplanuoto** biudžeto pradeda dirbti — **be biudžeto kėlimo**, t. y. 07-30 sprendimo nekeičiant |
+| **09-03** | **5 PMax kampanijų `shopping_setting.feed_label` = LT** (buvo tuščias → 0 produktų → „Nėra produktų sistemoje Google Ads", 6,6 % opt. balas, 8 € iš 28 €/d išleista). Mutate per Google Ads API, patikrinta nepriklausomu GAQL. Kampanijos: 23085196755, 23231305809, 23739524386, 24208858994, 24214064113, **+ 23941982295 Ukmergė PMax (14:26, buvo praleista, pataisyta)** | + (laukiama): PMax su produktais, iki ~20 €/d **jau suplanuoto** biudžeto pradeda dirbti — **be biudžeto kėlimo**, t. y. 07-30 sprendimo nekeičiant |
 
 Patikra: 09-04 09:00 VPS cron — ar `SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN`
 rekomendacija dingo. 09-06 06:00 — Porter GBP dieninė eilutė (M6 testas).
 
-Atviras klausimas: „Sleeping Expert — Ukmergė PMax" nėra tarp 5 atnaujintų.
-Ar jau turėjo LT, ar praleista?
+Ukmergė PMax buvo praleista — pataisyta 14:26, patvirtinta GAQL. Viso 6 PMax su LT.
+„SE — Ukmergė čiužiniai + lovos [always-on]" (23941122366) — **Search** kampanija,
+`shopping_setting` jai netaikomas, tuščias feed_label normalus. Neliesti.
