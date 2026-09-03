@@ -140,11 +140,11 @@ Reikalavimai:
   reikalingas tik su `--create-contacts`). Token prasideda `pat-eu1-…`.
 - Paleisti iš kompiuterio arba Hermes VPS (Claude sandbox'as neturi prieigos prie api.hubapi.com ir IMAP).
 
-```bash
-export IMAP_USER='info@sleepingexpert.lt'
-export IMAP_PASSWORD='***'
-export HUBSPOT_TOKEN='pat-eu1-***'
+Slaptažodžių į komandas ir pokalbius nerašyti: skriptas jų paklausia interaktyviai (getpass) arba
+skaito iš `~/.se-pastas/imap_password` ir `~/.se-pastas/hubspot_token` (chmod 600). Aplinkos kintamieji
+`IMAP_PASSWORD` / `HUBSPOT_TOKEN` veikia, bet nerekomenduojami (lieka shell istorijoje).
 
+```bash
 python3 scripts/hubspot_imap_backfill.py --list-folders                     # aplankų pavadinimai
 python3 scripts/hubspot_imap_backfill.py --folder INBOX --since 2024-06-01   # dry run, ataskaita CSV
 python3 scripts/hubspot_imap_backfill.py --folder INBOX.Sent --since 2024-06-01

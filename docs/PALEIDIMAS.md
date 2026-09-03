@@ -47,17 +47,25 @@ cd se-pastas
 
 ---
 
-## 4 žingsnis. Įvesti prisijungimus
+## 4 žingsnis. Slaptažodžiai — nieko nereikia įrašyti į komandas
 
-Pakeisti `SLAPTAZODIS` ir `pat-eu1-...` savo reikšmėmis:
+Skriptas **pats paklaus** pašto slaptažodžio ir HubSpot rakto, kai bus paleistas.
+Įvedant ekrane nieko nesimato — tai normalu, tiesiog įveskite ir spauskite Enter.
+
+Slaptažodžio ir rakto **niekur nerašykite**: nei į komandų eilutę, nei į Claude pokalbį,
+nei į VPS Claude sesiją. Viskas, kas įrašoma į pokalbį, lieka jo istorijoje.
+
+Jei skriptą leisite kelis kartus ir nenorite kaskart vesti, galima įrašyti į failus,
+kuriuos gali skaityti tik root (komandos paklaus reikšmės, ekrane nesimatys):
 
 ```bash
-export IMAP_USER='info@sleepingexpert.lt'
-export IMAP_PASSWORD='SLAPTAZODIS'
-export HUBSPOT_TOKEN='pat-eu1-...'
+mkdir -p ~/.se-pastas && chmod 700 ~/.se-pastas
+read -rs -p "Pašto slaptažodis: " P; printf '%s' "$P" > ~/.se-pastas/imap_password; unset P; echo
+read -rs -p "HubSpot token: " T; printf '%s' "$T" > ~/.se-pastas/hubspot_token; unset T; echo
+chmod 600 ~/.se-pastas/*
 ```
 
-`IMAP_PASSWORD` — tas pats Hostinger pašto slaptažodis, kurį įvedėte HubSpot lange.
+Kai baigsite darbą, failus galima ištrinti: `rm -rf ~/.se-pastas`.
 
 ---
 
@@ -136,10 +144,11 @@ Skriptą galima leisti pakartotinai — tie patys laiškai antrą kartą nekelia
 
 | Klaida | Ką daryti |
 |---|---|
-| `AUTHENTICATIONFAILED` | Neteisingas pašto slaptažodis. Pasitikrinti prisijungiant per mail.hostinger.com |
+| `AUTHENTICATIONFAILED` | Neteisingas pašto slaptažodis. Pasitikrinti prisijungiant per mail.hostinger.com; jei naudojate failą — `rm ~/.se-pastas/imap_password` ir paleisti iš naujo |
 | `Nepavyko atidaryti aplanko` | Netikslus aplanko pavadinimas — paleisti `--list-folders` |
-| `HubSpot ... 401` | Neteisingas arba pasibaigęs raktas — pasidaryti naują (1 žingsnis) |
+| `HubSpot ... 401` | Neteisingas arba pasibaigęs raktas — pasidaryti naują (1 žingsnis); jei naudojate failą — `rm ~/.se-pastas/hubspot_token` |
 | `HubSpot ... 403` | Rakte trūksta scope — pridėti trūkstamą (1 žingsnis, 3 punktas) |
+| `Trūksta imap_password ...` | Skriptas paleistas ne interaktyviame terminale — paleisti tiesiogiai SSH lange arba įrašyti į failą (4 žingsnis) |
 | `command not found: python3` | Naudoti `/root/frontier-agent/venv/bin/python3` vietoje `python3` |
 
 Nukopijuokite klaidos tekstą ir atsiųskite man — pasakysiu, kas negerai.

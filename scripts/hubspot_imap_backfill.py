@@ -8,10 +8,6 @@ Senoji istorija (2024–2026) į CRM nepatenka. Šis skriptas ją perkelia vien�
 
 Naudojimas (numatytasis režimas — DRY RUN, į HubSpot nieko nerašoma):
 
-    export IMAP_USER='info@sleepingexpert.lt'
-    export IMAP_PASSWORD='...'
-    export HUBSPOT_TOKEN='pat-eu1-...'          # Private App token (žr. docs/hubspot-email-integration.md)
-
     python3 scripts/hubspot_imap_backfill.py --list-folders
     python3 scripts/hubspot_imap_backfill.py --folder INBOX --since 2024-01-01
     python3 scripts/hubspot_imap_backfill.py --folder INBOX.Sent --since 2024-01-01
@@ -26,6 +22,14 @@ Kas daroma su kiekvienu laišku:
   5. Sukuriamas Email objektas (/crm/v3/objects/emails) su tekstu, tema, data, antraštėmis ir
      susiejamas su kontaktu (association type 198 = email -> contact).
 
+Slaptažodžiai (IMAP slaptažodis, HubSpot token) NIEKUR nerašomi komandų eilutėje ir jokiame pokalbyje.
+Skriptas jų paklausia interaktyviai (įvedant ekrane nesimato) arba skaito iš failų:
+
+    ~/.se-pastas/imap_password    ir    ~/.se-pastas/hubspot_token     (teisės 0600)
+
+Aplinkos kintamieji IMAP_PASSWORD / HUBSPOT_TOKEN irgi veikia, bet nerekomenduojami —
+lieka shell istorijoje. IMAP_USER numatytasis: info@sleepingexpert.lt.
+
 Tik standartinė Python 3 biblioteka, jokių priklausomybių.
 """
 from __future__ import annotations
@@ -36,9 +40,11 @@ import email
 import email.header
 import email.utils
 import html
+import getpass
 import imaplib
 import json
 import os
+import stat
 import re
 import sys
 import time
@@ -463,6 +469,37 @@ def write_summary(path: str, agg: dict) -> None:
         w.writerows(rows)
 
 
+SECRET_DIR = os.path.expanduser("~/.se-pastas")
+
+
+def read_secret(name: str, env_var: str, prompt: str, required: bool = True) -> str | None:
+    """Slaptažodis iš: 1) aplinkos kintamojo, 2) failo ~/.se-pastas/<name>, 3) interaktyvaus klausimo.
+
+    Failas turi būti pasiekiamas tik savininkui (0600); kitaip įspėjama, bet skaitoma.
+    Interaktyvus klausimas rodomas tik jei terminalas interaktyvus; kitaip grąžinama None.
+    """
+    val = os.environ.get(env_var)
+    if val:
+        return val.strip()
+    path = os.path.join(SECRET_DIR, name)
+    if os.path.exists(path):
+        mode = stat.S_IMODE(os.stat(path).st_mode)
+        if mode & 0o077:
+            print(f"ĮSPĖJIMAS: {path} teisės {oct(mode)} — pataisykite: chmod 600 {path}", file=sys.stderr)
+        with open(path, encoding="utf-8") as f:
+            val = f.read().strip()
+        if val:
+            return val
+    if sys.stdin.isatty():
+        val = getpass.getpass(prompt)
+        if val:
+            return val.strip()
+    if required:
+        print(f"Trūksta {name}: nustatykite {env_var}, įrašykite į {path} (chmod 600) "
+              f"arba paleiskite interaktyviame terminale.", file=sys.stderr)
+    return None
+
+
 def load_state(path: str) -> dict:
     if os.path.exists(path):
         with open(path, encoding="utf-8") as f:
@@ -503,13 +540,13 @@ def main(argv: list[str] | None = None) -> int:
     our_addresses = args.our_address or DEFAULT_OUR_ADDRESSES
     skip_domains = DEFAULT_SKIP_DOMAINS + args.skip_domain
 
-    user = os.environ.get("IMAP_USER")
-    password = os.environ.get("IMAP_PASSWORD")
-    if not user or not password:
-        print("Trūksta IMAP_USER / IMAP_PASSWORD aplinkos kintamųjų", file=sys.stderr)
+    user = os.environ.get("IMAP_USER") or our_addresses[0]
+    password = read_secret("imap_password", "IMAP_PASSWORD", f"Pašto slaptažodis ({user}): ")
+    if not password:
         return 2
 
     conn = imap_connect(args.imap_host, args.imap_port, user, password)
+    del password
     if args.list_folders:
         for f in imap_list_folders(conn):
             print(f)
@@ -517,15 +554,18 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     hs: HubSpot | None = None
-    if args.apply:
-        token = os.environ.get("HUBSPOT_TOKEN")
-        if not token:
-            print("--apply reikalauja HUBSPOT_TOKEN", file=sys.stderr)
-            return 2
+    # Dry run: token nebūtinas, bet su juo lentelė rodo, kas jau yra HubSpot'e.
+    # --apply: token privalomas.
+    token = read_secret("hubspot_token", "HUBSPOT_TOKEN",
+                        "HubSpot Private App token (Enter = praleisti, tik dry run): ",
+                        required=args.apply)
+    if args.apply and not token:
+        print("--apply reikalauja HubSpot token", file=sys.stderr)
+        conn.logout()
+        return 2
+    if token:
         hs = HubSpot(token, owner_id=args.owner_id)
-    elif os.environ.get("HUBSPOT_TOKEN"):
-        # Dry run su tokenu: tikriname kontaktų egzistavimą, bet nieko nerašome
-        hs = HubSpot(os.environ["HUBSPOT_TOKEN"], owner_id=args.owner_id)
+    del token
 
     state = load_state(args.state_file)
     done = set(state["done_message_ids"])
