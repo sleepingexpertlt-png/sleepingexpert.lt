@@ -129,3 +129,11 @@ neturint VPS patvirtinimo — tai to paties tipo klaida kaip K10
   išėmė juos iš North Star. North Star = GBP maršrutai + WC užsakymai.
   Niekada nekelti `calls=0` kaip radinio ar prioriteto. Tai buvo parašyta
   `hermes_status` dokumentacijoje — perskaityta ir nepastebėta.
+
+- **K17** (2026-09-03) — **Windsor nebenaudojamas.** Visos prieigos tiesioginės
+  per VPS: Google Ads — `src/agents/google_ads_agent.py` (`execute_gaql()`,
+  customer 7015063449, **be MCC header'io** — eilutė kode: „direct customer
+  access works without MCC header"), GBP — `gmb_agent.py`, GSC / GA4 / WC /
+  GMC — tiesiogiai. Prieš bet kokį „neturiu prieigos" ar naują tyrimą — pirma
+  `data/` ir `tasks/lessons.md` frontier-agent repo. 2026-08-28 diena buvo
+  prarasta tiriant tai, kas surašyta `data/ads_budget_reality_2026-07-30.md`.
