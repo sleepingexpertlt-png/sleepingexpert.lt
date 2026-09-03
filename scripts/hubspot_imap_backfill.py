@@ -264,20 +264,32 @@ class HubSpot:
                 raise RuntimeError(f"HubSpot {method} {path} -> {e.code}: {detail}") from None
         raise RuntimeError(f"HubSpot {method} {path}: per daug bandymų (429/5xx)")
 
-    def find_contact_by_email(self, addr: str) -> str | None:
+    def contact_info(self, addr: str) -> dict | None:
+        """Grąžina {'id', 'lifecyclestage', 'num_associated_deals'} arba None."""
         addr = addr.lower()
         if addr in self._contact_cache:
             return self._contact_cache[addr]
         body = {
             "filterGroups": [{"filters": [{"propertyName": "email", "operator": "EQ", "value": addr}]}],
-            "properties": ["email"],
+            "properties": ["email", "lifecyclestage", "num_associated_deals"],
             "limit": 1,
         }
         res = self._request("POST", "/crm/v3/objects/contacts/search", body)
         results = res.get("results") or []
-        cid = str(results[0]["id"]) if results else None
-        self._contact_cache[addr] = cid
-        return cid
+        info = None
+        if results:
+            props = results[0].get("properties") or {}
+            info = {
+                "id": str(results[0]["id"]),
+                "lifecyclestage": props.get("lifecyclestage") or "",
+                "num_associated_deals": props.get("num_associated_deals") or "0",
+            }
+        self._contact_cache[addr] = info
+        return info
+
+    def find_contact_by_email(self, addr: str) -> str | None:
+        info = self.contact_info(addr)
+        return info["id"] if info else None
 
     def create_contact(self, addr: str, display_name: str) -> str:
         first, last = split_name(display_name)
@@ -290,7 +302,8 @@ class HubSpot:
             props["hubspot_owner_id"] = self.owner_id
         res = self._request("POST", "/crm/v3/objects/contacts", {"properties": props})
         cid = str(res["id"])
-        self._contact_cache[addr.lower()] = cid
+        self._contact_cache[addr.lower()] = {"id": cid, "lifecyclestage": "lead",
+                                             "num_associated_deals": "0"}
         return cid
 
     def email_exists(self, message_id: str) -> bool:
@@ -386,6 +399,70 @@ def imap_fetch(conn: imaplib.IMAP4_SSL, uid: bytes) -> bytes | None:
 # Pagrindinė eiga
 # --------------------------------------------------------------------------------------
 
+def aggregate_counterparts(agg: dict, mail: ParsedMail, skip_domains: Iterable[str]) -> None:
+    """Kaupia statistiką pagal kiekvieną pašnekovą (kas rašė, kiek kartų, kada)."""
+    for addr in mail.counterparts:
+        entry = agg.setdefault(addr, {
+            "email": addr, "name": "", "domain": addr.split("@")[-1],
+            "gauta": 0, "issiusta": 0, "pirmas": mail.date, "paskutinis": mail.date,
+            "paskutine_tema": "", "sisteminis": is_noise_address(addr, skip_domains),
+        })
+        if mail.direction == "INCOMING_EMAIL":
+            entry["gauta"] += 1
+            if not entry["name"] and mail.from_name:
+                entry["name"] = mail.from_name
+        else:
+            entry["issiusta"] += 1
+            if not entry["name"]:
+                entry["name"] = next((n for n, a in mail.to + mail.cc if a == addr and n), "")
+        if mail.date < entry["pirmas"]:
+            entry["pirmas"] = mail.date
+        if mail.date >= entry["paskutinis"]:
+            entry["paskutinis"] = mail.date
+            entry["paskutine_tema"] = mail.subject
+
+
+def suggest_action(entry: dict) -> str:
+    """Siūlymas, ką su šiuo adresu daryti CRM'e."""
+    if entry["sisteminis"]:
+        return "IGNORUOTI — sisteminis/noreply adresas"
+    stage = entry.get("hubspot_lifecyclestage") or ""
+    if entry.get("hubspot_id"):
+        if stage == "customer":
+            return "ESAMAS KLIENTAS — laiškus kelti prie kortelės"
+        if stage == "other":
+            return "PARTNERIS/TIEKĖJAS — kelti laiškus, į marketingą neįtraukti"
+        return "ESAMAS KONTAKTAS — kelti laiškus"
+    if entry["issiusta"] and entry["gauta"]:
+        return "NAUJAS LEAD — susirašinėjome abipusiai, verta sukurti kontaktą"
+    if entry["gauta"] and not entry["issiusta"]:
+        return "PERŽIŪRĖTI — rašė mums, bet neatsakėme (galimas prarastas lead)"
+    return "PERŽIŪRĖTI — rašėme mes, atsakymo nebuvo"
+
+
+def write_summary(path: str, agg: dict) -> None:
+    fields = ["email", "name", "domain", "gauta", "issiusta", "viso", "pirmas", "paskutinis",
+              "paskutine_tema", "hubspot_id", "hubspot_lifecyclestage", "hubspot_sandoriai",
+              "siulymas"]
+    rows = []
+    for e in agg.values():
+        rows.append({
+            "email": e["email"], "name": e["name"], "domain": e["domain"],
+            "gauta": e["gauta"], "issiusta": e["issiusta"], "viso": e["gauta"] + e["issiusta"],
+            "pirmas": e["pirmas"].date().isoformat(), "paskutinis": e["paskutinis"].date().isoformat(),
+            "paskutine_tema": e["paskutine_tema"],
+            "hubspot_id": e.get("hubspot_id", ""),
+            "hubspot_lifecyclestage": e.get("hubspot_lifecyclestage", ""),
+            "hubspot_sandoriai": e.get("hubspot_sandoriai", ""),
+            "siulymas": suggest_action(e),
+        })
+    rows.sort(key=lambda r: (-r["viso"], r["email"]))
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=fields)
+        w.writeheader()
+        w.writerows(rows)
+
+
 def load_state(path: str) -> dict:
     if os.path.exists(path):
         with open(path, encoding="utf-8") as f:
@@ -417,6 +494,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--skip-domain", action="append", default=[], help="Papildomas ignoruojamas domenas")
     p.add_argument("--state-file", default="hubspot_backfill_state.json")
     p.add_argument("--report-csv", default="hubspot_backfill_report.csv")
+    p.add_argument("--summary-csv", default="hubspot_backfill_contacts.csv",
+                   help="Suvestinė pagal pašnekovą su siūlymu, ką daryti CRM'e")
     p.add_argument("--owner-id", default=os.environ.get("HUBSPOT_OWNER_ID", "92125541"),
                    help="HubSpot owner ID, kuriam priskiriamos veiklos")
     args = p.parse_args(argv)
@@ -460,6 +539,7 @@ def main(argv: list[str] | None = None) -> int:
     counts = {"total": 0, "logged": 0, "already": 0, "noise": 0, "no_contact": 0,
               "no_counterpart": 0, "unparsable": 0, "created_contacts": 0}
     rows = []
+    agg: dict[str, dict] = {}
     for uid in uids:
         counts["total"] += 1
         raw = imap_fetch(conn, uid)
@@ -470,6 +550,7 @@ def main(argv: list[str] | None = None) -> int:
         row = {"date": mail.date.isoformat(), "direction": mail.direction, "from": mail.from_addr,
                "counterparts": ";".join(mail.counterparts), "subject": mail.subject, "action": ""}
         rows.append(row)
+        aggregate_counterparts(agg, mail, skip_domains)
 
         if mail.message_id in done:
             counts["already"] += 1
@@ -518,17 +599,39 @@ def main(argv: list[str] | None = None) -> int:
 
     conn.logout()
 
+    # Kiekvienam pašnekovui pažiūrime, ar jis jau yra HubSpot'e
+    if hs:
+        for addr, entry in agg.items():
+            if entry["sisteminis"]:
+                continue
+            info = hs.contact_info(addr)
+            if info:
+                entry["hubspot_id"] = info["id"]
+                entry["hubspot_lifecyclestage"] = info["lifecyclestage"]
+                entry["hubspot_sandoriai"] = info["num_associated_deals"]
+
     with open(args.report_csv, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["date", "direction", "from", "counterparts", "subject", "action"])
         w.writeheader()
         w.writerows(rows)
+    write_summary(args.summary_csv, agg)
 
     print("\nSuvestinė:")
     for k, v in counts.items():
         print(f"  {k:18} {v}")
-    print(f"\nAtaskaita: {args.report_csv}")
+
+    by_suggestion: dict[str, int] = {}
+    for e in agg.values():
+        key = suggest_action(e).split(" — ")[0]
+        by_suggestion[key] = by_suggestion.get(key, 0) + 1
+    print(f"\nPašnekovai ({len(agg)} unikalūs adresai):")
+    for k, v in sorted(by_suggestion.items(), key=lambda kv: -kv[1]):
+        print(f"  {k:22} {v}")
+
+    print(f"\nLaiškų ataskaita:      {args.report_csv}")
+    print(f"Pašnekovų suvestinė:   {args.summary_csv}")
     if args.apply:
-        print(f"Būsena: {args.state_file}")
+        print(f"Būsena:                {args.state_file}")
     return 0
 
 

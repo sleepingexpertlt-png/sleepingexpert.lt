@@ -150,10 +150,29 @@ python3 scripts/hubspot_imap_backfill.py --folder INBOX --since 2024-06-01 --app
 python3 scripts/hubspot_imap_backfill.py --folder INBOX.Sent --since 2024-06-01 --apply
 ```
 
-Dry run sukuria `hubspot_backfill_report.csv` su stulpeliu `action` (would-log / skip:noise /
-skip:no-contact-in-hubspot / already-logged) — pirmiausia peržiūrėti jį, tik tada leisti su `--apply`.
-Laiškai kontaktams, kurių HubSpot'e nėra, praleidžiami (kad nekurtų naujų šiukšlių); jei norima kurti —
-`--create-contacts`.
+Dry run sukuria du failus:
+
+1. `hubspot_backfill_report.csv` — kiekvienas laiškas su stulpeliu `action` (would-log / skip:noise /
+   skip:no-contact-in-hubspot / already-logged).
+2. `hubspot_backfill_contacts.csv` — **rūšiavimo lentelė pagal pašnekovą**, surikiuota pagal laiškų kiekį:
+   el. paštas, vardas, domenas, kiek gauta/išsiųsta, pirmas ir paskutinis kontaktas, paskutinė tema,
+   ar jau yra HubSpot'e (ID, lifecycle stage, sandorių skaičius) ir **siūlymas**:
+
+   | Siūlymas | Ką reiškia |
+   |---|---|
+   | IGNORUOTI | sisteminis / noreply adresas — į CRM nekelti |
+   | ESAMAS KLIENTAS | kontaktas jau yra, lifecycle = customer — kelti laiškus prie kortelės |
+   | PARTNERIS/TIEKĖJAS | lifecycle = other — kelti laiškus, į marketingą neįtraukti |
+   | NAUJAS LEAD | susirašinėta abipusiai, kontakto CRM'e nėra — verta sukurti |
+   | PERŽIŪRĖTI | rašė mums, bet neatsakėme (galimas prarastas lead), arba rašėme mes be atsako |
+
+Eiga: pirmiausia dry run → peržiūrėti `hubspot_backfill_contacts.csv` ir nuspręsti, kurie adresai tampa
+lead'ais → tik tada `--apply`.
+
+Laiškai kontaktams, kurių HubSpot'e nėra, pagal nutylėjimą praleidžiami — tai apsauga, kad nepasikartotų
+2026-05 importas, kai į CRM pateko 384 adresai iš Gmail adresų knygos (37 iš jų — robotai). Kontaktus kurti
+automatiškai galima su `--create-contacts`, bet tai daryti verta tik susiaurinus imtį (pvz. `--since`
+paskutiniams metams), o ne visai istorijai.
 
 Alternatyva be skripto: iš Outlook persiųsti pasirinktus senus laiškus į HubSpot „Forward to CRM“ adresą
 (Settings → General → Email → Forwarding address) — kiekvienas persiųstas laiškas prisikabina prie kontakto
@@ -173,4 +192,4 @@ pagal originalų siuntėją.
 - [ ] Peržiūrėti 120 privačių asmenų be užsakymų (`contacts_private_no_order_review.csv`)
 - [ ] Sukurti WooCommerce pipeline'ą ir pataisyti Hermes CRM Sync etapų atnaujinimą; patikrinti, kodėl nuo
       2026-05 sync'as sukūrė tik 16 sandorių
-- [ ] Paleisti `hubspot_imap_backfill.py` (dry run → apply) senai info@ istorijai
+- [ ] Paleisti `hubspot_imap_backfill.py` dry run, peržiūrėti `hubspot_backfill_contacts.csv`, nuspręsti dėl lead'ų, tada `--apply`
