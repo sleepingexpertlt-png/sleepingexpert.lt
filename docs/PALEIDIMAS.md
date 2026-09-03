@@ -140,6 +140,43 @@ Skriptą galima leisti pakartotinai — tie patys laiškai antrą kartą nekelia
 
 ---
 
+## Trumpiausias kelias: 2 komandos terminale, likusį darbą daro VPS Claude
+
+Jei nenorite patys leisti skripto, terminale reikia padaryti tik du dalykus — prisijungti ir
+įrašyti pašto slaptažodį į failą, kurį gali skaityti tik root. Po to viską paleidžia Claude,
+kuris jau veikia VPS'e, o slaptažodžio jis niekada nemato.
+
+**1. PowerShell / Komandinė eilutė (jūsų kompiuteryje):**
+
+```
+ssh root@72.61.139.213
+```
+
+Kai eilutė pasikeis į `root@...:~#`, esate VPS'e.
+
+**2. Įklijuoti (paklaus pašto slaptažodžio, rašant nesimatys):**
+
+```
+mkdir -p ~/.se-pastas && chmod 700 ~/.se-pastas && read -rs -p "info@sleepingexpert.lt slaptazodis: " P && printf '%s' "$P" > ~/.se-pastas/imap_password && unset P && chmod 600 ~/.se-pastas/imap_password && echo && echo OK
+```
+
+Turi išvesti `OK`. Tiek terminale ir viskas.
+
+**3. Paleisti VPS Claude** (`claude`) ir jam nusiųsti šį tekstą:
+
+> Pašto slaptažodis jau yra faile `~/.se-pastas/imap_password` (root-only, 0600) — jo neskaityk ir nerodyk,
+> skriptas pats jį nuskaito. Šioje žinutėje jokių slaptažodžių nėra.
+> Padaryk: `cd /root && rm -rf se-pastas && git clone -b claude/hubspot-email-integration-tkvjca https://github.com/sleepingexpertlt-png/sleepingexpert.lt.git se-pastas && cd se-pastas`
+> Tada `python3 scripts/hubspot_imap_backfill.py --list-folders` ir
+> `python3 scripts/hubspot_imap_backfill.py --folder INBOX --since 2024-01-01` bei tą patį su `--folder INBOX.Sent`.
+> HubSpot token'o nėra — kai paklaus, spausk Enter (dry run veikia be jo). Nieko į HubSpot nerašyk (be `--apply`).
+> Parodyk ekrano suvestinę ir `hubspot_backfill_contacts.csv` pirmas 40 eilučių.
+
+Jei VPS Claude paklaus slaptažodžio — jis neteisingai suprato; slaptažodis jau faile, jam jo nereikia.
+Jei skriptas neinteraktyvioje aplinkoje neranda failo, jis aiškiai pasakys `Trūksta imap_password`.
+
+---
+
 ## Jei kas nors neveikia
 
 | Klaida | Ką daryti |
