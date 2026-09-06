@@ -103,3 +103,21 @@ metrikoje. Neatskirta.
 Pagal 09-03 užsirašytą kriterijų: **liko 0 → realu → avarija.** Nulinių
 dienų nebeliko, bet lygis −80 % išsilaikė šešias dienas — kriterijaus esmė
 išpildyta.
+
+### M6 papildymas 2026-09-06 — profilių patikra per GBP API (skaitymas, be pakeitimų)
+
+Tikrinta `hermes_gbp_request` (Business Information API v1), visos 3 lokacijos.
+
+| Faktas | Vilnius | Klaipėda | Ukmergė |
+|---|---|---|---|
+| Adresas / openInfo | yra, OPEN | yra, OPEN | yra, OPEN |
+| Pagr. kategorija | mattress_store | mattress_store | mattress_store |
+| Paslaugų sritis | **Lietuva, Latvija, Estija (3 valstybės)** | 9 vietovės aplink Klaipėdą | 7 vietovės aplink Ukmergę |
+| Profilio kalba | pl | en | en |
+| latlng | yra | yra | negrąžinta |
+
+Išvados:
+- Nė viename profilyje nėra pakeitimo, kuris paaiškintų vienalaikį 08-27 kritimą visose trijose lokacijose. Priežastis lieka nenustatyta ir sisteminė (ne profilio).
+- API artefaktas: `serviceArea.businessType` grąžina `CUSTOMER_LOCATION_ONLY`, kai readMask be `storefrontAddress`, ir `CUSTOMER_AND_BUSINESS_LOCATION`, kai su. Adresas realiai yra. Ne signalas.
+- Vilniaus paslaugų sritis (3 valstybės) skiriasi nuo kitų dviejų (miestų lygis). Savininkas 08-28 nurodė, kad tai pačio Google pasiūlymas. Kritimas prasidėjo 08-27, t. y. anksčiau — todėl NE priežastis. Įrašyta kaip stebėjimas, be siūlymo keisti.
+- 09-04 VPS cron (feed_label diagnostika) rezultato Telegram sraute nėra (72 val.: tik 3 blog + 2 system žinutės). Reikia VPS relay.
