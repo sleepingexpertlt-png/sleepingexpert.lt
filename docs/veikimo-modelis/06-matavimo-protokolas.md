@@ -68,3 +68,38 @@ realu.
 Lokacijų ID (Porter / GBP API):
 Vilnius `11855115537711521704` · Klaipėda `18399011255848825016` ·
 Ukmergė `2791954715091405702`.
+
+## M6 testas 2026-09-06 — rezultatas
+
+Porter perklausta 09-06 06:00 (`coverageUntil 2026-09-05`). Palyginimas su
+09-03 traukimu:
+
+| Data | 09-03 traukimas | 09-06 traukimas | Išvada |
+|---|---|---|---|
+| 08-29 | 8 / 2 / 9 | **28 / 22 / 16** | užsipildė |
+| 08-30 | 0 / 0 / 0 | **26 / 12 / 7** | užsipildė |
+| 08-31 | 0 / 0 / 0 | **25 / 17 / 10** | užsipildė |
+| 09-01 | 0 / 0 / 0 | **26 / 22 / 10** | užsipildė |
+| 09-02 → 09-05 | — | 0 / 0 / 0 | dar neužpildyta |
+
+(Vilnius / Klaipėda / Ukmergė, impresijos.)
+
+**Išvada 1 — M6 patvirtinta, bet vėlavimas ~5 d., ne 3.** Taisyklė
+keičiama: eilutei naudoti tik dienas iki **`coverageUntil − 5 d.`**
+
+**Išvada 2 — kritimas nuo 08-27 REALUS ir tęsiasi.** Užpildytos dienos rodo
+~25 / ~17 / ~10 impresijų per dieną prieš ~130 / ~80 / ~85 iki 08-26.
+Tai **−80 %** šešias dienas iš eilės (08-27 → 09-01). Maršrutai per tas
+šešias dienas: **1** (Klaipėda 08-29). Reklama grįžo 09-01 — 09-01
+impresijos nepakilo.
+
+**Išvada 3 — priežastis sisteminė, ne vietinė.** Trys nepriklausomos
+lokacijos krito tą pačią dieną tuo pačiu dydžiu. Tai ne konkurencija ir ne
+vienas profilis. Kandidatai: (a) 08-27 profilių redagavimas, jei lietė visas
+tris; (b) „Google atnaujino jūsų atributus" — Google pats keitė atributus apie
+08-27 (matyta profilio paste'e); (c) Google pusės pokytis Performance API
+metrikoje. Neatskirta.
+
+Pagal 09-03 užsirašytą kriterijų: **liko 0 → realu → avarija.** Nulinių
+dienų nebeliko, bet lygis −80 % išsilaikė šešias dienas — kriterijaus esmė
+išpildyta.
