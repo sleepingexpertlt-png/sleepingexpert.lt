@@ -137,3 +137,61 @@ rekomendacija dingo. 09-06 06:00 — Porter GBP dieninė eilutė (M6 testas).
 Ukmergė PMax buvo praleista — pataisyta 14:26, patvirtinta GAQL. Viso 6 PMax su LT.
 „SE — Ukmergė čiužiniai + lovos [always-on]" (23941122366) — **Search** kampanija,
 `shopping_setting` jai netaikomas, tuščias feed_label normalus. Neliesti.
+
+## 2026-09-10 — Reklamos faktai ir kas iš tikrųjų relevant tikslui
+
+GAQL, customer 7015063449, 2026-09-01 → 2026-09-09, tik ENABLED kampanijos.
+Iš viso išleista **752,88 € per 9 d. = 83,65 €/d**.
+
+### feed_label taisymas suveikė
+
+PMax kampanijos vėl leidžia pinigus: PMax-4 154,78 €, Vilnius PMax A2 89,69 €,
+PMax-3 83,06 €, Klaipėda PMax A3 79,71 €, Vaikiškos lovos 47,20 €.
+Diagnostika „Nėra produktų sistemoje Google Ads" nebeblokuoja išlaidų.
+
+### Biudžeto pasiskirstymas pagal miestą
+
+| Miestas | Išlaidos 9 d. | Per dieną | GBP impresijų pokytis |
+|---|---|---|---|
+| Vilnius | 223,48 € | 24,83 € | +45 % |
+| Klaipėda | 99,39 € | 11,04 € | +56 % |
+| Ukmergė | 28,47 € | 3,16 € | **−3 %** |
+
+Vienintelis neaugantis salonas gauna 8 kartus mažiau nei Vilnius. Tai nėra
+paklausos trūkumas: Ukmergės PMax per 9 d. surinko 2816 impresijų, bet išleido
+4,72 € (0,52 €/d), CPC 0,06 €. Kampanija badauja, ne neranda auditorijos.
+
+### Efektyvumas: Search prieš PMax
+
+| Kampanija | €/d | CPC | CTR |
+|---|---|---|---|
+| Vilnius Search always-on | 11,67 | 1,38 € | 15,7 % |
+| Ukmergė Search always-on | 2,64 | 0,88 € | 15,3 % |
+| E-com Paieška | 9,57 | 0,40 € | 13,3 % |
+| Klaipėda Search | 2,19 | 0,44 € | 12,5 % |
+| **PMax-4 (bendras)** | **17,20** | **1,07 €** | **1,4 %** |
+| PMax-3 (bendras) | 9,23 | 1,11 € | 2,3 % |
+| Klaipėda PMax A3 | 8,86 | 0,71 € | 4,8 % |
+
+Didžiausias vienas išlaidų punktas (PMax-4, 17,20 €/d) turi prasčiausią CTR (1,4 %)
+ir brangiausią kliką tarp stambiųjų. Search kampanijos su 12–16 % CTR gauna mažiau.
+
+### Neveikianti kampanija
+
+`SE — Shopping Hilding Nevada -20% [2026-09]` (24203056043) yra ENABLED, bet per
+9 dienas: 0 impresijų, 0 klikų, 0 €. Rugsėjo akcijos kampanija nepaleista.
+Priežastis nenustatyta, reikia diagnozės.
+
+### Kas relevant, o kas ne (2026-09-10 vertinimas)
+
+| Dalykas | Relevantumas tikslui | Kodėl |
+|---|---|---|
+| Ukmergės biudžeto badas | **aukštas** | vienintelis neaugantis salonas, priežastis matoma |
+| PMax-4 efektyvumas | **aukštas** | didžiausios išlaidos, prasčiausias rezultatas |
+| Neveikianti Shopping kampanija | vidutinis | nulis rezultato, bet ir nulis žalos |
+| GSC cron miręs | vidutinis | vienintelis antrinio tikslo skaitiklis, bet pats nieko nejudina |
+| Blogas nepublikuoja | **žemas** | naujas straipsnis nekelia esamo raktažodžio iš 7 į 4 |
+| blog_agent CB atviras | **žemas** | vartai sustabdė fabrikaciją, tai apsauga, ne gedimas |
+
+Biudžeto nekeliame (2026-07-30 savininko sprendimas). Perskirstymas tarp esamų
+kampanijų yra atskiras klausimas ir sprendžia savininkas.
