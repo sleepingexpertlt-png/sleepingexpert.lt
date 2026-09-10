@@ -198,3 +198,63 @@ perskaičiavimo (nes nėra duomenų).
 | Blogas nepublikuoja | `blog_published_24h` = 0, `blog_drafted_24h` = 2 | ≥3 d. |
 | blog_quality_gate | score 0,495 — pusė straipsnių krenta | tęstinis |
 | Porter MCP | neprisijungė (404) | šiandien |
+
+---
+
+## M7 patikra 2026-09-10: nepriklausomas šaltinis (Porter) patvirtina
+
+Ta pati laiko eilutė užklausta per Porter `google-my-business` konektorių — tai
+atskiras kelias nei `hermes_gbp_request`. `coverageUntil: 2026-09-09`,
+`lastRefreshed: 2026-09-09 19:20 UTC`.
+
+### Bendros paieškos impresijos, dienomis
+
+| Data | Vilnius | Klaipėda | Ukmergė |
+|---|---|---|---|
+| 08-20 → 08-26 | 136, 123, 93, 32, 160, 146, 117 | 74, 73, 62, 27, 106, 88, 64 | 75, 109, 72, 25, 100, 83, 68 |
+| 08-27 → 09-02 | 32, 23, 28, 26, 25, 26, 29 | 17, 25, 22, 12, 17, 22, 16 | 7, 16, 16, 7, 10, 10, 5 |
+| 09-03 → 09-06 | **214, 188, 82, 183** | **138, 146, 79, 76** | **68, 73, 75, 78** |
+| 09-07 → 09-09 | 0 (dar neįkelta) | 0 | 0 |
+
+### Maršrutai, dienomis
+
+| Parduotuvė | 08-20 → 08-26 | Paskutinė ne nulinė | Nulių iš eilės |
+|---|---|---|---|
+| Vilnius | 1, 0, 3, 0, 2, 3, 5 | 08-26 (5) | 14 (08-27 → 09-09) |
+| Klaipėda | 3, 8, 2, 0, 0, 0, 1 | 08-29 (1) | 11 (08-30 → 09-09) |
+| Ukmergė | 0, 0, 13, 0, 0, 1, 0 | 08-29 (1) | 11 (08-30 → 09-09) |
+
+### Kiek maršrutų turėjo būti
+
+Prieškritiniu laikotarpiu (08-20 → 08-26) kiekviena parduotuvė davė po 14 maršrutų.
+Santykis maršrutai / impresijos: Vilnius 1,73 %, Klaipėda 2,83 %, Ukmergė 2,63 %.
+Pritaikius tą patį santykį atsistatymo dienoms 09-03 → 09-06:
+
+| Parduotuvė | Impresijos 09-03 → 09-06 | Laukta maršrutų | Faktas |
+|---|---|---|---|
+| Vilnius | 667 | 11,6 | 0 |
+| Klaipėda | 439 | 12,4 | 0 |
+| Ukmergė | 294 | 7,7 | 0 |
+| **Viso** | **1400** | **31,7** | **0** |
+
+Jei elgsena nepakito, tikimybė per tas keturias dienas gauti nulį yra **1,6 × 10⁻¹⁴**.
+Tai ne svyravimas ir ne triukšmas.
+
+### Kur du šaltiniai sutampa ir kur ne
+
+| Teiginys | GBP API | Porter | Statusas |
+|---|---|---|---|
+| Maršrutai 0 nuo 08-27 (Vln) / 08-30 (Klp, Ukm) | taip | taip | **patvirtinta** |
+| Impresijos atsistatė 09-03 virš bazės | taip | taip | **patvirtinta** |
+| Svetainės klikai 09-03 → 09-05 | 1, 2, 1 | 0, 0, 0 | **nesutampa** |
+
+**Pataisa M7 įrašui.** M7 trečiame punkte rėmiausi svetainės klikais kaip įrodymu,
+kad veiksmų grandinė veikia. Porter tomis dienomis rodo 0. Du šaltiniai nesutaria,
+todėl tas argumentas laikomas neįrodytu ir pašalinamas iš išvados. Pagrindinė
+išvada nesikeičia — ji laikosi ant impresijų atsistatymo ir maršrutų nulio, o tai
+patvirtina abu šaltiniai nepriklausomai.
+
+**Porter aprėpties pastaba.** `coverageUntil` rodo 09-09, bet 09-07 → 09-09 visos
+eilutės nulinės visiems trims. Reali Porter aprėptis baigiasi 09-06.
+`coverageUntil` iš Porter nėra patikimas aprėpties rodiklis — tikrinti pagal
+paskutinę dieną su nenuline impresija.
