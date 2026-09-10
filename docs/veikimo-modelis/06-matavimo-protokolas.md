@@ -258,3 +258,46 @@ patvirtina abu šaltiniai nepriklausomai.
 eilutės nulinės visiems trims. Reali Porter aprėptis baigiasi 09-06.
 `coverageUntil` iš Porter nėra patikimas aprėpties rodiklis — tikrinti pagal
 paskutinę dieną su nenuline impresija.
+
+---
+
+## M8 — 2026-09-10: savininko lauko duomenys uždaro klausimą
+
+Savininkas praneša iš realybės: skambučių srautas didelis, profilis Maps rodomas
+gerai, matomumas ten, kur anksčiau matė tik LONAS. Rezultatas juntamas versle.
+
+Tai trečias nepriklausomas šaltinis ir jis atsako į M7 palikta atvirą klausimą.
+
+| Šaltinis | Ką rodo |
+|---|---|
+| GBP Performance API | maršrutai 0 nuo 08-27 / 08-30 |
+| Porter | tas pats, 0 |
+| Savininko stebėjimas | žmonės randa, skambina, ateina |
+
+**Išvada: sulaužytas skaitiklis, ne profilis ir ne verslas.** Mygtukas veikia, nes
+klientai per jį ateina. Vadinasi tikrinti profilio nebereikia ir keisti jo negalima —
+jis tvarkingas. Lieka viena užduotis: pranešti Google apie neveikiančią metriką.
+
+**Anksčiau užregistruotas testas laikomas atliktu.** M7 buvo numatyta: „mygtuko nėra →
+lūžis profilyje; mygtukas yra ir veikia → lūžusi Google metrika". Pasitvirtino antras
+variantas.
+
+### Tikslas turi gyvą skaitiklį — impresijos
+
+Maršrutų skaitiklis miręs, bet impresijos matuojamos ir abiejuose šaltiniuose sutampa.
+Bazė 08-20 → 08-26 prieš atsistatymą 09-03 → 09-06, vidurkis per dieną:
+
+| Parduotuvė | Bazė | Dabar | Pokytis |
+|---|---|---|---|
+| Vilnius | 115/d | 167/d | **+45 %** |
+| Klaipėda | 71/d | 110/d | **+56 %** |
+| Ukmergė | 76/d | 74/d | −3 % |
+
+Tikslo sąlyga yra +30 % bent 2 iš 3 salonų. **Pagal impresijas ta sąlyga jau tenkinama
+Vilniuje ir Klaipėdoje.** Ukmergė stovi vietoje ir yra vienintelė atsiliekanti.
+
+**Sprendimas dėl matavimo (2026-09-10).** Kol Google maršrutų skaitiklis neveikia,
+pagrindinis stebimas rodiklis yra GBP impresijos per dieną, bazė ir tikslas
+perskaičiuoti aukščiau. Maršrutai lieka deklaruotas tikslas ir grįžta į matavimą tą
+dieną, kai skaitiklis atsigauna. Bazė 34 ir tikslas 44 neatšaukiami, tik laikinai
+nematuojami. Tai nėra tikslo sumažinimas.
