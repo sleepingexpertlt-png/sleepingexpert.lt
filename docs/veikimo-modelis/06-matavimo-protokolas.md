@@ -121,3 +121,80 @@ Išvados:
 - API artefaktas: `serviceArea.businessType` grąžina `CUSTOMER_LOCATION_ONLY`, kai readMask be `storefrontAddress`, ir `CUSTOMER_AND_BUSINESS_LOCATION`, kai su. Adresas realiai yra. Ne signalas.
 - Vilniaus paslaugų sritis (3 valstybės) skiriasi nuo kitų dviejų (miestų lygis). Savininkas 08-28 nurodė, kad tai pačio Google pasiūlymas. Kritimas prasidėjo 08-27, t. y. anksčiau — todėl NE priežastis. Įrašyta kaip stebėjimas, be siūlymo keisti.
 - 09-04 VPS cron (feed_label diagnostika) rezultato Telegram sraute nėra (72 val.: tik 3 blog + 2 system žinutės). Reikia VPS relay.
+
+---
+
+## M7 — 2026-09-10: maršrutų metrika sulaužyta, ne paklausa
+
+Šaltinis: Google Business Profile Performance API tiesiogiai (`hermes_gbp_request`,
+`fetchMultiDailyMetricsTimeSeries`). NE Porter — Porter MCP šią dieną neprisijungė.
+Svarbu: API praleidžia `value` lauką, kai reikšmė 0, todėl tuščia diena = 0, ne „nėra duomenų".
+
+### Vilnius, dienos reikšmės
+
+| Data | Mobile Maps impresijos | Maršrutai | Svetainės klikai |
+|---|---|---|---|
+| 08-24 | 116 | 2 | 3 |
+| 08-25 | 106 | 3 | 2 |
+| 08-26 | 83 | 5 | 2 |
+| 08-27 | 9 | 0 | 1 |
+| 08-28 | 4 | 0 | 0 |
+| 08-29 | 8 | 0 | 1 |
+| 08-30 → 09-02 | 0 | 0 | 0–1 |
+| 09-03 | **180** | 0 | 1 |
+| 09-04 | **158** | 0 | 2 |
+| 09-05 | 57 | 0 | 1 |
+| 09-06 | **180** | 0 | 0 |
+| 09-07 | **236** | 0 | 0 |
+| 09-08, 09-09 | tuščia (vėlavimas) | — | — |
+
+### Ką tai įrodo
+
+1. **Impresijų kritimas 08-27 → 09-02 buvo realus ir jau baigėsi.** Nuo 09-03 impresijos
+   ne tik atsistatė, bet viršija prieškritinę bazę (83–116 → 158–236). Laikas sutampa
+   su Google Ads sustabdymu dėl mokėjimo (~08-28 → 09-01) ir atsinaujinimu.
+2. **Maršrutai = 0 keturiolika dienų iš eilės (08-27 → 09-07), įskaitant penkias dienas
+   su rekordinėmis impresijomis.** Prieš tai buvo 2–5 per dieną prie 83–116 impresijų.
+   Jei elgsena nepakito, tikimybė gauti 14 nulių iš eilės yra ~1e-14. Tai ne paklausa.
+3. **Veiksmų fiksavimas veikia.** Tomis pačiomis dienomis svetainės klikai rašomi
+   (09-03: 1, 09-04: 2, 09-05: 1), 09-02 užfiksuotas 1 skambučio klikas. Vadinasi
+   sulaužyta ne visa veiksmų grandinė, o būtent maršrutų mygtukas arba jo metrika.
+4. **Ne vėlavimas.** Tose pačiose dienose impresijos jau užpildytos. Faktinė aprėptis
+   baigiasi 09-07, t. y. vėlavimas ~3 d., ne 5. **M6 taisyklė tikslinama: aprėpties riba
+   yra ta diena, kurią impresijos dar turi reikšmę, ne fiksuotas dienų skaičius.**
+5. **Ne profilio kokybė.** Visos trys lokacijos: `hasVoiceOfMerchant: true`, statusas OPEN,
+   adresai vietoje, kategorijos nepakitusios.
+
+### Kitos dvi parduotuvės — tas pats
+
+| Parduotuvė | Paskutinė diena su maršrutais | Nulių iš eilės iki 09-07 |
+|---|---|---|
+| Vilnius | 08-26 (5) | 12 |
+| Klaipėda | 08-29 (1) | 9 |
+| Ukmergė | 08-29 (1) | 9 |
+
+### Pasekmė tikslui
+
+Šiaurinė žvaigždė (34 → 44 maršrutai) šiuo metu **nematuojama**. Ne „blogai einasi" —
+matavimo prietaisas rodo nulį. Iki kol tai išspręsta, bet koks maršrutų skaičiaus
+vertinimas neturi prasmės, o 51 dienos langas tęsiasi.
+
+### Vienintelis likęs neautomatizuojamas patikrinimas
+
+Atidaryti Google Maps telefone, rasti Sleeping Expert Vilnius, pažiūrėti ar yra
+mygtukas „Nuorodos" / „Directions". Tai atskiria dvi hipotezes:
+- mygtuko nėra → sulaužytas profilio veiksmas, taisoma profilyje;
+- mygtukas yra ir veikia → sulaužyta Google metrika, rašomas kreipimasis į palaikymą.
+
+Iki atsakymo — jokių profilio keitimų (nes nežinoma, kas keistina), jokio tikslo
+perskaičiavimo (nes nėra duomenų).
+
+## Sistemos gedimai 2026-09-10
+
+| Gedimas | Faktas | Kiek laiko |
+|---|---|---|
+| GSC nebematuojamas | `traffic_snapshot_age_hours` = 168,5; paskutinis įrašas 09-03 07:30 | 7 d. |
+| blog_agent circuit breaker | `cb: open`, paskutinis bandymas 09-09 14:38 | nuo ~09-07 |
+| Blogas nepublikuoja | `blog_published_24h` = 0, `blog_drafted_24h` = 2 | ≥3 d. |
+| blog_quality_gate | score 0,495 — pusė straipsnių krenta | tęstinis |
+| Porter MCP | neprisijungė (404) | šiandien |
