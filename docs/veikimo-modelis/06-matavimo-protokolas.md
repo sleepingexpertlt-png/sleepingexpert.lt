@@ -362,3 +362,39 @@ Porter prieš Hermès bazę, kuris duotų dar didesnį augimą.
 
 **Ukmergė vienintelė krenta.** Sutampa su 09-10 reklamos auditu: Ukmergė gauna
 3,16 €/d, Vilnius 24,83 €/d, Klaipėda 11,04 €/d.
+
+## M10 — 2026-09-14: rezultatas tikras, bet nuomojamas
+
+Klausimas: ar maršrutų augimas yra mūsų, ar pirktas? Atsakymą duoda natūralus
+eksperimentas, kurio niekas specialiai nedarė — reklamos sustabdymas dėl mokėjimo
+2026-08-28 → 09-01.
+
+GBP impresijos per dieną, Porter:
+
+| Salonas | Bazė 08-20→26 | Reklama OFF 08-30→09-02 | Dabar 09-03→08 | OFF vs bazė |
+|---|---|---|---|---|
+| Vilnius | 115 | 26 | 198 | **−77 %** |
+| Klaipėda | 71 | 17 | 123 | **−76 %** |
+| Ukmergė | 76 | 8 | 112 | **−89 %** |
+
+Kai reklama sustojo keturioms dienoms, GBP matomumas nukrito tris keturis kartus
+visose trijose parduotuvėse. Vadinasi didžioji dalis GBP impresijų ir per jas
+einančių maršrutų yra mokama, o ne organinė. Local PMax kampanijos („Local store
+visits and promotions") tiesiogiai maitina Maps matomumą.
+
+**Ką tai keičia.** Tikslas pasiektas ir skaičiai tikri. Bet jie laikosi tol, kol
+mokama. Tai ne priekaištas rezultatui, o jo savybė, kurią reikia žinoti planuojant.
+
+**Patvirtinimas iš kitos pusės.** Ukmergė gauna 3,16 €/d ir yra vienintelė
+krentanti (−14 % maršrutų). Vilnius 24,83 €/d duoda +100 %, Klaipėda 11,04 €/d
+duoda +107 %. Tas pats mechanizmas abiem kryptim.
+
+**Ko dar neįrodyta.** Grandinė maršrutas → pardavimas. Savininkas nurodė, kad lovos
+ar komplekto pirkimo ciklas trunka iki 80 dienų, todėl rugsėjo maršrutai pardavimuose
+matysis lapkritį–gruodį. Dabartinis run rate 24 814 €/mėn., tikslas 83 000 €.
+
+**Neatsakytas klausimas.** Bazinės savaitės reklamos išlaidų neturiu — Hermès ads
+įrankis šią sesiją neprieinamas, o Porter google-ads paskyra yra `available`, ne
+`connected`, ir jos materializavimas sunaudoja workspace licencijos vietą. Todėl
+negaliu pasakyti, ar dabar leidžiame daugiau nei bazinę savaitę. Tai reikia
+patikrinti prieš darant išvadą apie efektyvumo pagerėjimą.
