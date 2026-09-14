@@ -195,3 +195,76 @@ Priežastis nenustatyta, reikia diagnozės.
 
 Biudžeto nekeliame (2026-07-30 savininko sprendimas). Perskirstymas tarp esamų
 kampanijų yra atskiras klausimas ir sprendžia savininkas.
+
+## 2026-09-14 — Reklamos konversijos prijungtos. Trys išvados, viena jų nemaloni
+
+Savininko sprendimu prijungta Porter `google-ads` paskyra (sunaudota licencijos
+vieta). Duomenys: 2026-08-14 → 2026-09-13, 30 d.
+
+### 1. Google Ads paskyroje NĖRA pardavimo sekimo
+
+Visos paskyroje veikiančios konversijos per 30 d.:
+
+| Konversijos veiksmas | Kategorija | Kiekis |
+|---|---|---|
+| Local actions - Other engagements | Engagement | 420 |
+| **Local actions - Directions** | **Get Directions** | **255** |
+| Local actions - Website visits | Page View | 31 |
+| Clicks to call | Contact | 28 |
+
+Nė vienos pirkimo konversijos. `conversions_value` lygi konversijų skaičiui, t. y.
+kiekviena verta 1, ne eurų. Vadinasi **1 441,63 € per mėnesį leidžiama nežinant,
+kuri dalis atneša pardavimų.** ROAS apskaičiuoti neįmanoma.
+
+### 2. Mes perkame būtent tą metriką, kurią pasirinkome tikslu
+
+Paskyra optimizuojama į „Local actions - Directions". Per 30 d. reklamai
+priskirti 255 maršrutai. Todėl teiginys „maršrutai +64 %" iš dalies reiškia
+„nupirkome daugiau maršrutų". Veiksmas tikras, klientas tikras, bet Šiaurinė
+žvaigždė yra perkama, todėl kaip nepriklausomas sėkmės matas ji silpna.
+
+### 3. Kaina už maršrutą pagal kampaniją
+
+| Kampanija | € / 30 d. | Maršrutai | € už maršrutą |
+|---|---|---|---|
+| PMax-4 (bendras) | 193,90 | 93 | **2,08** |
+| Vilnius PMax (A2) | 142,69 | 62 | **2,30** |
+| Klaipėda PMax (A3) | 133,10 | 50 | **2,66** |
+| Vaikiškos lovos PMax | 73,75 | 26 | 2,84 |
+| PMax-3 (bendras) | 86,04 | 15 | 5,74 |
+| PMax-2 (bendras) | 17,39 | 2 | 8,69 |
+| **Ukmergė PMax** | 20,63 | 2 | **10,31** |
+| Ąžuolinės lovos Vilnius | 43,83 | 1 | 43,83 |
+| **Ukmergė Search always-on** | 103,15 | 2 | **51,58** |
+| Klaipėda Search | 106,36 | 1 | 106,36 |
+| Antialerginiai [niche] | 126,18 | 1 | 126,18 |
+| Vilnius Search always-on | 171,97 | 0 | — |
+| E-com Paieška | 202,30 | 0 | — |
+| Medicininiai [niche] | 19,44 | 0 | — |
+
+Suvestinė: **PMax 667,48 € → 250 maršrutų = 2,67 € už maršrutą.
+Search 774,15 € → 5 maršrutai = 154,83 € už maršrutą.**
+
+### Pataisa 09-10 įrašui
+
+2026-09-10 rašiau, kad PMax-4 yra prasčiausia kampanija, nes jos CTR 1,4 %, o
+Search kampanijos su 12–16 % CTR nepakankamai finansuojamos. **Tai buvo klaida.**
+PMax-4 yra pigiausias maršrutų šaltinis paskyroje (2,08 €). CTR tarp PMax ir Search
+nepalyginamas, nes PMax rodo Display ir YouTube inventoriuje.
+
+### Svarbus apribojimas, kurio negalima praleisti
+
+Search kampanijos negali generuoti „Local actions" konversijų, jei prie jų
+neprikabinti vietos ištekliai (location assets). Pagal `tasks/lessons.md` L14 jie
+kabinami tik per UI. Todėl **Search rodmuo 5 maršrutai nereiškia, kad Search
+neveikia — jis reiškia, kad Search rezultatas nematuojamas.** Search gali varyti
+pardavimus svetainėje, kurių niekas nefiksuoja, nes pirkimo konversijos nėra.
+Teisingas teiginys: 774 € per mėnesį leidžiama aklai, ne 774 € iššvaistoma.
+
+### Ukmergė: duomenys nepatvirtina biudžeto hipotezės
+
+Ukmergė gauna 123,78 € per mėnesį (PMax 20,63 + Search 103,15) ir duoda 4 maršrutus.
+Tai 30,95 € už maršrutą, prasčiausias rodiklis paskyroje, kai Vilniaus PMax duoda
+2,30 €. Jei problema būtų badavimas, kaina už maršrutą būtų normali, tik kiekis
+mažas. Ji nenormali. Todėl **pinigų pylimas į Ukmergę nepagrįstas** — 09-10 svarstytas
+perskirstymas būtų buvęs klaida, ir gerai, kad jis nebuvo pasiūlytas kaip veiksmas.
