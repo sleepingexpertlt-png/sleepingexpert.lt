@@ -137,3 +137,18 @@ neturint VPS patvirtinimo — tai to paties tipo klaida kaip K10
   Prieš bet kokį „neturiu prieigos" — pirma Porter, tada frontier-agent
   `data/` ir `tasks/lessons.md`. 2026-08-28 diena buvo prarasta tiriant tai,
   kas surašyta `data/ads_budget_reality_2026-07-30.md`.
+
+## K18 — 2026-09-14: dirbame tik tiesiogiai
+
+Savininko sprendimas: Porter ir kiti tarpininkai nenaudojami. Visi reklamos ir
+GBP veiksmai vykdomi tiesiogiai per VPS (`src/agents/google_ads_agent.py`,
+`GoogleAdsClient`, `execute_gaql()`, customer 7015063449, be MCC antraštės) arba
+per Hermès `hermes_ads_gaql` / `hermes_ads_mutate`, kai jie prieinami.
+
+Tai pakeičia K17 dalį „Porter duomenims". K17 likusi dalis (pirma tikrinti `data/`
+ir `lessons.md` prieš teigiant, kad nėra prieigos) galioja.
+
+Praktinė priežastis, kodėl tai teisinga: 2026-09-14 bandant per Porter vykdyti
+kampanijos stabdymą grįžo `NO_BALANCE` — workspace kreditai baigėsi. Tarpininkas
+pridėjo priklausomybę, kurios be reikalo nereikia. Tiesioginis kelias tokios
+priklausomybės neturi.
