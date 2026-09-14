@@ -301,3 +301,64 @@ pagrindinis stebimas rodiklis yra GBP impresijos per dieną, bazė ir tikslas
 perskaičiuoti aukščiau. Maršrutai lieka deklaruotas tikslas ir grįžta į matavimą tą
 dieną, kai skaitiklis atsigauna. Bazė 34 ir tikslas 44 neatšaukiami, tik laikinai
 nematuojami. Tai nėra tikslo sumažinimas.
+
+---
+
+## M9 — 2026-09-14: KLAIDA. Maršrutų skaitiklis nebuvo sulaužytas
+
+**Atšaukiu M7 ir M8 pagrindinę išvadą.** Maršrutai nebuvo sulaužyti. Jie tiesiog
+užsipildo daug vėliau nei impresijos.
+
+Įrodymas. 2026-09-10 užklausiau tas pačias dienas ir gavau nulius. Šiandien,
+2026-09-14, tos pačios dienos turi reikšmes:
+
+| Diena | Vilnius maršrutai 09-10 užklausoje | Ta pati diena 09-14 užklausoje |
+|---|---|---|
+| 09-04 | 0 | **9** |
+| 09-05 | 0 | **5** |
+| 09-06 | 0 | **3** |
+| 09-08 | — | **10** |
+| 09-09 | — | 1 |
+
+Duomenys atkeliavo po 09-10. Jokio taisymo tarp šių dviejų datų nedaryta.
+
+**Kur suklydau.** M7 skaičiavau tikimybę 1,6 × 10⁻¹⁴, kad maršrutų nulis yra
+atsitiktinis. Skaičiavimas buvo teisingas, prielaida — ne. Skaičiavau tikimybę
+įvykio, kurio nebuvo: duomenys ne trūko, jie dar nebuvo atkeliavę. Rėmiausi tuo,
+kad impresijos toms dienoms jau užpildytos, ir padariau prielaidą, jog visos
+metrikos pildosi kartu. Netiesa.
+
+**Taisyklė (keičia M6 ir M7).** Skirtingos GBP metrikos turi skirtingą vėlavimą:
+
+| Metrika | Vėlavimas |
+|---|---|
+| Impresijos | ~3 d. |
+| Maršrutai | **~7–10 d.** |
+
+Aprėpties riba imama pagal **lėčiausią** metriką, ne pagal impresijas.
+Maršrutų duomenys jaunesni nei 10 d. laikomi nepilnais ir apie juos neteigiama nieko.
+
+**Ką tai reiškia praktiškai.** Savininkas 09-10 pasakė, kad realybėje viskas veikia.
+Jis buvo teisus, o aš turėjau tris kartus daugiau duomenų ir vis tiek klydau.
+Lauko stebėjimas aplenkė API. Tai įrašoma kaip taisyklė: kai savininko stebėjimas
+prieštarauja šviežiems API duomenims, pirma tikrinamas duomenų pilnumas, ne realybė.
+
+## Tikslo būklė 2026-09-14 (vienas šaltinis, Porter, vienodi 7 d. langai)
+
+| Salonas | 08-20 → 08-26 | 09-03 → 09-09 | Pokytis |
+|---|---|---|---|
+| Vilnius | 14 | 28 | **+100 %** |
+| Klaipėda | 14 | 29 | **+107 %** |
+| Ukmergė | 14 | 12 | −14 % |
+| **Viso** | **42** | **69** | **+64 %** |
+
+**Tikslo sąlyga (+30 % bent 2 iš 3 salonų) įvykdyta.** Vilnius ir Klaipėda.
+Skaitinis tikslas 44 taip pat viršytas: 69.
+
+**Pastaba dėl bazės.** Oficiali bazė buvo 34 (Vln 8, Klp 13, Ukm 13), fiksuota iš
+Hermès 2026-08-26. Porter tą pačią savaitę rodo 42 (14/14/14). Šaltiniai skaičiuoja
+skirtingai, todėl aukščiau lyginu Porter su Porter. Tai griežtesnis palyginimas nei
+Porter prieš Hermès bazę, kuris duotų dar didesnį augimą.
+
+**Ukmergė vienintelė krenta.** Sutampa su 09-10 reklamos auditu: Ukmergė gauna
+3,16 €/d, Vilnius 24,83 €/d, Klaipėda 11,04 €/d.
