@@ -152,3 +152,24 @@ Praktinė priežastis, kodėl tai teisinga: 2026-09-14 bandant per Porter vykdyt
 kampanijos stabdymą grįžo `NO_BALANCE` — workspace kreditai baigėsi. Tarpininkas
 pridėjo priklausomybę, kurios be reikalo nereikia. Tiesioginis kelias tokios
 priklausomybės neturi.
+
+## K19 — 2026-09-18: tarpininkų nenaudojam. Taškas.
+
+Savininko nurodymas po to, kai griebiausi Ahrefs ir Windsor:
+
+**Leidžiama tik tiesiogiai:**
+- Hermès `hermes_ads_gaql` / `hermes_ads_mutate` (Google Ads, customer 7015063449)
+- Hermès `hermes_gbp_request` (GBP)
+- VPS `src/agents/google_ads_agent.py`, `gmb_agent.py`
+
+**Nenaudojam:** Ahrefs, Windsor, Porter. Nė duomenims, nė veiksmams.
+
+**Kai tiesioginis įrankis neprieinamas** — atsakymas yra „tiesioginis įrankis
+neprieinamas", o ne tylus perėjimas prie tarpininko. Tarpininkas atrodo kaip
+sprendimas, bet iš tikrųjų tai sprendimo apėjimas: duomenys kitokie, kreditai
+baigiasi, planai riboja, ir po to pusė laiko sugaišta aiškinantis, kodėl
+skaičiai nesutampa.
+
+Kas jau padaryta per Windsor 2026-09-18 (PMax-2 ir PMax-3 sustabdymas) —
+lieka galioti, nes rezultatas teisingas ir patikrintas. Klaidingas buvo kelias,
+ne sprendimas. Ateityje tokie veiksmai eina tiesiogiai.
