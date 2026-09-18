@@ -1,0 +1,329 @@
+{
+  "category": "gamta",
+  "category_name": "Gamta ir stichijos",
+  "entries": [
+    {
+      "slug": "vanduo",
+      "word": "Vanduo",
+      "title": "Sapnuoti vandenį",
+      "aliases": ["vandens", "švarus vanduo", "drumstas vanduo", "ežeras", "baseinas", "tvenkinys"],
+      "short": "Vanduo sapne – emocijų simbolis. Jo būsena (skaidrus, drumstas, ramus, audringas) tiksliai parodo, kaip šiuo metu jaučiatės giliau nei kasdienis „viskas gerai“.",
+      "psychology": [
+        "Vanduo yra pats universaliausias sapnų simbolis, ir beveik visos psichologijos mokyklos sutaria dėl jo prasmės: tai emocinis gyvenimas ir pasąmonė. Jungas vandenį vadino nesąmoningumo vaizdiniu; šiuolaikiniai tyrėjai pastebi, kad vanduo sapnuose dažnai koreliuoja su emocine dienos įtampa.",
+        "Skaidrus, ramus vanduo – emocinė aiškumas ir ramybė. Drumstas ar purvinas – sumaištis, jausmai, kurių nesuprantate. Audringas – stiprūs, nesuvaldyti jausmai. Gilus – tai, kas slypi po paviršiumi ir dar neįvardyta.",
+        "Praktinė pastaba: jei sapnuojate vandenį dažnai, ypač su troškulio jausmu, pasitikrinkite, ar pakankamai geriate dieną ir ar miegamasis ne per sausas. Kūno signalai įsipina į sapnus dažniau, nei manome."
+      ],
+      "variants": [
+        {"situation": "Skaidrus, ramus vanduo", "meaning": "Emocinė ramybė, aiškumas. Vienas geriausių sapnų vaizdinių."},
+        {"situation": "Drumstas ar purvinas vanduo", "meaning": "Sumaištis, neaiškūs jausmai, situacija, kurios nematote aiškiai."},
+        {"situation": "Vanduo kyla ar užlieja", "meaning": "Emocijos ima viršų. Persikrovimo signalas – laikas sulėtinti."}
+      ],
+      "mindfulness": "Išgerkite stiklinę vandens lėtai, sąmoningai, jausdami kiekvieną gurkšnį. Tai paprasčiausia mindfulness praktika ir kartu priminimas, kad jausmai, kaip vanduo, teka ir keičiasi.",
+      "related": ["jura", "upe", "potvynis", "plaukti", "skesti", "zuvis"]
+    },
+    {
+      "slug": "jura",
+      "word": "Jūra",
+      "title": "Sapnuoti jūrą",
+      "aliases": ["jūros", "vandenynas", "bangos", "pajūris", "paplūdimys", "cunamis"],
+      "short": "Jūra sapne – didelių, neaprėpiamų emocijų ir gyvenimo galimybių simbolis. Ramios bangos – vidinė taika; audra ar cunamis – jausmai, kurie atrodo didesni už jus.",
+      "psychology": [
+        "Jei vanduo apskritai reiškia emocijas, jūra – jų mastą. Sapnas apie jūrą dažnai pasirodo, kai gyvenime atsiveria kažkas didelio: naujas etapas, didelis sprendimas, stipri meilė ar stiprus gedulas. Jūros dydis sapne atitinka jausmo dydį.",
+        "Ramus pajūris – vienas dažniausių atsipalaidavimo vaizdinių, ne veltui naudojamas ir meditacijose. Jei sapnuojate ramią jūrą, psichika ilsisi arba prašo poilsio. Audringa jūra, cunamis, milžiniška banga – emocinis persikrovimas, jausmas, kad tuoj neatlaikysite. Tokie sapnai dažni prieš perdegimą.",
+        "Stovėjimas ant kranto ir žiūrėjimas į jūrą – sprendimo slenkstis: matote galimybę, bet dar neįžengėte."
+      ],
+      "variants": [
+        {"situation": "Cunamis ar milžiniška banga", "meaning": "Persikrovimas, emocinė krizė, kurios nesuvaldote. Rimtas signalas skirti sau poilsio ir paramos."},
+        {"situation": "Ramus paplūdimys", "meaning": "Poilsis, ramybė, atsigavimas. Arba – jo poreikis."},
+        {"situation": "Plaukiate atviroje jūroje", "meaning": "Esate stiprių jausmų ar naujo etapo viduryje. Kaip sekasi plaukti – taip sekasi ir gyvenime."}
+      ],
+      "mindfulness": "Įsivaizduokite, kad jūsų kvėpavimas – bangos: įkvėpimas atslenka, iškvėpimas atsitraukia. Penkios minutės tokio kvėpavimo prieš miegą ramina nervų sistemą.",
+      "related": ["vanduo", "potvynis", "plaukti", "skesti", "laivas"]
+    },
+    {
+      "slug": "upe",
+      "word": "Upė",
+      "title": "Sapnuoti upę",
+      "aliases": ["upės", "upelis", "srovė", "tekantis vanduo", "krioklys"],
+      "short": "Upė sapne – gyvenimo tėkmės ir laiko simbolis. Kaip teka upė, taip jaučiate savo gyvenimo kryptį: sklandžiai, per greitai ar visai sustojus.",
+      "psychology": [
+        "Upė teka viena kryptimi, todėl sapnuose ji simbolizuoja gyvenimo kelią ir laiką. Rami, plati upė – pasitikėjimas gyvenimo eiga. Srauni, verpetuota – jausmas, kad įvykiai neša greičiau, nei spėjate. Išdžiūvusi – užsistovėjimas, energijos trūkumas.",
+        "Kirsti upę sapne – vienas iš klasikinių „perėjimo“ vaizdinių: iš vieno etapo į kitą. Ar pavyko pereiti, ar bijojote, ar radote tiltą – visa tai kalba apie tai, kaip vertinate artėjantį pokytį.",
+        "Plaukimas pasroviui ar prieš srovę – paprasta, bet tiksli metafora. Jei sapne plaukėte prieš srovę, verta paklausti, kur gyvenime eikvojate jėgas kovodami su tuo, kas natūraliai teka kitur."
+      ],
+      "variants": [
+        {"situation": "Kertate upę", "meaning": "Pokytis, perėjimas į naują etapą. Kaip sekėsi pereiti – taip jaučiatės pokyčio atžvilgiu."},
+        {"situation": "Upė išsiliejusi", "meaning": "Įvykiai peržengia įprastas ribas. Emocinis ar darbo persikrovimas."},
+        {"situation": "Krioklys", "meaning": "Staigus, stiprus pokytis ar išsilaisvinimas. Dažnai – emocinis išsiveržimas po ilgo slopinimo."}
+      ],
+      "mindfulness": "Paklauskite: kur mano gyvenime šiuo metu plaukiu prieš srovę? Ar tai būtina, ar galiu leisti tėkmei nešti?",
+      "related": ["vanduo", "jura", "tiltas", "plaukti", "kelias"]
+    },
+    {
+      "slug": "potvynis",
+      "word": "Potvynis",
+      "title": "Sapnuoti potvynį",
+      "aliases": ["potvynio", "užlieja", "užtvindo", "vanduo namuose", "vanduo kyla"],
+      "short": "Potvynis sapne – emocijų, kurios peržengia ribas, simbolis. Dažniausiai jis pasirodo persikrovimo laikotarpiais, kai jaučiatės „užlieti“ darbų, rūpesčių ar jausmų.",
+      "psychology": [
+        "Potvynis – vanduo, kuris išeina iš savo vietos. Psichologiškai tai emocijos, kurios nebetelpa į įprastas ribas: susikaupęs nerimas, liūdesys, pyktis. Sapnas apie potvynį dažnai atsiranda tada, kai dieną laikotės „viskas gerai“, o naktį psichika parodo tikrą lygį.",
+        "Vanduo, kylantis namuose, – ypač reikšmingas sapnas, nes namas sapnuose reiškia jus pačius. Tai signalas, kad vidinė įtampa pasiekė lygį, kai reikia veiksmų: poilsio, pokalbio, pagalbos.",
+        "Kartu potvynis nuplauna ir išvalo. Jei sapne vanduo nuslūgo ir liko švara, tai apsivalymo ir naujos pradžios ženklas – po sunkaus laikotarpio."
+      ],
+      "variants": [
+        {"situation": "Bėgate nuo potvynio", "meaning": "Vengiate stiprių jausmų, kurie vis tiek jus pasiveja. Saugiau juos sutikti nei bėgti."},
+        {"situation": "Vanduo namuose", "meaning": "Emocinis persikrovimas asmeniniame gyvenime ar šeimoje. Laikas pasikalbėti."},
+        {"situation": "Potvynis nuslūgsta", "meaning": "Krizė praeina. Palengvėjimas ir galimybė pradėti iš naujo."}
+      ],
+      "mindfulness": "Šiandien pasakykite bent vienam žmogui, kaip iš tikrųjų jaučiatės – ne „gerai“, o tikrai. Potvynis sapne dažnai yra neišsakytų jausmų slėgis.",
+      "related": ["vanduo", "jura", "namas", "skesti", "audra"]
+    },
+    {
+      "slug": "ugnis",
+      "word": "Ugnis",
+      "title": "Sapnuoti ugnį",
+      "aliases": ["ugnies", "gaisras", "dega", "liepsna", "laužas", "dega namas"],
+      "short": "Ugnis sapne – energijos, aistros ir pokyčio simbolis. Suvaldyta ugnis (laužas, židinys) – šiluma ir jėga; gaisras – jausmai ar situacija, kuri išsprūdo iš kontrolės.",
+      "psychology": [
+        "Ugnis ir kuria, ir naikina, todėl sapnuose ji beveik visada reiškia transformaciją. Psichologiškai ugnis siejama su stipriomis emocijomis: pykčiu, aistra, entuziazmu. Svarbiausia – ar ugnis sapne suvaldyta. Židinys, laužas, žvakė – šiluma, namai, kūrybinė energija. Gaisras – jausmai, kurie plinta greičiau, nei spėjate juos suvaldyti.",
+        "Degantis namas – vienas stipriausių sapnų vaizdinių. Kadangi namas reiškia jus pačius, gaisras jame – vidinė krizė ar didelis tapatybės pokytis. Tokie sapnai dažni perdegimo (angl. burnout – pažodžiui „sudegimas“) laikotarpiais. Tai ne sutapimas.",
+        "Kartu ugnis apvalo. Sapnas, kuriame kažkas sudega, o jūs jaučiate palengvėjimą, – sena etapo pabaiga ir vieta naujam."
+      ],
+      "variants": [
+        {"situation": "Dega namas", "meaning": "Vidinė krizė, perdegimas, didelis pokytis. Rimtas signalas pasirūpinti savimi."},
+        {"situation": "Gesinate ugnį", "meaning": "Aktyviai tvarkotės su krize. Ar pavyksta – taip ir gyvenime."},
+        {"situation": "Laužas ar židinys", "meaning": "Šiluma, saugumas, bendrumas. Ramus ir geras sapnas."}
+      ],
+      "mindfulness": "Jei sapnavote gaisrą, patikrinkite savo savaitės kalendorių: kur nėra nė vienos tuščios valandos? Ten ir dega.",
+      "related": ["audra", "namas", "sviesa", "kovotis"]
+    },
+    {
+      "slug": "zemes-drebejimas",
+      "word": "Žemės drebėjimas",
+      "title": "Sapnuoti žemės drebėjimą",
+      "aliases": ["žemė dreba", "griūva", "griūtis", "žemė skyla", "nuošliauža"],
+      "short": "Žemės drebėjimas sapne – pamatų, kuriais pasitikėjote, sukrėtimo simbolis. Kažkas, kas atrodė stabilu, pasirodė nesą.",
+      "psychology": [
+        "Žemė sapnuose reiškia pagrindą: šeimą, namus, sveikatą, finansinį saugumą, tapatybę. Kai ji dreba, psichika praneša, kad kažkas, kuo pasitikėjote, sujudėjo. Tokie sapnai dažni po netikėtų žinių: atleidimo, diagnozės, išdavystės, staigaus pokyčio šeimoje.",
+        "Jei sapne žemės drebėjimo metu išgyvenote ar radote saugią vietą, tai geras ženklas – jūsų atsparumas veikia. Jei sapnas baigėsi griūtimi ir bejėgiškumu, verta ieškoti paramos ir dieną.",
+        "Kartais žemės drebėjimas sapne – ne krizė, o pokytis, kurio patys norite, bet bijote: persikraustymas, darbo keitimas, santykių pabaiga. Sukrėtimas gali būti ir išlaisvinimas."
+      ],
+      "variants": [
+        {"situation": "Griūva pastatai", "meaning": "Struktūros, kuriomis pasitikėjote (darbas, institucijos, planai), pasirodė trapios."},
+        {"situation": "Žemė skyla po kojomis", "meaning": "Pagrindo praradimo baimė. Klausimas: kas šiuo metu atrodo nesaugu?"},
+        {"situation": "Išgyvenate drebėjimą", "meaning": "Atsparumas. Net jei sukrėtimas didelis, jūs jį atlaikote."}
+      ],
+      "mindfulness": "Atsistokite basomis ant grindų ir minutę pajuskite žemę po pėdomis. Tai vadinamoji „įžeminimo“ praktika, kuri realiai mažina nerimą po sukrėtimo.",
+      "related": ["audra", "potvynis", "namas", "kalnas"]
+    },
+    {
+      "slug": "audra",
+      "word": "Audra",
+      "title": "Sapnuoti audrą",
+      "aliases": ["audros", "perkūnija", "žaibas", "griaustinis", "vėtra", "uraganas", "viesulas"],
+      "short": "Audra sapne – emocinės įtampos, kuri artėja arba jau prasidėjo, simbolis. Žaibas – staigi įžvalga ar staigus įvykis, viesulas – chaosas.",
+      "psychology": [
+        "Audra sapne dažniausiai atspindi konfliktą – vidinį arba su kitais žmonėmis. Jei audra tik artėja, jūs nujaučiate įtampą, kuri dar neprasiveržė: neišsakytą pyktį, artėjantį pokalbį, sprendimą, kurį atidedate. Jei audra jau siautėja – konfliktas vyksta.",
+        "Žaibas turi savo prasmę: tai staigus aiškumas arba staigus smūgis. Daugelis žmonių sapnuoja žaibą prieš pat svarbų suvokimą. Griaustinis – garsas, kurio negalima ignoruoti, dažnai reiškia žinią ar įspėjimą.",
+        "Viesulas ar uraganas – chaosas, kuriame prarandate kryptį. Tokie sapnai dažni, kai vienu metu vyksta per daug pokyčių. Svarbu: kiekviena audra praeina, ir sapnuose po audros dažnai ateina ramybė."
+      ],
+      "variants": [
+        {"situation": "Slepiatės nuo audros", "meaning": "Vengiate konflikto. Kartais tai išmintinga, kartais tik atideda."},
+        {"situation": "Žaibas trenkia", "meaning": "Staigus įvykis ar staigi įžvalga. Dažnai – lūžio taškas."},
+        {"situation": "Audra praeina", "meaning": "Konfliktas baigiasi. Palengvėjimas ir aiškumas."}
+      ],
+      "mindfulness": "Pastebėkite, kur jūsų kūne šiuo metu „kaupiasi audra“ – suveržti pečiai, sukąsti žandikauliai? Sąmoningai atpalaiduokite tą vietą tris kartus per dieną.",
+      "related": ["lietus", "ugnis", "jura", "zemes-drebejimas"]
+    },
+    {
+      "slug": "lietus",
+      "word": "Lietus",
+      "title": "Sapnuoti lietų",
+      "aliases": ["lyja", "liūtis", "lietaus", "šlapia", "permirkęs"],
+      "short": "Lietus sapne – apsivalymo, liūdesio ir atsinaujinimo simbolis. Švelnus lietus ramina, liūtis – emocijų proveržis, kuris išvalo.",
+      "psychology": [
+        "Lietus – vanduo iš dangaus, todėl sapnuose jis dažnai reiškia emocijas, kurios ateina „iš viršaus“ – ne iš jūsų valios, o iš aplinkybių. Švelnus lietus – lengvas liūdesys ar melancholija, kuri nėra bloga; dažnai tai poilsio ir apmąstymų būsena.",
+        "Liūtis sapne – emocinis išsiliejimas. Įdomu, kad daugelis žmonių po tokio sapno pabunda lengvesni: ašaros, net ir sapnuotos, atlieka savo darbą. Tyrimai rodo, kad REM miegas padeda apdoroti emocijas ir sumažinti jų intensyvumą (M. Walker).",
+        "Permirkti lietuje – atsidavimas tam, ko negalite kontroliuoti. Slėptis nuo lietaus – vengimas jausti."
+      ],
+      "variants": [
+        {"situation": "Vaikštote lietuje ir jaučiatės gerai", "meaning": "Priėmimas. Leidžiate sau jausti ir nesipriešinate."},
+        {"situation": "Lietus pro langą", "meaning": "Stebite jausmus iš atstumo. Ramybė arba emocinis atsiribojimas."},
+        {"situation": "Liūtis, potvynis", "meaning": "Emocijų perteklius. Žr. potvynis."}
+      ],
+      "mindfulness": "Jei šiandien liūdna – leiskite sau paliūdėti 10 minučių be telefono ir be tikslo. Sapnas apie lietų dažnai prašo būtent šito.",
+      "related": ["vanduo", "audra", "potvynis", "verkti", "langas"]
+    },
+    {
+      "slug": "sniegas",
+      "word": "Sniegas",
+      "title": "Sapnuoti sniegą",
+      "aliases": ["sninga", "žiema", "ledas", "šaltis", "pusnys", "šąla"],
+      "short": "Sniegas sapne – tylos, sustojimo ir emocinio šalčio simbolis. Jis gali reikšti ir ramų poilsį, ir jausmų „užšalimą“.",
+      "psychology": [
+        "Sniegas uždengia ir nutildo. Sapnuose jis dažnai reiškia laikotarpį, kai gyvenimas sulėtėjo – savanoriškai (poilsis, atsitraukimas) arba ne (užsistovėjimas, depresyvi nuotaika). Emocija sapne padeda atskirti: ramus džiaugsmas – poilsis; vienatvė ir šaltis – emocinė izoliacija.",
+        "Ledas – sustingę jausmai. Sapnas apie ledą dažnas žmonėms, kurie po skaudaus įvykio „užšaldė“ emocijas, kad išgyventų. Tai veikia laikinai, bet ledas sapne primena, kad po juo vanduo vis dar teka.",
+        "Tirpstantis sniegas – vienas geriausių sapnų ženklų: emocinis atšilimas, grįžtantis gyvumas po sunkaus laikotarpio."
+      ],
+      "variants": [
+        {"situation": "Pūga, pasiklystate sniege", "meaning": "Krypties praradimas, vienatvė, emocinis šaltis. Laikas ieškoti šilumos – žmonių, ne tik antklodės."},
+        {"situation": "Tirpstantis sniegas", "meaning": "Atšilimas, sunkaus laikotarpio pabaiga."},
+        {"situation": "Žaidžiate sniege", "meaning": "Lengvumas ir džiaugsmas net sunkiomis sąlygomis. Vidinis vaikas gyvas."}
+      ],
+      "mindfulness": "Praktinė pastaba: šaltis sapne kartais tiesiog reiškia, kad miegamajame per šalta arba antklodė per plona. Patikrinkite – kartais sapnas yra tik termometras.",
+      "related": ["lietus", "kalnas", "tamsa", "sviesa", "lova"]
+    },
+    {
+      "slug": "saule",
+      "word": "Saulė",
+      "title": "Sapnuoti saulę",
+      "aliases": ["saulės", "saulėtekis", "saulėlydis", "saulėta diena", "saulės užtemimas"],
+      "short": "Saulė sapne – aiškumo, energijos ir sąmoningumo simbolis. Saulėtekis – nauja pradžia, saulėlydis – užbaigimas, užtemimas – laikina abejonė.",
+      "psychology": [
+        "Saulė – sąmonės, aiškumo ir gyvybinės energijos simbolis beveik visose kultūrose. Sapnuose ji pasirodo, kai psichika ilsisi ir jaučiasi saugi, arba kai po ilgos „tamsos“ pagaliau matote išeitį. Sapnas apie ryškią saulę dažnai lydi sveikimą, sprendimo priėmimą, naujo etapo pradžią.",
+        "Saulėtekis ir saulėlydis turi skirtingas emocijas. Saulėtekis – viltis ir pradžia; jis dažnai sapnuojamas prieš pokyčius. Saulėlydis – užbaigimas, kartais melancholiškas, bet ramus. Abu yra sveiki, pereinamieji vaizdiniai.",
+        "Saulės užtemimas ar per kaitri saulė – kai kas gero tapo per daug: perdegimas nuo entuziazmo, per didelė viešuma, per daug dėmesio."
+      ],
+      "variants": [
+        {"situation": "Saulėtekis", "meaning": "Nauja pradžia, viltis, energija. Vienas geriausių sapnų vaizdinių."},
+        {"situation": "Saulėlydis", "meaning": "Užbaigimas su ramybe. Priimate, kad etapas baigiasi."},
+        {"situation": "Saulės užtemimas", "meaning": "Laikina abejonė ar aiškumo praradimas. Praeina."}
+      ],
+      "mindfulness": "Ryte atidarykite užuolaidas ir 5 minutes pabūkite dienos šviesoje – tai vienas paprasčiausių būdų sureguliuoti miego ritmą ir nuotaiką.",
+      "related": ["sviesa", "menulis", "dangus-zvaigzdes", "skristi"]
+    },
+    {
+      "slug": "menulis",
+      "word": "Mėnulis",
+      "title": "Sapnuoti mėnulį",
+      "aliases": ["mėnulio", "pilnatis", "jaunatis", "mėnesiena", "naktis"],
+      "short": "Mėnulis sapne – intuicijos, ciklų ir paslėptų jausmų simbolis. Pilnatis – jausmų pilnatvė, jaunatis – nauja, dar nematoma pradžia.",
+      "psychology": [
+        "Jei saulė sapnuose reiškia sąmonę, mėnulis – pasąmonę, intuiciją ir tai, kas matoma tik pusiau. Jungas mėnulį siejo su moteriškuoju principu ir ciklais. Sapnas apie mėnulį dažnai kviečia pasitikėti nuojauta ir priimti, kad ne viską reikia matyti aiškiai, kad tai būtų tikra.",
+        "Pilnatis – emocinė pilnatvė, kartais perteklius. Daug žmonių pastebi, kad per pilnatį miega prasčiau; tyrimų duomenys prieštaringi, bet subjektyvus jausmas realus. Jei sapnuojate pilnatį – galbūt jausmai šiuo metu ypač intensyvūs.",
+        "Mėnulis, atsispindintis vandenyje, – ypač gražus ir dažnas vaizdinys: intuicija, kuri atsispindi emocijose. Ramybės ženklas."
+      ],
+      "variants": [
+        {"situation": "Pilnatis", "meaning": "Jausmų pilnatvė ar intensyvumas. Kūrybinis laikotarpis."},
+        {"situation": "Mėnulis krenta ar dingsta", "meaning": "Intuicijos praradimo baimė, orientacijos stoka."},
+        {"situation": "Mėnesiena ant vandens", "meaning": "Ramybė, harmonija tarp proto ir jausmų."}
+      ],
+      "mindfulness": "Prieš miegą išjunkite ekranus bent 30 minučių ir pažiūrėkite pro langą. Mėnulis sapne dažnai primena, kad naktis skirta ne ekranui, o poilsiui.",
+      "related": ["saule", "dangus-zvaigzdes", "tamsa", "vanduo"]
+    },
+    {
+      "slug": "dangus-zvaigzdes",
+      "word": "Žvaigždės ir dangus",
+      "title": "Sapnuoti žvaigždes",
+      "aliases": ["žvaigždė", "žvaigždės", "dangus", "krentanti žvaigždė", "kosmosas", "visata"],
+      "short": "Žvaigždės sapne – vilties, orientyrų ir didesnės perspektyvos simbolis. Krentanti žvaigždė – noras ar staigi permaina, tamsus dangus be žvaigždžių – krypties stoka.",
+      "psychology": [
+        "Žvaigždės tūkstančius metų buvo orientyras keliautojams, todėl sapnuose jos reiškia kryptį ir tikslą. Sapnas apie žvaigždėtą dangų dažnai pasirodo, kai ieškote prasmės ar sprendimo, ir primena, kad orientyrai yra – tereikia pažvelgti aukštyn.",
+        "Kosmosas ar visata sapne – perspektyvos pokytis. Tokie sapnai dažni po įvykių, kurie priverčia permąstyti prioritetus: netekties, ligos, didelio pasiekimo. Žmogus jaučiasi mažas, bet ne bejėgis – tai vadinamasis „nuostabos“ jausmas, kurį psichologai sieja su geresne savijauta.",
+        "Krentanti žvaigždė – kultūriškai noras; psichologiškai – trumpalaikė galimybė, kurią reikia pastebėti."
+      ],
+      "variants": [
+        {"situation": "Žvaigždėtas dangus", "meaning": "Ramybė, viltis, perspektyva. Geras sapnas."},
+        {"situation": "Dangus be žvaigždžių", "meaning": "Krypties ir orientyrų stoka. Laikas persvarstyti tikslus."},
+        {"situation": "Skrendate tarp žvaigždžių", "meaning": "Laisvė, ambicija, didelės svajonės."}
+      ],
+      "mindfulness": "Šiandien užrašykite vieną dalyką, kuris jums svarbus ilgesnėje perspektyvoje nei ši savaitė. Žvaigždės sapne primena apie tolimus orientyrus.",
+      "related": ["menulis", "saule", "skristi", "paukstis"]
+    },
+    {
+      "slug": "miskas",
+      "word": "Miškas",
+      "title": "Sapnuoti mišką",
+      "aliases": ["miško", "giria", "pasiklysti miške", "medžiai", "tankumynas"],
+      "short": "Miškas sapne – pasąmonės ir nežinomybės simbolis. Ramus miškas – poilsis ir gilumas; pasiklydimas miške – krypties praradimas gyvenime.",
+      "psychology": [
+        "Miškas – vieta, kur nematyti toli ir kur gyvena tai, ko nepažįstame. Sapnuose jis simbolizuoja nesąmoningą psichikos dalį ir gyvenimo etapus, kai nėra aiškaus kelio. Pasakose herojai eina į mišką, kad pasikeistų, – sapnuose tas pats.",
+        "Ramus, šviesus miškas – atsigavimas, ryšys su savimi. Tyrimai rodo, kad buvimas gamtoje realiai mažina streso hormonų lygį, ir sapnai apie mišką dažnai atspindi šį poreikį. Tamsus, tankus miškas – nerimas, sumaištis, jausmas, kad esate įstrigę.",
+        "Pasiklysti miške – vienas dažniausių sapnų. Jis reiškia ne bejėgiškumą, o pereinamąjį etapą: senas kelias baigėsi, naujas dar nematomas. Tai normalu ir laikina."
+      ],
+      "variants": [
+        {"situation": "Pasiklystate miške", "meaning": "Krypties praradimas, pereinamasis etapas. Klausimas: ką paleidote ir ko dar neradote?"},
+        {"situation": "Randate kelią iš miško", "meaning": "Sprendimas artėja. Jūs jau matote išeitį."},
+        {"situation": "Miško gyvūnai", "meaning": "Instinktai ir jausmai, kurie gyvena „giliau“. Žr. konkretų gyvūną."}
+      ],
+      "mindfulness": "Bent kartą per savaitę praleiskite 20 minučių tarp medžių be telefono. Tai ne romantika, o vienas geriausiai ištirtų būdų mažinti stresą.",
+      "related": ["medis", "pasiklysti", "vilkas", "meska", "kelias"]
+    },
+    {
+      "slug": "kalnas",
+      "word": "Kalnas",
+      "title": "Sapnuoti kalną",
+      "aliases": ["kalnai", "kopti į kalną", "viršūnė", "kalva", "uola"],
+      "short": "Kalnas sapne – tikslo, iššūkio ir perspektyvos simbolis. Kopimas – pastangos, viršūnė – pasiekimas, kritimas nuo kalno – baimė neatlaikyti.",
+      "psychology": [
+        "Kalnas – didžiausia matoma kliūtis ir kartu aukščiausia matoma vieta. Sapnuose jis reiškia tikslą, kuris reikalauja pastangų: karjeros žingsnį, sveikatos pokytį, didelį projektą. Kaip sekasi kopti sapne – taip vertinate savo galimybes.",
+        "Viršūnė – pasiekimas ir perspektyva. Sapnas, kuriame stovite ant viršūnės, dažnai pasirodo po didelių pastangų ir reiškia, kad matote visumą. Kartu viršūnė gali būti vieniša – kai kurie žmonės po didelių pasiekimų jaučiasi tuščiai.",
+        "Kalnas, kurio negalite įkopti, ar nuolatinis slydimas žemyn – jausmas, kad tikslas per didelis arba pastangos neduoda rezultato. Verta persvarstyti ne tikslą, o kelią."
+      ],
+      "variants": [
+        {"situation": "Kopiate į kalną", "meaning": "Pastangos link tikslo. Sunkumas sapne = suvokiamas sunkumas gyvenime."},
+        {"situation": "Stovite ant viršūnės", "meaning": "Pasiekimas, perspektyva, aiškumas."},
+        {"situation": "Krentate nuo kalno", "meaning": "Baimė prarasti pasiektą poziciją. Žr. kristi."}
+      ],
+      "mindfulness": "Padalinkite didžiausią savo tikslą į vieną žingsnį, kurį galite padaryti šiandien per 15 minučių. Kalnas sapne primena, kad kopiama žingsniais.",
+      "related": ["kristi", "kelias", "sniegas", "miskas"]
+    },
+    {
+      "slug": "geles",
+      "word": "Gėlės",
+      "title": "Sapnuoti gėles",
+      "aliases": ["gėlė", "rožės", "puokštė", "sodas", "žydi", "nuvytusios gėlės"],
+      "short": "Gėlės sapne – augimo, grožio ir jausmų išraiškos simbolis. Žydinčios gėlės – gyvenimo pilnatvė; nuvytusios – praleistas laikas ar užgesęs jausmas.",
+      "psychology": [
+        "Gėlės žydi trumpai, todėl sapnuose jos reiškia tai, kas gražu ir laikina: jausmus, santykių etapus, gyvenimo periodus. Sapnas apie žydintį sodą dažnai lydi laikotarpius, kai daug kas pavyksta ir jaučiatės pilnatvę. Sodinti gėles – investuoti į ateitį, rūpintis kažkuo, kas dar tik augs.",
+        "Konkrečios gėlės turi kultūrines prasmes (rožė – meilė, ramunė – paprastumas), bet svarbiau jūsų asmeninis ryšys: gėlė iš močiutės sodo reikš vaikystę, gėlė iš vestuvių – įsipareigojimą.",
+        "Nuvytusios gėlės – praėjęs laikas, neišnaudota galimybė ar užgesę jausmai. Tai nėra blogas sapnas, greičiau kvietimas pasodinti ką nors naujo."
+      ],
+      "variants": [
+        {"situation": "Gaunate gėlių", "meaning": "Poreikis būti pastebėtam ir įvertintam. Arba – pripažinimas, kurį jau gavote."},
+        {"situation": "Sodinate gėles", "meaning": "Investuojate į ateitį, rūpinatės augimu – savo ar kitų."},
+        {"situation": "Nuvytusios gėlės", "meaning": "Užgesęs jausmas ar praleistas laikas. Ką laikas sodinti iš naujo?"}
+      ],
+      "mindfulness": "Pastatykite ant stalo vieną gėlę ar žalią augalą ir kelis kartus per dieną į jį pažiūrėkite 10 sekundžių. Mažas, bet realus dėmesio ir nuotaikos „perkrovimas“.",
+      "related": ["medis", "drugelis", "bite", "vestuves"]
+    },
+    {
+      "slug": "medis",
+      "word": "Medis",
+      "title": "Sapnuoti medį",
+      "aliases": ["medžiai", "ąžuolas", "šaknys", "kerta medį", "nuvirtęs medis", "sodas"],
+      "short": "Medis sapne – gyvenimo, šaknų ir augimo simbolis. Sveikas medis – stabilumas; nuvirtęs ar nukirstas – praradimas ar pamato sukrėtimas.",
+      "psychology": [
+        "Medis – gyvybės simbolis, jungiantis žemę (šaknis) ir dangų (šakas). Sapnuose jis reiškia jus pačius: kaip tvirtai stovite, kokios jūsų šaknys (šeima, kilmė, vertybės), kiek augate. Didelis, sveikas medis – stabilumas ir branda. Jaunas medelis – nauja pradžia, kuriai reikia priežiūros.",
+        "Nuvirtęs ar nukirstas medis – vienas skaudžiausių sapnų vaizdinių. Dažniausiai jis reiškia praradimą: žmogaus, sveikatos, tapatybės dalies. Toks sapnas dažnas po netekties ir yra gedulo dalis.",
+        "Lipti į medį – siekti perspektyvos ar saugumo. Sėdėti po medžiu – poilsis ir apsauga. Ąžuolas Lietuvoje turi ypatingą prasmę – stiprybė, ištvermė, kartų ryšys."
+      ],
+      "variants": [
+        {"situation": "Nuvirtęs medis", "meaning": "Praradimas, pamatų sukrėtimas. Dažnas po netekties."},
+        {"situation": "Sodinate medį", "meaning": "Ilgalaikė investicija: šeima, namai, verslas, sveikata."},
+        {"situation": "Medis su vaisiais", "meaning": "Pastangos duoda rezultatą. Derliaus laikas."}
+      ],
+      "mindfulness": "Atsistokite tiesiai, pajuskite pėdas ant žemės ir įsivaizduokite, kad iš jų auga šaknys. Minutė tokio „medžio“ pratimo ramina ir grąžina stabilumo jausmą.",
+      "related": ["miskas", "geles", "zemes-drebejimas", "namas"]
+    },
+    {
+      "slug": "purvas",
+      "word": "Purvas",
+      "title": "Sapnuoti purvą",
+      "aliases": ["purvo", "purvinas", "dumblas", "klampynė", "pelkė", "įklimpti"],
+      "short": "Purvas sapne – jausmo, kad kažkas „susitepė“ ar kad įklimpote į situaciją, simbolis. Klampynė – užsistovėjimas, iš kurio sunku išsivaduoti.",
+      "psychology": [
+        "Purvas – žemė, sumišusi su vandeniu: stabilumas, sumišęs su emocijomis. Sapnuose jis reiškia situaciją, kuri iš aiškios tapo neaiškia ir lipnia: konfliktą, kuriame nebeaišku, kas teisus; santykius, kurie tapo painūs; reikalus, kurie „prilipo“.",
+        "Įklimpti į purvą ar pelkę – jausmas, kad kuo labiau stengiatės, tuo giliau grimztate. Tokie sapnai dažni, kai sprendžiate problemą netinkamu būdu – jėga vietoj kantrybės. Sapno patarimas paprastas: sustokite, apsižvalgykite, ieškokite tvirto krašto.",
+        "Purvinas kūnas ar drabužiai – gėdos ar kaltės jausmas, dažnai perdėtas. Nusiprausti sapne – apsivalymas, atleidimas sau."
+      ],
+      "variants": [
+        {"situation": "Įklimpstate į purvą", "meaning": "Užsistovėjimas, situacija, kuri traukia gilyn. Keiskite metodą, ne pastangų kiekį."},
+        {"situation": "Purvini drabužiai", "meaning": "Gėda ar jausmas, kad kažkas sugadino jūsų reputaciją."},
+        {"situation": "Nusiplaunate purvą", "meaning": "Apsivalymas, palengvėjimas, atleidimas sau."}
+      ],
+      "mindfulness": "Užrašykite situaciją, kurioje jaučiatės „įklimpę“. Tada – vieną dalyką, kurio galite NEdaryti, kad negrimztumėte giliau. Kartais sprendimas yra sustoti.",
+      "related": ["vanduo", "kiaule", "varle", "kelias"]
+    }
+  ]
+}

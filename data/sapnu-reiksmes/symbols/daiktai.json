@@ -1,0 +1,370 @@
+{
+  "category": "daiktai",
+  "category_name": "Daiktai ir transportas",
+  "entries": [
+    {
+      "slug": "pinigai",
+      "word": "Pinigai",
+      "title": "Sapnuoti pinigus",
+      "aliases": ["pinigų", "rasti pinigus", "pamesti pinigus", "monetos", "banknotai", "turtas", "skola"],
+      "short": "Pinigai sapne – vertės, galios ir saugumo simbolis. Rasti pinigus – atrasti savo vertę; pamesti – baimė prarasti kontrolę ar saugumą.",
+      "psychology": [
+        "Pinigai sapnuose retai reiškia tik pinigus. Psichologiškai jie simbolizuoja vertę – tai, ką galite duoti ir gauti, – bei saugumą ir galią. Rasti pinigus sapne dažniausiai reiškia atrasti savo vertę: talentą, galimybę, savybę, kurios neįvertinote. Pamesti – baimę prarasti tai, kas suteikia saugumą, arba jausmą, kad energiją leidžiate ne ten.",
+        "Skolos sapne – įsipareigojimai, kurių nesugebate „grąžinti“: pažadai, laikas kitiems, emocinės skolos. Toks sapnas dažnas žmonėms, kurie per daug duoda ir jaučiasi išsekę.",
+        "Kartu pinigų sapnai tiesiogiai atspindi realų finansinį nerimą – tęstinumo hipotezė čia veikia tiesiogiai. Jei nerimaujate dėl sąskaitų, tokie sapnai natūralūs ir nereikalauja simbolinės interpretacijos, tik veiksmų dieną."
+      ],
+      "variants": [
+        {"situation": "Randate pinigus", "meaning": "Atrandate savo vertę ar netikėtą galimybę. Geras ženklas."},
+        {"situation": "Pametate pinigus", "meaning": "Baimė prarasti saugumą, energija eikvojama ne ten."},
+        {"situation": "Skaičiuojate pinigus", "meaning": "Kontrolės ir planavimo poreikis. Kartais – nerimas dėl realių finansų."}
+      ],
+      "mindfulness": "Užrašykite tris dalykus, kurie jums vertingi ir nekainuoja: santykį, įgūdį, įprotį. Pinigų sapnas dažnai prašo prisiminti, kad vertė nėra tik sąskaitoje.",
+      "related": ["auksas", "vagis", "parduotuve", "darbas"]
+    },
+    {
+      "slug": "auksas",
+      "word": "Auksas",
+      "title": "Sapnuoti auksą",
+      "aliases": ["aukso", "auksinis", "lobis", "brangenybės", "deimantai", "papuošalai"],
+      "short": "Auksas sapne – tikros, ilgalaikės vertės simbolis. Skirtingai nei pinigai, auksas reiškia tai, kas nekinta: talentą, vertybes, brandą.",
+      "psychology": [
+        "Auksas – metalas, kuris nerūdija ir nesikeičia. Alchemikai jį laikė tobulumo simboliu, o Jungas – „savasties“ (vidinio centro) vaizdiniu. Sapnuose auksas reiškia tikrąją vertę: tai, kas jumyse nekinta nepriklausomai nuo aplinkybių. Rasti auksą – atrasti savo esminę savybę ar pašaukimą.",
+        "Lobis, paslėptas ir ieškomas, – potencialas, kurio dar neatkasėte. Toks sapnas dažnas žmonėms, kurie jaučia, kad dirba ne tai, kam gimę.",
+        "Auksas, kuris pasirodo netikras, ar prarastas auksas – nusivylimas tuo, ką laikėte vertingu: santykiu, darbu, tikslu."
+      ],
+      "variants": [
+        {"situation": "Randate lobį", "meaning": "Potencialas, pašaukimas, neatrastas talentas."},
+        {"situation": "Auksas netikras", "meaning": "Nusivylimas tuo, kas atrodė vertinga."},
+        {"situation": "Papuošalai", "meaning": "Savivertė, noras būti matomam ir įvertintam."}
+      ],
+      "mindfulness": "Užrašykite vieną savo savybę, kuri nekinta – nei sėkmėje, nei nesėkmėje. Tai jūsų auksas. Sapnas dažnai primena jį, kai pamirštate.",
+      "related": ["pinigai", "ziedas", "saule", "sviesa"]
+    },
+    {
+      "slug": "ziedas",
+      "word": "Žiedas",
+      "title": "Sapnuoti žiedą",
+      "aliases": ["žiedą", "žiedo", "sužadėtuvių žiedas", "vestuvinis žiedas", "pamesti žiedą", "rasti žiedą"],
+      "short": "Žiedas sapne – įsipareigojimo, ryšio ir užbaigtumo simbolis. Pamesti žiedą – baimė dėl santykio; rasti – naujo ryšio ar sutarties su savimi pradžia.",
+      "psychology": [
+        "Žiedas – uždaras ratas be pradžios ir pabaigos, todėl daugelyje kultūrų jis reiškia amžiną ryšį ir įsipareigojimą. Sapnuose žiedas dažniausiai simbolizuoja santykius (ne tik romantinius) ir pažadus – sau ar kitiems. Gauti žiedą – įsipareigojimo priėmimas ar jo troškimas. Dovanoti – noras užtikrinti ryšį.",
+        "Pamesti žiedą – vienas dažniausių nerimo sapnų partnerystėje. Jis retai reiškia tikrą grėsmę santykiams; dažniau – jausmą, kad ryšys silpsta dėl rutinos, atstumo ar neišsakytų dalykų. Kvietimas pasikalbėti, ne panikuoti.",
+        "Žiedas, kuris netinka ar spaudžia, – įsipareigojimas, kuris tapo per ankštas: santykiuose, darbe, vaidmenyje."
+      ],
+      "variants": [
+        {"situation": "Pametate žiedą", "meaning": "Nerimas dėl ryšio. Kvietimas pokalbiui, ne pranašystė."},
+        {"situation": "Gaunate žiedą", "meaning": "Įsipareigojimo priėmimas ar troškimas."},
+        {"situation": "Žiedas spaudžia", "meaning": "Įsipareigojimas tapo per ankštas. Ką reikia persvarstyti?"}
+      ],
+      "mindfulness": "Užrašykite vieną pažadą, kurį davėte sau ir dar netesėjote. Žiedas sapne dažnai primena būtent tokius – vidinius – įsipareigojimus.",
+      "related": ["vestuves", "auksas", "buves-mylimasis", "rankos"]
+    },
+    {
+      "slug": "raktas",
+      "word": "Raktas",
+      "title": "Sapnuoti raktą",
+      "aliases": ["raktą", "raktai", "pamesti raktus", "rasti raktą", "raktas netinka", "užrakinta", "spyna"],
+      "short": "Raktas sapne – sprendimo, prieigos ir galimybės simbolis. Rasti raktą – rasti atsakymą; pamesti – jausmas, kad praradote prieigą prie kažko svarbaus.",
+      "psychology": [
+        "Raktas atrakina ir užrakina, todėl sapnuose jis reiškia sprendimą, prieigą ar paslaptį. Rasti raktą – vienas geriausių sapnų: pasąmonė rado atsakymą, kurio sąmonė ieškojo. Dažnai po tokio sapno problema, kurią ilgai sprendėte, „atsirakina“ per kelias dienas.",
+        "Pamesti raktus – dažnas nerimo sapnas, ypač žmonėms, kurie dieną jaučia, kad prarado prieigą: prie savo namų (saugumo), darbo (vaidmens), žmogaus (santykio). Raktas, kuris netinka, – bandote spręsti problemą netinkamu būdu.",
+        "Daug raktų, iš kurių nežinote, kuris tinka, – per daug galimybių ir sprendimo paralyžius."
+      ],
+      "variants": [
+        {"situation": "Randate raktą", "meaning": "Sprendimas rastas. Atsakymas ateina."},
+        {"situation": "Pametate raktus", "meaning": "Prieigos praradimo baimė: prie namų, darbo, žmogaus."},
+        {"situation": "Raktas netinka", "meaning": "Netinkamas metodas. Keiskite priėjimą, ne pastangų kiekį."}
+      ],
+      "mindfulness": "Užrašykite problemą, kurią bandote „atrakinti“. Tada – tris skirtingus raktus (būdus), net jei du atrodo kvaili. Kartais trečias tinka.",
+      "related": ["durys", "namas", "kalejimas", "vagis"]
+    },
+    {
+      "slug": "durys",
+      "word": "Durys",
+      "title": "Sapnuoti duris",
+      "aliases": ["duris", "durų", "atidarytos durys", "uždarytos durys", "beldžia į duris", "užrakintos durys", "daug durų"],
+      "short": "Durys sapne – galimybės, slenksčio ir pasirinkimo simbolis. Atviros durys – galimybė; užrakintos – kliūtis; beldimas – kažkas nori įeiti į jūsų gyvenimą.",
+      "psychology": [
+        "Durys – riba tarp dviejų erdvių, todėl sapnuose jos reiškia perėjimą ir pasirinkimą. Atidarytos durys – galimybė, į kurią kviečiama įeiti; uždarytos ar užrakintos – kliūtis arba jūsų pačių nepasirengimas. Daug durų – daug pasirinkimų, kartais per daug.",
+        "Beldimas į duris – dažnas ir stiprus sapnas: kažkas (žmogus, jausmas, žinia) nori patekti į jūsų gyvenimą. Baimė atidaryti – nepasirengimas naujam. Atidaryti ir nieko nerasti – lūkesčiai, kurie nepasiteisina.",
+        "Durys, kurios neužsidaro, – ribų problema: negalite atsiriboti nuo žmonių ar darbo. Tokie sapnai dažni žmonėms, kurie nemoka pasakyti „ne“."
+      ],
+      "variants": [
+        {"situation": "Užrakintos durys", "meaning": "Kliūtis ar nepasirengimas. Kas laiko raktą?"},
+        {"situation": "Kažkas beldžia", "meaning": "Nauja galimybė ar jausmas nori įeiti. Ar atidarysite?"},
+        {"situation": "Durys neužsidaro", "meaning": "Ribų problema. Kam reikia pasakyti „ne“?"}
+      ],
+      "mindfulness": "Įsivaizduokite duris iš sapno. Ką jaučiate stovėdami prieš jas? Baimę, smalsumą, nuovargį? Ta emocija – tikrasis atsakymas apie situaciją, kurią durys simbolizuoja.",
+      "related": ["raktas", "namas", "langas", "kelias"]
+    },
+    {
+      "slug": "langas",
+      "word": "Langas",
+      "title": "Sapnuoti langą",
+      "aliases": ["langą", "lango", "žiūrėti pro langą", "išdaužtas langas", "atidarytas langas", "kažkas už lango"],
+      "short": "Langas sapne – perspektyvos ir ribos tarp vidaus ir išorės simbolis. Pro langą žiūrite į pasaulį, bet dar nesate jame – stebėjimo ir laukimo būsena.",
+      "psychology": [
+        "Jei durys – perėjimas, langas – žiūrėjimas be perėjimo. Sapnuose langas reiškia perspektyvą: kaip matote pasaulį ir kaip pasaulis mato jus. Žiūrėti pro langą – stebėti gyvenimą iš atstumo; tai gali būti ramus apmąstymas arba pasyvumas, priklausomai nuo emocijos.",
+        "Išdaužtas langas – ribos pažeidimas: kažkas įsibrovė į jūsų erdvę arba jūsų požiūris į kažką „sudužo“. Nešvarus, aprasojęs langas – neaiški perspektyva, negalite matyti situacijos aiškiai.",
+        "Kažkas žiūri į jus pro langą – jausmas, kad esate stebimi ar vertinami. Dažnas sapnas žmonėms, kurie jaučia socialinį spaudimą."
+      ],
+      "variants": [
+        {"situation": "Žiūrite pro langą", "meaning": "Stebėjimas iš atstumo. Ramybė arba pasyvumas – pasakys emocija."},
+        {"situation": "Išdaužtas langas", "meaning": "Ribos pažeidimas ar požiūrio sudužimas."},
+        {"situation": "Atidarote langą", "meaning": "Naujas oras, atvirumas, perspektyvos keitimas. Geras ženklas."}
+      ],
+      "mindfulness": "Atidarykite tikrą langą ir minutę tiesiog kvėpuokite. Sapnas apie langą dažnai reiškia, kad reikia naujo oro – tiesiogine ir perkeltine prasme.",
+      "sleep_note": "Vėdinamas miegamasis (apie 18–20 °C) yra vienas paprasčiausių būdų pagerinti miego kokybę. Šaltesnis, švarus oras padeda greičiau užmigti.",
+      "related": ["durys", "namas", "sviesa", "paukstis", "lietus"]
+    },
+    {
+      "slug": "veidrodis",
+      "word": "Veidrodis",
+      "title": "Sapnuoti veidrodį",
+      "aliases": ["veidrodį", "veidrodyje", "atspindys", "nematau savo atspindžio", "sudužęs veidrodis", "kitas veidas veidrodyje"],
+      "short": "Veidrodis sapne – savęs pažinimo ir tapatybės simbolis. Ką matote atspindyje, tai jūsų santykis su savimi šiuo metu.",
+      "psychology": [
+        "Veidrodis rodo mus patiems sau, todėl sapnuose jis reiškia savivoką ir tapatybę. Matyti save aiškiai – savęs priėmimas. Matyti kitokį veidą, senesnį, jaunesnį, svetimą – tapatybės pokytis arba jausmas, kad nebeatpažįstate savęs (dažnas po didelių gyvenimo pokyčių ar ilgo streso).",
+        "Nematyti savo atspindžio – vienas nerimą keliančių sapnų. Psichologiškai tai jausmas, kad praradote save: gyvenate kitų lūkesčiais, pamiršote, ko norite. Kvietimas grįžti prie savęs.",
+        "Sudužęs veidrodis – kultūriškai nelaimė, psichologiškai – suskaldyta savivoka, vidinis konfliktas tarp kelių savo versijų. Tai nėra blogas ženklas; tai kvietimas juos sujungti."
+      ],
+      "variants": [
+        {"situation": "Nematote atspindžio", "meaning": "Savęs praradimas. Gyvenate kitų lūkesčiais."},
+        {"situation": "Atspindys kitoks", "meaning": "Tapatybės pokytis, nebeatpažįstate savęs."},
+        {"situation": "Sudužęs veidrodis", "meaning": "Suskaldyta savivoka. Kelios savo versijos, kurias reikia sujungti."}
+      ],
+      "mindfulness": "Pažiūrėkite į tikrą veidrodį 30 sekundžių be vertinimo – ne „kaip atrodau“, o „kas čia“. Tai nejaukus, bet stiprus savęs priėmimo pratimas.",
+      "related": ["nuogumas", "akys", "plaukai", "kirpti-plaukus"]
+    },
+    {
+      "slug": "telefonas",
+      "word": "Telefonas",
+      "title": "Sapnuoti telefoną",
+      "aliases": ["telefoną", "telefonas neveikia", "negaliu paskambinti", "skambutis", "pamesti telefoną", "žinutė"],
+      "short": "Telefonas sapne – ryšio ir komunikacijos simbolis. Neveikiantis telefonas – jausmas, kad negalite pasiekti žmogaus ar būti išgirsti.",
+      "psychology": [
+        "Telefonas – ryšys su kitais. Sapnuose jis reiškia komunikaciją: ar galite pasiekti žmones ir ar jie pasiekia jus. Vienas dažniausių šiuolaikinių sapnų – telefonas, kuris neveikia, neįveda numerio, išsikrauna ar dingsta ryšys. Psichologiškai tai jausmas, kad negalite pasakyti to, ką reikia, ar būti išgirsti.",
+        "Pamesti telefoną – šiais laikais tai tapatybės ir ryšio praradimo baimė, panaši į piniginės praradimą. Toks sapnas dažnas žmonėms, kurie jaučia priklausomybę nuo ekrano.",
+        "Skambutis iš mirusio ar seniai nematyto žmogaus – atmintis ir neužbaigti pokalbiai. Neatsiliepti į skambutį – vengimas. Praktinė pastaba: telefonas prie lovos ir vėlyvas naršymas realiai blogina miegą ir dažnina nerimo sapnus."
+      ],
+      "variants": [
+        {"situation": "Telefonas neveikia", "meaning": "Negalite pasakyti ar būti išgirsti. Su kuo reikia pokalbio?"},
+        {"situation": "Pametate telefoną", "meaning": "Ryšio ir tapatybės praradimo baimė. Kartais – priklausomybės nuo ekrano ženklas."},
+        {"situation": "Skambina miręs žmogus", "meaning": "Neužbaigtas pokalbis, atmintis. Žr. miręs žmogus."}
+      ],
+      "mindfulness": "Šįvakar telefoną palikite kitame kambaryje. Tai vienas geriausiai ištirtų būdų pagerinti miegą – ir sumažinti sapnus apie neveikiantį telefoną.",
+      "sleep_note": "Ekranų šviesa ir informacijos srautas prieš miegą stumia užmigimą vėliau ir dažnina neramius sapnus. Pabandykite bent 30 min be ekrano prieš miegą.",
+      "related": ["draugas", "mires-zmogus", "vagis", "darbas"]
+    },
+    {
+      "slug": "automobilis",
+      "word": "Automobilis",
+      "title": "Sapnuoti automobilį",
+      "aliases": ["automobilį", "mašina", "mašiną", "vairuoti", "avarija", "neveikia stabdžiai", "nevaldau mašinos", "vairas"],
+      "short": "Automobilis sapne – gyvenimo valdymo simbolis. Kas vairuoja, ar veikia stabdžiai, kur važiuojate – visa tai atspindi, kiek kontroliuojate savo kryptį.",
+      "psychology": [
+        "Automobilis – asmeninė judėjimo priemonė, todėl sapnuose jis reiškia, kaip valdote savo gyvenimą. Svarbiausias klausimas: kas vairuoja? Jei jūs – kontroliuojate kryptį. Jei kitas žmogus – jaučiate, kad jis lemia jūsų sprendimus. Jei niekas – gyvenimas rieda savaime, be jūsų valios.",
+        "Neveikiantys stabdžiai – vienas dažniausių nerimo sapnų: tempas per didelis ir negalite sustoti. Toks sapnas dažnas perdegimo išvakarėse. Avarija – baimė, kad greitis ar kryptis baigsis smūgiu; dažnai – po konflikto ar rizikingo sprendimo.",
+        "Automobilis, kuris neužsiveda, – energijos ar motyvacijos stoka. Pamestas automobilis (nerandate, kur pastatėte) – krypties ar tapatybės praradimas."
+      ],
+      "variants": [
+        {"situation": "Neveikia stabdžiai", "meaning": "Tempas per didelis. Negalite sustoti. Perdegimo signalas."},
+        {"situation": "Vairuoja kitas", "meaning": "Kažkas kitas lemia jūsų kryptį. Ar sutinkate su tuo?"},
+        {"situation": "Avarija", "meaning": "Baimė, kad dabartinis kelias baigsis smūgiu. Dažnai – po rizikingo sprendimo."}
+      ],
+      "mindfulness": "Užrašykite vieną sritį, kurioje šiuo metu „vairuoja“ ne jūs. Ar tai jūsų pasirinkimas? Jei ne – koks pirmas žingsnis atgal prie vairo?",
+      "related": ["kelias", "keliauti", "traukinys", "veluoti"]
+    },
+    {
+      "slug": "traukinys",
+      "word": "Traukinys",
+      "title": "Sapnuoti traukinį",
+      "aliases": ["traukinį", "traukinio", "stotis", "bėgiai", "praleisti traukinį", "traukinys nuvažiavo", "vagonas"],
+      "short": "Traukinys sapne – gyvenimo kelio, kuriuo važiuoja ir kiti, simbolis. Jis eina nustatytais bėgiais, todėl dažnai reiškia visuomenės lūkesčius ir laiką, kurio negalima sustabdyti.",
+      "psychology": [
+        "Skirtingai nei automobilis, traukinys važiuoja bėgiais pagal tvarkaraštį ir veža daug žmonių. Sapnuose jis reiškia gyvenimo kelią, kuris atrodo nulemtas: karjeros laiptus, „normalų“ gyvenimo scenarijų (mokslai, darbas, šeima). Važiuoti traukiniu ramiai – pasitikėjimas eiga. Norėti išlipti – jausmas, kad kelias ne jūsų.",
+        "Praleisti traukinį – vienas dažniausių nerimo sapnų, reiškiantis baimę praleisti galimybę ar „atsilikti nuo gyvenimo“. Jis dažnas žmonėms, kurie lygina save su bendraamžiais. Sapno patarimas: traukiniai važiuoja ir vėliau.",
+        "Stotis – laukimo ir sprendimo vieta. Būti stotyje ir nežinoti, kur važiuoti, – krypties paieška."
+      ],
+      "variants": [
+        {"situation": "Praleidžiate traukinį", "meaning": "Baimė praleisti galimybę, atsilikti. Dažniausiai perdėta."},
+        {"situation": "Norite išlipti, bet negalite", "meaning": "Kelias, kuris atrodo ne jūsų. Ką reikėtų keisti?"},
+        {"situation": "Stotis, nežinote kur važiuoti", "meaning": "Krypties paieška, sprendimo laukimas."}
+      ],
+      "mindfulness": "Užrašykite vieną „turėčiau jau būti“ lūkestį, kurį nešiojatės. Kieno jis? Traukinio sapnas dažnai yra svetimas tvarkaraštis.",
+      "related": ["veluoti", "keliauti", "kelias", "automobilis", "lektuvas"]
+    },
+    {
+      "slug": "lektuvas",
+      "word": "Lėktuvas",
+      "title": "Sapnuoti lėktuvą",
+      "aliases": ["lėktuvą", "lėktuvo", "skristi lėktuvu", "lėktuvo katastrofa", "lėktuvas krenta", "oro uostas", "pakilimas"],
+      "short": "Lėktuvas sapne – didelių tikslų, ambicijų ir greitų pokyčių simbolis. Katastrofa – baimė, kad ambicija per didelė; sklandus skrydis – pasitikėjimas savo kryptimi.",
+      "psychology": [
+        "Lėktuvas kyla aukštai ir greitai įveikia didelius atstumus, todėl sapnuose jis reiškia ambicijas, didelius planus ir greitus pokyčius. Sėkmingas pakilimas – projekto ar etapo pradžia su pasitikėjimu. Nusileidimas – užbaigimas, grįžimas į žemę po intensyvaus laikotarpio.",
+        "Lėktuvo katastrofos sapnai – dažni ir gąsdinantys, bet beveik niekada nepranašauja tikros nelaimės. Jie reiškia baimę, kad didelis planas žlugs, arba jausmą, kad nekontroliuojate situacijos, kurioje daug kas priklauso nuo kitų (pilotas – kitas žmogus, lemiantis jūsų likimą).",
+        "Oro uostas – laukimo ir pereinamojo etapo vieta. Pavėluoti į lėktuvą – baimė praleisti didelę galimybę."
+      ],
+      "variants": [
+        {"situation": "Lėktuvas krenta", "meaning": "Baimė, kad didelis planas žlugs, arba kontrolės stoka. Ne pranašystė."},
+        {"situation": "Sklandus skrydis", "meaning": "Pasitikėjimas savo kryptimi ir ambicijomis."},
+        {"situation": "Pavėluojate į lėktuvą", "meaning": "Baimė praleisti didelę galimybę."}
+      ],
+      "mindfulness": "Užrašykite savo didžiausią šių metų tikslą ir šalia – kas iš tikrųjų priklauso nuo jūsų, o kas ne. Lėktuvo sapnas dažnai kyla iš bandymo kontroliuoti tai, kas nepriklauso.",
+      "related": ["skristi", "keliauti", "kristi", "traukinys"]
+    },
+    {
+      "slug": "laivas",
+      "word": "Laivas",
+      "title": "Sapnuoti laivą",
+      "aliases": ["laivą", "laivo", "valtis", "plaukti laivu", "laivas skęsta", "kruizas", "uostas"],
+      "short": "Laivas sapne – kelionės per emocinį gyvenimą simbolis. Kaip laivas laikosi ant vandens, taip jūs laikotės tarp savo jausmų.",
+      "psychology": [
+        "Laivas plaukia vandeniu, o vanduo sapnuose – emocijos. Todėl laivas reiškia jūsų gebėjimą judėti per emocinį gyvenimą: santykius, gedulą, permainas. Tvirtas laivas ramiame vandenyje – emocinė pusiausvyra. Laivas audroje – sunkus etapas, kurį vis dėlto plaukiate. Skęstantis laivas – jausmas, kad emocijos ima viršų.",
+        "Valtis – mažesnė, asmeniškesnė versija: vienatvė, savarankiškumas, kartais trapumas. Irkluoti valtį – pastangos, kurios priklauso tik nuo jūsų.",
+        "Uostas – saugumas, poilsis po kelionės arba baimė išplaukti. Kruizas – malonumas ir atsipalaidavimas, kartais – noras pabėgti."
+      ],
+      "variants": [
+        {"situation": "Laivas skęsta", "meaning": "Emocijos ima viršų. Žr. skendimas. Ieškokite paramos."},
+        {"situation": "Rami kelionė laivu", "meaning": "Emocinė pusiausvyra, pasitikėjimas eiga."},
+        {"situation": "Bijote išplaukti iš uosto", "meaning": "Saugumo ir naujo etapo konfliktas."}
+      ],
+      "mindfulness": "Įsivaizduokite savo dabartinę situaciją kaip laivą: koks oras, kokia jūra, kas prie vairo? Šis vaizdinys dažnai pasako daugiau nei valanda analizės.",
+      "related": ["jura", "vanduo", "skesti", "keliauti"]
+    },
+    {
+      "slug": "peilis",
+      "word": "Peilis",
+      "title": "Sapnuoti peilį",
+      "aliases": ["peilį", "peilio", "aštrus", "pjauti", "įpjauti", "kardas", "žirklės"],
+      "short": "Peilis sapne – atskyrimo, aiškumo ir kartais agresijos simbolis. Pjauti – atskirti tai, kas nebereikalinga; būti pjaunamam – jausmas, kad kažkas „pjauna“ jūsų ribas.",
+      "psychology": [
+        "Peilis pjauna ir atskiria. Sapnuose jis reiškia poreikį ką nors nutraukti: santykį, įprotį, ryšį su praeitimi. Toks sapnas dažnas prieš skyrybas, darbo keitimą ar kitus „nukirtimo“ sprendimus. Aštrus peilis – aiškumas ir ryžtas; bukas – bandymas nutraukti be jėgos.",
+        "Peilis kaip grėsmė – klasikinis agresijos simbolis. Jei sapne kažkas jus puola peiliu, tai jausmas, kad esate žeidžiami: kritika, apkalbos, išdavystė („peilis į nugarą“). Jei peilį laikote jūs – slopinamas pyktis arba poreikis apsiginti.",
+        "Įsipjauti netyčia – nerūpestingumas su savimi arba žodžiai, kurie netyčia įskaudino kitą."
+      ],
+      "variants": [
+        {"situation": "Pjaunate kažką", "meaning": "Poreikis nutraukti, atskirti. Ką laikas nukirpti?"},
+        {"situation": "Puola peiliu", "meaning": "Jausmas, kad esate žeidžiami: kritika, išdavystė."},
+        {"situation": "Įsipjaunate", "meaning": "Nerūpestingumas su savimi ar netyčia įskaudinti kitą."}
+      ],
+      "mindfulness": "Užrašykite vieną dalyką, kurį reikia „nukirpti“ aiškiai, o ne palengva. Kartais aštrus sprendimas yra gailestingesnis už ilgą tempimą.",
+      "related": ["kovotis", "ginklas", "kraujas", "priesas"]
+    },
+    {
+      "slug": "ginklas",
+      "word": "Ginklas",
+      "title": "Sapnuoti ginklą",
+      "aliases": ["ginklą", "pistoletas", "šautuvas", "šaudo", "šauti", "kulka", "neveikia ginklas"],
+      "short": "Ginklas sapne – galios, gynybos ir konflikto simbolis. Neveikiantis ginklas – vienas dažniausių variantų ir reiškia bejėgiškumą situacijoje, kurioje reikia apsiginti.",
+      "psychology": [
+        "Ginklas – galia nuotoliu. Sapnuose jis reiškia gebėjimą apsiginti arba pulti, ir kartu – baimę prarasti kontrolę. Kas laiko ginklą, tas turi galią. Jei ginklą laiko kitas žmogus – jaučiate grėsmę iš galingesnio (viršininko, institucijos, agresyvaus žmogaus). Jei jūs – galios ar gynybos poreikis, kartais slopinamas pyktis.",
+        "Ginklas, kuris neveikia, neiššauna, kulkos lėtos – vienas dažniausių sapnų, ir jis turi dvi priežastis. Psichologinė: jaučiatės bejėgiai konflikte, jūsų argumentai „nepasiekia“. Fiziologinė: REM miego atonija, kai kūnas negali judėti, įsipina į sapną kaip bejėgiškumas.",
+        "Šaudymas sapne, ypač sapnai apie karą ar išpuolius, dažnėja neramiais laikais – tai nerimo dėl pasaulio įvykių atspindys, ir tai normalu."
+      ],
+      "variants": [
+        {"situation": "Ginklas neveikia", "meaning": "Bejėgiškumas konflikte. Dažnai – REM atonijos atspindys."},
+        {"situation": "Į jus šaudo", "meaning": "Jaučiatės puolami: kritika, spaudimas, grėsmė."},
+        {"situation": "Laikote ginklą", "meaning": "Galios ar gynybos poreikis. Slopinamas pyktis."}
+      ],
+      "mindfulness": "Užrašykite konfliktą, kuriame jaučiatės bejėgiai. Tada – vieną dalyką, kurį ten galite kontroliuoti (dažniausiai – savo reakciją). Tai ne ginklas, bet veikia geriau.",
+      "related": ["kovotis", "peilis", "priesas", "policija"]
+    },
+    {
+      "slug": "knyga",
+      "word": "Knyga",
+      "title": "Sapnuoti knygą",
+      "aliases": ["knygą", "knygos", "skaityti", "biblioteka", "negaliu perskaityti", "raštas", "laiškas"],
+      "short": "Knyga sapne – žinių, atminties ir gyvenimo istorijos simbolis. Negalėti perskaityti teksto – vienas dažniausių sapnų, turintis neurologinį paaiškinimą.",
+      "psychology": [
+        "Knyga – sukauptos žinios ir istorija. Sapnuose ji reiškia mokymąsi, atmintį, savo gyvenimo pasakojimą. Biblioteka – vidinių išteklių gausa; sena knyga – praeities išmintis ar šeimos istorija; tuščia knyga – nerašyta ateitis.",
+        "Įdomus faktas: sapne tekstas dažniausiai neįskaitomas – raidės plaukia, keičiasi, nesudaro žodžių. Tai neurologija: smegenų sritys, atsakingos už kalbos apdorojimą, REM miego metu veikia silpniau. Todėl negalėjimas perskaityti sapne nėra simbolis, o normalus reiškinys. Kai kurie sąmoningų sapnų praktikai tai naudoja kaip „tikrovės testą“.",
+        "Laiškas sapne – žinia, kurios laukiate ar bijote. Rašyti knygą – poreikis papasakoti savo istoriją, kūrybinis impulsas."
+      ],
+      "variants": [
+        {"situation": "Negalite perskaityti", "meaning": "Normalus REM miego reiškinys, ne simbolis. Kartais – jausmas, kad trūksta informacijos sprendimui."},
+        {"situation": "Biblioteka", "meaning": "Vidiniai ištekliai, žinių gausa. Atsakymas jau yra – reikia tik surasti."},
+        {"situation": "Rašote knygą", "meaning": "Kūrybinis poreikis, noras papasakoti savo istoriją."}
+      ],
+      "mindfulness": "Užrašykite vieną sakinį, kuriuo prasidėtų jūsų gyvenimo knyga. Tai ne rašymo pratimas, o savivokos – kaip matote savo istoriją.",
+      "related": ["mokykla", "egzaminas", "mokytojas", "samoningas-sapnas"]
+    },
+    {
+      "slug": "laikrodis",
+      "word": "Laikrodis",
+      "title": "Sapnuoti laikrodį",
+      "aliases": ["laikrodį", "laikrodžio", "laikas", "sustojęs laikrodis", "nespėju", "laikrodis be rodyklių"],
+      "short": "Laikrodis sapne – laiko, spaudimo ir gyvenimo etapų simbolis. Sustojęs laikrodis – užsistovėjimas; per greitai bėgantis – jausmas, kad nespėjate gyventi.",
+      "psychology": [
+        "Laikrodis matuoja laiką, kurio negalima sustabdyti, todėl sapnuose jis reiškia spaudimą ir gyvenimo etapų suvokimą. Greitai besisukančios rodyklės – jausmas, kad laikas bėga per greitai, nespėjate. Toks sapnas dažnas apie 30, 40, 50 metų, kai lyginamasi su „turėjau jau“.",
+        "Sustojęs laikrodis – užsistovėjimas arba, priešingai, laikas, kuris sustojo dėl stiprios patirties (gedulo, įsimylėjimo). Laikrodis be rodyklių – laiko praradimas, dezorientacija, kartais – laisvė nuo tvarkaraščio.",
+        "Praktinė pastaba: sapnai apie laikrodį ir vėlavimą dažnesni žmonėms, kurie eina miegoti nerimaudami dėl žadintuvo. Vienas iš būdų – nustatyti žadintuvą anksčiau ir pasitikėti juo."
+      ],
+      "variants": [
+        {"situation": "Rodyklės sukasi per greitai", "meaning": "Laiko spaudimas, jausmas, kad nespėjate gyventi."},
+        {"situation": "Sustojęs laikrodis", "meaning": "Užsistovėjimas arba stipri patirtis, sustabdžiusi laiką."},
+        {"situation": "Laikrodis be rodyklių", "meaning": "Dezorientacija arba laisvė nuo tvarkaraščio."}
+      ],
+      "mindfulness": "Šiandien vieną valandą praleiskite be laikrodžio ir telefono. Pastebėkite, kaip keičiasi laiko jausmas. Laikrodžio sapnas dažnai yra spaudimas, kurį susikūrėme patys.",
+      "related": ["veluoti", "traukinys", "egzaminas", "darbas"]
+    },
+    {
+      "slug": "lova",
+      "word": "Lova",
+      "title": "Sapnuoti lovą",
+      "aliases": ["lovą", "lovoje", "miegamasis", "čiužinys", "pagalvė", "antklodė", "svetima lova", "negaliu užmigti sapne"],
+      "short": "Lova sapne – poilsio, intymumo ir saugumo simbolis. Nepatogi ar svetima lova – jausmas, kad nesate savo vietoje; negalėjimas užmigti sapne – nerimas, kuris neleidžia pailsėti net miegant.",
+      "psychology": [
+        "Lova – intymiausia vieta namuose: čia miegame, sergame, mylimės, gimstame ir mirštame. Sapnuose ji reiškia poilsį, saugumą ir artumą. Patogi, sava lova – ramybė ir priėmimas. Svetima lova – jausmas, kad esate ne savo vietoje: darbe, santykiuose, gyvenimo etape. Nepatogi, sulūžusi lova – poilsis, kuris neatkuria.",
+        "Sapnuoti, kad negalite užmigti, ar sapnuoti miegą sapne – dažnas reiškinys, ypač žmonėms su nemigos patirtimi. Tai rodo, kad net poilsis tapo įtampos šaltiniu. Tokiais atvejais padeda ne daugiau pastangų užmigti, o mažiau: miego rutina, vėsus kambarys, jokių ekranų.",
+        "Praktinė pastaba: sapnai apie nepatogią lovą kartais tiesiog reiškia nepatogią lovą. Jei dažnai pabundate su nugaros ar kaklo skausmu, verta pasitikrinti, ar čiužinys ir pagalvė vis dar atitinka jūsų kūną – čiužinys paprastai tarnauja apie 8–10 metų."
+      ],
+      "variants": [
+        {"situation": "Svetima lova", "meaning": "Jausmas, kad nesate savo vietoje. Kur gyvenime jaučiatės svečias?"},
+        {"situation": "Negalite užmigti sapne", "meaning": "Nerimas, kuris neleidžia pailsėti. Miego rutinos klausimas."},
+        {"situation": "Lova sulūžusi ar nepatogi", "meaning": "Poilsis neatkuria. Kartais – tiesiogine prasme."}
+      ],
+      "mindfulness": "Šįvakar prieš miegą 2 minutes gulėkite ir tiesiog pajuskite, kaip lova jus laiko – be užduoties užmigti. Kūnas, kuris jaučiasi laikomas, užmiega greičiau.",
+      "sleep_note": "Lova turėtų būti siejama tik su miegu ir intymumu – ne su darbu, valgymu ar ekranais. Jei ilgai negalite užmigti, geriau atsikelti, paskaityti prie silpnos šviesos ir grįžti, kai jausite mieguistumą.",
+      "related": ["namas", "seksas", "miego-paralyzius", "kosmaras", "sniegas"]
+    },
+    {
+      "slug": "drabuziai",
+      "word": "Drabužiai",
+      "title": "Sapnuoti drabužius",
+      "aliases": ["drabužius", "drabužių", "rūbai", "apsirengti", "netinkami drabužiai", "suplyšę drabužiai", "nauji drabužiai", "suknelė", "kostiumas"],
+      "short": "Drabužiai sapne – socialinio vaidmens ir įvaizdžio simbolis. Netinkami drabužiai – jausmas, kad neatitinkate situacijos; nauji – naujas vaidmuo ar tapatybė.",
+      "psychology": [
+        "Drabužiai – tai, ką rodome pasauliui. Sapnuose jie reiškia socialinį vaidmenį, įvaizdį ir apsaugą nuo vertinimo. Netinkami drabužiai (pižama darbe, vasariniai rūbai žiemą) – vienas dažniausių nerimo sapnų: jausmas, kad neatitinkate aplinkos lūkesčių ar esate „ne toje vietoje“.",
+        "Nauji drabužiai – naujas vaidmuo, tapatybės pokytis, noras būti matomam kitaip. Suplyšę, purvini – jausmas, kad įvaizdis pažeistas ar kad esate išsekę. Per dideli drabužiai – vaidmuo, į kurį dar neįaugote; per maži – vaidmuo, iš kurio išaugote.",
+        "Rengtis ir nespėti – panašu į vėlavimo sapną: nepasirengimas socialinei situacijai."
+      ],
+      "variants": [
+        {"situation": "Netinkami drabužiai", "meaning": "Neatitikimo jausmas. Kur jaučiatės „ne toje vietoje“?"},
+        {"situation": "Nauji drabužiai", "meaning": "Naujas vaidmuo ar tapatybė. Geras ženklas."},
+        {"situation": "Per dideli ar per maži", "meaning": "Vaidmuo, į kurį dar neįaugote, arba iš kurio išaugote."}
+      ],
+      "mindfulness": "Užrašykite vieną vaidmenį, kurį „dėvite“ kasdien, bet kuris nebetinka – per didelis, per mažas ar tiesiog ne jūsų. Ką reikėtų, kad jį nusivilktumėte?",
+      "related": ["nuogumas", "batai", "veidrodis", "vestuves"]
+    },
+    {
+      "slug": "batai",
+      "word": "Batai",
+      "title": "Sapnuoti batus",
+      "aliases": ["batus", "batų", "avalynė", "basas", "pamesti batus", "netinkantys batai", "nauji batai"],
+      "short": "Batai sapne – gyvenimo kelio ir pagrindo simbolis. Netinkantys batai – kelias, kuris ne jūsų; basos kojos – pažeidžiamumas arba laisvė.",
+      "psychology": [
+        "Batai neša mus keliu, todėl sapnuose jie reiškia tai, kaip einate per gyvenimą: patogiai ar skausmingai, savo keliu ar svetimu. Patogūs batai – pasitikėjimas savo kryptimi. Spaudžiantys ar per dideli – kelias, kuris jums netinka: darbas, vaidmuo, santykis.",
+        "Pamesti batus ar eiti basam – dažnas sapnas. Jis gali reikšti pažeidžiamumą (eiti gyvenimu be apsaugos) arba laisvę ir ryšį su žeme, priklausomai nuo emocijos. Eiti basam per akmenis – sunkus kelias be išteklių; basam per žolę – natūralumas ir ramybė.",
+        "Svetimi batai – bandymas eiti kito žmogaus keliu ar gyventi pagal jo lūkesčius. Nauji batai – naujas etapas, nauja kryptis."
+      ],
+      "variants": [
+        {"situation": "Batai spaudžia", "meaning": "Kelias ar vaidmuo, kuris netinka. Kas spaudžia gyvenime?"},
+        {"situation": "Einate basas", "meaning": "Pažeidžiamumas arba laisvė – pasakys emocija sapne."},
+        {"situation": "Svetimi batai", "meaning": "Gyvenate pagal kito lūkesčius, ne savo keliu."}
+      ],
+      "mindfulness": "Šiandien bent kelias minutes pavaikščiokite basomis – namuose ar žolėje. Tai paprasčiausias „įžeminimo“ pratimas, o batų sapnas dažnai kviečia pajusti savo kelią tiesiogiai.",
+      "related": ["kelias", "drabuziai", "kojos", "keliauti"]
+    }
+  ]
+}

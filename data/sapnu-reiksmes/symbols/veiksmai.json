@@ -1,0 +1,369 @@
+{
+  "category": "veiksmai",
+  "category_name": "Veiksmai ir situacijos",
+  "entries": [
+    {
+      "slug": "kristi",
+      "word": "Kritimas",
+      "title": "Sapnuoti, kad krentate",
+      "aliases": ["krentu", "kristi", "krito", "kritimas iš aukščio", "nukristi", "krentu į bedugnę"],
+      "short": "Kritimas – vienas dažniausių sapnų pasaulyje. Jis reiškia kontrolės praradimo baimę arba atramos stoką: kažkas, ant ko rėmėtės, pasirodė nepatikima.",
+      "psychology": [
+        "Sapnų tyrimai rodo, kad kritimas yra viena iš kelių universalių temų, kurią bent kartą sapnavo didžioji dauguma žmonių nepriklausomai nuo kultūros. Grėsmės simuliacijos teorija tai aiškina evoliuciškai: smegenys repetuoja pavojų. Psichologiškai kritimas reiškia jausmą, kad prarandate kontrolę – darbe, santykiuose, finansuose – arba kad nebeturite atramos.",
+        "Svarbu atskirti du dalykus. Trumpas krūptelėjimas užmiegant su kritimo pojūčiu (vadinamasis hipnagoginis trūkčiojimas) – tai ne sapnas, o normalus fiziologinis reiškinys, dažnesnis pervargus ar vartojant daug kofeino. Ilgas, siužetinis sapnas apie kritimą – jau psichologinis turinys.",
+        "Prietaras, kad „jei sapne nukrisi ir atsitrenksi – mirsi“, neturi jokio pagrindo. Daug žmonių sapne nukrenta iki galo ir pabunda sveiki. Kai kuriems pasiekti dugną sapne net reiškia palengvėjimą: blogiausia jau įvyko, ir jūs vis dar čia."
+      ],
+      "variants": [
+        {"situation": "Krentate ir pabundate", "meaning": "Dažniausias variantas. Nerimas dėl kontrolės praradimo. Patikrinkite, kuri gyvenimo sritis šiuo metu atrodo „be atramos“."},
+        {"situation": "Krentate ir nusileidžiate švelniai", "meaning": "Pasitikėjimas, kad išeitis atsiras. Geras atsparumo ženklas."},
+        {"situation": "Kažkas kitas krenta", "meaning": "Nerimas dėl artimo žmogaus arba baimė, kad negalėsite jo apsaugoti."}
+      ],
+      "mindfulness": "Užrašykite tris dalykus, kuriais galite pasitikėti šiandien: žmogų, įprotį, vietą. Sapnas apie kritimą prašo atramos – suteikite ją sau sąmoningai.",
+      "sleep_note": "Jei krūpčiojate užmiegant, sumažinkite kofeiną po pietų ir eikite miegoti anksčiau: tokie trūkčiojimai dažnesni, kai organizmas pervargęs.",
+      "related": ["skristi", "kalnas", "liftas", "laiptai", "baime"]
+    },
+    {
+      "slug": "skristi",
+      "word": "Skrydis",
+      "title": "Sapnuoti, kad skrendate",
+      "aliases": ["skrendu", "skristi", "skraidyti", "pakilti", "sklandyti", "levituoti"],
+      "short": "Skrydis sapne – laisvės, kontrolės ir perspektyvos simbolis. Tai vienas maloniausių sapnų, dažnai pasirodantis, kai išsivaduojate iš ko nors sunkaus.",
+      "psychology": [
+        "Skrydis – antra universali sapnų tema po kritimo, ir dažniausiai teigiama. Psichologiškai jis reiškia laisvę nuo apribojimų ir gebėjimą pažvelgti į situaciją iš aukščiau. Tokie sapnai dažni po sprendimų, kurie atnešė palengvėjimą: išėjus iš varginančio darbo, užbaigus santykius, pasveikus.",
+        "Kaip skrendate – irgi svarbu. Lengvas, valdomas skrydis – pasitikėjimas savimi. Skrydis, kurio nevaldote, ar baimė nukristi – laisvė, kuri gąsdina: galbūt naujas etapas atrodo per didelis. Sunkumas pakilti – jaučiate, kad kažkas jus laiko prie žemės.",
+        "Skrydžio sapnai dažnai būna sąmoningi (lucidiniai): žmogus suvokia, kad sapnuoja. Tai natūralu ir nekenksminga; kai kurie žmonės specialiai mokosi skraidyti sapnuose kaip malonaus pratimo."
+      ],
+      "variants": [
+        {"situation": "Skrendate lengvai ir džiaugiatės", "meaning": "Laisvė, pasitikėjimas, išsivadavimas. Vienas geriausių sapnų."},
+        {"situation": "Nepavyksta pakilti", "meaning": "Kažkas laiko prie žemės: įsipareigojimas, baimė, kito žmogaus nuomonė."},
+        {"situation": "Skrendate per žemai, kliūvate", "meaning": "Laisvė yra, bet su apribojimais. Klausimas, kurie iš jų tikri."}
+      ],
+      "mindfulness": "Pabudę po skrydžio sapno kelias minutes pabūkite tame lengvumo jausme prieš imdami telefoną. Teigiamos sapnų emocijos veikia nuotaiką visą dieną, jei joms leidžiate.",
+      "related": ["kristi", "paukstis", "lektuvas", "samoningas-sapnas"]
+    },
+    {
+      "slug": "begti",
+      "word": "Bėgimas ir persekiojimas",
+      "title": "Sapnuoti, kad jus vejasi",
+      "aliases": ["vejasi", "bėgu", "bėgti", "persekioja", "negaliu pabėgti", "kojos nejuda", "pabėgti"],
+      "short": "Persekiojimas – vienas dažniausių nerimo sapnų. Jis reiškia, kad vengiate kažko, kas vis tiek jus seka: sprendimo, jausmo, pokalbio ar atsakomybės.",
+      "psychology": [
+        "Sapnai apie persekiojimą – klasikinis grėsmės simuliacijos pavyzdys ir viena iš dažniausių sapnų temų visose kultūrose. Bet šiuolaikinio žmogaus nesivaiko plėšrūnai; jį vejasi neatsakyti laiškai, atidėti sprendimai, neišsakyti jausmai. Svarbiausias klausimas – ne „kas vejasi“, o „nuo ko bėgu dieną“.",
+        "Persekiotojas dažnai lieka neaiškus – tai tipiška. Jei jis turi veidą, tas žmogus ar jo savybė yra tai, ko vengiate. Jei tai šešėlis, monstras, neaiški figūra – Jungas pasakytų, kad bėgate nuo savo „šešėlio“: pykčio, ambicijos, baimės, kurios sau nepripažįstate.",
+        "Negalėjimas bėgti (kojos kaip iš švino, lėtas judėjimas) yra ne psichologinis simbolis, o fiziologija: REM miego metu raumenys realiai išjungti (atonija), ir smegenys tai kartais įpina į sapną. Tai normalu ir nekenksminga."
+      ],
+      "variants": [
+        {"situation": "Vejasi, bet negalite pabėgti", "meaning": "Jausmas, kad problema didesnė už jus. Dažnai – REM atonijos atspindys sapne, ne simbolis."},
+        {"situation": "Atsisukate į persekiotoją", "meaning": "Labai geras ženklas. Pasirengimas susidurti su tuo, ko vengėte. Dažnai po tokio sapno problema išsisprendžia."},
+        {"situation": "Vejatės jūs", "meaning": "Siekiate kažko, kas nuolat išslysta: tikslo, žmogaus, pripažinimo."}
+      ],
+      "mindfulness": "Įsivaizduokite, kad sapne sustojate ir atsisukate. Ką matote? Šis paprastas vaizduotės pratimas (naudojamas ir košmarų terapijoje) dažnai pakeičia pasikartojantį sapną.",
+      "related": ["priesas", "vilkas", "policija", "kosmaras", "miego-paralyzius"]
+    },
+    {
+      "slug": "mirtis",
+      "word": "Mirtis",
+      "title": "Sapnuoti savo ar kito mirtį",
+      "aliases": ["mirštu", "mirti", "numirti", "mirštantis", "sava mirtis", "artimojo mirtis", "mirė"],
+      "short": "Mirtis sapne beveik niekada nereiškia tikros mirties. Tai pabaigos ir pokyčio simbolis: kažkas jūsų gyvenime baigiasi, kad galėtų prasidėti kita.",
+      "psychology": [
+        "Sapnų psichologijoje mirtis – transformacijos, ne pabaigos simbolis. Žmonės ją sapnuoja pereinamaisiais laikotarpiais: baigdami mokslus, keisdami darbą, tapdami tėvais, išsiskirdami, sveikdami. Senasis „aš“ ar senasis etapas miršta. Toks sapnas dažniausiai yra sveikas ir net reikalingas.",
+        "Sapnuoti gyvo artimo žmogaus mirtį – vienas skaudžiausių ir kartu dažniausių sapnų, ypač tėvams ir partneriams. Jis reiškia ne pranašystę, o baimę prarasti, arba santykio pokytį: vaikas užauga, tėvai sensta, partneris keičiasi. Kartais toks sapnas rodo neišsakytą pyktį tam žmogui – ir tai irgi normalu.",
+        "Sava mirtis sapne, jei ją lydi ramybė, dažnai yra priėmimo ženklas – kažką paleidote. Jei ją lydi siaubas – nerimas dėl kontrolės praradimo, sveikatos ar ateities. Jei sapnai apie mirtį kartojasi ir gąsdina ilgiau nei kelias savaites, verta pasikalbėti su psichologu – ne dėl sapnų, o dėl nerimo, kurį jie rodo."
+      ],
+      "variants": [
+        {"situation": "Sava mirtis", "meaning": "Etapo pabaiga, tapatybės pokytis. Ramybė sapne = priėmimas; siaubas = nerimas dėl kontrolės."},
+        {"situation": "Gyvo artimojo mirtis", "meaning": "Baimė prarasti arba santykio pokytis. Ne pranašystė. Pasikalbėkite su tuo žmogumi."},
+        {"situation": "Mirtis ir prisikėlimas", "meaning": "Aiškus atsinaujinimo simbolis. Po sunkaus etapo – naujas."}
+      ],
+      "mindfulness": "Užrašykite, kas jūsų gyvenime šiuo metu baigiasi. Tada – kas dėl to gali prasidėti. Mirtis sapne beveik visada turi antrą pusę.",
+      "related": ["mires-zmogus", "laidotuves", "kapines", "gimdymas", "kosmaras"]
+    },
+    {
+      "slug": "verkti",
+      "word": "Verkimas",
+      "title": "Sapnuoti, kad verkiate",
+      "aliases": ["verkiu", "verkti", "ašaros", "raudoti", "verkiantis žmogus", "pabudau verkdamas"],
+      "short": "Verkimas sapne – emocijų, kurių dieną neišreiškėte, išsiliejimas. Dažnai po tokio sapno pabundama lengviau – ašaros atliko savo darbą.",
+      "psychology": [
+        "Sapnas – saugi vieta jausmams, kuriems dieną nebuvo vietos. Jei sapne verkiate, o pabudę nesuprantate kodėl, greičiausiai dieną kažką „laikėte“: liūdesį, nuovargį, nusivylimą. Tyrimai rodo, kad REM miegas mažina emocinių prisiminimų intensyvumą – verkimas sapne yra šio proceso dalis.",
+        "Pabusti su tikromis ašaromis – ne retas reiškinys ir nėra pavojingas. Tai stiprios emocijos, kurią sapnas apdorojo, ženklas. Verta ne gėdytis, o paklausti: ko gedžiu, dėl ko liūdžiu, ko man trūksta?",
+        "Kito žmogaus verkimas sapne – jautrumas jam arba jūsų pačių liūdesys, kurį lengviau matyti kitame nei savyje."
+      ],
+      "variants": [
+        {"situation": "Verkiate ir jaučiate palengvėjimą", "meaning": "Emocinis išsivalymas. Sveikas ir reikalingas sapnas."},
+        {"situation": "Norite verkti, bet negalite", "meaning": "Užblokuotos emocijos. Kažkas laukia, kad būtų pripažinta."},
+        {"situation": "Verkia artimas žmogus", "meaning": "Rūpestis dėl jo arba jūsų liūdesys, projektuojamas į kitą."}
+      ],
+      "mindfulness": "Jei pabudote po verkimo sapno, neskubėkite. Padėkite ranką ant krūtinės, kelis kartus lėtai įkvėpkite ir pasakykite sau: „Man leidžiama liūdėti.“ Tai užbaigia darbą, kurį pradėjo sapnas.",
+      "related": ["lietus", "mires-zmogus", "vanduo", "baime"]
+    },
+    {
+      "slug": "juoktis",
+      "word": "Juokas",
+      "title": "Sapnuoti juoką",
+      "aliases": ["juokiuosi", "juoktis", "juokas", "linksma", "džiaugsmas", "šventė", "vakarėlis"],
+      "short": "Juokas sapne – lengvumo ir vidinio išsilaisvinimo ženklas. Kartais tai poilsis po įtampos, kartais – ironija dėl to, ką per rimtai vertinate.",
+      "psychology": [
+        "Teigiami sapnai retesni už nerimo sapnus – tai patvirtina sapnų turinio tyrimai. Todėl sapnas, kuriame nuoširdžiai juokiatės, vertas dėmesio: psichika ilsisi, ir tai dažnai reiškia, kad sunkus laikotarpis baigiasi arba kad naujas įprotis (miegas, judėjimas, santykiai) veikia.",
+        "Juokas sapne gali turėti ir kitą prasmę: jei juokiatės iš to, kas gyvenime atrodo baisu, pasąmonė mažina to dalyko svarbą. Tai sveikas mechanizmas – humoras yra vienas brandžiausių psichologinių gynybos būdų.",
+        "Jei sapne juokiasi iš jūsų, tai gėdos ar nesaugumo jausmas, dažnai susijęs su viešu pasirodymu ar vertinimu. Verta patikrinti, ar tas vertinimas tikras, ar įsivaizduojamas."
+      ],
+      "variants": [
+        {"situation": "Nuoširdus juokas su draugais", "meaning": "Bendrumo ir ramybės jausmas. Sveikas, atsigaunantis sapnas."},
+        {"situation": "Juokiasi iš jūsų", "meaning": "Gėda, nesaugumas, baimė būti įvertintam neigiamai."},
+        {"situation": "Pabundate juokdamiesi", "meaning": "Retas, bet malonus reiškinys. Nervų sistema ilsisi."}
+      ],
+      "mindfulness": "Šiandien sąmoningai suraskite vieną dalyką, iš kurio galite pasijuokti – ypač jei tai jūsų pačių klaida. Humoras savo atžvilgiu yra vienas patikimiausių atsparumo rodiklių.",
+      "related": ["draugas", "vestuves", "vaikas", "saule"]
+    },
+    {
+      "slug": "egzaminas",
+      "word": "Egzaminas",
+      "title": "Sapnuoti egzaminą",
+      "aliases": ["egzaminas", "egzaminą", "testas", "neišlaikau", "nepasiruošęs", "kontrolinis", "pamiršau atsakymą"],
+      "short": "Egzaminas sapne – vertinimo baimės simbolis. Jį sapnuoja net žmonės, seniai baigę mokslus, kai gyvenime jaučiasi tikrinami: darbe, santykiuose, prieš svarbų sprendimą.",
+      "psychology": [
+        "Egzamino sapnas – vienas iš vadinamųjų „tipinių sapnų“, kuriuos sapnuoja dauguma žmonių, ir įdomu, kad jis dažniausias suaugusiems, kurie mokslus baigė prieš daugelį metų. Tai rodo, kad sapnas ne apie egzaminą, o apie vertinimą apskritai: ar esu pakankamai geras, ar pasiruošęs, ar mane „išlaikys“.",
+        "Tokie sapnai dažniausiai pasirodo prieš tikrą išbandymą – pokalbį dėl darbo, pristatymą, svarbų susitikimą – ir yra nerimo repeticija. Įdomu, kad tyrimai rodo: studentai, kurie sapnavo egzaminą naktį prieš, dažnai jį išlaikė geriau – smegenys pasiruošė.",
+        "Detalės pasako daugiau. Nepasiruošęs – jaučiatės, kad neturite pakankamai informacijos ar laiko. Pavėlavęs – baimė praleisti galimybę. Pamiršote atsakymą – nepasitikėjimas savo žiniomis, nors jos yra."
+      ],
+      "variants": [
+        {"situation": "Nepasiruošęs egzaminui", "meaning": "Jausmas, kad gyvenime laukia išbandymas, kuriam neturite pakankamai išteklių. Dažnai – perdėtas."},
+        {"situation": "Neišlaikote", "meaning": "Nesėkmės baimė. Klausimas: kas nutiktų, jei tikrai neišlaikytumėte? Dažniausiai – daug mažiau nei atrodo."},
+        {"situation": "Išlaikote puikiai", "meaning": "Pasitikėjimas savimi auga. Geras ženklas prieš išbandymą."}
+      ],
+      "mindfulness": "Prieš svarbų įvykį užrašykite, ką jau žinote ir mokate – ne ko trūksta. Egzamino sapnas rodo, kad dėmesys nukrypo į spragas, o ne į išteklius.",
+      "related": ["mokykla", "mokytojas", "veluoti", "nuogumas"]
+    },
+    {
+      "slug": "veluoti",
+      "word": "Vėlavimas",
+      "title": "Sapnuoti, kad vėluojate",
+      "aliases": ["vėluoju", "vėluoti", "nespėju", "pavėlavau", "praleidau traukinį", "praleidau lėktuvą", "nespėti"],
+      "short": "Vėlavimas sapne – baimės praleisti galimybę arba jausmo, kad gyvenimas eina greičiau nei jūs, simbolis. Dažnas žmonėms, gyvenantiems pagal nuolatinį tvarkaraštį.",
+      "psychology": [
+        "Vėlavimo sapnai priklauso dažniausių nerimo sapnų grupei. Jie dažnesni žmonėms, kurių dienos labai struktūruotos, ir laikotarpiais, kai yra daug terminų. Psichologiškai tai jausmas, kad kažko nespėsite: karjeros, santykių, „gyvenimo plano“. Dažnai tas planas yra ne jūsų, o įsivaizduojamos visuomenės.",
+        "Praleistas traukinys ar lėktuvas turi papildomą sluoksnį: transportas sapnuose reiškia gyvenimo kryptį, tad jį praleisti – baimė, kad kiti juda pirmyn, o jūs liekate. Toks sapnas dažnas žmonėms apie 30 ir 40 metų, kai lyginamasi su bendraamžiais.",
+        "Kartu vėlavimo sapnas gali būti pasąmonės pastaba, kad tempas per didelis. Jei sapne bėgate, bet niekaip nespėjate, galbūt problema ne greitis, o kryptis."
+      ],
+      "variants": [
+        {"situation": "Praleidžiate traukinį ar lėktuvą", "meaning": "Baimė praleisti gyvenimo galimybę. Palyginimas su kitais."},
+        {"situation": "Vėluojate į darbą ar egzaminą", "meaning": "Nerimas dėl vertinimo ir įsipareigojimų."},
+        {"situation": "Vėluojate, bet nusprendžiate neskubėti", "meaning": "Labai geras ženklas: atsisakote svetimo tempo."}
+      ],
+      "mindfulness": "Šiandien vieną dalyką padarykite lėčiau, nei įprasta – valgykite, eikite, kalbėkite. Vėlavimo sapnas dažnai yra kūno prašymas sulėtinti.",
+      "related": ["egzaminas", "traukinys", "lektuvas", "laikrodis", "kelias"]
+    },
+    {
+      "slug": "pasiklysti",
+      "word": "Pasiklydimas",
+      "title": "Sapnuoti, kad pasiklydote",
+      "aliases": ["pasiklydau", "pasiklysti", "nerandu kelio", "nerandu namų", "nežinau kur esu", "labirintas"],
+      "short": "Pasiklysti sapne – krypties praradimo simbolis. Jis pasirodo pereinamaisiais laikotarpiais, kai senas kelias baigėsi, o naujas dar neaiškus.",
+      "psychology": [
+        "Pasiklydimas – vienas iš tipinių sapnų, kuriuos sapnuoja dauguma žmonių. Psichologiškai jis reiškia ne bejėgiškumą, o pereinamąjį etapą: tarp darbų, tarp santykių, tarp senos ir naujos tapatybės. Sapnas nesako, kad esate pasimetę visam laikui; jis sako, kad šiuo metu neturite žemėlapio.",
+        "Kur pasiklystate – svarbu. Mieste – socialinis pasimetimas, sunku rasti savo vietą tarp žmonių. Miške – vidinis pasimetimas, nesuprantate savo jausmų. Pastate ar labirinte – įstrigimas sistemoje (darbe, biurokratijoje, šeimos taisyklėse). Nerasti kelio namo – atitolimas nuo savęs.",
+        "Įdomu, kad daugelis žmonių sapne galiausiai randa kelią arba pabunda prieš rasdami. Abu variantai normalūs. Jei nuolat sapnuojate, kad pasiklydote, tai kvietimas dieną skirti laiko klausimui „ko aš iš tikrųjų noriu?“, o ne „ką turiu daryti?“"
+      ],
+      "variants": [
+        {"situation": "Nerandate kelio namo", "meaning": "Atitolimas nuo savęs, savo vertybių ar artimųjų. Laikas grįžti."},
+        {"situation": "Pasiklystate mieste", "meaning": "Socialinis pasimetimas, nesaugumas tarp žmonių."},
+        {"situation": "Randate kelią", "meaning": "Sprendimas artėja. Jūs jau žinote daugiau, nei manote."}
+      ],
+      "mindfulness": "Užrašykite tris dalykus, kurie jums svarbūs nepriklausomai nuo aplinkybių. Tai jūsų kompasas. Pasiklydimo sapnas dažniausiai reiškia, kad jį laikinai pametėte, o ne kad jo nėra.",
+      "related": ["miskas", "kelias", "namas", "tunelis", "tamsa"]
+    },
+    {
+      "slug": "nuogumas",
+      "word": "Nuogumas",
+      "title": "Sapnuoti, kad esate nuogas",
+      "aliases": ["nuogas", "nuoga", "nuogumas", "be drabužių", "viešumoje nuogas", "gėda"],
+      "short": "Nuogumas sapne – pažeidžiamumo ir baimės būti „permatytam“ simbolis. Vienas iš dažniausių sapnų, ypač prieš situacijas, kuriose jaučiatės vertinami.",
+      "psychology": [
+        "Sapnas apie nuogumą viešoje vietoje – tipinis sapnas, kurį sapnuoja dauguma žmonių. Freudas jį siejo su vaikystės laisve ir slopinama gėda; šiuolaikinė psichologija žiūri paprasčiau: drabužiai sapnuose reiškia socialinį vaidmenį ir apsaugą, o jų nebuvimas – jausmą, kad esate atviri vertinimui be apsaugos.",
+        "Svarbiausia detalė – kitų reakcija. Jei sapne visi žiūri ir juokiasi – bijote būti atskleisti (apsišaukėlio sindromas, gėda dėl klaidos). Jei niekas nepastebi – jūsų baimė didesnė nei reali grėsmė; dažnai tai palengvėjimo sapnas. Jei patys nesijaudinate dėl nuogumo – priimate save tokį, koks esate.",
+        "Tokie sapnai dažni prieš viešus pasirodymus, naujus darbus, pirmuosius pasimatymus – visur, kur jaučiatės „matomi“."
+      ],
+      "variants": [
+        {"situation": "Nuogas viešumoje, visi žiūri", "meaning": "Baimė būti atskleistam, gėda, nesaugumas dėl vertinimo."},
+        {"situation": "Nuogas, bet niekas nepastebi", "meaning": "Jūsų baimė didesnė nei tikrovė. Kiti mažiau jus vertina, nei manote."},
+        {"situation": "Kitas žmogus nuogas", "meaning": "Matote kažkieno pažeidžiamumą arba tiesą apie jį."}
+      ],
+      "mindfulness": "Prisiminkite paskutinę situaciją, kurioje jautėtės „permatomi“. Ar kas nors iš tikrųjų jus nuteisė? Dažniausiai atsakymas – ne. Nuogumo sapnas kviečia sumažinti įsivaizduojamą auditoriją.",
+      "related": ["egzaminas", "drabuziai", "tualetas", "veidrodis"]
+    },
+    {
+      "slug": "plaukti",
+      "word": "Plaukimas",
+      "title": "Sapnuoti, kad plaukiate",
+      "aliases": ["plaukiu", "plaukti", "plaukimas", "nardyti", "po vandeniu", "maudytis"],
+      "short": "Plaukimas sapne – gebėjimo tvarkytis su emocijomis simbolis. Lengvas plaukimas – jausmai valdomi; sunkus – kova su tuo, kas turėtų nešti.",
+      "psychology": [
+        "Jei vanduo reiškia emocijas, plaukimas – tai, kaip jose judate. Lengvas, malonus plaukimas sapne rodo, kad su jausmais tvarkotės gerai ir net mėgaujatės jų gilumu. Sunkus plaukimas, nuovargis, kova su bangomis – emocinė įtampa, kuri reikalauja per daug jėgų.",
+        "Nardymas ar buvimas po vandeniu – gilinimasis į pasąmonę. Jei sapne po vandeniu kvėpuojate, tai ypač geras ženklas: jaučiatės saugiai net giliausiuose jausmuose. Jei dūstate – žr. skendimą.",
+        "Plaukimas prieš srovę – kova su gyvenimo tėkme. Klausimas: ar būtina? Kartais taip, dažnai – ne."
+      ],
+      "variants": [
+        {"situation": "Plaukiate lengvai, maloniai", "meaning": "Emocinė sveikata, gebėjimas būti su jausmais."},
+        {"situation": "Plaukiate ir pavargstate", "meaning": "Emocinis nuovargis. Ieškokite kranto – poilsio, paramos."},
+        {"situation": "Kvėpuojate po vandeniu", "meaning": "Saugumas gilumoje. Pasitikėjimas savimi ir savo jausmais."}
+      ],
+      "mindfulness": "Įsivaizduokite, kad jūsų nerimas – vanduo, o jūs – plaukikas. Ne kovojate, o leidžiate vandeniui laikyti. Tai atsipalaidavimo pratimas, kurį galima daryti prieš miegą.",
+      "related": ["vanduo", "jura", "upe", "skesti", "zuvis"]
+    },
+    {
+      "slug": "skesti",
+      "word": "Skendimas",
+      "title": "Sapnuoti, kad skęstate",
+      "aliases": ["skęstu", "skęsti", "nuskendau", "dūstu vandenyje", "negaliu išplaukti", "užlieja"],
+      "short": "Skendimas sapne – emocinio persikrovimo simbolis. Jausmai ar įsipareigojimai kyla virš galvos, ir jaučiate, kad neatlaikysite.",
+      "psychology": [
+        "Skendimas – vienas stipriausių nerimo sapnų. Psichologiškai tai emocijos, kurios peržengė gebėjimą jas suvaldyti: gedulas, nerimas, per daug atsakomybių. Žodis „skęstu“ kasdienėje kalboje vartojamas būtent taip – „skęstu darbuose“. Sapnas šią metaforą paverčia vaizdu.",
+        "Tokie sapnai dažni prieš perdegimą ir depresyvių būsenų metu. Jie nėra pavojingi patys savaime, bet yra signalas, kurį verta priimti rimtai: ieškoti paramos, mažinti krūvį, kalbėtis. Jei skendimo sapnai kartojasi kelias savaites, verta pasitarti su psichologu.",
+        "Fiziologinis aspektas: sapnai apie dusimą ir skendimą kartais susiję su realiu kvėpavimo sutrikimu miegant (miego apnėja) arba nepatogia miegojimo padėtimi. Jei pabundate dusdami, knarkiate arba dieną jaučiatės neišsimiegoję, verta pasikonsultuoti su gydytoju."
+      ],
+      "variants": [
+        {"situation": "Skęstate ir kažkas ištraukia", "meaning": "Paramos poreikis ir jos priėmimas. Kas jus ištraukė sapne – tas žmogus ar savybė jums svarbi."},
+        {"situation": "Skęstate ir pabundate", "meaning": "Persikrovimas pasiekė ribą. Laikas mažinti krūvį."},
+        {"situation": "Skęsta kitas žmogus", "meaning": "Rūpestis dėl artimo žmogaus, kuris, jūsų nuomone, neatlaiko."}
+      ],
+      "mindfulness": "Užrašykite viską, kas šiuo metu „ant jūsų galvos“. Tada pažymėkite, ką galite atidėti, deleguoti ar atsisakyti. Skendimo sapnas prašo mažinti vandens lygį, o ne plaukti greičiau.",
+      "sleep_note": "Jei pabundate dusdami ar knarkiate, pasitarkite su gydytoju dėl miego apnėjos – tai dažna ir gydoma būklė. Taip pat patikrinkite pagalvės aukštį: per aukšta ar per žema pagalvė gali apsunkinti kvėpavimą miegant.",
+      "related": ["vanduo", "jura", "potvynis", "plaukti", "miego-paralyzius"]
+    },
+    {
+      "slug": "kovotis",
+      "word": "Kova ir muštynės",
+      "title": "Sapnuoti muštynes",
+      "aliases": ["mušuosi", "kovoju", "muštynės", "kova", "smūgis", "negaliu smogti", "karas"],
+      "short": "Kova sapne – vidinio ar išorinio konflikto simbolis. Silpnas smūgis, kuris „nepasiekia“, – vienas dažniausių sapnų ir turi fiziologinį paaiškinimą.",
+      "psychology": [
+        "Kova sapne dažniausiai reiškia konfliktą, kuriame dieną nesiginate: su viršininku, partneriu, šeimos nariu, arba su savimi. Grėsmės simuliacijos teorija sako, kad smegenys repetuoja gynybą; psichologija priduria: su kuo kovojate sapne, tas žmogus ar jo savybė šiuo metu kelia įtampą.",
+        "Labai dažnas variantas – smūgiai sapne silpni, lėti, „kaip per vandenį“. Tai REM miego raumenų atonijos atspindys: kūnas realiai negali judėti, ir smegenys tai įpina į sapną. Tai ne silpnumo simbolis, o fiziologija.",
+        "Karas sapne – didesnio masto konfliktas: tarp dviejų gyvenimo sričių, tarp vertybių, arba realus nerimas dėl pasaulio įvykių, kuris persikelia į naktį. Tokie sapnai dažnėja neramiais laikais, ir tai normalu."
+      ],
+      "variants": [
+        {"situation": "Smūgiai silpni, nepasiekia", "meaning": "REM atonija sapne. Fiziologinis, ne psichologinis reiškinys. Kartais – ir bejėgiškumo jausmas konflikte."},
+        {"situation": "Laimite kovą", "meaning": "Pasitikėjimas, kad susitvarkysite su konfliktu. Geras ženklas."},
+        {"situation": "Karas", "meaning": "Didelio masto vidinis konfliktas arba nerimas dėl išorinio pasaulio."}
+      ],
+      "mindfulness": "Užrašykite konfliktą, kurį dieną vengiate. Tada – vieną ramų sakinį, kuriuo galėtumėte jį pradėti spręsti. Kova sapne dažnai yra neišsakytas sakinys.",
+      "related": ["priesas", "vilkas", "liutas", "peilis", "ginklas"]
+    },
+    {
+      "slug": "buciuotis",
+      "word": "Bučinys",
+      "title": "Sapnuoti bučinį",
+      "aliases": ["bučiuojuosi", "bučinys", "bučiuotis", "bučiuoja", "meilė", "romantika", "apkabinimas"],
+      "short": "Bučinys sapne – artumo, priėmimo ir susijungimo simbolis. Su kuo bučiuojatės, dažnai svarbiau ne kaip žmogus, o kaip savybė, kurios jums reikia.",
+      "psychology": [
+        "Bučinys – artumo ir priėmimo ženklas. Sapnuose jis retai reiškia tiesioginį seksualinį norą; dažniau – poreikį būti priimtam, pamatytam, susijungti su kažkuo. Jungo požiūriu bučinys su nepažįstamuoju – susijungimas su savo neatrasta puse (anima/animus), o ne pranašystė apie naują meilę.",
+        "Bučinys su draugu, kolega ar kitu „netinkamu“ žmogumi sukelia daug nerimo, bet dažniausiai reiškia, kad vertinate to žmogaus savybę: ramybę, humorą, drąsą. Tai ne išdavystė ir ne slaptas jausmas.",
+        "Bučinys su buvusiu – neužbaigtas etapas, ne noras grįžti. Bučinys su partneriu – artumo poreikis arba jo pilnatvė, priklausomai nuo emocijos sapne."
+      ],
+      "variants": [
+        {"situation": "Bučinys su nepažįstamuoju", "meaning": "Naujos savybės ar gyvenimo pusės priėmimas. Kūrybos, laisvės, švelnumo poreikis."},
+        {"situation": "Bučinys su draugu ar kolega", "meaning": "Vertinate to žmogaus savybę. Ne slaptas jausmas, o simbolis."},
+        {"situation": "Nenorimas bučinys", "meaning": "Ribų pažeidimas. Kažkas gyvenime artinasi labiau, nei norite."}
+      ],
+      "mindfulness": "Paklauskite savęs: kokios savybės man šiuo metu trūksta ir kas iš mano pažįstamų ją turi? Bučinys sapne dažnai atsako į šį klausimą.",
+      "related": ["buves-mylimasis", "nepazistamasis", "seksas", "vestuves"]
+    },
+    {
+      "slug": "seksas",
+      "word": "Seksas",
+      "title": "Sapnuoti seksą",
+      "aliases": ["seksas", "seksą", "intymumas", "erotinis sapnas", "mylėtis", "neištikimybė sapne"],
+      "short": "Erotiniai sapnai – natūrali miego dalis, kurią patiria beveik visi. Psichologiškai jie dažniau kalba apie artumą, galią ir savęs priėmimą nei apie tiesioginį norą.",
+      "psychology": [
+        "Seksualinio turinio sapnai sudaro nedidelę, bet pastovią visų sapnų dalį ir yra visiškai normalūs bet kokio amžiaus žmonėms. REM miego metu fiziologinis sužadinimas vyksta nepriklausomai nuo sapno turinio, todėl kūnas kartais tiesiog „prisijungia“ prie siužeto.",
+        "Psichologinė prasmė dažniausiai ne apie seksą. Partneris sapne dažnai simbolizuoja savybę, kurią norite integruoti: pasitikėjimą, laisvę, švelnumą, jėgą. Seksas su kolega dažniausiai reiškia darbo santykių artumą ar konkurenciją, ne trauką. Seksas su buvusiu – neužbaigtą etapą.",
+        "Sapnas apie partnerio neištikimybę – dažnas ir skausmingas, bet beveik niekada nėra pranašystė. Jis kalba apie jūsų pačių nesaugumą santykyje arba jausmą, kad partneris tolsta – emociškai, ne fiziškai. Verta kalbėtis, ne įtarinėti."
+      ],
+      "variants": [
+        {"situation": "Seksas su nepažįstamuoju", "meaning": "Naujos savybės priėmimas, laisvės ar nuotykio poreikis."},
+        {"situation": "Partnerio neištikimybė", "meaning": "Nesaugumas santykyje, baimė būti paliktam. Ne pranašystė – kvietimas pokalbiui."},
+        {"situation": "Seksas su kolega ar draugu", "meaning": "Artumas ar konkurencija tuose santykiuose, ne trauka."}
+      ],
+      "mindfulness": "Nesmerkite savęs už sapno turinį – sapnai nėra moraliniai sprendimai. Paklauskite tik: kokio artumo ar kokios savybės man šiuo metu trūksta?",
+      "related": ["buciuotis", "buves-mylimasis", "nepazistamasis", "lova"]
+    },
+    {
+      "slug": "keliauti",
+      "word": "Kelionė",
+      "title": "Sapnuoti kelionę",
+      "aliases": ["keliauju", "keliauti", "kelionė", "užsienis", "išvykti", "bagažas", "lagaminas", "atostogos"],
+      "short": "Kelionė sapne – gyvenimo kelio ir pokyčių simbolis. Kur, kaip ir su kuo keliaujate, parodo, kaip vertinate savo dabartinę kryptį.",
+      "psychology": [
+        "Kelionė – viena iš pagrindinių gyvenimo metaforų, ir sapnai ją naudoja nuolat. Kelionės sapnas dažnai pasirodo prieš pokyčius arba jų metu: keičiant darbą, persikraustant, pradedant naują etapą. Emocija sapne rodo požiūrį į pokytį: nekantrumas ir smalsumas – pasirengimas; nerimas ir pasiklydimas – abejonės.",
+        "Bagažas sapne – ypač iškalbingas simbolis. Per sunkus lagaminas – nešiojatės per daug: senų nuoskaudų, įsipareigojimų, daiktų. Pamestas bagažas – tapatybės ar išteklių praradimo baimė. Keliauti be bagažo – laisvė arba nepasirengimas.",
+        "Kelionė į užsienį – nauja, nepažįstama sritis gyvenime. Grįžimas namo – poreikis grįžti prie savęs, savo vertybių ar artimųjų."
+      ],
+      "variants": [
+        {"situation": "Sunkus bagažas", "meaning": "Per daug nešiojatės: emociškai ar realiai. Ką galite palikti?"},
+        {"situation": "Pametate bagažą", "meaning": "Baimė prarasti tapatybę ar išteklius pokyčių metu."},
+        {"situation": "Kelionė su kompanija", "meaning": "Su kuo keliaujate sapne – tas žmogus ar savybė svarbi jūsų dabartiniam etapui."}
+      ],
+      "mindfulness": "Užrašykite tris dalykus, kuriuos norėtumėte „palikti namuose“ prieš kitą gyvenimo etapą. Kelionės sapnas dažnai kviečia pasitikrinti bagažą.",
+      "related": ["kelias", "automobilis", "traukinys", "lektuvas", "laivas", "veluoti"]
+    },
+    {
+      "slug": "valgyti",
+      "word": "Valgymas",
+      "title": "Sapnuoti maistą ir valgymą",
+      "aliases": ["valgau", "valgyti", "maistas", "alkis", "puota", "saldumynai", "duona", "vaisiai"],
+      "short": "Maistas sapne – poreikių ir jų patenkinimo simbolis. Alkis – kažko trūksta (ne tik maisto); puota – gausa arba perteklius.",
+      "psychology": [
+        "Maistas – pirmasis būdas, kuriuo išmokome gauti tai, ko reikia. Sapnuose jis reiškia poreikius plačiąja prasme: meilės, pripažinimo, poilsio, žinių. Alkis sapne retai apie maistą; dažniausiai tai emocinis alkis – kažko trūksta. Sotumas ir malonus valgymas – poreikiai patenkinti.",
+        "Konkretus maistas turi asmenines prasmes: močiutės pyragas – vaikystė ir saugumas, saldumynai – malonumas ar atlygis, duona – pagrindiniai poreikiai, vaisiai – rezultatas, derlius. Sugedęs maistas – kažkas, kas turėjo maitinti, bet kenkia (santykis, darbas).",
+        "Praktinė pastaba: sapnai apie maistą dažnesni, kai einate miegoti alkani arba, atvirkščiai, per sotūs. Kūnas kalba per sapnus dažniau, nei manome."
+      ],
+      "variants": [
+        {"situation": "Alkis, nerandate maisto", "meaning": "Emocinis ar fizinis trūkumas. Ko šiuo metu negaunate?"},
+        {"situation": "Puota, gausa", "meaning": "Poreikiai patenkinti arba perteklius, kuris slegia."},
+        {"situation": "Sugedęs maistas", "meaning": "Kažkas, kas turėjo maitinti, kenkia. Patikrinkite santykius ir įpročius."}
+      ],
+      "mindfulness": "Kitą kartą valgydami pirmus tris kąsnius suvalgykite lėtai, be ekrano, jausdami skonį. Tai paprasčiausia mindfulness praktika ir kartu būdas išgirsti, ko kūnui iš tikrųjų reikia.",
+      "related": ["kiaule", "vista", "karve", "pinigai"]
+    },
+    {
+      "slug": "kirpti-plaukus",
+      "word": "Plaukų kirpimas",
+      "title": "Sapnuoti plaukų kirpimą",
+      "aliases": ["kerpu plaukus", "kirpykla", "nukirpo plaukus", "nusikirpau", "skutimasis", "nauja šukuosena"],
+      "short": "Plaukų kirpimas sapne – pokyčio ir tapatybės atnaujinimo simbolis. Savanoriškas kirpimas – naujas etapas; priverstinis – jausmas, kad kažkas atima jūsų jėgą ar įvaizdį.",
+      "psychology": [
+        "Plaukai daugelyje kultūrų siejami su jėga, tapatybe ir įvaizdžiu. Kirpimas sapne – dažnas pokyčių palydovas: žmonės jį sapnuoja prieš skyrybas, darbo keitimą, persikraustymą. Tai sena psichologinė metafora – „nukirpti“ praeitį.",
+        "Svarbu, kas kerpa ir ar sutikote. Jei kerpate patys ar džiaugiatės rezultatu – sąmoningas pokytis, kurį priimate. Jei kažkas kerpa prieš jūsų valią ar rezultatas gąsdina – jausmas, kad kažkas keičia jūsų gyvenimą be jūsų sutikimo, ar kad prarandate dalį savęs.",
+        "Bloga šukuosena sapne – nerimas dėl to, kaip atrodote kitų akyse po pokyčio."
+      ],
+      "variants": [
+        {"situation": "Kerpate patys", "meaning": "Sąmoningas pokytis, kontrolė. Geras ženklas."},
+        {"situation": "Nukerpa prieš valią", "meaning": "Kažkas keičia jūsų gyvenimą be sutikimo. Ribų klausimas."},
+        {"situation": "Nauja šukuosena patinka", "meaning": "Naujos tapatybės priėmimas."}
+      ],
+      "mindfulness": "Užrašykite vieną dalyką, kurį norėtumėte „nukirpti“ iš savo gyvenimo šį mėnesį. Mažas, konkretus. Sapnas apie kirpimą dažnai jau žino atsakymą.",
+      "related": ["plaukai", "veidrodis", "drabuziai", "persikraustyti"]
+    },
+    {
+      "slug": "persikraustyti",
+      "word": "Persikraustymas",
+      "title": "Sapnuoti persikraustymą",
+      "aliases": ["kraustausi", "persikraustyti", "naujas butas", "nauji namai", "kraustymasis", "dėžės"],
+      "short": "Persikraustymas sapne – vidinio pokyčio simbolis. Namas reiškia jus pačius, tad keisti namus – keisti save, savo vaidmenį ar gyvenimo etapą.",
+      "psychology": [
+        "Kadangi namas sapnuose beveik visada simbolizuoja sapnuotoją, persikraustymas reiškia tapatybės ar gyvenimo etapo pokytį. Tokie sapnai dažni ne tik prieš tikrą kraustymąsi, bet ir prieš bet kokį didelį pokytį: naują darbą, santykių etapą, tėvystę.",
+        "Emocija sapne rodo požiūrį į pokytį. Džiaugsmas, erdvės jausmas – pokytis laukiamas. Nerimas, chaosas, nesupakuoti daiktai – jaučiatės nepasirengę arba per daug nešiojatės iš praeities. Grįžimas į seną butą – ilgesys ar neužbaigtas etapas.",
+        "Dėžės sapne – tai, ką pasiimate su savimi. Per daug dėžių – per daug praeities. Tuščios dėžės – nepasirengimas arba, priešingai, lengvumas."
+      ],
+      "variants": [
+        {"situation": "Naujas, erdvus būstas", "meaning": "Augimas, naujos galimybės. Labai geras ženklas."},
+        {"situation": "Chaosas, nespėjate susipakuoti", "meaning": "Pokytis ateina greičiau, nei jam pasiruošiate."},
+        {"situation": "Grįžtate į seną butą", "meaning": "Neužbaigtas etapas ar saugumo ilgesys."}
+      ],
+      "mindfulness": "Įsivaizduokite, kad iš tikrųjų kraustotės: kuriuos tris daiktus (įpročius, santykius, įsitikinimus) pasiimtumėte, o kuriuos paliktumėte? Užrašykite.",
+      "related": ["namas", "vaikystes-namai", "keliauti", "kirpti-plaukus"]
+    }
+  ]
+}

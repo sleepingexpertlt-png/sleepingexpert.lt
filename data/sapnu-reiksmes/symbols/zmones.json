@@ -1,0 +1,310 @@
+{
+  "category": "zmones",
+  "category_name": "Žmonės ir santykiai",
+  "entries": [
+    {
+      "slug": "mires-zmogus",
+      "word": "Miręs žmogus",
+      "title": "Sapnuoti mirusį žmogų",
+      "aliases": ["mirusieji", "mirusi mama", "miręs tėvas", "velionis", "mirę artimieji", "mirusi močiutė"],
+      "short": "Sapnuoti mirusį artimą – vienas dažniausių ir emociškai stipriausių sapnų. Psichologiškai tai ne žinia „iš anapus“, o gedulo ir atminties darbas, kurį smegenys atlieka miegant.",
+      "psychology": [
+        "Miego tyrimai rodo, kad REM fazėje smegenys apdoroja emociškai svarbius prisiminimus (M. Walker ir kt.). Mirusio artimojo sapnas dažniausiai reiškia, kad santykis su tuo žmogumi jums vis dar gyvas ir svarbus – ir tai visiškai natūralu. Tokie sapnai dažnesni per metines, šventes, gyvenimo lūžius, kai to žmogaus ypač trūksta.",
+        "Sapno turinys pasako, kurioje gedulo stadijoje esate. Jei mirusysis sapne gyvas ir viskas įprasta – psichika dar „nesutinka“ su netektimi. Jei jis atsisveikina, ramina, sako, kad viskas gerai, – tai priėmimo ženklas. Jei sapne jis piktas ar priekaištauja, greičiausiai nešiojatės kaltę ar nepasakytus žodžius.",
+        "Svarbu: tokie sapnai nėra ženklas, kad kažkas blogo nutiks. Prietaras, kad mirusieji „šaukia“, neturi jokio pagrindo. Jei sapnas ramino – priimkite jį kaip dovaną. Jei skaudino – tai kvietimas užbaigti pokalbį, kurio nepavyko užbaigti gyvenime, pavyzdžiui, parašant laišką, kurio niekas neperskaitys."
+      ],
+      "variants": [
+        {"situation": "Mirusysis kalba su jumis", "meaning": "Dažniausiai tai jūsų pačių vidinis balsas, apsivilkęs pažįstamo žmogaus pavidalą. Atkreipkite dėmesį į žodžius – jie dažnai yra patarimas, kurį patys sau norite duoti."},
+        {"situation": "Mirusysis vėl miršta sapne", "meaning": "Gedulas grįžta nauja banga. Tai normalu – netektis nesibaigia per metus, ji keičia formą."},
+        {"situation": "Mirusi mama ar tėvas", "meaning": "Tėvų sapnai dažnai susiję su poreikiu būti pripažintam ar apsaugotam. Klausimas: ko šiuo metu jums labiausiai reikia, ką tas žmogus duodavo?"}
+      ],
+      "mindfulness": "Jei sapnas buvo šiltas, pabudę skirkite minutę padėkoti už tą žmogų. Jei skaudus – užrašykite, ką norėtumėte jam pasakyti. Rašymas ranka yra vienas geriausiai ištirtų būdų apdoroti gedulą.",
+      "related": ["mirtis", "laidotuves", "mama", "tevas", "kapines"]
+    },
+    {
+      "slug": "buves-mylimasis",
+      "word": "Buvęs mylimasis",
+      "title": "Sapnuoti buvusį (buvusią)",
+      "aliases": ["buvęs vaikinas", "buvusi mergina", "buvęs vyras", "buvusi žmona", "buvusi meilė", "eksas"],
+      "short": "Sapnas apie buvusį partnerį retai reiškia, kad jo ilgitės. Dažniausiai jis kalba apie tai, ką tas santykis jums davė arba atėmė – ir ko šiuo metu trūksta ar vėl kartojasi.",
+      "psychology": [
+        "Buvęs partneris sapne yra ne žmogus, o santykio etapas. Psichologai pastebi, kad tokie sapnai dažnėja, kai dabartiniame gyvenime pasikartoja ta pati dinamika: vėl jaučiatės nesuprasti, vėl per daug aukojatės, vėl bijote artumo. Sapnas rodo į raštą, ne į žmogų.",
+        "Jei santykis baigėsi neseniai, tokie sapnai yra natūrali gedulo dalis – smegenys apdoroja netektį taip pat, kaip ir mirties atveju. Jei praėjo daug metų, o sapnai grįžta, verta paklausti, kokia gyvenimo tema tuo metu buvo svarbi: pirmoji meilė, laisvė, jaunystė, nesaugumas.",
+        "Sapnas apie buvusį nėra išdavystė dabartinio partnerio atžvilgiu ir nereiškia, kad priėmėte blogą sprendimą. Sapnai neskirsto žmonių į teisingus ir klaidingus – jie tiesiog naudoja pažįstamus veidus, kad papasakotų apie jausmus."
+      ],
+      "variants": [
+        {"situation": "Susitaikote su buvusiu", "meaning": "Dažniausiai tai susitaikymas su savimi to laikotarpio atžvilgiu, o ne noras grįžti. Priimate tai, kas buvo."},
+        {"situation": "Buvęs jus ignoruoja ar skaudina", "meaning": "Neužbaigta nuoskauda. Sapnas rodo, kad kažkas iš to santykio vis dar veikia jūsų pasitikėjimą savimi."},
+        {"situation": "Buvęs su nauju partneriu", "meaning": "Palyginimo ir savivertės tema. Klausimas ne apie jį, o apie tai, kaip vertinate save dabar."}
+      ],
+      "mindfulness": "Užrašykite vieną dalyką, kurio išmokote iš to santykio, ir vieną dalyką, kurio daugiau sau neleisite. Tai paverčia sapną įžvalga, o ne nostalgija.",
+      "related": ["buciuotis", "vestuves", "draugas", "nepazistamasis"]
+    },
+    {
+      "slug": "mama",
+      "word": "Mama",
+      "title": "Sapnuoti mamą",
+      "aliases": ["motina", "mamytė", "močiutė", "senelė"],
+      "short": "Mama sapne – globos, saugumo ir kartu vidinių lūkesčių simbolis. Kaip ji elgiasi sapne, taip šiuo metu jaučiate savo poreikį būti priimtam.",
+      "psychology": [
+        "Motina yra pirmasis žmogus, per kurį suvokiame saugumą. Jungas kalbėjo apie „motinos archetipą“ – vidinį globos ir maitinimo vaizdinį, kuris gyvena mumyse nepriklausomai nuo tikros mamos. Sapnas apie mamą todėl dažnai kalba ne apie ją, o apie tai, kaip šiuo metu rūpinatės savimi.",
+        "Jei sapne mama rūpinasi, guodžia, maitina – jums šiuo metu reikia atramos, ir pasąmonė ją suteikia. Jei mama sapne pikta, kritikuoja ar nekreipia dėmesio, greičiausiai savo viduje girdite kritiško balso aidą, kuris trukdo pailsėti.",
+        "Suaugusiems vaikams sapnai apie mamą dažnai grįžta gyvenimo lūžiais: tapus tėvais, keičiant darbą, sergant. Tai psichikos būdas grįžti prie pirminio saugumo šaltinio, kai reikia jėgų."
+      ],
+      "variants": [
+        {"situation": "Mama serga ar miršta sapne", "meaning": "Tai retai susiję su tikra sveikata. Dažniau tai baimė prarasti atramą arba pokytis santykyje – pavyzdžiui, kai vaidmenys keičiasi ir jūs tampate globėju."},
+        {"situation": "Ginčas su mama", "meaning": "Vidinis konfliktas tarp to, ko jūs norite, ir to, ko, jūsų manymu, iš jūsų tikimasi."},
+        {"situation": "Močiutė ar senelė", "meaning": "Išmintis, tradicija, šaknys. Toks sapnas dažnai pasirodo, kai reikia ramaus, patyrusio požiūrio į situaciją."}
+      ],
+      "mindfulness": "Padarykite sau tai, ką gera mama padarytų vaikui: paruoškite šiltą vakarienę, anksčiau eikite miegoti, nesibarkite dėl klaidos. Rūpestis savimi yra įgūdis, ne silpnumas.",
+      "related": ["tevas", "vaikas", "kudikis", "mires-zmogus", "namas"]
+    },
+    {
+      "slug": "tevas",
+      "word": "Tėvas",
+      "title": "Sapnuoti tėvą",
+      "aliases": ["tėtis", "tėtė", "senelis"],
+      "short": "Tėvas sapne – autoriteto, taisyklių ir vidinio vertinimo simbolis. Toks sapnas dažnai iškyla, kai priimate svarbų sprendimą arba jaučiate, kad esate vertinami.",
+      "psychology": [
+        "Psichologijoje tėvo figūra siejama su struktūra, ribomis ir išoriniu pasauliu – darbu, pasiekimais, atsakomybe. Sapnas apie tėvą dažnai pasirodo, kai gyvenime iškyla klausimas „ar aš pakankamai geras?“ Tai nebūtinai susiję su tikru tėvu; tai vidinis vertintojas, kurį kiekvienas nešiojamės.",
+        "Palaikantis tėvas sapne – ženklas, kad pasitikite savo sprendimu. Griežtas ar nepatenkintas tėvas – savikritika, kuri šiuo metu per garsi. Verta atkreipti dėmesį, dėl ko tėvas sapne nepatenkintas: dažniausiai tai ta sritis, kurioje patys sau esate griežčiausi.",
+        "Žmonėms, kurių santykis su tėvu buvo sudėtingas arba tėvas nedalyvavo gyvenime, tokie sapnai gali būti būdas užbaigti tai, ko gyvenimas neužbaigė. Tai sveikas psichikos procesas."
+      ],
+      "variants": [
+        {"situation": "Tėvas duoda patarimą", "meaning": "Jūsų pačių išmintis, kalbanti autoritetingu balsu. Įsiklausykite į turinį."},
+        {"situation": "Tėvas pyksta", "meaning": "Kaltės jausmas arba baimė nuvilti. Klausimas: kieno lūkesčius iš tikrųjų bandote patenkinti?"},
+        {"situation": "Senelis", "meaning": "Šaknys, kartų ryšys, ilgalaikė perspektyva. Toks sapnas ramina laikotarpiais, kai viskas atrodo laikina."}
+      ],
+      "mindfulness": "Užrašykite vieną taisyklę, pagal kurią gyvenate, bet niekada nepasirinkote patys. Ar ji vis dar jums tarnauja? Sapnas apie tėvą dažnai atveria būtent šį klausimą.",
+      "related": ["mama", "mokytojas", "policija", "darbas", "mires-zmogus"]
+    },
+    {
+      "slug": "vaikas",
+      "word": "Vaikas",
+      "title": "Sapnuoti vaiką",
+      "aliases": ["vaikai", "sūnus", "dukra", "mažas vaikas", "berniukas", "mergaitė"],
+      "short": "Vaikas sapne – jūsų pačių vidinės, pažeidžiamos ir kūrybingos dalies simbolis. Jei sapnuojate savo vaikus, tai dažniausiai rūpesčio ir atsakomybės atspindys.",
+      "psychology": [
+        "Sapnų psichologijoje nepažįstamas vaikas beveik visada reiškia jus pačius – tą pusę, kuri nori žaisti, mokytis, būti saugoma. Jei sapne vaikas laimingas, jūs šiuo metu leidžiate sau lengvumą. Jei vaikas verkia ar pasiklydo, kažkuri jūsų dalis jaučiasi apleista – dažniausiai dėl per didelio darbo krūvio ar per griežtų reikalavimų sau.",
+        "Tėvams sapnai apie savo vaikus – nerimo apdorojimo forma. Miego tyrimai rodo, kad rūpestis dėl vaikų yra vienas dažniausių suaugusiųjų sapnų turinių. Sapnas, kuriame vaikui gresia pavojus, nėra pranašystė; tai smegenų būdas „repetuoti“ apsaugą.",
+        "Sapnas, kad vėl esate vaikas, dažnai pasirodo, kai suaugusiojo gyvenimas tapo per sunkus. Tai kvietimas ne bėgti nuo atsakomybės, o grąžinti į gyvenimą žaidimą ir smalsumą."
+      ],
+      "variants": [
+        {"situation": "Vaikas pasiklysta", "meaning": "Kažkurią savo dalį (kūrybą, poilsį, džiaugsmą) pametėte kasdienybėje. Laikas ją surasti."},
+        {"situation": "Nepažįstamas vaikas", "meaning": "Naujas projektas, idėja ar jūsų pačių augimo etapas."},
+        {"situation": "Savo vaikas sužeistas", "meaning": "Nerimas dėl vaiko saugumo. Dažnas ir normalus tėvų sapnas, ypač pereinamais laikotarpiais – pradėjus mokyklą, keičiant aplinką."}
+      ],
+      "mindfulness": "Šiandien padarykite ką nors tik dėl malonumo, be tikslo ir naudos – taip, kaip darytų vaikas. Dešimt minučių pakanka.",
+      "related": ["kudikis", "mama", "nestumas", "mokykla", "vaikystes-namai"]
+    },
+    {
+      "slug": "kudikis",
+      "word": "Kūdikis",
+      "title": "Sapnuoti kūdikį",
+      "aliases": ["kūdikiai", "naujagimis", "mažylis"],
+      "short": "Kūdikis sapne – naujos pradžios, trapumo ir atsakomybės simbolis. Jis pasirodo, kai gyvenime gimsta kažkas nauja: projektas, santykis, tapatybė.",
+      "psychology": [
+        "Kūdikis yra universalus naujos pradžios vaizdinys. Sapnuose jis dažniausiai simbolizuoja tai, kas ką tik gimė jūsų gyvenime ir reikalauja rūpesčio: naują darbą, verslą, santykį, sveikatos įprotį. Kaip jaučiatės sapne laikydami kūdikį – užtikrintai ar bijodami – taip jaučiatės ir naujojo etapo atžvilgiu.",
+        "Sapnai apie kūdikius dažni ir tiems, kurie planuoja ar bijo nėštumo, ir tiems, kurie neseniai tapo tėvais. Antruoju atveju tai tiesiog tęstinumas – dienos rūpestis persikelia į naktį. Tyrimai rodo, kad naujų tėvų sapnų turinys keičiasi pirmaisiais mėnesiais po gimimo.",
+        "Verkiantis, apleistas ar sergantis kūdikis sapne – ženklas, kad kažkas nauja negauna pakankamai dėmesio. Dažnai tai jūsų pačių poreikiai, atidėti dėl kitų."
+      ],
+      "variants": [
+        {"situation": "Laikote kūdikį ant rankų", "meaning": "Prisiimate atsakomybę už kažką naujo ir trapaus. Ramus jausmas sapne – pasitikėjimas savimi."},
+        {"situation": "Pamirštate kūdikį", "meaning": "Dažnas ir nerimą keliantis sapnas. Jis retai susijęs su tikrais vaikais; dažniau – su apleistu projektu ar savo poreikiais."},
+        {"situation": "Svetimas kūdikis", "meaning": "Nauja galimybė, kuri ateina ne iš jūsų iniciatyvos."}
+      ],
+      "mindfulness": "Paklauskite: kas mano gyvenime šiuo metu yra „kūdikis“ – dar trapus, bet vertingas? Skirkite tam dalykui šiandien 20 minučių nepertraukiamo dėmesio.",
+      "related": ["vaikas", "nestumas", "gimdymas", "mama"]
+    },
+    {
+      "slug": "nepazistamasis",
+      "word": "Nepažįstamas žmogus",
+      "title": "Sapnuoti nepažįstamą žmogų",
+      "aliases": ["nepažįstamasis", "svetimas žmogus", "nepažįstama moteris", "nepažįstamas vyras", "nematytas veidas"],
+      "short": "Nepažįstamasis sapne dažniausiai yra jūsų pačių dalis, kurios dar neatpažįstate: nauja savybė, slopinamas jausmas arba galimybė.",
+      "psychology": [
+        "Jungas nepažįstamus sapnų personažus vadino „šešėlio“ ar „animos/animus“ figūromis – psichikos dalimis, kurios dar neįsisąmonintos. Nepažįstamasis, kuris sapne padeda, dažnai yra jūsų neatrasta stiprybė. Nepažįstamasis, kuris grasina, – savybė, kurią sau draudžiate (pyktis, ambicija, seksualumas).",
+        "Įdomus faktas: sapnų tyrimai rodo, kad smegenys retai „sugalvoja“ visiškai naujus veidus – dažniausiai tai kažkur matytų žmonių fragmentai. Tad nepažįstamasis sapne gali būti ir tiesiog atminties koliažas be gilesnės prasmės.",
+        "Romantiškas nepažįstamasis sapne retai reiškia, kad sutiksite naują meilę. Dažniau jis simbolizuoja savybes, kurių ilgitės – savyje arba partneryje."
+      ],
+      "variants": [
+        {"situation": "Nepažįstamasis seka iš paskos", "meaning": "Kažkas, ko vengiate, seka jums iš paskos – neišspręstas klausimas ar nepripažinta emocija."},
+        {"situation": "Nepažįstamasis padeda", "meaning": "Jūsų vidinis išteklius, kurio dar nenaudojate sąmoningai."},
+        {"situation": "Bučiuojatės su nepažįstamuoju", "meaning": "Naujos savybės ar gyvenimo pusės priėmimas. Dažnai – kūrybos ar laisvės poreikis."}
+      ],
+      "mindfulness": "Įsivaizduokite, kad nepažįstamasis iš sapno sėdi priešais jus. Ko jis norėtų paklausti? Šis vaizduotės pratimas, naudojamas geštalto terapijoje, dažnai duoda netikėtų atsakymų.",
+      "related": ["priesas", "draugas", "buciuotis", "kelias"]
+    },
+    {
+      "slug": "priesas",
+      "word": "Priešas",
+      "title": "Sapnuoti priešą",
+      "aliases": ["priešai", "konfliktas", "ginčas", "muštynės su žmogumi", "nekenčiamas žmogus"],
+      "short": "Priešas sapne – vidinio konflikto projekcija. Tai, kas jus erzina kitame žmoguje, dažnai yra tai, ką sunku priimti savyje.",
+      "psychology": [
+        "Sapnai apie konfliktus ir priešus – vieni dažniausių, ir tai suprantama: grėsmės simuliacijos teorija teigia, kad smegenys naktį repetuoja socialinius pavojus lygiai taip pat, kaip fizinius. Todėl ginčas sapne su kolega ar giminaičiu nereiškia, kad santykis pasmerktas – tai tiesiog treniruotė.",
+        "Psichologiškai svarbiausias klausimas: ką jums reiškia tas žmogus? Priešas sapne dažnai turi būtent tą savybę, kurios sau neleidžiate – tiesumą, ambiciją, drąsą. Jungas tai vadino projekcija: ką neigiame savyje, matome kituose.",
+        "Jei sapne susitaikote su priešu, tai beveik visada geras ženklas – vidinis konfliktas juda link integracijos."
+      ],
+      "variants": [
+        {"situation": "Priešas laimi", "meaning": "Jaučiatės bejėgiai konkrečioje situacijoje. Sapnas kviečia ieškoti ne jėgos, o kitokio požiūrio."},
+        {"situation": "Susitaikote su priešu", "meaning": "Priėmimas – savęs arba situacijos. Dažnai po tokio sapno pabundama lengviau."},
+        {"situation": "Priešas – artimas žmogus", "meaning": "Nepasakytas pyktis santykyje, kurį saugote. Vertas ramaus pokalbio, ne slopinimo."}
+      ],
+      "mindfulness": "Užrašykite tris savybes, kurios jus labiausiai erzina priešo iš sapno elgesyje. Tada sąžiningai paklauskite: ar kuri nors iš jų gyvena manyje – galbūt slopinama?",
+      "related": ["kovotis", "vilkas", "liutas", "nepazistamasis"]
+    },
+    {
+      "slug": "draugas",
+      "word": "Draugas",
+      "title": "Sapnuoti draugą",
+      "aliases": ["draugai", "draugė", "geriausias draugas", "senas draugas", "bičiulis"],
+      "short": "Draugas sapne – jūsų savybių veidrodis. Jei sapnuojate seną draugą, su kuriuo nebendraujate, greičiausiai ilgitės ne jo, o tos gyvenimo dalies.",
+      "psychology": [
+        "Tęstinumo hipotezė (M. Schredl) teigia, kad sapnuojame tai, kas užima mintis dieną. Todėl draugai, su kuriais bendraujate kasdien, sapnuose pasirodo dažnai ir dažniausiai be gilios prasmės. Įdomiau, kai sapnuojate seną draugą, su kuriuo seniai nebendraujate – tada jis atstovauja laikotarpiui, savybei ar jausmui.",
+        "Draugas sapne dažnai turi būtent tą savybę, kurios jums šiuo metu reikia: linksmumą, drąsą, ramybę. Pasąmonė „pasiskolina“ pažįstamą veidą, kad primintų apie tą savybę. Klausimas: kuo šis žmogus išsiskiria, ir ar man to šiuo metu trūksta?",
+        "Išdavystė sapne (draugas meluoja, apleidžia) retai pranašauja tikrą išdavystę. Dažniau tai pasitikėjimo tema apskritai – galbūt neseniai kas nors sugriovė jūsų pasitikėjimą, ir psichika tikrina kitus santykius."
+      ],
+      "variants": [
+        {"situation": "Senas draugas iš vaikystės", "meaning": "Ilgesys paprastumo ir laiko, kai atsakomybės buvo mažiau. Kvietimas grąžinti šiek tiek lengvumo."},
+        {"situation": "Draugas išduoda", "meaning": "Pasitikėjimo tema. Klausimas ne apie jį, o apie tai, kas neseniai pažeidė jūsų saugumo jausmą."},
+        {"situation": "Draugas miršta sapne", "meaning": "Santykio ar etapo pokytis. Sapnas dažnai pasirodo, kai draugystė natūraliai keičiasi – dėl atstumo, šeimos, skirtingų kelių."}
+      ],
+      "mindfulness": "Parašykite trumpą žinutę draugui iš sapno – be priežasties, tiesiog „prisiminiau tave“. Socialiniai ryšiai yra vienas stipriausių gero miego ir nuotaikos veiksnių.",
+      "related": ["buves-mylimasis", "nepazistamasis", "suo", "mokykla"]
+    },
+    {
+      "slug": "mokytojas",
+      "word": "Mokytojas",
+      "title": "Sapnuoti mokytoją",
+      "aliases": ["mokytoja", "dėstytojas", "auklėtoja", "gydytojas", "autoritetas"],
+      "short": "Mokytojas sapne – vertinimo, mokymosi ir autoriteto simbolis. Toks sapnas dažnai kyla, kai gyvenime jaučiatės egzaminuojami.",
+      "psychology": [
+        "Mokytojas – pirmasis autoritetas už šeimos ribų, todėl sapnuose jis simbolizuoja išorinį vertinimą: darbdavį, visuomenę, „ką pasakys žmonės“. Sapnas apie mokytoją dažnai pasirodo prieš svarbų pokalbį, pristatymą ar sprendimą, kai bijote būti įvertinti.",
+        "Kartu mokytojas – tai ir vidinis mentorius. Jei sapne mokytojas jus moko ar pataria, tai jūsų pačių išmintis, kalbanti autoritetingu balsu. Verta atsiminti, ką jis sakė – sapnų patarimai dažnai būna netikėtai tikslūs.",
+        "Konkretus mokytojas iš praeities sapne gali reikšti tą gyvenimo laikotarpį ar pamoką, kurią dabar reikia prisiminti."
+      ],
+      "variants": [
+        {"situation": "Mokytojas bara", "meaning": "Savikritika. Kažkuri sritis, kurioje jaučiatės nepakankamai geri."},
+        {"situation": "Jūs esate mokytojas", "meaning": "Poreikis dalintis, vadovauti arba – jausmas, kad turite atsakomybę už kitus."},
+        {"situation": "Gydytojas", "meaning": "Rūpestis sveikata arba poreikis „pasigydyti“ emociškai. Sapnas retai reiškia tikrą ligą."}
+      ],
+      "mindfulness": "Įsivaizduokite, kad sapno mokytojas duoda jums vieną pamoką šiai savaitei. Kokia ji būtų? Užrašykite vienu sakiniu.",
+      "related": ["mokykla", "egzaminas", "tevas", "policija"]
+    },
+    {
+      "slug": "policija",
+      "word": "Policija",
+      "title": "Sapnuoti policiją",
+      "aliases": ["policininkas", "pareigūnas", "areštas", "suima", "teismas"],
+      "short": "Policija sapne – vidinės kontrolės, taisyklių ir kaltės simbolis. Ji pasirodo, kai jaučiate, kad kažkur peržengėte ribą – tikrą ar įsivaizduojamą.",
+      "psychology": [
+        "Freudo terminais policija sapne – „superego“, vidinis prižiūrėtojas, kuris tikrina, ar elgiatės pagal taisykles. Sapnas, kuriame policija jus sustabdo ar suima, dažniausiai reiškia kaltės jausmą dėl kažko, ką padarėte arba tik pagalvojote. Dažnai tas „nusikaltimas“ yra visai nekaltas: poilsis, kai reikėjo dirbti, „ne“ artimam žmogui.",
+        "Kita pusė – policija kaip apsauga. Jei sapne policija jums padeda ar jus gina, tai poreikis tvarkos ir saugumo chaotiškame laikotarpyje.",
+        "Sapnai apie teismą ar areštą dažni perfekcionistams ir žmonėms, kurie nuolat save vertina. Tai kvietimas sušvelninti vidinį teisėją."
+      ],
+      "variants": [
+        {"situation": "Policija jus suima", "meaning": "Kaltė ar baimė būti „pagautam“. Klausimas: kokią taisyklę, jūsų manymu, sulaužėte, ir ar ji apskritai buvo teisinga?"},
+        {"situation": "Skambinate policijai", "meaning": "Poreikis pagalbos situacijoje, kurios vieni nesuvaldote. Verta jos paprašyti ir dieną."},
+        {"situation": "Bėgate nuo policijos", "meaning": "Vengiate atsakomybės ar nemalonaus pokalbio, kuris vis tiek jūsų laukia."}
+      ],
+      "mindfulness": "Pastebėkite, kiek kartų šiandien pasakėte sau „turiu“ ar „privalau“. Pabandykite bent vieną pakeisti į „noriu“ arba „renkuosi“.",
+      "related": ["kalejimas", "vagis", "tevas", "begti"]
+    },
+    {
+      "slug": "vagis",
+      "word": "Vagis",
+      "title": "Sapnuoti vagį ar vagystę",
+      "aliases": ["vagystė", "apvogė", "pavogė", "įsilaužimas", "plėšikas"],
+      "short": "Vagis sapne – ženklas, kad jaučiate, jog kažkas atima tai, kas jums priklauso: laiką, energiją, pripažinimą, saugumą.",
+      "psychology": [
+        "Vagystė sapne retai susijusi su daiktais. Pasąmonė vagį naudoja, kad papasakotų apie praradimą, kuris vyksta tyliai: darbas, kuris atima visą laiką; santykis, kuriame tik duodate; žmogus, kuris pasisavina jūsų idėjas. Klausimas: ką sapne pavogė, ir ką tas daiktas jums reiškia?",
+        "Įsilaužimas į namus – ypač stiprus sapnas, nes namas sapnuose reiškia jus pačius. Tokie sapnai dažni po įvykių, kai jautėtės pažeidžiami: konflikto, ligos, kritikos viešumoje.",
+        "Jei sapne vagis esate jūs, tai dažniausiai reiškia, kad jaučiatės imantys tai, ko „nenusipelnėte“ – dažnas apsišaukėlio sindromo palydovas. Arba – slaptą norą turėti tai, ką turi kiti."
+      ],
+      "variants": [
+        {"situation": "Pavogė piniginę ar telefoną", "meaning": "Tapatybės ir ryšio praradimo baimė. Jaučiate, kad prarandate kontrolę savo gyvenimo ar bendravimo atžvilgiu."},
+        {"situation": "Įsilaužimas į namus", "meaning": "Asmeninių ribų pažeidimas. Kažkas įsibrovė į jūsų erdvę – fizinę ar emocinę."},
+        {"situation": "Sugaunate vagį", "meaning": "Atgaunate kontrolę. Sapnas rodo, kad jau matote, kas ir kaip iš jūsų atima."}
+      ],
+      "mindfulness": "Užrašykite, kas šią savaitę „pavogė“ daugiausiai jūsų laiko. Ar tai buvo jūsų pasirinkimas? Vienas sąmoningas „ne“ dažnai grąžina daugiau nei valandą.",
+      "related": ["policija", "pinigai", "namas", "durys"]
+    },
+    {
+      "slug": "vestuves",
+      "word": "Vestuvės",
+      "title": "Sapnuoti vestuves",
+      "aliases": ["vestuvių", "tuoktis", "santuoka", "nuotaka", "jaunikis", "sužadėtuvės"],
+      "short": "Vestuvės sapne – įsipareigojimo ir dviejų gyvenimo pusių sujungimo simbolis. Sapnas retai pranašauja tikras vestuves, dažniau – vidinį sprendimą.",
+      "psychology": [
+        "Jungas vestuves laikė „sąjungos“ archetipu – dviejų priešingų dalių sujungimu: proto ir jausmų, darbo ir asmeninio gyvenimo, seno ir naujo. Sapnas apie vestuves dažnai pasirodo, kai priimate sprendimą, kuris sujungia du kelius arba reikalauja ilgalaikio įsipareigojimo.",
+        "Emocija sapne yra svarbiausia. Džiaugsmingos vestuvės – priimate įsipareigojimą su ramybe. Nerimas, bėgimas nuo altoriaus, netinkamas jaunikis ar nuotaka – abejonės dėl sprendimo, kuris jums atrodo neatšaukiamas: darbo sutartis, būsto pirkimas, santykių etapas.",
+        "Sapnuoti savo vestuves su nepažįstamu žmogumi – dažnas sapnas, kuris nereiškia neištikimybės; tai savybių, kurių jums reikia, priėmimas."
+      ],
+      "variants": [
+        {"situation": "Vestuvės sugriūva", "meaning": "Baimė, kad įsipareigojimas neišsipildys. Verta patikrinti, ar abejonės kyla iš faktų, ar iš nerimo."},
+        {"situation": "Esate svečias vestuvėse", "meaning": "Stebite kitų įsipareigojimus ir lyginate su savais. Klausimas apie jūsų vietą santykiuose."},
+        {"situation": "Vestuvės su buvusiu", "meaning": "Neužbaigtas etapas. Ne noras grįžti, o poreikis užbaigti tą istoriją savo viduje."}
+      ],
+      "mindfulness": "Užrašykite vieną įsipareigojimą, kurį šiuo metu svarstote. Šalia – ką jis jums duos ir ko pareikalaus. Sapnas apie vestuves dažnai yra šio balanso klausimas.",
+      "related": ["buves-mylimasis", "ziedas", "buciuotis", "drabuziai"]
+    },
+    {
+      "slug": "nestumas",
+      "word": "Nėštumas",
+      "title": "Sapnuoti nėštumą",
+      "aliases": ["nėščia", "esu nėščia", "laukiuosi", "pilvas"],
+      "short": "Nėštumas sapne – augimo ir kūrybos simbolis. Kažkas jūsų gyvenime bręsta, bet dar nepasirodė: idėja, projektas, naujas etapas.",
+      "psychology": [
+        "Nėštumas – vienas aiškiausių potencialo simbolių. Sapnuose jis reiškia, kad kažkas auga viduje ir dar nėra pasirengęs gimti. Toks sapnas vienodai dažnas moterims ir vyrams, ir dažniausiai susijęs ne su vaikais, o su kūryba, karjera ar asmeniniu augimu.",
+        "Nėščioms moterims sapnai apie nėštumą – tiesioginis kasdienybės tęsinys; tyrimai rodo, kad nėštumo metu sapnai apskritai tampa ryškesni ir dažniau prisimenami dėl hormonų ir dažnesnių prabudimų.",
+        "Baimė sapne (nenorimas nėštumas, komplikacijos) – nerimas dėl pokyčio, kuriam nesijaučiate pasirengę. Tai ne ženklas, kad pokytis blogas; tai ženklas, kad reikia daugiau laiko arba paramos."
+      ],
+      "variants": [
+        {"situation": "Sapnuoja vyras, kad yra nėščias", "meaning": "Kūrybinis potencialas arba naujas atsakomybės etapas. Dažnas sapnas prieš svarbius projektus."},
+        {"situation": "Nėštumo testas", "meaning": "Laukiate patvirtinimo dėl kažko svarbaus – ne tik nėštumo."},
+        {"situation": "Kito žmogaus nėštumas", "meaning": "Matote augimą kitame ir lyginate su savu, arba rūpinatės to žmogaus pokyčiais."}
+      ],
+      "mindfulness": "Paklauskite savęs: kas manyje šiuo metu bręsta, bet dar neturi formos? Neskubėkite jo „pagimdyti“ – kai kurie dalykai turi savo laiką.",
+      "related": ["kudikis", "gimdymas", "vaikas", "mama"]
+    },
+    {
+      "slug": "gimdymas",
+      "word": "Gimdymas",
+      "title": "Sapnuoti gimdymą",
+      "aliases": ["gimdyti", "gimsta vaikas", "gimimas", "pagimdžiau"],
+      "short": "Gimdymas sapne – naujo etapo pradžios, pastangų ir kartais skausmo simbolis. Kažkas, ką ilgai nešiojote, pagaliau ateina į pasaulį.",
+      "psychology": [
+        "Jei nėštumas sapne reiškia brendimą, gimdymas – įvykdymą. Toks sapnas dažnai pasirodo užbaigiant didelį darbą, prieš pat svarbų pokytį arba jam ką tik įvykus. Skausmas ar sunkumas sapne atspindi pastangas, kurių tas pokytis pareikalavo.",
+        "Gimdymo sapnai dažni ir po didelių gyvenimo lūžių: persikraustymo, skyrybų, sveikimo. Psichika juos naudoja kaip metaforą naujam „aš“.",
+        "Sapnas, kuriame gimdymas nepavyksta ar kūdikis gimsta keistas, nėra pranašystė; tai baimė, kad naujasis etapas neatitiks lūkesčių."
+      ],
+      "variants": [
+        {"situation": "Lengvas gimdymas", "meaning": "Pokytis ateina natūraliai. Pasitikėkite procesu."},
+        {"situation": "Sunkus gimdymas", "meaning": "Naujasis etapas reikalauja daug jėgų. Paprašykite pagalbos – sapne ir gyvenime."},
+        {"situation": "Gimsta dvyniai", "meaning": "Dvi naujos pradžios vienu metu arba dvilypumo jausmas – dvi gyvenimo kryptys."}
+      ],
+      "mindfulness": "Jei ką nors neseniai užbaigėte, sustokite ir sąmoningai tai pripažinkite. Dažnai pereiname prie kito darbo neįvertinę, ką pasiekėme.",
+      "related": ["nestumas", "kudikis", "ligonine", "mama"]
+    },
+    {
+      "slug": "laidotuves",
+      "word": "Laidotuvės",
+      "title": "Sapnuoti laidotuves",
+      "aliases": ["laidotuvių", "karstas", "laidoja", "gedulas", "šermenys"],
+      "short": "Laidotuvės sapne – užbaigimo ir atsisveikinimo simbolis. Dažniausiai laidojama ne žmogus, o etapas, įprotis ar santykis, kurį laikas paleisti.",
+      "psychology": [
+        "Sapnas apie laidotuves retai susijęs su tikra mirtimi. Psichologiškai tai ritualas – smegenų būdas užbaigti tai, kas jau baigėsi, bet dar nebuvo sąmoningai paleista: darbas, iš kurio išėjote, santykis, kuris nutrūko, gyvenimo etapas. Klausimas sapnui: ką ar ką laidojote, ir ką tas žmogus ar daiktas jums reiškė?",
+        "Savo laidotuvių sapnas – vienas keisčiausių, bet gana dažnas. Jis beveik visada reiškia tapatybės pokytį: senasis „aš“ užbaigia savo darbą. Dažnai toks sapnas pasirodo prieš didelius sprendimus.",
+        "Jei laidotuvės sapne yra gyvo artimo žmogaus, tai dažniausiai baimė jį prarasti arba santykio su juo pokytis, o ne pranašystė."
+      ],
+      "variants": [
+        {"situation": "Savo laidotuvės", "meaning": "Tapatybės pokytis. Sena savęs versija baigia savo darbą, ir tai gali būti gera."},
+        {"situation": "Gyvo žmogaus laidotuvės", "meaning": "Baimė prarasti arba santykio pokytis. Pasikalbėkite su tuo žmogumi – dažnai to ir trūksta."},
+        {"situation": "Tuščias karstas", "meaning": "Atsisveikinimas, kuris dar neįvyko iki galo. Kažką paleidote tik iš dalies."}
+      ],
+      "mindfulness": "Užrašykite vieną dalyką, kurį laikas paleisti – įprotį, nuoskaudą, planą, kuris nebeveikia. Sąmoningas atsisveikinimas yra sveikas; nesąmoningas – tęsiasi sapnuose.",
+      "related": ["mirtis", "mires-zmogus", "kapines", "baznycia"]
+    }
+  ]
+}

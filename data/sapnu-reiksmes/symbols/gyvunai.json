@@ -1,0 +1,348 @@
+{
+  "category": "gyvunai",
+  "category_name": "Gyvūnai",
+  "entries": [
+    {
+      "slug": "gyvate",
+      "word": "Gyvatė",
+      "title": "Sapnuoti gyvatę",
+      "aliases": ["gyvatės", "angis", "žaltys", "roplys"],
+      "short": "Gyvatė sapne dažniausiai rodo į kažką, ko budrūs vengiate pažvelgti tiesiai: paslėptą įtampą, nepasitikėjimą žmogumi arba permainą, kuri jau prasidėjo.",
+      "psychology": [
+        "Gyvatė yra vienas seniausių ir daugiareikšmiškiausių sapnų simbolių. K. G. Jungas ją siejo su nesąmoningąja psichikos dalimi – tuo, kas gyvena „žemiau“ kasdienio mąstymo. Šiuolaikinė miego psichologija žiūri paprasčiau: gyvatė sapne beveik visada sukelia stiprią emociją, o būtent emocija, ne pats gyvūnas, yra sapno žinutė. Jei pabudote su baime, verta paklausti, kas dienoje šiuo metu kelia nerimą, bet dar neįvardyta.",
+        "Grėsmės simuliacijos teorija (A. Revonsuo) aiškina, kodėl gyvatės sapnuojamos net miestuose: smegenys naktį „repetuoja“ pavojų atpažinimą, o gyvatė yra evoliuciškai senas pavojaus ženklas. Tai nereiškia, kad pavojus jums realiai gresia – tai reiškia, kad jūsų nervų sistema šiuo metu yra budresnė nei įprastai.",
+        "Kita pusė: gyvatė meta odą. Daugelyje kultūrų ji simbolizuoja atsinaujinimą ir gijimą. Jei sapne gyvatė ramiai šliaužė ir jūs nebijojote, tai gali rodyti, kad išgyvenate permainą, kurią priimate – net jei sąmoningai to dar nepripažinote."
+      ],
+      "variants": [
+        {"situation": "Gyvatė įkanda", "meaning": "Įkandimas dažnai atspindi jausmą, kad kas nors „įgėlė“ – kritika, išdavystė ar staigus konfliktas. Atkreipkite dėmesį, kurią kūno vietą įkando: rankos siejamos su darbu ir veiksmu, kojos – su stabilumu ir judėjimu pirmyn."},
+        {"situation": "Daug gyvačių", "meaning": "Gyvačių gausa paprastai reiškia ne vieną konkretų rūpestį, o bendrą persikrovimo jausmą – per daug neišspręstų smulkmenų, kurios visos kartu tampa sunkios."},
+        {"situation": "Užmušate gyvatę", "meaning": "Toks sapnas rodo, kad sąmoningai ar ne, jau ėmėtės veiksmų prieš tai, kas jus vargino. Psichologiškai tai geras ženklas – vidinis konfliktas juda link sprendimo."}
+      ],
+      "mindfulness": "Prieš miegą trumpai paklauskite savęs: „Ko aš šiuo metu vengiu pažiūrėti tiesiai?“ Nereikia atsakyti – pakanka leisti klausimui pabūti. Sapnai dažnai atsako patys.",
+      "related": ["voras", "ziurke", "baime", "miskas"]
+    },
+    {
+      "slug": "suo",
+      "word": "Šuo",
+      "title": "Sapnuoti šunį",
+      "aliases": ["šunys", "šuniukas", "šunelis"],
+      "short": "Šuo sapne – ištikimybės, draugystės ir apsaugos simbolis. Jo elgesys rodo, kaip šiuo metu vertinate savo santykius su artimais žmonėmis.",
+      "psychology": [
+        "Šuo yra gyvūnas, kurį žmonės tūkstančius metų sieja su lojalumu. Todėl sapnuose jis dažniausiai atstovauja santykiams: draugams, partneriui, šeimai. Tęstinumo hipotezė (M. Schredl) teigia, kad sapnų turinys atkartoja tai, kas mums rūpi dieną – tad jei sapnuojate šunį, tikėtina, kad santykių tema jums šiuo metu aktuali.",
+        "Ramus, draugiškas šuo dažniausiai reiškia saugumo jausmą ir pasitikėjimą aplinkiniais. Agresyvus ar lojantis šuo rodo priešingą: jaučiate, kad kažkas iš artimos aplinkos elgiasi nesąžiningai, arba patys bijote būti apleisti.",
+        "Jei sapnuojate savo tikrą (ypač jau mirusį) šunį, tai paprastai ne simbolis, o atminties ir emocijų apdorojimas. Miego tyrimai rodo, kad REM fazėje smegenys peržiūri emociškai svarbius prisiminimus, ir mylimi gyvūnai čia užima tokią pat vietą kaip žmonės."
+      ],
+      "variants": [
+        {"situation": "Šuo puola ar kanda", "meaning": "Jaučiate grėsmę iš žmogaus, kuriuo turėtumėte galėti pasitikėti. Verta pasitikrinti, ar nesate konflikte su artimu žmogumi, kurį stengiatės nuslėpti net nuo savęs."},
+        {"situation": "Pasiklydęs ar paliktas šuo", "meaning": "Toks sapnas dažnai atspindi jūsų pačių vienišumo jausmą arba rūpestį dėl žmogaus, kuris, jūsų nuomone, liko be paramos."},
+        {"situation": "Šuniukas", "meaning": "Jaunas gyvūnas simbolizuoja naują santykį, projektą ar poreikį rūpintis. Jei šuniukų daug – galbūt jaučiate, kad turite per daug įsipareigojimų."}
+      ],
+      "mindfulness": "Pabudę pagalvokite apie vieną žmogų, kuriuo iš tikrųjų pasitikite. Tokia trumpa dėkingumo mintis ryte mažina nerimą ir gerina nuotaiką visą dieną.",
+      "related": ["kate", "vilkas", "draugas", "namas"]
+    },
+    {
+      "slug": "kate",
+      "word": "Katė",
+      "title": "Sapnuoti katę",
+      "aliases": ["katės", "katinas", "kačiukas"],
+      "short": "Katė sapne siejama su nepriklausomybe, intuicija ir tuo, kas lieka nepasakyta. Ji dažnai pasirodo, kai jaučiate, kad kažkas aplinkoje ne iki galo atvira.",
+      "psychology": [
+        "Katė – savarankiškas, sunkiai nuspėjamas gyvūnas, todėl sapnuose ji dažnai simbolizuoja tą jūsų dalį, kuri nori laisvės ir erdvės. Jei paskutiniu metu jaučiatės pernelyg įsipareigoję ar kontroliuojami, katė sapne gali būti priminimas, kad jums reikia laiko sau.",
+        "Jungo psichologijoje katė artima „anima“ archetipui – jautriajai, intuityviajai pusei. Sapnas apie katę gali kviesti labiau pasikliauti nuojauta, o ne vien logika. Ypač jei sapne katė kažką stebėjo ar kažkur vedė.",
+        "Neigiami sapnai apie kates (kandanti, drąskanti katė) dažniausiai susiję su jausmu, kad kas nors elgiasi dviveidiškai. Tai ne pranašystė, o jūsų pačių įtarumo signalas – vertas patikrinti, o ne ignoruoti."
+      ],
+      "variants": [
+        {"situation": "Juoda katė", "meaning": "Kultūrinis prietaras čia mažai ką reiškia. Psichologiškai juoda spalva sapne rodo nežinią: situaciją, kurios dar negalite aiškiai įvertinti."},
+        {"situation": "Katė drasko", "meaning": "Įsižeidimas ar pyktis, kurio neišreiškėte. Dažnai tai susiję su artimu žmogumi, kuriam nenorite pasakyti tiesos."},
+        {"situation": "Murkianti, glaudžianti katė", "meaning": "Ramybės ir priėmimo jausmas. Toks sapnas dažnas laikotarpiais, kai pagaliau pailsite po ilgos įtampos."}
+      ],
+      "mindfulness": "Šiandien vieną sprendimą priimkite pagal nuojautą, o ne pagal skaičiavimą – ir vakare pastebėkite, kaip jautėtės. Sapnas apie katę dažnai kviečia būtent to.",
+      "related": ["suo", "vilkas", "nepazistamasis", "tamsa"]
+    },
+    {
+      "slug": "ziurke",
+      "word": "Žiurkė",
+      "title": "Sapnuoti žiurkę",
+      "aliases": ["žiurkės", "pelė", "pelės", "graužikai"],
+      "short": "Žiurkė ar pelė sapne rodo į smulkius, bet nuolat graužiančius rūpesčius – tai, kas tyliai „ėda“ jūsų ramybę.",
+      "psychology": [
+        "Graužikai sapnuose retai reiškia didelę grėsmę. Jie simbolizuoja tai, kas veikia tyliai ir iš pasalų: neapmokėtą sąskaitą, nepasakytą atsiprašymą, nedidelį melą, su kuriuo gyvenate. Žodis „graužti“ lietuvių kalboje ne veltui vartojamas ir apie nerimą.",
+        "Tyrimai apie sapnų turinį rodo, kad nemalonūs gyvūnai sapnuose dažniau pasirodo stresiniais laikotarpiais. Jei žiurkės ar pelės pasikartoja keliose naktyse iš eilės, tai ženklas, kad kažkuris neišspręstas klausimas jau kaupiasi.",
+        "Kartu žiurkė yra išgyvenimo simbolis: gyvūnas, kuris prisitaiko bet kur. Kai kuriems sapnuotojams žiurkė reiškia jų pačių atsparumą sunkiomis sąlygomis."
+      ],
+      "variants": [
+        {"situation": "Žiurkė namuose", "meaning": "Rūpestis kilęs iš artimos aplinkos: šeimos, buities, namų finansų. Namas sapne beveik visada reiškia jus pačius, tad graužikas namuose – tai vidinis nerimas."},
+        {"situation": "Pelė bėga per kūną", "meaning": "Jausmas, kad kažkas kėsinasi į jūsų asmeninę erdvę arba kad prarandate kontrolę smulkmenose."},
+        {"situation": "Gaudote ar išvarote žiurkę", "meaning": "Aktyviai sprendžiate problemą. Toks sapnas rodo, kad neleidžiate smulkmenoms kauptis."}
+      ],
+      "mindfulness": "Užrašykite tris mažus dalykus, kurie jus šiuo metu „graužia“. Dažnai vien jų įvardijimas popieriuje sumažina naktinį nerimą.",
+      "related": ["gyvate", "voras", "namas", "baime"]
+    },
+    {
+      "slug": "voras",
+      "word": "Voras",
+      "title": "Sapnuoti vorą",
+      "aliases": ["vorai", "voratinklis", "vabzdys"],
+      "short": "Voras sapne dažniausiai simbolizuoja jausmą, kad esate įpainioti į situaciją, kurios patys nesukūrėte, arba kad kas nors kantriai laukia jūsų klaidos.",
+      "psychology": [
+        "Voratinklis yra kantrybės ir tinklo metafora. Sapnuose voras dažnai pasirodo, kai žmogus jaučiasi įsipainiojęs: į santykius, darbo politiką, finansinius įsipareigojimus. Klausimas ne „ko bijoti“, o „kur šiuo metu jaučiuosi neturintis išeities“.",
+        "Vorų baimė (arachnofobija) yra viena dažniausių fobijų, todėl daliai žmonių voras sapne yra tiesiog baimės apdorojimas be gilesnės prasmės. Miego psichologai pastebi, kad tokie sapnai dažnesni, kai dieną buvo daug stimulų ir mažai poilsio.",
+        "Jungo požiūriu voras siejamas su „motinos“ archetipo tamsiąja puse – rūpesčiu, kuris pereina į kontrolę. Jei sapne voras jus apraizgė, verta paklausti, ar kas nors gyvenime jus „saugo“ taip stipriai, kad jaučiatės nelaisvi."
+      ],
+      "variants": [
+        {"situation": "Didelis voras", "meaning": "Problema, kurią sąmoningai mažinate, o pasąmonė ją mato kaip didelę. Dažnai tai finansinis ar sveikatos klausimas, kurį atidedate."},
+        {"situation": "Voratinklis", "meaning": "Užsistovėjimas. Kažkas jūsų gyvenime seniai nejudėjo – galbūt planas, kurį vis atidedate."},
+        {"situation": "Užmušate vorą", "meaning": "Ryžtingumas. Jūs nusprendėte nebeleisti kažkam laukti ir tempti."}
+      ],
+      "mindfulness": "Įsivaizduokite, kad tinklas, kuriame esate, turi vieną laisvą siūlą. Kuris tai siūlas? Toks trumpas vaizduotės pratimas prieš miegą padeda pasąmonei ieškoti sprendimo, o ne baimės.",
+      "related": ["gyvate", "ziurke", "kalejimas", "baime"]
+    },
+    {
+      "slug": "arklys",
+      "word": "Arklys",
+      "title": "Sapnuoti arklį",
+      "aliases": ["arkliai", "žirgas", "kumelė", "jodinėti"],
+      "short": "Arklys sapne – energijos, laisvės ir gyvybinės jėgos simbolis. Kaip elgiasi arklys, taip šiuo metu jaučiasi jūsų vidinė jėga.",
+      "psychology": [
+        "Arklys – vienas šviesiausių sapnų simbolių. Psichologijoje jis siejamas su instinktais ir gyvybine energija (Freudas kalbėjo apie „libido“ plačiąja prasme – ne tik seksualinę, bet bendrą gyvybės jėgą). Ramiai bėgantis arklys rodo, kad ta energija teka laisvai.",
+        "Jodinėjimas sapne dažnai reiškia kontrolės klausimą: ar jūs valdote situaciją, ar situacija jus. Jei arklys nepaklūsta, tai gali atspindėti jausmą, kad emocijos ar aplinkybės nešasi jus be jūsų sutikimo.",
+        "Pavargęs, sergantis ar krentantis arklys – išsekimo ženklas. Tokie sapnai dažnai pasirodo perdegimo laikotarpiais ir yra rimtas kvietimas pailsėti, ne tik naktį, bet ir dieną."
+      ],
+      "variants": [
+        {"situation": "Baltas arklys", "meaning": "Aiškumas ir naujas etapas. Daugelyje kultūrų baltas žirgas – geros permainos ženklas; psichologiškai tai viltis, kurią jau jaučiate."},
+        {"situation": "Arklys pasibaido ar numeta", "meaning": "Prarandate kontrolę emocijų ar projekto atžvilgiu. Laikas sulėtinti tempą."},
+        {"situation": "Laukiniai arkliai", "meaning": "Nesuvaldyta energija: galbūt turite daug idėjų, bet nė vienos neįgyvendinate iki galo."}
+      ],
+      "mindfulness": "Šiandien pastebėkite, kada turite daugiausiai energijos, ir tuo metu padarykite svarbiausią darbą. Sapnas apie arklį dažnai primena: jėga yra, klausimas – kur ją nukreipiate.",
+      "related": ["elnias", "kelias", "keliauti", "skristi"]
+    },
+    {
+      "slug": "vilkas",
+      "word": "Vilkas",
+      "title": "Sapnuoti vilką",
+      "aliases": ["vilkai", "vilkė", "vilkų gauja"],
+      "short": "Vilkas sapne – instinktų, ribų ir vienatvės simbolis. Jis pasirodo, kai jūsų vidinė „laukinė“ pusė nori būti išgirsta.",
+      "psychology": [
+        "Vilkas Jungo psichologijoje siejamas su „šešėliu“ – tomis savybėmis, kurių sau nepripažįstame: pykčiu, konkurencija, noru ginti savo teritoriją. Sapnas apie vilką nereiškia, kad esate agresyvūs; dažniau jis reiškia, kad per ilgai slopinote teisėtą pyktį ar poreikį nusistatyti ribas.",
+        "Vilkų gauja simbolizuoja priklausymą grupei ir jos taisykles. Jei sapne bijote gaujos, galbūt jaučiate spaudimą iš kolektyvo – darbo, šeimos, draugų. Jei esate gaujos dalis, tai gali rodyti stiprų bendrumo jausmą.",
+        "Vienišas vilkas – nepriklausomybės ir kartu vienatvės simbolis. Toks sapnas dažnas žmonėms, kurie neseniai priėmė sprendimą eiti savo keliu."
+      ],
+      "variants": [
+        {"situation": "Vilkas vejasi", "meaning": "Bėgate nuo savo pačių stipraus jausmo, dažniausiai pykčio ar noro pasakyti „ne“."},
+        {"situation": "Vilkas ramus, žiūri į jus", "meaning": "Kvietimas susipažinti su savo instinktyviąja puse, o ne jos bijoti."},
+        {"situation": "Vilkas puola artimą žmogų", "meaning": "Nerimas dėl žmogaus, kurį jaučiatės privalantys apsaugoti."}
+      ],
+      "mindfulness": "Užduokite sau klausimą: „Kur šią savaitę turėjau pasakyti „ne“, bet pasakiau „taip“?“ Vilkas sapne dažnai yra būtent ta neišsakyta riba.",
+      "related": ["suo", "meska", "begti", "miskas"]
+    },
+    {
+      "slug": "meska",
+      "word": "Meška",
+      "title": "Sapnuoti mešką",
+      "aliases": ["lokys", "meškos", "lokiai", "meškinas"],
+      "short": "Meška sapne simbolizuoja didelę, bet dažniausiai ramią jėgą: motinišką globą, poreikį pailsėti arba grėsmę, kurią jaučiate, bet dar nematote.",
+      "psychology": [
+        "Meška – gyvūnas, kuris miega žiemą. Sapnuose ji dažnai pasirodo, kai organizmui reikia atsitraukimo ir poilsio. Jei sapnuojate mešką ramioje, ne grėsmingoje situacijoje, verta tai suprasti kaip kūno signalą: jums reikia daugiau miego ir mažiau įsipareigojimų.",
+        "Grėsminga meška yra klasikinis „didelės, neaiškios grėsmės“ simbolis. Skirtingai nei vilkas ar gyvatė, meška reiškia ne konkretų žmogų, o aplinkybes: sveikatos nerimą, didelį sprendimą, ekonominį netikrumą.",
+        "Meška su jaunikliais siejama su motinystės ir apsaugos tema. Toks sapnas dažnai pasirodo tėvams, kurie nerimauja dėl vaikų, arba žmonėms, išgyvenantiems stiprų poreikį kažką saugoti."
+      ],
+      "variants": [
+        {"situation": "Meška puola", "meaning": "Jaučiatės užgriūti aplinkybių, kurių negalite kontroliuoti. Dažnai tai susiję su sveikata ar finansais."},
+        {"situation": "Miegantis lokys", "meaning": "Problema, kuri šiuo metu „miega“, bet gali pabusti. Arba – jūsų pačių atidėtas poreikis pailsėti."},
+        {"situation": "Meška iš tolo", "meaning": "Jaučiate grėsmę, bet ji dar toli. Turite laiko pasiruošti."}
+      ],
+      "mindfulness": "Patikrinkite savo miego rutiną: ar per pastarąją savaitę miegojote bent 7 valandas? Meška sapne dažnai yra kūno prašymas, ne psichikos mįslė.",
+      "related": ["vilkas", "miskas", "lova", "baime"]
+    },
+    {
+      "slug": "paukstis",
+      "word": "Paukštis",
+      "title": "Sapnuoti paukštį",
+      "aliases": ["paukščiai", "varna", "balandis", "erelis", "gulbė", "pelėda"],
+      "short": "Paukštis sapne – laisvės, perspektyvos ir žinios simbolis. Rūšis ir skrydžio kryptis pasako, apie ką ta žinia.",
+      "psychology": [
+        "Paukščiai skraido, todėl sapnuose beveik visada siejami su noru pakilti virš situacijos, pamatyti ją iš aukščiau. Jei sapnuojate paukščius laikotarpiu, kai jaučiatės „įklimpę“, tai pasąmonės priminimas, kad yra ir kitas požiūrio taškas.",
+        "Skirtingi paukščiai turi skirtingą emocinį atspalvį, bet svarbiausia – jūsų asmeninis santykis su jais. Varna vienam žmogui reiškia išmintį, kitam – nerimą. Todėl aiškindami sapną pirmiausia paklauskite: ką šis paukštis reiškia man, o ne žodynui.",
+        "Paukštis narve ar su sulaužytu sparnu – klasikinis apribotos laisvės simbolis. Tokie sapnai dažni žmonėms, kurie jaučiasi įstrigę santykiuose ar darbe, kurio nekeičia iš saugumo."
+      ],
+      "variants": [
+        {"situation": "Paukštis įskrenda į namus", "meaning": "Nauja žinia ar žmogus ateina į jūsų asmeninę erdvę. Reakcija sapne (džiaugsmas ar baimė) parodo, kaip tai vertinate."},
+        {"situation": "Paukščių pulkas", "meaning": "Bendrumo jausmas arba, jei pulkas grėsmingas, jausmas, kad aplinka spaudžia vienbalsiai."},
+        {"situation": "Negyvas paukštis", "meaning": "Viltis ar planas, kurį jau nurašėte. Verta patikrinti, ar tikrai per anksti."}
+      ],
+      "mindfulness": "Išeikite į lauką bent 10 minučių ir sąmoningai pažiūrėkite į dangų. Tai paprastas, bet veiksmingas būdas sugrąžinti perspektyvą, kurios sapnas apie paukštį prašo.",
+      "related": ["skristi", "drugelis", "langas", "dangus-zvaigzdes"]
+    },
+    {
+      "slug": "zuvis",
+      "word": "Žuvis",
+      "title": "Sapnuoti žuvį",
+      "aliases": ["žuvys", "žvejoti", "žvejyba", "akvariumas"],
+      "short": "Žuvis sapne siejama su tuo, kas plaukioja giliau nei sąmonė: intuicija, jausmais, kuriuos sunku pagauti, ir gausa.",
+      "psychology": [
+        "Vanduo sapnuose beveik visada reiškia emocijas, o žuvis – tai, kas gyvena tose emocijose. Jungas žuvį siejo su nesąmoningu turiniu, kuris nori iškilti į paviršių. Jei sapne žuvį pagavote, greičiausiai ką nors svarbaus suvokėte; jei ji išslydo – įžvalga dar tik formuojasi.",
+        "Tęstinumo hipotezės požiūriu žuvys sapnuose dažnos žmonėms, kurie dieną daug galvoja apie kūrybą, sprendimus „iš gilumos“ arba tiesiog mėgsta vandenį. Tai ne mistika – tai atmintis.",
+        "Daug žuvų – gausos ir galimybių ženklas. Negyvos žuvys – jausmas, kad kažkas, kas turėjo gyvuoti, nutrūko."
+      ],
+      "variants": [
+        {"situation": "Gaudote žuvį", "meaning": "Ieškote atsakymo ar sprendimo. Kantrybė sapne rodo, kad artėjate prie jo."},
+        {"situation": "Žuvis akvariume", "meaning": "Jausmai ar idėjos, kurias laikote „stikle“ – matote, bet neleidžiate joms laisvai judėti."},
+        {"situation": "Didelė žuvis", "meaning": "Didelė galimybė arba didelis jausmas, kurį dar sunku suvaldyti."}
+      ],
+      "mindfulness": "Pabudę užrašykite pirmą mintį, kuri atėjo į galvą – prieš telefoną, prieš planus. Žuvis sapne dažnai primena, kad geriausios įžvalgos iškyla ramybėje.",
+      "related": ["vanduo", "jura", "upe", "plaukti"]
+    },
+    {
+      "slug": "karve",
+      "word": "Karvė",
+      "title": "Sapnuoti karvę",
+      "aliases": ["karvės", "jautis", "bulius", "veršelis", "galvijai"],
+      "short": "Karvė sapne – ramybės, maitinimo ir kasdienės gerovės simbolis. Jautis ar bulius – jėgos ir užsispyrimo.",
+      "psychology": [
+        "Karvė daugelyje kultūrų siejama su motinyste ir maitinimu. Sapne ji dažniausiai reiškia stabilumą: namų ramybę, patikimą pajamų šaltinį, rūpestį, kurį gaunate ar teikiate. Rami karvė ganykloje – vienas ramiausių sapnų vaizdų, dažnas žmonėms, kurie po įtampos pagaliau pailsi.",
+        "Jautis ar bulius keičia simbolio kryptį: tai jėga, kartais užsispyrimas ar pyktis. Jei sapne jus vejasi bulius, greičiausiai susidūrėte su užsispyrusiu žmogumi arba patys per ilgai spaudžiate situaciją jėga.",
+        "Liesa, serganti karvė tradiciškai siejama su nepritekliaus baime. Psichologiškai tai nerimas dėl ateities saugumo, dažnai finansinio."
+      ],
+      "variants": [
+        {"situation": "Melžiate karvę", "meaning": "Naudojatės turimais ištekliais. Geras darbo ir kantrybės ženklas."},
+        {"situation": "Karvių banda", "meaning": "Bendruomenė, šeima, kolektyvas. Jūsų vieta bandoje sapne parodo, kaip jaučiatės grupėje."},
+        {"situation": "Bulius puola", "meaning": "Konfliktas su žmogumi, kuris nenusileidžia. Arba – jūsų pačių užsispyrimas, kuris jums kenkia."}
+      ],
+      "mindfulness": "Šiandien atkreipkite dėmesį į tai, kas jūsų gyvenime veikia patikimai ir be pastangų. Karvė sapne primena: ne viskas turi būti kova.",
+      "related": ["kiaule", "arklys", "pinigai", "namas"]
+    },
+    {
+      "slug": "kiaule",
+      "word": "Kiaulė",
+      "title": "Sapnuoti kiaulę",
+      "aliases": ["kiaulės", "paršelis", "šernas"],
+      "short": "Kiaulė sapne – dvilypis simbolis: gausa ir sotumas, bet ir jausmas, kad kažkas (ar jūs patys) peržengė saiko ribą.",
+      "psychology": [
+        "Lietuviškoje tradicijoje kiaulė – turto ir sotumo ženklas, o kasdienėje kalboje – nešvarumo ar nepadorumo. Sapne abu sluoksniai veikia kartu. Pirmiausia paklauskite, ką jautėte: jei pasibjaurėjimą – sapnas apie ribas ir saiką; jei ramybę – apie gerovę ir pasitenkinimą.",
+        "Psichologiškai kiaulė dažnai simbolizuoja malonumų temą: valgį, poilsį, kūno poreikius. Žmonėms, kurie sau šito draudžia, kiaulė sapne gali būti pasąmonės priminimas, kad kūnas irgi turi teisę į malonumą.",
+        "Šernas – laukinė kiaulės versija – reiškia impulsyvumą ir jėgą, kurios sunku suvaldyti."
+      ],
+      "variants": [
+        {"situation": "Kiaulė purve", "meaning": "Jaučiate, kad kažkas jūsų aplinkoje „susitepė“ – galbūt situacija, į kurią nenorėjote įsivelti."},
+        {"situation": "Paršeliai", "meaning": "Naujos, mažos gerovės užuomazgos: taupymas, naujas pajamų šaltinis, augantis projektas."},
+        {"situation": "Šernas puola", "meaning": "Susidūrimas su kažkieno grubumu. Arba jūsų pačių impulsas, kurio vėliau gailėjotės."}
+      ],
+      "mindfulness": "Pastebėkite, ką šiandien valgote ir kaip. Sąmoningas valgymas – paprasta mindfulness praktika, o kiaulė sapne dažnai kalba būtent apie kūno poreikius.",
+      "related": ["karve", "valgyti", "pinigai", "purvas"]
+    },
+    {
+      "slug": "drugelis",
+      "word": "Drugelis",
+      "title": "Sapnuoti drugelį",
+      "aliases": ["drugeliai", "peteliškė", "kandis", "vikšras"],
+      "short": "Drugelis sapne – transformacijos, trapumo ir lengvumo simbolis. Jis pasirodo permainų laikotarpiais.",
+      "psychology": [
+        "Drugelio virsmas iš vikšro – viena universaliausių pokyčio metaforų. Sapnuose drugelis dažniausiai reiškia, kad išgyvenate ar netrukus išgyvensite asmeninį pokytį: santykių, darbo, tapatybės. Svarbu, kad pokytis sapne atrodo natūralus, ne prievartinis.",
+        "Drugelis yra trapus. Jei sapne bijojote jį sužeisti arba jis žuvo, tai gali atspindėti rūpestį dėl kažko brangaus, bet nestabilaus: naujų santykių, sveikstančio žmogaus, pradedamo verslo.",
+        "Kandys – tamsesnė drugelio versija – dažnai siejamos su tuo, kas tyliai gadina: senos nuoskaudos, neužbaigti reikalai."
+      ],
+      "variants": [
+        {"situation": "Drugelis nutupia ant jūsų", "meaning": "Priėmimas ir ramybė. Dažnai – ženklas, kad permaina jau įvyko ir jūs ją priėmėte."},
+        {"situation": "Vikšras", "meaning": "Pokytis dar tik prasideda. Reikia kantrybės ir laiko."},
+        {"situation": "Gaudote drugelį", "meaning": "Bandote sulaikyti tai, kas iš prigimties laikina: akimirką, jausmą, laikotarpį."}
+      ],
+      "mindfulness": "Šiandien padarykite vieną mažą dalyką kitaip nei įprastai – kitas kelias į darbą, kitas ryto įprotis. Drugelis sapne primena, kad pokytis prasideda nuo smulkmenų.",
+      "related": ["paukstis", "geles", "skristi", "bite"]
+    },
+    {
+      "slug": "bite",
+      "word": "Bitė",
+      "title": "Sapnuoti bitę",
+      "aliases": ["bitės", "avilys", "vapsva", "širšė", "medus"],
+      "short": "Bitė sapne – darbštumo, bendruomenės ir tvarkos simbolis. Vapsva ar širšė – smulkaus, bet skaudaus konflikto.",
+      "psychology": [
+        "Bitės gyvena griežtai organizuotoje bendruomenėje, todėl sapnuose jos dažnai siejamos su darbu ir vieta kolektyve. Sapnas apie ramiai dūzgiančias bites paprastai rodo, kad jaučiatės produktyvūs ir savo vietoje. Bičių spiečius, kuris jus puola, – jausmas, kad darbo ar aplinkos reikalavimai užgriuvo visi iš karto.",
+        "Įgėlimas sapne – klasikinis „mažo, bet skaudaus“ įvykio simbolis: pastaba, kuri užkliuvo, žinutė, kurios nesitikėjote. Vapsvos ir širšės sapnuose beveik visada reiškia irzlumą ar konfliktą, kuris „zyzia“ ir neduoda ramybės.",
+        "Medus – saldus darbo rezultatas. Jei sapnavote medų, galbūt artėja laikas, kai ilgos pastangos duos vaisių."
+      ],
+      "variants": [
+        {"situation": "Bitė įgelia", "meaning": "Netikėta, nedidelė skriauda. Dažnai iš žmogaus, iš kurio to nesitikėjote."},
+        {"situation": "Avilys", "meaning": "Namai, šeima ar darbo kolektyvas. Kaip avilys atrodo sapne – tvarkingas ar sugriautas – taip jaučiate tą bendruomenę."},
+        {"situation": "Bičių spiečius", "meaning": "Persikrovimas: per daug užduočių, per daug žmonių, per daug garso."}
+      ],
+      "mindfulness": "Išjunkite pranešimus telefone bent vienai valandai. Bičių dūzgimas sapne dažnai yra skaitmeninio triukšmo atspindys.",
+      "related": ["drugelis", "darbas", "kovotis", "geles"]
+    },
+    {
+      "slug": "varle",
+      "word": "Varlė",
+      "title": "Sapnuoti varlę",
+      "aliases": ["varlės", "rupūžė", "buožgalvis"],
+      "short": "Varlė sapne – prisitaikymo ir permainos simbolis: gyvūnas, gyvenantis ir vandenyje, ir sausumoje, primena, kad galite gyventi dviejose pasaulio pusėse.",
+      "psychology": [
+        "Varlė – gyvūnas, kuris išgyvena virsmą (buožgalvis – varlė) ir gyvena dviejose terpėse. Sapnuose ji dažnai pasirodo, kai žmogus balansuoja tarp dviejų gyvenimo sričių: darbo ir šeimos, seno ir naujo, proto ir jausmų. Ramybė sapne rodo, kad balansas pavyksta.",
+        "Nemalonus jausmas sapnuojant varlę ar rupūžę dažniausiai reiškia pasibjaurėjimą kažkuo, ką reikia „prisiliesti“: nemalonų pokalbį, buities darbą, sveikatos klausimą. Pasaka apie varlę, virstančią princu, psichologiškai reiškia tą patį – tai, ko vengiate, gali pasirodyti vertinga.",
+        "Varlių kurkimas sapne kartais atspindi realų foną – miego tyrimai rodo, kad garsai iš aplinkos įsipina į sapnų turinį."
+      ],
+      "variants": [
+        {"situation": "Daug varlių", "meaning": "Daug mažų permainų vienu metu. Nė viena atskirai nesunki, bet visos kartu vargina."},
+        {"situation": "Varlė šokinėja", "meaning": "Sprendimai, priimami šuoliais, be nuoseklumo. Galbūt verta sustoti ir susidėlioti planą."},
+        {"situation": "Rupūžė", "meaning": "Kažkas, ką laikote bjauriu ar gėdingu, bet kas yra tiesiog gyvenimo dalis."}
+      ],
+      "mindfulness": "Pastebėkite, tarp kurių dviejų „pasaulių“ šiuo metu gyvenate. Ar galite abu priimti kaip savus, o ne rinktis vieną?",
+      "related": ["vanduo", "gyvate", "upe", "purvas"]
+    },
+    {
+      "slug": "liutas",
+      "word": "Liūtas",
+      "title": "Sapnuoti liūtą",
+      "aliases": ["liūtai", "tigras", "leopardas", "plėšrūnas", "didelė katė"],
+      "short": "Liūtas ar tigras sapne – galios, orumo ir valdymo simbolis. Toks sapnas kalba apie tai, kaip jaučiate savo vietą tarp kitų žmonių.",
+      "psychology": [
+        "Didieji plėšrūnai sapnuose reprezentuoja autoritetą ir jėgą. Klausimas – kieno. Jei liūtas sapne yra jūs (jojate ant jo, esate su juo drauge), tai pasitikėjimo savimi ir lyderystės sapnas. Jei liūtas jums grasina, greičiausiai susiduriate su galingesniu žmogumi ar institucija.",
+        "Jungas liūtą siejo su „karaliaus“ archetipu – brandžia, atsakinga galia. Tigras dažniau reiškia laukinę, nekontroliuojamą aistrą ar pyktį. Skirtumas subtilus, bet svarbus: liūtas valdo, tigras puola.",
+        "Sapnai apie plėšrūnus narvuose dažni žmonėms, kurie slopina savo ambicijas ar stiprias emocijas, kad neišsiskirtų."
+      ],
+      "variants": [
+        {"situation": "Liūtas vejasi", "meaning": "Bėgate nuo atsakomybės ar lyderio vaidmens, kurį jums siūlo gyvenimas."},
+        {"situation": "Prijaukintas liūtas", "meaning": "Suvaldyta jėga. Geras ženklas – mokate naudoti savo galią neįskaudindami kitų."},
+        {"situation": "Tigras puola", "meaning": "Stipri aistra ar pyktis, kurį patiriate iš kitų arba savyje."}
+      ],
+      "mindfulness": "Prisiminkite vieną situaciją, kurioje pasielgėte tvirtai ir oriai. Kelias minutes pabūkite tame jausme – tai stiprina pasitikėjimą savimi labiau nei bet kokia motyvacinė citata.",
+      "related": ["vilkas", "meska", "kate", "priesas"]
+    },
+    {
+      "slug": "elnias",
+      "word": "Elnias",
+      "title": "Sapnuoti elnią",
+      "aliases": ["elniai", "briedis", "stirna", "stirnos"],
+      "short": "Elnias, briedis ar stirna sapne – švelnumo, budrumo ir vidinės ramybės simbolis. Tai vienas ramiausių sapnų vaizdinių.",
+      "psychology": [
+        "Elnias yra budrus, bet ne agresyvus gyvūnas. Sapnuose jis dažnai simbolizuoja jautrumą ir gebėjimą pastebėti pavojų nesileidžiant į kovą. Jei sapnuojate elnią, galbūt gyvenime esate situacijoje, kur reikia ne jėgos, o atidumo.",
+        "Stirna sapne dažnai siejama su trapumu ir poreikiu būti saugomam. Jei sapne stirna sužeista, tai gali atspindėti jūsų pačių pažeidžiamumo jausmą arba rūpestį dėl kažko trapaus.",
+        "Briedis – didesnė ir tvirtesnė versija – reiškia orumą ir ramų pasitikėjimą. Sapnas apie briedį miške dažnai pasirodo žmonėms, kurie po sunkaus laikotarpio vėl jaučia žemę po kojomis."
+      ],
+      "variants": [
+        {"situation": "Elnias pabėga", "meaning": "Kažkas švelnaus ir vertingo išsprūdo – galbūt akimirka, kurios neįvertinote."},
+        {"situation": "Elnias su ragais", "meaning": "Ramus autoritetas. Jūs turite jėgos, bet nenaudojate jos prieš kitus."},
+        {"situation": "Sužeista stirna", "meaning": "Trapumo jausmas. Verta būti švelnesniems patiems sau."}
+      ],
+      "mindfulness": "Pabandykite trumpą pratimą: penkias minutes tyliai sėdėkite ir tiesiog klausykitės garsų aplink. Elnias sapne primena, kad ramus budrumas yra jėga.",
+      "related": ["arklys", "miskas", "vilkas", "sviesa"]
+    },
+    {
+      "slug": "vista",
+      "word": "Višta",
+      "title": "Sapnuoti vištą",
+      "aliases": ["vištos", "gaidys", "viščiukai", "kiaušiniai"],
+      "short": "Višta sapne – buities, rūpesčio ir smulkių kasdienių reikalų simbolis. Gaidys – ryto, pabudimo ir kartais tuščio išdidumo.",
+      "psychology": [
+        "Višta sapnuose dažniausiai reiškia kasdienybę: rūpestį šeima, namų tvarką, mažus, bet būtinus darbus. Sapnas apie vištą, vedančią viščiukus, – klasikinis globos ir atsakomybės už kitus simbolis.",
+        "Gaidys siejamas su rytu ir pabudimu, tad sapne jis gali reikšti naują pradžią. Kartu gaidys – išdidumo ir garsaus savęs rodymo simbolis; jei sapne gaidys erzina, galbūt aplinkoje yra žmogus, kuris per daug save demonstruoja.",
+        "Kiaušiniai sapne – potencialas, kuris dar neišsiskleidė: idėja, planas, laukiamas pokytis."
+      ],
+      "variants": [
+        {"situation": "Višta su viščiukais", "meaning": "Rūpestis vaikais ar žmonėmis, už kuriuos jaučiatės atsakingi."},
+        {"situation": "Gaidys gieda", "meaning": "Naujas etapas ar kvietimas atsibusti – tiek tiesiogine, tiek perkeltine prasme."},
+        {"situation": "Renkate kiaušinius", "meaning": "Kaupiate išteklius ar idėjas būsimam projektui."}
+      ],
+      "mindfulness": "Šiandien vieną buities darbą atlikite lėtai ir sąmoningai, kaip praktiką, o ne kaip prievolę. Višta sapne primena, kad kasdienybė irgi gali būti rami.",
+      "related": ["karve", "kudikis", "namas", "valgyti"]
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "category": "vietos",
+  "category_name": "Vietos ir pastatai",
+  "entries": [
+    {
+      "slug": "namas",
+      "word": "Namas",
+      "title": "Sapnuoti namą",
+      "aliases": ["namai", "namo", "butas", "kambarys", "naujas namas", "griūvantis namas", "nežinomi kambariai"],
+      "short": "Namas sapne – jūs patys. Kiekvienas kambarys, aukštas ir durys atspindi jūsų psichikos dalį, o namo būklė – tai, kaip jaučiatės iš vidaus.",
+      "psychology": [
+        "Namas – vienas svarbiausių sapnų simbolių, ir beveik visos psichologijos mokyklos sutaria: namas sapne reiškia sapnuotojo asmenybę ir vidinį pasaulį. Jungas namą tyrinėjo kaip psichikos struktūrą: rūsys – pasąmonė ir praeitis, pirmasis aukštas – kasdienis gyvenimas, viršutiniai aukštai – protas ir siekiai, palėpė – prisiminimai.",
+        "Namo būklė – jūsų būklė. Tvarkingas, šviesus namas – vidinė ramybė. Apleistas, griūvantis, su įtrūkimais – nuovargis, nerimas, apleisti poreikiai. Per mažas namas – jaučiatės suvaržyti. Per didelis, tuščias – vienatvė arba neišnaudotas potencialas.",
+        "Vienas dažniausių ir įdomiausių sapnų – rasti savo name kambarį, kurio nežinojote. Tai beveik visada reiškia naują savo dalį: talentą, galimybę, savybę, kurios dar neatradote. Toks sapnas dažnai pasirodo augimo laikotarpiais."
+      ],
+      "variants": [
+        {"situation": "Randate nežinomą kambarį", "meaning": "Nauja savo pusė ar galimybė. Vienas geriausių sapnų vaizdinių."},
+        {"situation": "Namas griūva", "meaning": "Tapatybės ar pagrindų sukrėtimas. Dažnas didelių pokyčių metu."},
+        {"situation": "Namas užrakintas, negalite įeiti", "meaning": "Atitolimas nuo savęs. Kažkas neleidžia grįžti prie savo vidinio pasaulio."}
+      ],
+      "mindfulness": "Įsivaizduokite savo vidinį namą: kuris kambarys šiuo metu labiausiai apleistas? Skirkite jam šią savaitę – tai gali būti poilsis, kūryba, santykiai ar kūnas.",
+      "related": ["vaikystes-namai", "durys", "langas", "laiptai", "persikraustyti", "ugnis"]
+    },
+    {
+      "slug": "vaikystes-namai",
+      "word": "Vaikystės namai",
+      "title": "Sapnuoti vaikystės namus",
+      "aliases": ["seni namai", "tėvų namai", "močiutės namai", "kaimas", "senas butas", "grįžti į vaikystę"],
+      "short": "Vaikystės namai sapne – šaknų, saugumo ir neužbaigtų praeities temų simbolis. Toks sapnas pasirodo, kai dabartyje reikia atramos arba kai praeitis dar turi ką pasakyti.",
+      "psychology": [
+        "Vaikystės namai – vieta, kur susiformavo pirmieji saugumo, meilės ir taisyklių modeliai. Sapnuoti juos suaugus – vienas dažniausių sapnų, ypač stresiniais laikotarpiais. Psichika grįžta ten, kur kadaise jautėsi (arba norėjo jaustis) saugi. Tai ne regresija, o išteklių paieška.",
+        "Kartu tokie sapnai gali rodyti, kad praeities tema vis dar aktuali. Jei sapne vaikystės namuose jaučiate nerimą, konfliktą ar negalite išeiti, galbūt kuris nors senas modelis (santykis su tėvais, vaidmuo šeimoje) vis dar valdo dabartinius sprendimus.",
+        "Vaikystės namai, kurie sapne pasikeitė – nauji kambariai, kita spalva, kiti gyventojai – reiškia, kad jūsų santykis su praeitimi keičiasi. Dažnai tai geras ženklas: senos istorijos gauna naują interpretaciją."
+      ],
+      "variants": [
+        {"situation": "Grįžtate ir jaučiatės gerai", "meaning": "Išteklių paieška, poreikis saugumo. Priimkite tai kaip poilsį."},
+        {"situation": "Negalite išeiti iš vaikystės namų", "meaning": "Senas modelis vis dar laiko. Klausimas: kokia taisyklė iš vaikystės jums nebetinka?"},
+        {"situation": "Namai pasikeitę, svetimi", "meaning": "Santykis su praeitimi keičiasi. Augimas."}
+      ],
+      "mindfulness": "Užrašykite vieną sakinį, kurį dažnai girdėjote vaikystės namuose. Ar jis vis dar tiesa jūsų gyvenime? Ar norite jį pasilikti?",
+      "related": ["namas", "mama", "tevas", "vaikas", "persikraustyti"]
+    },
+    {
+      "slug": "mokykla",
+      "word": "Mokykla",
+      "title": "Sapnuoti mokyklą",
+      "aliases": ["mokyklą", "mokyklos", "klasė", "universitetas", "pamoka", "vėl mokykloje", "klasiokai"],
+      "short": "Mokykla sapne – mokymosi, vertinimo ir socialinės vietos simbolis. Suaugusieji ją sapnuoja, kai gyvenime jaučiasi tikrinami arba mokosi kažko naujo.",
+      "psychology": [
+        "Mokykla – pirmoji vieta, kur buvome vertinami ir lyginami su kitais. Todėl sapnuose ji reiškia bet kurią gyvenimo sritį, kur jaučiatės tikrinami: darbą, naują aplinką, santykių pradžią. Sapnas „vėl esu mokykloje“ dažnas suaugusiems ir dažniausiai pasirodo, kai mokotės kažko naujo ar jaučiatės nepasiruošę.",
+        "Detalės svarbios. Nerandate klasės – pasimetimas naujoje sistemoje. Pamiršote tvarkaraštį – jausmas, kad kiti žino taisykles, o jūs ne. Klasiokai – socialinis lyginimas, kartais nostalgija. Senas mokytojas – autoritetas, kurio nuomonė vis dar svarbi.",
+        "Universitetas sapne dažnai reiškia aukštesnį mokymosi lygį: ne faktus, o gyvenimo pamokas. Toks sapnas gali rodyti brandos etapą."
+      ],
+      "variants": [
+        {"situation": "Vėl esate mokykloje suaugęs", "meaning": "Jaučiatės tikrinami arba mokotės naujo. Nepasirengimo jausmas dažniausiai perdėtas."},
+        {"situation": "Nerandate klasės", "meaning": "Pasimetimas naujoje aplinkoje ar sistemoje."},
+        {"situation": "Klasiokai", "meaning": "Socialinis lyginimas, nostalgija arba neužbaigti santykiai iš to laiko."}
+      ],
+      "mindfulness": "Užrašykite, ko šiuo metu mokotės gyvenime – ne kursuose, o realiai: kantrybės, ribų, naujo vaidmens. Pripažinkite, kad esate mokinys, ir tai gerai.",
+      "related": ["egzaminas", "mokytojas", "draugas", "veluoti"]
+    },
+    {
+      "slug": "baznycia",
+      "word": "Bažnyčia",
+      "title": "Sapnuoti bažnyčią",
+      "aliases": ["bažnyčią", "bažnyčios", "šventykla", "malda", "melstis", "kunigas", "altorius"],
+      "short": "Bažnyčia sapne – prasmės, ramybės ir vertybių simbolis. Ji pasirodo, kai ieškote atsakymų, kurių kasdienybė neduoda, arba kai reikia vidinės tylos.",
+      "psychology": [
+        "Nepriklausomai nuo tikėjimo, bažnyčia sapnuose reiškia vietą, kur ieškoma prasmės ir ramybės. Jungas šventyklas laikė „savasties“ (vidinio centro) simboliais. Toks sapnas dažnai pasirodo krizių, netekčių ar didelių sprendimų metu – psichika ieško tvirtesnio pagrindo nei kasdienybė.",
+        "Emocija sapne yra raktas. Ramybė bažnyčioje – vidinio centro radimas, vertybių aiškumas. Nerimas, negalėjimas įeiti, tuščia ar griūvanti bažnyčia – vertybių krizė, jausmas, kad senosios atramos nebeveikia.",
+        "Kunigas ar dvasininkas sapne – vidinis patarėjas, sąžinė, kartais – kaltės tema. Malda sapne – prašymas pagalbos, kurio dieną neišdrįstate ištarti."
+      ],
+      "variants": [
+        {"situation": "Meldžiatės ir jaučiate ramybę", "meaning": "Vidinis centras, prasmės radimas. Sveikas, ramus sapnas."},
+        {"situation": "Tuščia ar griūvanti bažnyčia", "meaning": "Vertybių krizė. Senosios atramos keičiasi."},
+        {"situation": "Negalite įeiti", "meaning": "Kaltė ar jausmas, kad nenusipelnėte ramybės. Verta persvarstyti."}
+      ],
+      "mindfulness": "Skirkite 5 minutes tylai – be muzikos, be ekrano, be užduoties. Bažnyčia sapne dažnai reiškia būtent tylos poreikį, nepriklausomai nuo tikėjimo.",
+      "related": ["laidotuves", "kapines", "sviesa", "vestuves"]
+    },
+    {
+      "slug": "kapines",
+      "word": "Kapinės",
+      "title": "Sapnuoti kapines",
+      "aliases": ["kapines", "kapinių", "kapas", "kapą", "antkapis", "Vėlinės", "lankyti kapus"],
+      "short": "Kapinės sapne – praeities, atminties ir užbaigtų etapų vieta. Toks sapnas retai gąsdina pranašyste; dažniau jis kviečia pagerbti tai, kas baigėsi, ir eiti toliau.",
+      "psychology": [
+        "Kapinės – vieta, kur praeitis turi savo vietą. Sapnuose jos reiškia tai, kas jūsų gyvenime jau baigėsi: santykius, etapus, senas savęs versijas, ir tikrus mirusius artimuosius. Ramus vaikščiojimas po kapines sapne dažniausiai rodo, kad su praeitimi esate susitaikę.",
+        "Nerimas kapinėse, negalėjimas išeiti, atviri kapai – praeitis, kuri dar „nepalaidota“: neužbaigtas gedulas, senos nuoskaudos, kaltė. Tokie sapnai dažnesni prieš metines, Vėlines ar gyvenimo lūžius.",
+        "Savo kapą pamatyti sapne – ne mirties pranašystė, o tapatybės pokytis: sena savęs versija baigė darbą. Dažnai toks sapnas lydi didelius sprendimus."
+      ],
+      "variants": [
+        {"situation": "Lankote artimojo kapą", "meaning": "Gedulo darbas, atmintis. Sveikas ir dažnas sapnas, ypač prieš metines."},
+        {"situation": "Pasiklystate kapinėse", "meaning": "Praeitis, kuri neleidžia eiti pirmyn. Kas dar neužbaigta?"},
+        {"situation": "Savo kapas", "meaning": "Tapatybės pokytis, senos versijos pabaiga. Ne mirties pranašystė."}
+      ],
+      "mindfulness": "Užrašykite vieną dalyką iš praeities, kurį laikas „palaidoti“ – su pagarba, bet galutinai. Kapinės sapne dažnai prašo būtent šio ritualo.",
+      "related": ["mires-zmogus", "laidotuves", "mirtis", "baznycia"]
+    },
+    {
+      "slug": "ligonine",
+      "word": "Ligoninė",
+      "title": "Sapnuoti ligoninę",
+      "aliases": ["ligoninę", "ligoninės", "gydytojas", "operacija", "greitoji", "palata", "sergu"],
+      "short": "Ligoninė sapne – gijimo ir poreikio pasirūpinti savimi simbolis. Retai tai ligos pranašystė; dažniau signalas, kad kažkas jūsų gyvenime reikalauja priežiūros.",
+      "psychology": [
+        "Ligoninė – vieta, kur gydoma. Sapnuose ji reiškia, kad kažkas jumyse reikalauja dėmesio ir gijimo: emocinė žaizda, perdegimas, apleistas kūnas. Tokie sapnai dažni, kai ilgai ignoruojate nuovargį ar skausmą, ir psichika tai parodo tiesiogiai.",
+        "Būti pacientu sapne – poreikis, kad kas nors jumis pasirūpintų; dažnai tai pripažinimas, kad negalite visko atlaikyti vieni. Būti gydytoju ar slaugytoju – rūpestis kitais, kartais – perdėtas, savo sąskaita. Lankyti sergantį – nerimas dėl artimo žmogaus.",
+        "Operacija sapne – gilus pokytis, kuris skauda, bet gydo: santykių pabaiga, tiesos pasakymas, seno įpročio atsisakymas."
+      ],
+      "variants": [
+        {"situation": "Esate pacientas", "meaning": "Poreikis, kad kas nors pasirūpintų. Pripažinimas, kad reikia pagalbos."},
+        {"situation": "Operacija", "meaning": "Skausmingas, bet gydantis pokytis."},
+        {"situation": "Negalite išeiti iš ligoninės", "meaning": "Jaučiatės įstrigę gijimo ar priklausomybės nuo kitų būsenoje."}
+      ],
+      "mindfulness": "Paklauskite savęs sąžiningai: kada paskutinį kartą buvote pas gydytoją profilaktiškai, o kada – gerai išsimiegojote tris naktis iš eilės? Ligoninė sapne dažnai yra kūno prašymas.",
+      "sleep_note": "Jei sapnai apie ligą kartojasi ir lydi realūs simptomai – skausmas, nuolatinis nuovargis, sutrikęs miegas – tai priežastis kreiptis į gydytoją, ne į sapnininką.",
+      "related": ["liga", "mokytojas", "gimdymas", "lova"]
+    },
+    {
+      "slug": "kalejimas",
+      "word": "Kalėjimas",
+      "title": "Sapnuoti kalėjimą",
+      "aliases": ["kalėjimą", "kalėjime", "kamera", "uždarytas", "negaliu išeiti", "grotos", "įkalintas"],
+      "short": "Kalėjimas sapne – suvaržymo ir savęs ribojimo simbolis. Dažniausiai kalėjimą pastatėte patys: iš taisyklių, baimių ar įsipareigojimų, kurių nebeperžiūrite.",
+      "psychology": [
+        "Sapnas apie kalėjimą retai susijęs su tikra bausme. Psichologiškai tai jausmas, kad esate įstrigę: darbe, kurio nemėgstate, santykiuose, kurie nebeauga, vaidmenyje, kurio nepasirinkote. Svarbiausias klausimas: kas laiko duris užrakintas? Dažniausiai atsakymas – jūsų pačių įsitikinimai („negaliu“, „per vėlu“, „ką pasakys“).",
+        "Kaltės tema irgi dažna: kalėjimas kaip bausmė už kažką, ką padarėte ar tik pagalvojote. Tokie sapnai būdingi žmonėms su griežtu vidiniu kritiku.",
+        "Pabėgimas iš kalėjimo sapne – vienas iš labiausiai išlaisvinančių sapnų: pasąmonė jau rado išeitį, kurios sąmonė dar nemato."
+      ],
+      "variants": [
+        {"situation": "Esate įkalintas nežinia už ką", "meaning": "Suvaržymas be aiškios priežasties – dažniausiai savo paties taisyklės."},
+        {"situation": "Pabėgate", "meaning": "Išeitis yra ir jūs ją jau matote. Labai geras ženklas."},
+        {"situation": "Kalėjime kitas žmogus", "meaning": "Matote kažkieno suvaržymą arba norite jį „uždaryti“ – kontrolės tema."}
+      ],
+      "mindfulness": "Užrašykite tris „negaliu“, kuriuos šiandien sau sakėte. Prie kiekvieno parašykite: „Iš tikrųjų – nenoriu / bijau / nusprendžiau.“ Dažnai grotos ištirpsta nuo tikslesnio žodžio.",
+      "related": ["policija", "voras", "durys", "tunelis"]
+    },
+    {
+      "slug": "liftas",
+      "word": "Liftas",
+      "title": "Sapnuoti liftą",
+      "aliases": ["liftą", "lifte", "liftas krenta", "įstrigau lifte", "liftas kyla"],
+      "short": "Liftas sapne – greito kilimo ar kritimo gyvenime simbolis. Įstrigęs liftas – jausmas, kad karjera ar santykiai sustojo tarp aukštų.",
+      "psychology": [
+        "Liftas – judėjimas aukštyn arba žemyn be jūsų pastangų. Sapnuose jis dažniausiai simbolizuoja karjerą, statusą ar emocinę būseną, kuri keičiasi greitai. Kylantis liftas – augimas, pasiekimai, kartais baimė, kad kilimas per greitas. Krentantis liftas – kontrolės praradimo baimė, panaši į kritimo sapną.",
+        "Įstrigti lifte – vienas dažniausių variantų ir reiškia užsistovėjimą: tarp dviejų etapų, tarp sprendimų, tarp „jau ne“ ir „dar ne“. Toks sapnas dažnas laukiant atsakymo – dėl darbo, santykių, sveikatos.",
+        "Liftas, kuris važiuoja ne ten, kur spaudžiate, – jausmas, kad gyvenimo kryptį lemia ne jūs."
+      ],
+      "variants": [
+        {"situation": "Liftas krenta", "meaning": "Kontrolės praradimo baimė, nerimas dėl staigaus nuosmukio."},
+        {"situation": "Įstringate lifte", "meaning": "Užsistovėjimas, laukimas. Tarp etapų."},
+        {"situation": "Liftas kyla per greitai", "meaning": "Sėkmė, kuriai nesijaučiate pasirengę. Apsišaukėlio sindromas."}
+      ],
+      "mindfulness": "Jei jaučiatės „įstrigę tarp aukštų“, užrašykite vieną dalyką, kurį galite padaryti nelaukdami niekieno atsakymo. Liftas sapne dažnai primena, kad laiptai irgi egzistuoja.",
+      "related": ["laiptai", "kristi", "darbas", "kalejimas"]
+    },
+    {
+      "slug": "laiptai",
+      "word": "Laiptai",
+      "title": "Sapnuoti laiptus",
+      "aliases": ["laiptus", "laiptais", "lipti laiptais", "kristi nuo laiptų", "begaliniai laiptai"],
+      "short": "Laiptai sapne – pastangų ir laipsniško judėjimo simbolis. Lipti aukštyn – augimas žingsnis po žingsnio; leistis – grįžimas prie pagrindų ar į pasąmonę.",
+      "psychology": [
+        "Skirtingai nei liftas, laiptai reikalauja pastangų. Sapnuose jie reiškia progresą, kurį darote patys: mokymąsi, karjerą, sveikatos pokyčius. Lipimas aukštyn – tikslo siekimas; nuovargis lipant – pastangos atrodo per didelės; lengvas lipimas – pasitikėjimas.",
+        "Leistis laiptais žemyn – ne būtinai blogai. Jungo požiūriu tai gilinimasis į pasąmonę, praeitį, savo šaknis. Toks sapnas dažnas terapijos ar savęs pažinimo laikotarpiais. Rūsys laiptų apačioje – praeities ir slopinamų jausmų vieta.",
+        "Begaliniai laiptai, sulūžę laipteliai, laiptai, kurie veda į niekur, – jausmas, kad pastangos neduoda rezultato arba kad tikslas neaiškus."
+      ],
+      "variants": [
+        {"situation": "Lipate aukštyn lengvai", "meaning": "Progresas, pasitikėjimas savo pastangomis."},
+        {"situation": "Leidžiatės į rūsį", "meaning": "Gilinimasis į praeitį ar pasąmonę. Dažnai – sveikas procesas."},
+        {"situation": "Laiptai sulūžę ar begaliniai", "meaning": "Pastangos be aiškaus rezultato. Persvarstykite tikslą ar kelią."}
+      ],
+      "mindfulness": "Kitą kartą lipdami tikrais laiptais darykite tai sąmoningai: jauskite kiekvieną laiptelį. Tai mini meditacija ir kartu priminimas, kad progresas yra žingsniai, ne šuoliai.",
+      "related": ["liftas", "kristi", "namas", "kalnas"]
+    },
+    {
+      "slug": "tualetas",
+      "word": "Tualetas",
+      "title": "Sapnuoti tualetą",
+      "aliases": ["tualetą", "tualete", "nerandu tualeto", "viešas tualetas", "tualetas be durų", "nešvarus tualetas"],
+      "short": "Tualetas sapne – vienas dažniausių ir mažiausiai aptariamų sapnų. Jis reiškia poreikį atsikratyti to, kas nebereikalinga, ir privatumo ar ribų klausimą.",
+      "psychology": [
+        "Sapnai apie tualetą yra labai dažni, nors apie juos retai kalbama. Psichologiškai tualetas – vieta, kur atsikratome to, kas nebereikalinga. Sapnas apie tualeto paiešką dažnai reiškia poreikį „išsivalyti“: išsakyti nuoskaudą, atsisakyti įsipareigojimo, paleisti seną istoriją.",
+        "Tualetas be durų, viešas, be privatumo – vienas dažniausių variantų. Jis reiškia ribų problemą: jaučiate, kad neturite asmeninės erdvės, kad kiti mato per daug, kad negalite pasilikti nieko sau. Toks sapnas dažnas tėvams su mažais vaikais ir žmonėms atviro tipo biuruose.",
+        "Nešvarus, užsikimšęs tualetas – susikaupusios, neišreikštos emocijos. Praktinė pastaba: sapnas apie tualeto paiešką kartais tiesiog reiškia, kad kūnui reikia į tualetą. Miego tyrimai tai patvirtina – kūno signalai įsipina į sapnus."
+      ],
+      "variants": [
+        {"situation": "Nerandate tualeto", "meaning": "Poreikis išsakyti ar paleisti, kuriam nerandate vietos ir laiko."},
+        {"situation": "Tualetas be durų ar viešas", "meaning": "Privatumo stoka, ribų problema. Kam reikia pasakyti „čia mano erdvė“?"},
+        {"situation": "Užsikimšęs tualetas", "meaning": "Susikaupusios emocijos ar reikalai, kurių niekaip nepaleidžiate."}
+      ],
+      "mindfulness": "Užrašykite vieną dalyką, kurį nešiojatės, nors jis jau seniai nereikalingas – nuoskaudą, įsipareigojimą, daiktą. Ir tiesiog leiskite jam išeiti.",
+      "related": ["nuogumas", "namas", "durys", "vanduo"]
+    },
+    {
+      "slug": "kelias",
+      "word": "Kelias",
+      "title": "Sapnuoti kelią",
+      "aliases": ["kelią", "kelio", "takas", "kryžkelė", "sankryža", "gatvė", "užtvertas kelias"],
+      "short": "Kelias sapne – gyvenimo krypties simbolis. Tiesus ir aiškus kelias – pasitikėjimas; kryžkelė – sprendimas; užtvertas kelias – kliūtis, kuri dažnai yra vidinė.",
+      "psychology": [
+        "Kelias – bene tiesiausia gyvenimo kelionės metafora. Sapnuose jis rodo, kaip vertinate savo kryptį: platus, apšviestas kelias – aiškumas; siauras, vingiuotas takas – netikrumas, bet ir nuotykis; kelias, kuris dingsta ar baigiasi, – etapo pabaiga be aiškaus tęsinio.",
+        "Kryžkelė – klasikinis sprendimo simbolis. Jei sapne stovite kryžkelėje ir negalite pasirinkti, greičiausiai ir gyvenime atidedate sprendimą. Sapnas nesako, kuris kelias teisingas; jis sako, kad laikas rinktis.",
+        "Užtvertas kelias, kliūtis, statybos – trukdžiai. Svarbu, kaip reaguojate sapne: ieškote aplinkkelio (kūrybiškumas), laukiate (kantrybė ar pasyvumas), grįžtate atgal (baimė)."
+      ],
+      "variants": [
+        {"situation": "Kryžkelė", "meaning": "Sprendimo laikas. Atidėjimas irgi yra sprendimas."},
+        {"situation": "Užtvertas kelias", "meaning": "Kliūtis. Kaip reagavote sapne – taip reaguojate gyvenime."},
+        {"situation": "Kelias baigiasi", "meaning": "Etapo pabaiga. Naujas kelias dar nematomas, bet bus."}
+      ],
+      "mindfulness": "Jei stovite prie sprendimo, užrašykite abu kelius ir prie kiekvieno – ką prarasite. Dažnai bijome ne pasirinkti, o prarasti; kai tai įvardijama, sprendimas lengvėja.",
+      "related": ["keliauti", "automobilis", "pasiklysti", "tiltas", "tunelis"]
+    },
+    {
+      "slug": "tiltas",
+      "word": "Tiltas",
+      "title": "Sapnuoti tiltą",
+      "aliases": ["tiltą", "tilto", "pereiti tiltą", "griūvantis tiltas", "tiltas per upę"],
+      "short": "Tiltas sapne – perėjimo iš vieno etapo į kitą simbolis. Kaip atrodo tiltas ir ar pavyksta jį pereiti, taip vertinate artėjantį pokytį.",
+      "psychology": [
+        "Tiltas jungia du krantus, todėl sapnuose jis reiškia perėjimą: iš seno darbo į naują, iš vienatvės į santykius, iš ligos į sveikatą. Tokie sapnai dažni pokyčių išvakarėse. Tvirtas tiltas – pasitikėjimas, kad pokytis pavyks. Siauras, siūbuojantis, be turėklų – nerimas dėl pokyčio.",
+        "Griūvantis ar sulūžęs tiltas – baimė, kad perėjimas nepavyks arba kad kelio atgal nebus. Tai vienas dažniausių nerimo sapnų prieš didelius sprendimus.",
+        "Stovėti tilto viduryje ir negalėti nei eiti, nei grįžti – klasikinis „tarp dviejų etapų“ sapnas. Jis normalus ir laikinas."
+      ],
+      "variants": [
+        {"situation": "Pereinate tiltą", "meaning": "Pokytis pavyksta. Jūs jau kitame krante."},
+        {"situation": "Tiltas griūva", "meaning": "Baimė, kad pokytis nepavyks. Dažnai perdėta."},
+        {"situation": "Bijote pereiti", "meaning": "Abejonės dėl sprendimo. Ką prarasite, ką rasite?"}
+      ],
+      "mindfulness": "Įsivaizduokite tiltą tarp to, kur esate, ir kur norite būti. Koks pirmas žingsnis ant jo? Tik vienas. Tai užtenka šiandienai.",
+      "related": ["upe", "kelias", "vanduo", "keliauti"]
+    },
+    {
+      "slug": "tunelis",
+      "word": "Tunelis",
+      "title": "Sapnuoti tunelį",
+      "aliases": ["tunelį", "tunelyje", "urvas", "požemis", "šviesa tunelio gale", "tamsus koridorius"],
+      "short": "Tunelis sapne – perėjimo per sunkų etapą simbolis. Tamsa – nežinia, šviesa gale – viltis. Tunelis visada turi išėjimą.",
+      "psychology": [
+        "Tunelis – uždara, tamsi, bet vienakryptė erdvė. Sapnuose jis reiškia laikotarpį, kurį reikia pereiti, o ne apeiti: ligą, gedulą, sunkų darbo etapą, krizę. Tunelio sapnas dažnai pasirodo ne pradžioje, o viduryje sunkumų, kai atrodo, kad pabaigos nematyti.",
+        "Šviesa tunelio gale – vienas universaliausių vilties vaizdinių, ir sapnuose ji beveik visada geras ženklas: pasąmonė mato išeitį. Tunelis be šviesos – nežinia, kartais depresyvi nuotaika; jei toks sapnas kartojasi, verta ieškoti paramos.",
+        "Urvas ar požemis – gilesnė versija: gilinimasis į save, į pasąmonę, į praeitį. Jungas urvą laikė transformacijos vieta – iš jo išeinama kitokiu."
+      ],
+      "variants": [
+        {"situation": "Matote šviesą gale", "meaning": "Viltis, sunkaus etapo pabaiga artėja."},
+        {"situation": "Tunelis be galo, tamsa", "meaning": "Nežinia, nuovargis. Ieškokite paramos, ne tik ištvermės."},
+        {"situation": "Urvas, požemis", "meaning": "Gilinimasis į save. Transformacija."}
+      ],
+      "mindfulness": "Jei esate „tunelyje“, nesistenkite matyti viso kelio. Pakanka matyti vieną žingsnį. Užrašykite jį.",
+      "related": ["tamsa", "sviesa", "kelias", "pasiklysti", "kalejimas"]
+    },
+    {
+      "slug": "parduotuve",
+      "word": "Parduotuvė",
+      "title": "Sapnuoti parduotuvę",
+      "aliases": ["parduotuvę", "parduotuvės", "prekybos centras", "pirkti", "apsipirkimas", "turgus", "kasa"],
+      "short": "Parduotuvė sapne – pasirinkimų ir išteklių simbolis. Ką renkatės, ką galite ar negalite nusipirkti – tai jūsų galimybių ir vertės jausmo atspindys.",
+      "psychology": [
+        "Parduotuvė – vieta, kur renkamės ir keičiame išteklius į tai, ko reikia. Sapnuose ji reiškia gyvenimo pasirinkimus ir jausmą, ar turite pakankamai (pinigų, laiko, energijos, meilės), kad juos įgyvendintumėte. Didelis, gausus prekybos centras – daug galimybių, kartais per daug; tuščios lentynos – trūkumas, nusivylimas.",
+        "Negalėti sumokėti kasoje – dažnas nerimo sapnas: jausmas, kad kažko norite, bet nesate to „verti“ arba neturite pakankamai išteklių. Tai dažniausiai savivertės, ne finansų tema.",
+        "Turgus – gyvesnė, socialesnė versija: derėjimasis, santykių mainai, bendruomenė."
+      ],
+      "variants": [
+        {"situation": "Negalite sumokėti", "meaning": "Jausmas, kad nesate verti to, ko norite, arba kad trūksta išteklių. Dažniausiai – savivertės klausimas."},
+        {"situation": "Tuščios lentynos", "meaning": "Nusivylimas, trūkumas, galimybių stoka."},
+        {"situation": "Negalite išsirinkti", "meaning": "Per daug variantų, sprendimo paralyžius."}
+      ],
+      "mindfulness": "Užrašykite vieną dalyką, kurio šiuo metu norite, bet manote, kad „negalite sau leisti“. Ar tai tikrai apie pinigus? Dažnai – ne.",
+      "related": ["pinigai", "valgyti", "kelias", "drabuziai"]
+    },
+    {
+      "slug": "darbas",
+      "word": "Darbas",
+      "title": "Sapnuoti darbą",
+      "aliases": ["darbą", "darbe", "biuras", "viršininkas", "kolegos", "atleido iš darbo", "naujas darbas", "dirbu sapne"],
+      "short": "Darbas sapne – dažniausiai tęstinumas: dienos rūpesčiai persikelia į naktį. Bet detalės (viršininkas, atleidimas, naujas darbas) kalba apie vertę, kontrolę ir saugumą.",
+      "psychology": [
+        "Sapnai apie darbą – vieni dažniausių suaugusiųjų sapnų, ir tai tiesiogiai patvirtina tęstinumo hipotezę: sapnuojame tai, kuo gyvename. Jei dirbate sapne tą patį, ką dieną, smegenys tiesiog tęsia apdorojimą. Tokie sapnai dažnesni intensyviais laikotarpiais ir yra signalas, kad darbas užima per daug vietos – net naktį.",
+        "Viršininkas sapne – autoriteto ir vertinimo tema, panaši į tėvo ar mokytojo simbolį. Atleidimas iš darbo – saugumo praradimo baimė, kartais – slaptas noras išeiti, kurio sau nepripažįstate. Naujas darbas – pokyčio troškimas ar baimė.",
+        "Jei darbo sapnai neleidžia pailsėti, tai jau miego kokybės klausimas: verta griežčiau atskirti darbą ir poilsį vakare, ypač – nenešti darbo į lovą (nei laptopo, nei minčių)."
+      ],
+      "variants": [
+        {"situation": "Atleidžia iš darbo", "meaning": "Saugumo baimė arba slaptas noras keisti. Kuris variantas – pasakys emocija sapne."},
+        {"situation": "Viršininkas bara", "meaning": "Vertinimo baimė, savikritika."},
+        {"situation": "Naujas darbas", "meaning": "Pokyčio troškimas ar nerimas dėl jo."}
+      ],
+      "mindfulness": "Nustatykite valandą, po kurios darbas baigiasi – ir fiziškai (laptopas uždarytas), ir mintyse (užrašykite rytdienos darbus, kad galva jų nelaikytų). Darbo sapnai dažniausiai mažėja per savaitę.",
+      "sleep_note": "Lova turėtų būti skirta miegui, ne darbui. Jei dirbate lovoje, smegenys nustoja ją sieti su poilsiu – tai viena dažniausių prasto užmigimo priežasčių.",
+      "related": ["tevas", "mokytojas", "pinigai", "veluoti", "egzaminas"]
+    }
+  ]
+}

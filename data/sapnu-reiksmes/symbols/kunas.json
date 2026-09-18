@@ -1,0 +1,160 @@
+{
+  "category": "kunas",
+  "category_name": "Kūnas ir sveikata",
+  "entries": [
+    {
+      "slug": "dantys",
+      "word": "Dantys",
+      "title": "Sapnuoti, kad byra dantys",
+      "aliases": ["dantis", "dantų", "byra dantys", "iškrito dantis", "dantų byrėjimas", "lūžta dantys", "dantistas", "be dantų"],
+      "short": "Dantų byrėjimas – vienas dažniausių sapnų pasaulyje. Jis reiškia bejėgiškumą, savivertės ir įvaizdžio nerimą, o kartais – tiesiog naktinį dantų griežimą.",
+      "psychology": [
+        "Sapnas apie byrančius, lūžtančius ar iškrentančius dantis patenka į vadinamųjų „tipinių sapnų“ sąrašą – jį bent kartą sapnavo didžioji dauguma žmonių. Dantys – tai, kuo kandame, kalbame ir šypsomės, todėl psichologiškai jie siejami su gebėjimu apsiginti, išsakyti save ir su įvaizdžiu. Jų praradimas sapne – bejėgiškumo, gėdos ar kontrolės praradimo jausmas.",
+        "Tyrimai rodo, kad dantų sapnai dažnesni žmonėms, patiriantiems psichologinę įtampą, ir – įdomu – žmonėms, kurie naktį griežia dantimis ar spaudžia žandikaulį (bruksizmas). Kūno pojūtis įsipina į sapną. Jei pabundate su įtemptu žandikauliu ar skaudančiais dantimis, tai fiziologinė, ne simbolinė priežastis, ir verta pasitarti su odontologu.",
+        "Liaudies prietaras, kad dantų byrėjimas pranašauja artimojo mirtį, neturi jokio pagrindo ir tik kelia nereikalingą nerimą. Psichologiškai dantų sapnas dažniausiai kalba apie pereinamąjį etapą (kaip vaikystėje keičiasi dantys) ir baimę atrodyti silpnam."
+      ],
+      "variants": [
+        {"situation": "Dantys byra po vieną", "meaning": "Laipsniškas kontrolės ar pasitikėjimo praradimas. Kas po truputį „byra“ gyvenime?"},
+        {"situation": "Išspjaunate visus dantis", "meaning": "Jausmas, kad prarandate gebėjimą apsiginti ar išsakyti save."},
+        {"situation": "Dantys lūžta valgant", "meaning": "Kažkas, ką bandote „sukramtyti“ (problema, sprendimas), per kieta."}
+      ],
+      "mindfulness": "Pabudę atkreipkite dėmesį į žandikaulį: ar jis suspaustas? Sąmoningai atpalaiduokite jį kelis kartus per dieną. Tai mažina ir bruksizmą, ir dantų sapnus.",
+      "sleep_note": "Jei dantų sapnai kartojasi kartu su rytiniu žandikaulio skausmu ar galvos skausmu, pasitarkite su odontologu dėl bruksizmo – naktinė kapa yra paprastas sprendimas.",
+      "related": ["plaukai", "veidrodis", "nuogumas", "kraujas"]
+    },
+    {
+      "slug": "plaukai",
+      "word": "Plaukai",
+      "title": "Sapnuoti plaukus",
+      "aliases": ["plaukus", "plaukų", "slenka plaukai", "nuplikau", "ilgi plaukai", "žili plaukai", "plaukai iškrenta"],
+      "short": "Plaukai sapne – jėgos, tapatybės ir įvaizdžio simbolis. Slenkantys plaukai – jėgų ar kontrolės praradimo baimė; ilgi, sveiki – gyvybingumas.",
+      "psychology": [
+        "Plaukai daugelyje kultūrų siejami su jėga (Samsono mitas), seksualumu ir tapatybe. Sapnuose jie reiškia jūsų gyvybinę energiją ir tai, kaip save pristatote. Slenkantys ar iškrentantys plaukai – dažnas nerimo sapnas: baimė prarasti jėgą, jaunystę, patrauklumą ar kontrolę. Jis dažnas išsekimo ir perdegimo laikotarpiais.",
+        "Žili plaukai sapne – branda ir išmintis arba senėjimo baimė, priklausomai nuo emocijos. Ilgi, gražūs plaukai – gyvybingumas ir savęs priėmimas. Susivėlę plaukai – sumaištis mintyse.",
+        "Praktinė pastaba: plaukų slinkimas realiai gali būti streso ir miego trūkumo pasekmė, tad sapnas kartais tiesiog atspindi realų rūpestį. Jei taip – sprendimas ne sapnininke, o poilsyje."
+      ],
+      "variants": [
+        {"situation": "Slenka plaukai", "meaning": "Jėgų ar kontrolės praradimo baimė. Išsekimo signalas."},
+        {"situation": "Žili plaukai", "meaning": "Branda arba senėjimo baimė. Ką reiškia jums – pasakys emocija."},
+        {"situation": "Ilgi, gražūs plaukai", "meaning": "Gyvybingumas, savęs priėmimas. Geras ženklas."}
+      ],
+      "mindfulness": "Užrašykite, kas per pastarąjį mėnesį iš jūsų „ištraukė“ daugiausiai jėgų. Plaukų sapnas dažnai yra energijos balanso klausimas.",
+      "related": ["kirpti-plaukus", "dantys", "veidrodis", "liga"]
+    },
+    {
+      "slug": "kraujas",
+      "word": "Kraujas",
+      "title": "Sapnuoti kraują",
+      "aliases": ["kraują", "kraujo", "kraujuoja", "kraujavimas", "kraujas iš nosies", "žaizda kraujuoja"],
+      "short": "Kraujas sapne – gyvybinės energijos, aukos ir gilaus jausmo simbolis. Netekti kraujo – jausmas, kad kažkas eikvoja jūsų jėgas; kraujas ant rankų – kaltė.",
+      "psychology": [
+        "Kraujas – gyvybė ir kartu sužeidimas. Sapnuose jis reiškia gyvybinę energiją ir tai, kas jai nutinka. Kraujavimas – energijos, laiko ar emocijų netekimas: santykis, kuris „nuleidžia kraują“, darbas, kuris išsekina. Toks sapnas dažnas žmonėms, kurie per daug duoda.",
+        "Kraujas ant rankų – klasikinis kaltės simbolis (Makbeto motyvas). Jis retai susijęs su tikru nusikaltimu; dažniau – su jausmu, kad kažką įskaudinote, net jei to nenorėjote. Svetimas kraujas – rūpestis dėl kito žmogaus arba jausmas, kad esate įtraukti į svetimą konfliktą.",
+        "Moterims sapnai apie kraują dažnesni prieš mėnesines ir jų metu – kūnas kalba. Tai tęstinumo hipotezės pavyzdys, ne simbolis."
+      ],
+      "variants": [
+        {"situation": "Kraujuojate ir negalite sustabdyti", "meaning": "Energijos ar emocijų netekimas, kurio nekontroliuojate. Kas jus išsekina?"},
+        {"situation": "Kraujas ant rankų", "meaning": "Kaltė – dažnai perdėta. Ką manote įskaudinę?"},
+        {"situation": "Kraujas iš nosies", "meaning": "Įtampa, spaudimas, dažnai – dėl per didelio krūvio."}
+      ],
+      "mindfulness": "Užrašykite, kam šią savaitę atidavėte daugiausiai energijos, ir kiek jos grįžo. Kraujo sapnas dažnai yra nesubalansuotų mainų vaizdinys.",
+      "related": ["zaizda", "peilis", "liga", "kovotis"]
+    },
+    {
+      "slug": "liga",
+      "word": "Liga",
+      "title": "Sapnuoti ligą",
+      "aliases": ["ligą", "sergu", "sirgti", "vėžys", "karščiuoju", "sergantis žmogus", "diagnozė"],
+      "short": "Liga sapne – dėmesio ir priežiūros poreikio simbolis. Ji retai pranašauja tikrą ligą; dažniau tai signalas, kad kažkas jumyse (kūnas, jausmai, santykiai) reikalauja gijimo.",
+      "psychology": [
+        "Sapnas apie ligą – vienas nerimą keliančių, bet psichologiškai jis beveik visada reiškia ne fizinę, o emocinę ar gyvenimo „ligą“: išsekimą, nesveikus santykius, ignoruojamą nuovargį. Kūnas sapne serga tada, kai kažkas gyvenime „nesveika“ ir prašo dėmesio.",
+        "Konkretaus žmogaus liga sapne – rūpestis dėl jo arba jausmas, kad santykis su juo serga. Nepagydoma liga – jausmas, kad situacija be išeities (dažniausiai perdėtas). Pasveikimas sapne – vienas geriausių ženklų: gijimas jau vyksta.",
+        "Kada verta atkreipti dėmesį tiesiogiai: jei sapnai apie ligą kartojasi ir kartu jaučiate realius simptomus – nuolatinį nuovargį, skausmą, sutrikusį miegą ar apetitą – tai priežastis kreiptis į gydytoją. Sapnas gali būti pirmasis kūno signalas, kurį verta patikrinti, o ne interpretuoti."
+      ],
+      "variants": [
+        {"situation": "Sergate nežinoma liga", "meaning": "Neaiškus išsekimas ar nerimas. Kas gyvenime „nesveika“?"},
+        {"situation": "Serga artimas žmogus", "meaning": "Rūpestis dėl jo ar dėl santykio su juo."},
+        {"situation": "Pasveikstate", "meaning": "Gijimas vyksta. Labai geras ženklas."}
+      ],
+      "mindfulness": "Šiandien padarykite vieną dalyką savo kūnui, kurį atidedate: pasivaikščiokite, išgerkite daugiau vandens, eikite miegoti valanda anksčiau. Ligos sapnas dažnai yra kūno prašymas, kurį girdite tik naktį.",
+      "sleep_note": "Jei sapnai apie ligą lydi realius simptomus – pasitarkite su gydytoju. Sapnininkas nėra diagnostika.",
+      "related": ["ligonine", "kraujas", "mirtis", "plaukai"]
+    },
+    {
+      "slug": "akys",
+      "word": "Akys",
+      "title": "Sapnuoti akis",
+      "aliases": ["akis", "akių", "aklas", "nematau", "negaliu atmerkti akių", "akys užmerktos", "svetimos akys"],
+      "short": "Akys sapne – suvokimo, tiesos ir sąmoningumo simbolis. Negalėti atmerkti akių ar aklumas – nenoras matyti kažko, kas jau aišku.",
+      "psychology": [
+        "Akys – tai, kuo matome ir esame matomi. Sapnuose jos reiškia suvokimą ir tiesą. Aiškios akys – įžvalga, aiškumas. Negalėjimas atmerkti akių, aklumas, neryškus vaizdas – vengimas matyti kažką, kas jau aišku: santykio problemą, sveikatos klausimą, sprendimą, kurį reikia priimti.",
+        "Sapnas „negaliu atmerkti akių“ turi ir fiziologinę pusę: REM miego metu vokai realiai lieka užmerkti, o akys juda – smegenys kartais tai įpina į sapną. Tai dažnas ir nekenksmingas reiškinys.",
+        "Svetimos akys, kurios stebi, – vertinimo baimė ar jausmas, kad esate stebimi. Akių spalva ar išraiška sapne dažnai reiškia emociją, kurią pastebėjote kitame žmoguje, bet dieną neįvertinote."
+      ],
+      "variants": [
+        {"situation": "Negalite atmerkti akių", "meaning": "Nenoras matyti to, kas aišku. Dažnai – ir REM miego fiziologija."},
+        {"situation": "Aklumas", "meaning": "Vengimas tiesos ar jausmas, kad trūksta informacijos."},
+        {"situation": "Kažkas stebi", "meaning": "Vertinimo baimė, socialinis spaudimas."}
+      ],
+      "mindfulness": "Užrašykite vieną dalyką, kurį „matote“, bet apsimetate nematantys. Vien įvardijimas dažnai sumažina tokių sapnų dažnį.",
+      "related": ["veidrodis", "sviesa", "tamsa", "nuogumas"]
+    },
+    {
+      "slug": "rankos",
+      "word": "Rankos",
+      "title": "Sapnuoti rankas",
+      "aliases": ["rankas", "rankų", "pirštai", "sužeista ranka", "nėra rankų", "nešvarios rankos", "prausti rankas"],
+      "short": "Rankos sapne – veiksmo, gebėjimų ir ryšio su kitais simbolis. Sužeistos ar nejudančios rankos – jausmas, kad negalite veikti; nešvarios – kaltė.",
+      "psychology": [
+        "Rankomis dirbame, kuriame, liečiame ir laikome. Sapnuose jos reiškia jūsų gebėjimą veikti ir įtaką pasauliui. Stiprios, veiklios rankos – pasitikėjimas savo gebėjimais. Sužeistos, surištos, nejudančios – bejėgiškumas, jausmas, kad negalite paveikti situacijos.",
+        "Nešvarios rankos – kaltė ar jausmas, kad įsivėlėte į kažką, kas jums „netinka“. Prausti rankas – noras atsiriboti nuo atsakomybės (Piloto motyvas) arba apsivalyti. Laikyti kito žmogaus ranką – ryšys, parama, pasitikėjimas.",
+        "Kaip ir su kojomis, nejudančios rankos sapne dažnai yra REM atonijos atspindys – kūnas realiai negali judėti."
+      ],
+      "variants": [
+        {"situation": "Rankos nejuda ar surištos", "meaning": "Bejėgiškumas. Dažnai – REM atonijos atspindys."},
+        {"situation": "Nešvarios rankos", "meaning": "Kaltė ar jausmas, kad įsivėlėte į kažką netinkamo."},
+        {"situation": "Laikote kito ranką", "meaning": "Ryšys, parama, pasitikėjimas. Geras ženklas."}
+      ],
+      "mindfulness": "Užrašykite vieną dalyką, kurį šiuo metu galite padaryti savo rankomis – ne planuoti, ne svarstyti, o padaryti. Ir padarykite šiandien.",
+      "related": ["kojos", "ziedas", "kovotis", "kraujas"]
+    },
+    {
+      "slug": "kojos",
+      "word": "Kojos",
+      "title": "Sapnuoti kojas",
+      "aliases": ["kojas", "kojų", "negaliu paeiti", "kojos nejuda", "sunkios kojos", "sužeista koja", "be kojų", "pėdos"],
+      "short": "Kojos sapne – stabilumo, savarankiškumo ir judėjimo pirmyn simbolis. Kojos, kurios nejuda ar yra sunkios, – dažniausiai REM miego fiziologija, kartais – įstrigimo jausmas.",
+      "psychology": [
+        "Kojos neša mus per gyvenimą ir laiko ant žemės. Sapnuose jos reiškia stabilumą ir gebėjimą judėti pirmyn. Stiprios kojos – pasitikėjimas savo pagrindu. Sužeistos, silpnos, nejudančios – jausmas, kad negalite eiti toliau arba kad kažkas atėmė stabilumą.",
+        "Sapnas „kojos nejuda“, „bėgu, bet nepajudu iš vietos“, „kojos kaip iš švino“ – vienas dažniausių, ir jo pagrindinė priežastis fiziologinė: REM miego metu kūno raumenys išjungti (atonija), ir smegenys tai įpina į sapną. Tai visiškai normalu. Jei sapnas kartojasi kartu su gyvenimo situacija, kurioje jaučiatės įstrigę, abu sluoksniai veikia kartu.",
+        "Pėdos – ryšys su žeme ir realybe. Basos pėdos sapne – žr. batai."
+      ],
+      "variants": [
+        {"situation": "Kojos nejuda, negalite bėgti", "meaning": "REM atonija sapne. Kartais – įstrigimo jausmas gyvenime."},
+        {"situation": "Sužeista koja", "meaning": "Stabilumo praradimas, sunkumas judėti pirmyn."},
+        {"situation": "Stiprios kojos, lengvai einate", "meaning": "Pasitikėjimas savo pagrindu ir kryptimi."}
+      ],
+      "mindfulness": "Atsistokite ir minutę jauskite, kaip pėdos remiasi į grindis. Tai „įžeminimo“ pratimas, kuris realiai mažina nerimą ir grąžina stabilumo jausmą.",
+      "related": ["rankos", "batai", "begti", "kelias", "miego-paralyzius"]
+    },
+    {
+      "slug": "zaizda",
+      "word": "Žaizda",
+      "title": "Sapnuoti žaizdą",
+      "aliases": ["žaizdą", "žaizdos", "sužeistas", "sužeidimas", "randas", "skausmas", "traumą"],
+      "short": "Žaizda sapne – emocinio sužeidimo, kuris dar negijo, simbolis. Kur žaizda – ten ir tema: širdis – santykiai, rankos – veikla, galva – mintys.",
+      "psychology": [
+        "Žaizda sapne beveik visada reiškia emocinę žaizdą – nuoskaudą, netektį, išdavystę, kuri dar neužgijo. Vieta kūne pasako temą: krūtinė ir širdis – meilė ir santykiai; rankos – darbas ir veiksmas; kojos – stabilumas; galva – mintys ir savivertė; nugara – tai, ko nematote, dažnai – išdavystė („peilis į nugarą“).",
+        "Sena žaizda, kuri vėl atsiveria, – nuoskauda, kurią laikėte užgijusia, bet kažkas ją vėl palietė. Randas – žaizda užgijo, bet paliko pėdsaką; tai brandos, ne silpnumo ženklas.",
+        "Gydyti žaizdą sapne – sau ar kitam – gijimo procesas jau vyksta. Ignoruoti žaizdą – vengimas, kuris ją tik gilina."
+      ],
+      "variants": [
+        {"situation": "Žaizda neužgyja", "meaning": "Nuoskauda, kurios nesprendžiate. Kas ją vis atveria?"},
+        {"situation": "Gydote žaizdą", "meaning": "Gijimas vyksta. Geras ženklas."},
+        {"situation": "Randas", "meaning": "Užgijusi patirtis, kuri tapo dalimi jūsų. Branda."}
+      ],
+      "mindfulness": "Uždėkite ranką ant tos kūno vietos, kur sapne buvo žaizda, ir kelis kartus lėtai įkvėpkite. Šis paprastas gestas – savęs raminimo praktika, kurią naudoja ir psichoterapeutai.",
+      "related": ["kraujas", "liga", "peilis", "ligonine"]
+    }
+  ]
+}

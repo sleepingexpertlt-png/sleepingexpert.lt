@@ -1,0 +1,161 @@
+{
+  "category": "busenos",
+  "category_name": "Sapnų būsenos ir reiškiniai",
+  "entries": [
+    {
+      "slug": "kosmaras",
+      "word": "Košmaras",
+      "title": "Košmarai: ką jie reiškia ir ką daryti",
+      "aliases": ["košmarai", "košmarą", "baisus sapnas", "blogi sapnai", "pabudau iš siaubo", "naktiniai košmarai"],
+      "short": "Košmaras – sapnas, nuo kurio pabundate su stipria baime. Retkarčiais tai normalu ir netgi naudinga; dažni košmarai – signalas, kad nervų sistemai reikia pagalbos.",
+      "psychology": [
+        "Košmarai – natūrali miego dalis: juos retkarčiais sapnuoja dauguma suaugusiųjų, o vaikai – dar dažniau. Grėsmės simuliacijos teorija teigia, kad košmarai yra evoliucinis treniruoklis – smegenys naktį repetuoja pavojus. Emocijų reguliavimo tyrimai (M. Walker) priduria, kad REM miegas padeda „nukenksminti“ dienos baimes; košmaras – tai, kai šis procesas nesuspėja.",
+        "Košmarai dažnėja stresiniais laikotarpiais, po traumuojančių įvykių, sergant karščiuojant, vartojant kai kuriuos vaistus ar alkoholį prieš miegą (alkoholis slopina REM miegą, o jam grįžtant sapnai tampa intensyvesni). Dažni košmarai – daugiau nei kartą per savaitę ilgiau nei mėnesį – jau laikomi miego sutrikimu ir yra gydomi.",
+        "Vienas iš geriausiai ištirtų metodų – vaizduotės repeticijos terapija (Imagery Rehearsal Therapy, B. Krakow): pasikartojantį košmarą užrašote, sugalvojate jam kitą pabaigą ir dieną kelias minutes ją įsivaizduojate. Tyrimai rodo, kad tai realiai mažina košmarų dažnį per kelias savaites. Tai galima daryti ir savarankiškai."
+      ],
+      "variants": [
+        {"situation": "Retas košmaras po sunkios dienos", "meaning": "Normalu. Smegenys apdoroja stresą. Nereikia nieko daryti."},
+        {"situation": "Pasikartojantis košmaras", "meaning": "Neišspręsta tema. Pabandykite vaizduotės repeticiją: perrašykite pabaigą."},
+        {"situation": "Košmarai kelis kartus per savaitę ilgiau nei mėnesį", "meaning": "Miego sutrikimas, kurį verta aptarti su gydytoju ar psichologu. Gydoma."}
+      ],
+      "mindfulness": "Po košmaro neskubėkite vėl užmigti su ta pačia baime. Atsisėskite, įjunkite silpną šviesą, tris kartus lėtai iškvėpkite ilgiau nei įkvepiate. Pasakykite sau: „Tai buvo sapnas, aš esu čia.“ Tada grįžkite.",
+      "sleep_note": "Košmarus dažnina alkoholis prieš miegą, vėlyva sunki vakarienė, per šiltas kambarys ir miego trūkumas. Reguliarus miego laikas ir vėsus, tamsus miegamasis – pirmieji žingsniai.",
+      "related": ["begti", "kristi", "baime", "pasikartojantis-sapnas", "miego-paralyzius"]
+    },
+    {
+      "slug": "pasikartojantis-sapnas",
+      "word": "Pasikartojantis sapnas",
+      "title": "Pasikartojantys sapnai: kodėl jie grįžta",
+      "aliases": ["pasikartojantys sapnai", "tas pats sapnas", "sapnuoju tą patį", "vis sapnuoju", "sapnas kartojasi"],
+      "short": "Pasikartojantis sapnas – psichikos būdas grąžinti temą, kuri dieną liko neišspręsta. Jis dažniausiai baigiasi tada, kai tema išsprendžiama arba kai sapnui sąmoningai duodama kita pabaiga.",
+      "psychology": [
+        "Pasikartojančius sapnus patiria dauguma žmonių, dažniausiai – vaikystėje ar paauglystėje, bet ir suaugę. Tyrimai rodo, kad jų turinys dažniausiai neigiamas (persekiojimas, kritimas, vėlavimas, egzaminas) ir jie susiję su neišspręstais rūpesčiais. Kai rūpestis išsprendžiamas, sapnas paprastai nustoja kartotis. Tai vienas aiškiausių įrodymų, kad sapnai atspindi budrų gyvenimą.",
+        "Sapnas gali kartotis metų metus su nedideliais pokyčiais. Pokyčiai verti dėmesio: jei persekiotojas priartėja arba jūs pirmą kartą atsisukate – tema juda. Jei sapnas kartojasi visiškai identiškai – tema užstrigusi.",
+        "Ką daryti: užrašykite sapną kuo detaliau. Paklauskite, kokia emocija jame dominuoja ir kur dieną jaučiate tą pačią emociją. Tada – vaizduotės repeticija: sugalvokite sapnui kitą pabaigą, kurioje jaučiatės saugiai ar stipriai, ir 5 minutes per dieną ją įsivaizduokite. Daugumai žmonių sapnas pasikeičia per 2–4 savaites."
+      ],
+      "variants": [
+        {"situation": "Sapnas iš vaikystės grįžta suaugus", "meaning": "Sena tema vėl aktuali. Kas gyvenime primena tą laikotarpį?"},
+        {"situation": "Sapnas kartojasi, bet keičiasi", "meaning": "Tema juda. Pastebėkite, kas keičiasi – tai progreso ženklas."},
+        {"situation": "Identiškas sapnas metų metus", "meaning": "Užstrigusi tema. Vaizduotės repeticija arba pokalbis su specialistu."}
+      ],
+      "mindfulness": "Užrašykite pasikartojantį sapną ir šalia – kitą pabaigą, kurią norėtumėte. Skaitykite ją prieš miegą kelis vakarus. Tai ne magija, o ištirtas metodas.",
+      "related": ["kosmaras", "begti", "egzaminas", "kristi", "samoningas-sapnas"]
+    },
+    {
+      "slug": "samoningas-sapnas",
+      "word": "Sąmoningas sapnas",
+      "title": "Sąmoningi (lucidiniai) sapnai: kai supranti, kad sapnuoji",
+      "aliases": ["sąmoningi sapnai", "lucidinis sapnas", "lucid dream", "suprantu kad sapnuoju", "valdyti sapną", "sapnų valdymas"],
+      "short": "Sąmoningas sapnas – kai sapnuodami suvokiate, kad sapnuojate, ir kartais galite sapną valdyti. Tai normalus, tyrimais patvirtintas reiškinys, kurio galima išmokti.",
+      "psychology": [
+        "Sąmoningi (lucidiniai) sapnai – mokslo pripažintas reiškinys: juos bent kartą gyvenime patyrė apie pusę žmonių, o kai kurie – reguliariai. Miego laboratorijose sąmoningi sapnuotojai gali iš anksto sutartais akių judesiais signalizuoti, kad suvokia sapnuojantys – tai įrodo, kad reiškinys tikras, ne pasakojimas.",
+        "Kam tai naudinga: sąmoningi sapnai naudojami košmarų terapijoje (suvokus, kad sapnuoji, galima atsisukti į persekiotoją), kūrybai ir tiesiog malonumui (skrydžiai – dažniausia sąmoningų sapnų veikla). Jie nekenksmingi, bet intensyvios pastangos juos sukelti gali trikdyti miego kokybę, todėl saikas svarbus.",
+        "Kaip išmokti: sapnų dienoraštis (didina sapnų prisiminimą), „tikrovės testai“ dieną (pažiūrėti į tekstą ar laikrodį du kartus – sapne jie keičiasi), ir tiesiog ketinimas prieš miegą: „šiąnakt suprasiu, kad sapnuoju“. Daugumai žmonių pirmas sąmoningas sapnas įvyksta per kelias savaites praktikos."
+      ],
+      "variants": [
+        {"situation": "Suprantate, kad sapnuojate, ir pabundate", "meaning": "Dažniausia pradžia. Su praktika sapnas tęsiasi ilgiau."},
+        {"situation": "Valdote sapną", "meaning": "Pilnas sąmoningas sapnas. Naudokite jį košmarams keisti ar tiesiog skrydžiui."},
+        {"situation": "Sąmoningas sapnas virsta nemalonus", "meaning": "Retas atvejis. Priminkite sau, kad tai sapnas, ir leiskite jam baigtis."}
+      ],
+      "mindfulness": "Šiandien tris kartus paklauskite savęs: „Ar aš sapnuoju?“ – ir sąžiningai patikrinkite (perskaitykite tekstą, pažiūrėkite į rankas). Šis įprotis persikelia į sapnus.",
+      "related": ["skristi", "kosmaras", "pasikartojantis-sapnas", "knyga", "sapnas-sapne"]
+    },
+    {
+      "slug": "miego-paralyzius",
+      "word": "Miego paralyžius",
+      "title": "Miego paralyžius: negaliu pajudėti, kažkas kambaryje",
+      "aliases": ["negaliu pajudėti", "negaliu pabusti", "slogutis", "kažkas slegia krūtinę", "kažkas kambaryje", "pabudau ir negaliu judėti", "sapnų paralyžius"],
+      "short": "Miego paralyžius – trumpa būsena tarp miego ir budrumo, kai protas jau pabudo, o kūnas dar „išjungtas“. Dažnai lydi baisūs vaizdiniai. Tai nekenksminga, dažna ir turi aiškų fiziologinį paaiškinimą.",
+      "psychology": [
+        "Miego paralyžius yra ne sapnas ir ne mistika, o REM miego mechanizmo ypatybė. REM fazėje kūno raumenys išjungiami (atonija), kad nevaidintume sapnų. Kartais protas pabunda anksčiau nei ši atonija išsijungia – ir kelias sekundes ar minutes negalite pajudėti, nors viską suvokiate. Lietuvių tautosakoje tai vadinta „slogučiu“; visame pasaulyje žmonės tai apibūdina beveik vienodai: negali judėti, kažkas slegia krūtinę, jaučia kažkieno buvimą.",
+        "Baisūs vaizdiniai (figūra kambaryje, spaudimas, garsai) atsiranda todėl, kad smegenys vis dar iš dalies sapno režime, o baimė dėl negalėjimo judėti tuos vaizdinius sustiprina. Tai vadinamos hipnagoginės ar hipnopompinės haliucinacijos – normalus reiškinys.",
+        "Miego paralyžių bent kartą patiria maždaug kas penktas–dešimtas žmogus. Jį dažnina miego trūkumas, nereguliarus miego laikas, miegojimas ant nugaros, stresas ir alkoholis. Jis praeina pats per kelias sekundes ar minutes ir nėra pavojingas. Jei kartojasi dažnai ir trikdo – verta pasitarti su gydytoju, nes retais atvejais jis susijęs su kitais miego sutrikimais."
+      ],
+      "variants": [
+        {"situation": "Negalite pajudėti kelias sekundes pabudę", "meaning": "Klasikinis miego paralyžius. Nekenksmingas. Praeina pats."},
+        {"situation": "Jaučiate figūrą ar spaudimą ant krūtinės", "meaning": "Hipnopompinė haliucinacija. Normalus reiškinys, ne antgamtinis."},
+        {"situation": "Kartojasi kelis kartus per savaitę", "meaning": "Patikrinkite miego rutiną. Jei nepadeda – gydytojas."}
+      ],
+      "mindfulness": "Jei tai nutinka: nesipriešinkite ir nebandykite judėti visu kūnu. Sutelkite dėmesį į kvėpavimą (jis veikia) ir pabandykite pajudinti tik pirštą ar akis. Priminkite sau: „Tai miego paralyžius, jis praeis per minutę.“ Baimė jį tik prailgina.",
+      "sleep_note": "Reguliarus miego laikas, 7–9 val. miego ir miegojimas ant šono (ne ant nugaros) – trys veiksniai, kurie labiausiai mažina miego paralyžiaus dažnį. Tinkama pagalvė, palaikanti šoninę padėtį, čia realiai padeda.",
+      "related": ["kosmaras", "begti", "kojos", "baime", "tamsa"]
+    },
+    {
+      "slug": "baime",
+      "word": "Baimė sapne",
+      "title": "Sapnuoti stiprią baimę",
+      "aliases": ["baimė", "bijau", "siaubas", "panika sapne", "nerimas sapne", "pabudau išsigandęs"],
+      "short": "Baimė – dažniausia sapnų emocija. Ji ne visada reiškia problemą: smegenys naktį repetuoja pavojus, ir tai natūralu. Svarbu, kiek dažnai ir kiek stipriai.",
+      "psychology": [
+        "Sapnų turinio tyrimai (C. Hall ir R. Van de Castle metodika) nuosekliai rodo, kad neigiamos emocijos sapnuose dažnesnės nei teigiamos, o baimė – dažniausia iš jų. Tai nėra ženklas, kad kažkas negerai; grėsmės simuliacijos teorija tai aiškina kaip evoliucinį treniruoklį. Retkarčiais sapnuoti baimę yra sveika.",
+        "Baimė sapne dažnai neturi aiškaus objekto – tiesiog jaučiate siaubą be priežasties. Tai reiškia, kad emocija apdorojama atskirai nuo siužeto. Klausimas dieną: kur jaučiu tą pačią baimę, tik tylesnę? Dažnai atsakymas – nerimas dėl ateities, sveikatos, santykių, kurį dieną slopinate.",
+        "Kada verta susirūpinti: jei baimės sapnai dažni (kelis kartus per savaitę), trikdo miegą, ir dieną jaučiate nuolatinį nerimą – tai nerimo sutrikimo požymis, kuris gerai gydomas. Kreiptis į psichologą dėl sapnų nėra keista; sapnai – vienas informatyviausių nerimo rodiklių."
+      ],
+      "variants": [
+        {"situation": "Baimė be aiškaus objekto", "meaning": "Emocija apdorojama atskirai. Kur dieną jaučiate tylią baimę?"},
+        {"situation": "Baimė dėl artimo žmogaus", "meaning": "Rūpestis, kurį dieną laikote „per dideliu“, kad apie jį kalbėtumėte."},
+        {"situation": "Baimė kartojasi kas naktį", "meaning": "Nerimo lygis per aukštas. Verta pagalbos – tai gydoma."}
+      ],
+      "mindfulness": "Pabudę po baisaus sapno padėkite abi pėdas ant grindų ir įvardykite penkis daiktus, kuriuos matote. Tai „5-4-3-2-1“ įžeminimo technika, kuri per minutę sugrąžina į realybę.",
+      "related": ["kosmaras", "begti", "kristi", "tamsa", "miego-paralyzius"]
+    },
+    {
+      "slug": "sapnas-sapne",
+      "word": "Sapnas sapne",
+      "title": "Sapnuoti, kad pabudote, bet vis dar sapnuojate",
+      "aliases": ["klaidingas pabudimas", "sapnas sapne", "pabudau sapne", "sapnavau kad pabudau", "netikras pabudimas"],
+      "short": "Klaidingas pabudimas – sapnas, kuriame „pabundate“, keliatės, pradedate dieną, o paskui pabundate iš tikrųjų. Tai dažnas, nekenksmingas reiškinys, dažnesnis pervargus ar prieš svarbią dieną.",
+      "psychology": [
+        "Klaidingas pabudimas (angl. false awakening) – vienas keisčiausių ir kartu dažnų sapnų reiškinių. Sapnuojate, kad pabudote savo lovoje, keliatės, valotės dantis – ir tik po kurio laiko (arba tikro pabudimo) suprantate, kad tai buvo sapnas. Kartais tai kartojasi kelis kartus iš eilės.",
+        "Tyrimai sieja klaidingus pabudimus su sąmoningais sapnais (jie dažnai eina kartu) ir su padidėjusiu nerimu dėl ryto: prieš svarbų įvykį, kelionę, egzaminą smegenys „repetuoja“ pabudimą. Miego trūkumas ir nereguliarus grafikas juos dažnina.",
+        "Psichologiškai pasikartojantys klaidingi pabudimai gali atspindėti jausmą, kad gyvenate „autopilotu“: keliatės, darote tą patį, o iš tikrųjų nesate pabudę. Tai kvietimas paklausti, kiek dienos praleidžiate sąmoningai."
+      ],
+      "variants": [
+        {"situation": "Vienas klaidingas pabudimas", "meaning": "Normalu, ypač prieš svarbią dieną. Nieko daryti nereikia."},
+        {"situation": "Keli iš eilės", "meaning": "Pervargimas ar nerimas dėl ryto. Patikrinkite miego kiekį."},
+        {"situation": "Klaidingas pabudimas virsta sąmoningu sapnu", "meaning": "Puiki galimybė: supratę, kad sapnuojate, galite sapną tyrinėti."}
+      ],
+      "mindfulness": "Rytą, pabudę iš tikrųjų, prieš keldamiesi 30 sekundžių tiesiog pajuskite, kad esate čia: kūnas, lova, kvėpavimas. Sąmoningas pabudimas mažina ir klaidingus pabudimus, ir „autopiloto“ dienas.",
+      "related": ["samoningas-sapnas", "lova", "veluoti", "miego-paralyzius"]
+    },
+    {
+      "slug": "tamsa",
+      "word": "Tamsa",
+      "title": "Sapnuoti tamsą",
+      "aliases": ["tamsą", "tamsoje", "tamsu", "nieko nematau", "naktis", "tamsus kambarys", "užgeso šviesa"],
+      "short": "Tamsa sapne – nežinios, baimės ir kartu poilsio simbolis. Grėsminga tamsa – nerimas dėl to, ko nematote; rami tamsa – poreikis atsitraukti ir pailsėti.",
+      "psychology": [
+        "Tamsa – tai, ko nematome. Sapnuose ji reiškia nežinią: situaciją, kurios negalite įvertinti, ateitį, kuri neaiški, savo dalį, kurios nepažįstate (Jungo „šešėlis“). Baimė tamsoje sapne beveik visada yra baimė nežinomybės, o ne konkretaus dalyko.",
+        "Kartu tamsa – poilsio ir atsinaujinimo vieta. Sėkla dygsta tamsoje, miegame tamsoje. Rami tamsa sapne gali reikšti, kad psichikai reikia atsitraukimo nuo per didelio stimuliavimo. Užgesusi šviesa – energijos ar vilties praradimas, dažnai laikinas.",
+        "Praktinė pastaba: sapnai apie tamsą kartais tiesiog atspindi aplinką – per tamsų ar, priešingai, per šviesų miegamąjį, kai smegenys „ieško“ tamsos. Visiška tamsa miegamajame gerina miego kokybę."
+      ],
+      "variants": [
+        {"situation": "Bijote tamsoje", "meaning": "Nežinomybės baimė. Kas gyvenime šiuo metu neaišku?"},
+        {"situation": "Rami tamsa", "meaning": "Poilsio ir atsitraukimo poreikis."},
+        {"situation": "Užgęsta šviesa", "meaning": "Energijos ar vilties praradimas. Dažniausiai laikinas."}
+      ],
+      "mindfulness": "Vakare 10 minučių pabūkite pusiau tamsoje be ekranų. Tai ne tik mindfulness, bet ir melatonino (miego hormono) gamybos paskata.",
+      "sleep_note": "Kuo tamsesnis miegamasis, tuo geresnis miegas. Užuolaidos, kurios nepraleidžia šviesos, arba miego kaukė – vienas paprasčiausių miego kokybės patobulinimų.",
+      "related": ["sviesa", "tunelis", "baime", "menulis", "miego-paralyzius"]
+    },
+    {
+      "slug": "sviesa",
+      "word": "Šviesa",
+      "title": "Sapnuoti šviesą",
+      "aliases": ["šviesą", "šviesu", "ryški šviesa", "šviesa tunelio gale", "žvakė", "lempa", "spindulys"],
+      "short": "Šviesa sapne – aiškumo, vilties ir sąmoningumo simbolis. Ji pasirodo, kai psichika randa išeitį iš neaiškios situacijos arba kai kažką svarbaus suvokiate.",
+      "psychology": [
+        "Šviesa – matymas ir supratimas. Sapnuose ji reiškia aiškumą, įžvalgą ir viltį. Sapnas, kuriame tamsoje atsiranda šviesa, dažnai lydi sprendimo radimą, sveikimą, gedulo išėjimą. Tai vienas teigiamiausių sapnų vaizdinių ir vertas pasitikėjimo.",
+        "Per ryški, akinanti šviesa – per daug informacijos, per daug dėmesio, per daug „matomumo“. Toks sapnas dažnas žmonėms, kurie jaučiasi viešai vertinami. Žvakė – maža, bet sava šviesa: viltis sunkiu laikotarpiu, ramybė, kartais – atmintis apie mirusį artimąjį.",
+        "Praktinė pastaba: ryškios šviesos sapnai kartais atspindi tikrą šviesą miegamajame – gatvės žibintą, ekraną, ankstyvą saulę. Smegenys ją įpina į sapną."
+      ],
+      "variants": [
+        {"situation": "Šviesa tamsoje", "meaning": "Išeitis, viltis, sprendimas. Labai geras ženklas."},
+        {"situation": "Akinanti šviesa", "meaning": "Per daug stimulų ar dėmesio. Poilsio poreikis."},
+        {"situation": "Žvakė", "meaning": "Maža, sava viltis. Ramybė. Kartais – atmintis."}
+      ],
+      "mindfulness": "Ryte 5 minutes pabūkite natūralioje dienos šviesoje – prie lango ar lauke. Tai sureguliuoja vidinį laikrodį ir dažnai pagerina ne tik miegą, bet ir nuotaiką.",
+      "related": ["tamsa", "saule", "tunelis", "auksas", "akys"]
+    }
+  ]
+}
