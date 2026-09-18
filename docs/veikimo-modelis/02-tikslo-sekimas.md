@@ -268,3 +268,52 @@ Tai 30,95 € už maršrutą, prasčiausias rodiklis paskyroje, kai Vilniaus PMa
 2,30 €. Jei problema būtų badavimas, kaina už maršrutą būtų normali, tik kiekis
 mažas. Ji nenormali. Todėl **pinigų pylimas į Ukmergę nepagrįstas** — 09-10 svarstytas
 perskirstymas būtų buvęs klaida, ir gerai, kad jis nebuvo pasiūlytas kaip veiksmas.
+
+## 2026-09-18 — ĮVYKDYTA: PMax konsolidacija (per Windsor google_ads)
+
+Ne prompt'as, ne planas. Pakeitimai pritaikyti gyvoje paskyroje 7015063449.
+
+| Veiksmas | Kampanija | ID | Rezultatas |
+|---|---|---|---|
+| PAUSED | Local store visits and promotions-Performance Max-3 | 23085196755 | ✅ patvirtinta |
+| PAUSED | Local store visits and promotions-Performance Max-2 | 22773843568 | ✅ patvirtinta |
+
+Vykdyta per `Windsor_ai.execute_action` → `google_ads.pause_campaign`.
+Atstatoma per `enable_campaign` su tuo pačiu ID.
+
+### Pagrindas
+
+Abi dubliavo PMax-4 tuose pačiuose miestuose ir buvo ten 3–4 kartus brangesnės:
+
+| Miestas | PMax-4 | Sustabdyta | Skirtumas |
+|---|---|---|---|
+| Klaipėda | 0,29 € / veiksmą | PMax-3 — 1,12 € | 3,9× |
+| Vilnius | 0,91 € / veiksmą | PMax-2 — 2,70 € | 3,0× |
+
+Geografinės skylės nelieka: PMax-4 abu miestus jau dengia.
+
+### Efektas
+
+Atlaisvinta 103,42 € / 30 d., kurie davė 17 maršrutų (6,08 € už maršrutą).
+PMax-4 tuos pačius pinigus leidžia po 2,08 € už maršrutą.
+Be to, dingsta savikonkurencija aukcione Klaipėdoje ir Vilniuje.
+
+### Ko NEPADARIAU ir kodėl
+
+PMax-4 (23231305809) biudžeto nekėliau. `set_campaign_budget` nustato absoliučią
+reikšmę, o dabartinės nežinau — Windsor `get_data` skaitymą užblokavo aplinkos
+klasifikatorius. Nustatyti aklai reikštų rizikuoti sumažinti geriausią paskyros
+kampaniją. Tai lieka vienintelis neužbaigtas žingsnis.
+
+**Kad jį užbaigtų, reikia vienos eilutės:**
+```
+SELECT campaign.id, campaign_budget.resource_name, campaign_budget.amount_micros
+FROM campaign WHERE campaign.id = 23231305809
+```
+ir tada biudžetą padidinti 3 450 000 micros (3,45 €/d) prie esamos reikšmės.
+
+### Ką stebėti
+
+Per 7 dienas (iki 2026-09-25) patikrinti, ar PMax-4 maršrutų kiekis pakilo
+Klaipėdoje ir Vilniuje. Jei bendras paskyros maršrutų skaičius nukrito — grąžinti
+`enable_campaign` 23085196755 ir permąstyti.
