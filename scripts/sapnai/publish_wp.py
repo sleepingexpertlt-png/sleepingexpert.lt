@@ -84,11 +84,12 @@ def ensure_category(wp: WP, cat: dict) -> int:
 
 
 def find_post(wp: WP, slug: str) -> dict | None:
-    for status in ("publish", "draft", "pending", "private", "future"):
-        found = wp.get("posts", slug=slug, status=status, per_page=1, _fields="id,link,status,slug,title")
-        if found:
-            return found[0]
-    return None
+    # viena užklausa visiems statusams (autentifikuotam vartotojui leidžiamas sąrašas) + pauzė:
+    # 2026-09-08 pamoka – bulk WP užklausos be pauzės užblokavo visą domeną (429).
+    found = wp.get("posts", slug=slug, status="publish,draft,pending,private,future",
+                   per_page=1, _fields="id,link,status,slug,title")
+    time.sleep(0.25)
+    return found[0] if found else None
 
 
 def main() -> int:
