@@ -52,3 +52,50 @@ Vykdyti per VPS `google_ads_agent.py` arba Google Ads sąsajoje.
 Radiuso taškus geriausia rinkti sąsajoje, kur matomas žemėlapis.
 
 Po pakeitimo matuoti 14 d.: ar Vilniaus vidutinis čekis pakilo virš 770 €.
+
+---
+
+## 2026-09-19 — RASTA TIKROJI PRIEŽASTIS
+
+Nuskaityta iš paskyros (Porter `google_ads.campaign_criterion_list`, read veikia):
+
+```
+campaign 23941125495  type: PROXIMITY  criterionId: 2492543513932
+geoPoint: 54.6872, 25.2797
+radius: 30 KILOMETERS
+```
+
+**Kampanija vardu „Vilnius" taikoma 30 km spinduliu.** Tai Vilnius plius Trakai,
+Lentvaris, Grigiškės, Nemenčinė, Rūdiškės ir visas Vilniaus rajono kaimas.
+Todėl 171,97 €/mėn. ir 0 išmatuotų konversijų.
+
+Sutampa su pašto kodų duomenimis: Vilniaus rajonas (14xxx) = 286 € čekis,
+blogiausias, 2,8 % apyvartos.
+
+Kiti kriterijai toje kampanijoje: kalbos en/lt/pl/ru, 3 įrenginiai,
+4 neigiami raktažodžiai (jysk, dormeo, bikuva, ikea lovos). Miesto lygio
+LOCATION kriterijų nėra — tik šis vienas spindulys.
+
+### Pataisa (savininkas patvirtino 2026-09-19)
+
+**30 km → 10 km, tas pats centras 54.6872, 25.2797.**
+
+10 km padengia visus Vilniaus rajonus: Pilaitė 6,4 km, Fabijoniškės 5,8 km,
+Lazdynai, Justiniškės, Centras. Nukerta tik 10–30 km žiedą.
+
+### Vykdymo būklė: NEĮVYKDYTA
+
+| Kelias | Būklė |
+|---|---|
+| Porter read | ✅ veikia (taip ir rasta priežastis) |
+| Porter write | 🔴 `NO_BALANCE` — kreditų nėra |
+| Hermès `hermes_ads_mutate` | 🔴 sesijoje neprieinamas |
+| Windsor | 🔴 savininko išjungtas 2026-09-19 |
+
+Tvarka, jei vykdoma per API: **pirma sukurti 10 km, tik tada šalinti 30 km**,
+kad kampanija neliktų be taikymo (be jokio geo kriterijaus ji rodytųsi visur).
+
+Senojo kriterijaus duomenys atstatymui: `customers/7015063449/campaignCriteria/23941125495~2492543513932`,
+54.6872 / 25.2797 / 30 km.
+
+Sąsajoje tai vienas laukelis.
