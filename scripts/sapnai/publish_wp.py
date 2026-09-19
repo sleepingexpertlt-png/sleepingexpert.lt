@@ -15,7 +15,7 @@ Ką daro (idempotentiškai, pagal slug):
   3. Pakeičia {{URL:<key>}} vietaženklius tikrais permalink'ais ir įrašo turinį, excerpt ir RankMath meta.
   4. Hub straipsnį (sapnu-reiksmes) atnaujina paskutinį – jame nuorodos į visus 120 įrašų.
 
-Reikalingi env: WP_USER, WP_APP_PASSWORD; nebūtinas WP_URL (numatytas https://sleepingexpert.lt/wp-json/wp/v2).
+Reikalingi env: WP_USER, WP_APP_PASSWORD; WP_URL gali būti svetainės šaknis (kaip secrets.env) arba pilnas /wp-json/wp/v2 kelias.
 """
 from __future__ import annotations
 
@@ -36,7 +36,18 @@ except ImportError:  # pragma: no cover
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 BUILD = os.path.join(ROOT, "build", "sapnu-reiksmes")
-WP_URL = os.getenv("WP_URL", "https://sleepingexpert.lt/wp-json/wp/v2").rstrip("/")
+
+
+def _rest_base(raw: str | None) -> str:
+    """secrets.env laiko WP_URL kaip svetainės šaknį (https://www.sleepingexpert.lt);
+    priimame ir šaknį, ir pilną /wp-json/wp/v2 kelią."""
+    url = (raw or "https://sleepingexpert.lt").strip().rstrip("/")
+    if "/wp-json" not in url:
+        url += "/wp-json/wp/v2"
+    return url
+
+
+WP_URL = _rest_base(os.getenv("WP_URL"))
 
 
 class WP:

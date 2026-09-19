@@ -2,8 +2,9 @@
 """Core Web Vitals patikra sleepingexpert.lt — realūs Chrome (CrUX) duomenys + Lighthouse.
 
 GSC Core Web Vitals ataskaita neturi API, todėl tą patį šaltinį (CrUX, 28 d. p75) traukiame
-per PageSpeed Insights API. Be rakto veikia iš VPS (anoniminė kvota ~1 užklausa/s, kelios
-dešimtys per dieną iš vieno IP); su GOOGLE_API_KEY – 25 000/d.
+per PageSpeed Insights API. Su GOOGLE_API_KEY lauko duomenys imami iš CrUX API
+(atskira kvota, be dienos limito), o Lighthouse – iš PSI; jei rakto PSI kvota išnaudota, PSI
+bandomas anonimiškai (kelios dešimtys užklausų per dieną iš vieno IP).
 
 Naudojimas (iš VPS):
     python3 scripts/cwv/cwv_check.py                       # numatyti URL, mobile
@@ -36,6 +37,7 @@ DEFAULT_URLS = [
 ]
 PSI = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
 CRUX_HISTORY = "https://chromeuxreport.googleapis.com/v1/records:queryHistoryRecord"
+CRUX_RECORD = "https://chromeuxreport.googleapis.com/v1/records:queryRecord"
 
 # Google slenksčiai (p75)
 THRESHOLDS = {"LARGEST_CONTENTFUL_PAINT_MS": (2500, 4000), "INTERACTION_TO_NEXT_PAINT": (200, 500),
@@ -76,13 +78,60 @@ def fmt_metric(name: str, m: dict | None) -> str:
     return f"{p / 1000:.1f}s {cat}" if name != "INTERACTION_TO_NEXT_PAINT" else f"{p}ms {cat}"
 
 
+def crux_record(url: str, key: str, form_factor: str) -> dict:
+    """CrUX API (atskira kvota nuo PSI: 150/min, be dienos limito). Grąžina PSI formato metrics."""
+    body = json.dumps({"url": url, "formFactor": form_factor}).encode()
+    req = urllib.request.Request(f"{CRUX_RECORD}?key={key}", data=body, headers={"Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            d = json.load(r)
+    except urllib.error.HTTPError as e:
+        return {"error": {"code": e.code, "message": e.read().decode(errors="replace")[:200]}}
+    except Exception as e:  # noqa: BLE001
+        return {"error": {"code": 0, "message": str(e)}}
+    names = {"largest_contentful_paint": "LARGEST_CONTENTFUL_PAINT_MS", "interaction_to_next_paint": "INTERACTION_TO_NEXT_PAINT",
+             "cumulative_layout_shift": "CUMULATIVE_LAYOUT_SHIFT_SCORE", "experimental_time_to_first_byte": "EXPERIMENTAL_TIME_TO_FIRST_BYTE",
+             "first_contentful_paint": "FIRST_CONTENTFUL_PAINT_MS"}
+    metrics = {}
+    for k, v in d.get("record", {}).get("metrics", {}).items():
+        if k not in names:
+            continue
+        p75 = v.get("percentiles", {}).get("p75")
+        p75 = float(p75) * 100 if k == "cumulative_layout_shift" else p75
+        good, poor = THRESHOLDS[names[k]]
+        metrics[names[k]] = {"percentile": p75, "category": "FAST" if p75 <= good else ("AVERAGE" if p75 <= poor else "SLOW")}
+    return {"id": d.get("record", {}).get("key", {}).get("url", url), "metrics": metrics,
+            "period": d.get("record", {}).get("collectionPeriod", {})}
+
+
+def _quota_exhausted(err: dict) -> bool:
+    return err.get("code") == 429 and "Queries per day" in str(err.get("message", ""))
+
+
 def analyze(url: str, strategy: str, key: str | None) -> dict:
+    field = None
+    if key:  # tikslus GSC šaltinis, nepriklauso nuo PSI dienos kvotos
+        rec = crux_record(url, key, "PHONE" if strategy == "mobile" else "DESKTOP")
+        if "error" not in rec:
+            field = rec
+        elif rec["error"].get("code") != 404:
+            print(f"   CrUX API klaida: {rec['error']}")
     params = {"url": url, "strategy": strategy, "category": "performance"}
     if key:
         params["key"] = key
     d = get_json(PSI, params)
+    if "error" in d and key and _quota_exhausted(d["error"]):
+        print("   PSI: rakto dienos kvota išnaudota → bandau anonimiškai")
+        params.pop("key", None)
+        d = get_json(PSI, params)
     if "error" in d:
-        return {"url": url, "error": d["error"]}
+        if not field:
+            return {"url": url, "error": d["error"]}
+        d = {"loadingExperience": {"id": field["id"], "metrics": field["metrics"]}, "lighthouseResult": {},
+             "_note": f"Lighthouse nepasiekiamas ({d['error'].get('code')}); CrUX iš CrUX API"}
+    elif field:  # CrUX API duomenys tikslesni už PSI įdėtus (visada URL lygmens, jei yra)
+        d["loadingExperience"] = {"id": field["id"], "metrics": field["metrics"],
+                                  "overall_category": d.get("loadingExperience", {}).get("overall_category")}
     le = d.get("loadingExperience", {})
     ole = d.get("originLoadingExperience", {})
     lh = d.get("lighthouseResult", {})
@@ -117,6 +166,7 @@ def analyze(url: str, strategy: str, key: str | None) -> dict:
             "ttfb": a.get("server-response-time", {}).get("displayValue"),
             "lcp_element": lcp_node, "cls_top": cls_top, "opportunities": opps,
         },
+        "note": d.get("_note", ""),
         "raw_metrics": le.get("metrics", {}),
     }
 

@@ -72,6 +72,7 @@ sukūrus įrašus – todėl WP permalink struktūros žinoti iš anksto nereiki
 - Statusas visada `draft`; publish tik rankiniu būdu arba `--publish` po peržiūros.
 - Šaltinių DOI (5 vnt.) šioje sesijoje per tinklą patikrinti nepavyko (doi.org užblokuotas proxy) –
   prieš `--publish` paleisti `curl -I https://doi.org/<doi>` iš VPS.
+- `WP_URL` secrets.env faile yra svetainės šaknis (`https://www.sleepingexpert.lt`) – skriptas pats prideda `/wp-json/wp/v2`.
 
 ## WP slug'ų schema
 
