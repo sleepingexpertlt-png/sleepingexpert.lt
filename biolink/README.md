@@ -50,28 +50,43 @@ Visos nuorodos į `sleepingexpert.lt` automatiškai gauna
 
 Be parametro naudojamas `utm_source=biolink`.
 
-## Kur patalpinti
+## Kaip patalpinti adresu sleepingexpert.lt/link/
 
-Rekomenduojamas adresas: `https://sleepingexpert.lt/link/` (trumpas, savo domenas,
-be trečiųjų šalių logotipų kaip Linktree).
+Svetainė hostinama Hostinger, failų sistema nepasiekiama, todėl naudojami du
+dalykai: WP media (failo saugykla) ir Code Snippet (atiduoda failą adresu `/link/`).
 
-**Variantas A — WordPress (sleepingexpert.lt), FTP / failų tvarkyklė**
+**1 žingsnis, vieną kartą: Code Snippet**
 
-1. Sukurkite katalogą `link` svetainės šaknyje (šalia `wp-content`).
-2. Įkelkite `index.html` į `/link/`.
-3. Atidarykite `https://sleepingexpert.lt/link/`. Jokių įskiepių nereikia.
+1. WP Admin → Snippets → Add New.
+2. Pavadinimas: `SE Bio Link (/link/)`.
+3. Įklijuokite `biolink/wp-snippet.php` turinį be pirmos eilutės `<?php`.
+4. Scope: „Run snippet everywhere". Save Changes and Activate.
 
-**Variantas B — WordPress puslapis**
+Snippet'as reaguoja tik į `/link/`. Kol media bibliotekoje nėra failo, jis nieko
+nedaro ir svetainė veikia kaip anksčiau.
 
-1. Puslapiai → Pridėti naują, slug `link`, šablonas „Blank" / „Canvas" (be antraštės ir poraštės).
-2. Įdėkite bloką „Custom HTML" ir įklijuokite viso failo turinį nuo `<script>` (konfigūracija)
-   iki pabaigos, praleidžiant `<html>`, `<head>` ir `<body>` žymes.
-   Šriftą `Outfit` pridėkite per temos nustatymus arba palikite `<link>` eilutę.
+**2 žingsnis, kiekvieną kartą atnaujinus puslapį: įkelti failą**
 
-**Variantas C — GitHub Pages / Vercel / Netlify**
+Iš VPS (`72.61.139.213`), kur yra `secrets.env` su `WP_USER` ir `WP_APP_PASSWORD`:
 
-Nukreipkite į katalogą `biolink/`. Tada TikTok bio naudokite subdomeną,
-pvz. `link.sleepingexpert.lt` (CNAME į hostingą).
+```bash
+cd /root/sleepingexpert.lt && git pull
+set -a && source /root/frontier-agent/config/secrets.env && set +a
+python3 biolink/deploy.py            # dry run: parodo, ką darys
+python3 biolink/deploy.py --apply    # įkelia, ištrina senas versijas
+```
+
+Skriptas įkelia `index.html` į media kaip `se-biolink-<data>.html`. Jei WordPress
+neleidžia `.html`, automatiškai įkelia kaip `.txt`, snippet'ui tai nesvarbu.
+Senos versijos ištrinamos, kad snippet'as visada rastų naujausią.
+
+**3 žingsnis: patikrinti**
+
+Atidarykite `https://sleepingexpert.lt/link/?s=tiktok`. Jei matote seną versiją,
+LiteSpeed Cache → Toolbox → Purge All.
+
+Kodėl ne paprastas WP puslapis: tema apvyniotų jį savo header ir footer, o
+WordPress redaktorius keistų HTML. Snippet'as atiduoda failą tokį, koks yra.
 
 ## Brandbook taisyklės, kurių laikomasi
 
