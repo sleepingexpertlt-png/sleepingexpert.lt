@@ -193,6 +193,10 @@ CSS = """
 .se-sapnai .se-card__more{color:var(--se-accent);font-weight:500;font-size:14px}
 .se-sapnai .se-card--cat{background:var(--se-bg);min-height:96px;justify-content:center}
 .se-sapnai .se-cards__more{font-size:14px;margin-top:8px}
+.se-sapnai .se-back{display:inline-flex;align-items:center;gap:8px;background:var(--se-yellow);color:var(--se-blue);font-weight:700;padding:10px 16px;border-radius:999px;text-decoration:none;margin:4px 0 16px}
+.se-sapnai .se-back:hover{filter:brightness(.95)}
+.se-float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;display:inline-flex;align-items:center;gap:8px;background:var(--se-yellow,#ffd602);color:#142b6f;font:700 15px/1 Outfit,system-ui,sans-serif;padding:14px 18px;border-radius:999px;text-decoration:none;box-shadow:0 10px 15px rgba(20,43,111,.25)}
+.se-float:hover{filter:brightness(.95)}
 @media (max-width:600px){.se-sapnai .se-variants th,.se-sapnai .se-variants td{display:block;width:auto}.se-sapnai .se-variants th{border-bottom:0;padding-bottom:0}.se-sapnai .se-item h4{font-size:18px}}
 """
 
@@ -224,6 +228,10 @@ SEARCH_JS = """
     run();
   });});
   if(location.hash&&location.hash.indexOf('#q=')===0){q.value=decodeURIComponent(location.hash.slice(3));}
+  function focusSearch(){var box=document.getElementById('paieska');if(box)box.scrollIntoView({behavior:'smooth',block:'start'});setTimeout(function(){q.focus();},300);}
+  if(location.hash==='#paieska'){focusSearch();}
+  var top=document.getElementById('seSapnaiTop');
+  if(top){top.addEventListener('click',function(ev){ev.preventDefault();q.value='';run();focusSearch();});}
   run();
 })();
 """
@@ -397,6 +405,7 @@ def render_post(e: dict, by_slug: dict, link, today: str, products: dict | None 
     parts = []
     parts.append(f'<div class="se-sapnai"><style>{CSS}</style>')
     parts.append(f'<p class="se-crumbs"><a href="{hub}">Sapnų reikšmės</a> › {esc(e["category_name"])} › {esc(e["word"])}</p>')
+    parts.append(f'<a class="se-back" href="{hub}#paieska">🔍 Ieškoti kito sapno</a>')
     parts.append(f'<div class="speakable"><p><strong>{esc(e["short"])}</strong></p></div>')
     aliases = [a for a in e["aliases"] if a.lower() != e["word"].lower()][:6]
     if aliases:
@@ -448,6 +457,7 @@ def render_post(e: dict, by_slug: dict, link, today: str, products: dict | None 
     parts.append(bio_block(short=True))
     parts.append(contact_block(full=False))
     parts.append(f'<p class="se-sources">Atnaujinta: {today}</p>')
+    parts.append(f'<a class="se-float" href="{hub}#paieska" aria-label="Grįžti į sapnų paiešką">🔍 Sapnų paieška</a>')
 
     parts.append(json_ld({
         "@context": "https://schema.org",
@@ -493,7 +503,7 @@ def render_hub(entries: list[dict], categories: dict, link, today: str, products
                  "<li><strong>Užrašykite sapną ryte.</strong> Sapnų dienoraštis – paprasčiausias būdas pastebėti, kurios temos kartojasi.</li></ol>")
 
     parts.append(expert_note_block(AD_TYPES["bendras"]))
-    parts.append('<div class="se-search"><label for="seSapnaiQ"><strong>Sapnų paieška</strong></label>'
+    parts.append('<div class="se-search" id="paieska"><label for="seSapnaiQ"><strong>Sapnų paieška</strong></label>'
                  '<input id="seSapnaiQ" type="search" autocomplete="off" placeholder="Įveskite žodį, pvz.: gyvatė, dantys, kristi, buvęs…">'
                  f'<div class="se-count" id="seSapnaiCount">Iš viso simbolių: {len(entries)}</div></div>')
 
@@ -563,6 +573,7 @@ def render_hub(entries: list[dict], categories: dict, link, today: str, products
     parts.append(bio_block())
     parts.append(contact_block())
     parts.append(f'<p class="se-sources">Atnaujinta: {today}. Žodynas pildomas – trūkstamą simbolį galite pasiūlyti el. paštu.</p>')
+    parts.append('<a class="se-float" href="#paieska" id="seSapnaiTop" aria-label="Į sapnų paiešką">🔍 Paieška</a>')
     parts.append(f"<script>{SEARCH_JS}</script>")
     parts.append(json_ld({
         "@context": "https://schema.org",
@@ -704,7 +715,7 @@ def main() -> int:
         f.write(wrap_artifact("Sapnų reikšmės A–Ž", render_hub(entries, categories, prev_link_factory(0), today, products), 0))
     for e in entries:
         with open(os.path.join(out, "artifact", "posts", f"{e['slug']}.html"), "w", encoding="utf-8") as f:
-            f.write(wrap_artifact(post_title(e), render_post(e, by_slug, prev_link_factory(1), today, products), 1))
+            f.write(wrap_preview(post_title(e), render_post(e, by_slug, prev_link_factory(1), today, products), e["short"], 1))
 
     words = [p["words"] for p in manifest["posts"]]
     print(f"OK: {len(entries)} simboliai, {len(categories)} kategorijos → {out}")
