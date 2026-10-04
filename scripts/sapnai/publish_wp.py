@@ -166,12 +166,18 @@ def main() -> int:
             print(f"    ⚠️ nuorodos į dar nesukurtus įrašus ({len(missing)}): {sorted(missing)[:6]}…")
         return out
 
-    for p in items:
+    import datetime as dt
+    now = dt.datetime.now().replace(microsecond=0)
+    for idx, p in enumerate(items):
         with open(os.path.join(BUILD, p["file"]), encoding="utf-8") as f:
             content = resolve(f.read())
         data = {"content": content, "status": status, "excerpt": p["excerpt"], "categories": [cat_id],
                 "meta": {"rank_math_focus_keyword": p["focus_keyword"],
                          "rank_math_secondary_keywords": p["secondary_keywords"]}}
+        if status == "publish":
+            # hub – naujausia data, kad kategorijos archyve (/kategorija/sapnu-reiksmes/) būtų pirmas;
+            # simboliai – po minutę senesni, abėcėlės tvarka
+            data["date"] = (now - dt.timedelta(minutes=len(items) - 1 - idx)).isoformat()
         wp.post(f"posts/{ids[p['key']]}", data)
         print(f"  ✅ {p['slug']} → {links[p['key']]} ({p['words']} ž., {status})")
 

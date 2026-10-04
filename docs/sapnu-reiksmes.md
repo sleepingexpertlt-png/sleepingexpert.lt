@@ -95,6 +95,27 @@ Kortelės su realiais produktais imamos iš `data/sapnu-reiksmes/products.json`;
 `scripts/sapnai/fetch_products.py` iš VPS (viešas WC Store API, be auth). Be failo rodomos
 kategorijų plytelės. Kainos nerodomos sąmoningai – jos keičiasi, o straipsniai ne.
 
+## Kategorijos archyvas = hub (nukreipimas)
+
+`/kategorija/sapnu-reiksmes/` yra WordPress archyvas: kol įrašai juodraščiai – tuščias, po publikavimo –
+įrašų sąrašas be paieškos. Kad šis adresas atidarytų patį žodyną su paieška, reikia 301 nukreipimo
+į hub (`/sapnu-reiksmes/`). Du būdai, abu owner per WP admin (1 min.):
+
+1. **Rank Math → Redirections → Add New:** Source `kategorija/sapnu-reiksmes/` (Exact), Destination
+   `https://sleepingexpert.lt/sapnu-reiksmes/`, tipas 301.
+2. **WPCode snippet (PHP):**
+   ```php
+   add_action('template_redirect', function () {
+       if (is_category('sapnu-reiksmes') && !is_paged()) {
+           wp_redirect(home_url('/sapnu-reiksmes/'), 301);
+           exit;
+       }
+   });
+   ```
+
+Be nukreipimo `publish_wp.py` vis tiek palieka du saugiklius: kategorijos aprašymas su nuoroda į hub ir
+hub kaip naujausias įrašas (publikuojant datos išdėstomos taip, kad hub būtų pirmas sąraše).
+
 ## WP slug'ų schema
 
 - Hub: `/sapnu-reiksmes/`; kategorijos archyvas: `/kategorija/sapnu-reiksmes/` (aprašymas su nuoroda į hub
