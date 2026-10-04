@@ -175,6 +175,12 @@ def main() -> int:
         wp.post(f"posts/{ids[p['key']]}", data)
         print(f"  ✅ {p['slug']} → {links[p['key']]} ({p['words']} ž., {status})")
 
+    # kategorijos aprašymas su nuoroda į hub – kad /kategorija/sapnu-reiksmes/ turėtų ką paspausti
+    desc = m["category"].get("description_html")
+    if desc and m["hub"]["key"] in links:
+        wp.post(f"categories/{cat_id}", {"description": resolve(desc)})
+        print(f"  ✅ kategorijos aprašymas → nuoroda į {links[m['hub']['key']]}")
+
     print("Baigta. Peržiūrėkite draft'us WP admin → Posts → Drafts ir spauskite Publish (arba --publish).")
     return 0
 

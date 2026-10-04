@@ -22,6 +22,7 @@ saugus kelias (Google „scaled content abuse“ politika, 2024–2025).
 | `data/sapnu-reiksmes/symbols/*.json` | Turinys: 8 kategorijos, 120 simbolių. Vienas šaltinis tiesai. |
 | `scripts/sapnai/build.py` | Generatorius → `build/sapnu-reiksmes/` (WP fragmentai + manifest + peržiūra). |
 | `scripts/sapnai/publish_wp.py` | Publikavimas į WP per REST API (dry-run pagal nutylėjimą, draft statusas). |
+| `scripts/sapnai/fetch_products.py` | Realūs produktai reklamos kortelėms → `data/sapnu-reiksmes/products.json`. |
 | `build/` | Sugeneruota (git ignore). Paleisk `build.py`, kad atsirastų. |
 
 ### Simbolio įrašo laukai (`symbols/*.json`)
@@ -52,6 +53,7 @@ curl iš kitur, o Claude Code web sesija sleepingexpert.lt nepasiekia):
 ```bash
 cd /root/sleepingexpert.lt && git pull
 set -a && source /root/frontier-agent/config/secrets.env && set +a
+python3 scripts/sapnai/fetch_products.py              # realūs produktai kortelėms (nebūtina)
 python3 scripts/sapnai/build.py
 python3 scripts/sapnai/publish_wp.py                  # dry-run: parodo, kas bus sukurta / kas jau yra
 python3 scripts/sapnai/publish_wp.py --apply --limit 50   # 1 partija: 50 draft'ų + hub
@@ -74,9 +76,29 @@ sukūrus įrašus – todėl WP permalink struktūros žinoti iš anksto nereiki
   prieš `--publish` paleisti `curl -I https://doi.org/<doi>` iš VPS.
 - `WP_URL` secrets.env faile yra svetainės šaknis (`https://www.sleepingexpert.lt`) – skriptas pats prideda `/wp-json/wp/v2`.
 
+## Reklama (produktų blokai)
+
+Kiekvienas įrašas turi du blokus: „Miego eksperto pastaba“ po variantų lentele (kontekstinis tekstas +
+CTA į produktų kategoriją) ir produktų korteles prieš kontaktus. Tipas parenkamas pagal simbolį
+(`AD_BY_SLUG`) arba kategoriją (`AD_BY_CATEGORY`) `build.py` faile:
+
+| Tipas | Kada | Produktai |
+|---|---|---|
+| pozicija | košmarai, miego paralyžius, baimė, skendimas, dantys | pagalvės (šoninė padėtis) |
+| temperatura | sniegas, ugnis, saulė, audra, vanduo, jūra | antklodės pagal sezoną |
+| kunas | kojos, rankos, žaizda, liga, kritimas, laiptai | čiužiniai (CE Medical Device) |
+| tamsa | tamsa, šviesa, mėnulis, žvaigždės, langas, telefonas | miego aksesuarai (kaukės) |
+| lova | lova, namas, darbas, vėlavimas, laikrodis | čiužiniai (amžius 8–10 m.) |
+| bendras | visi kiti | čiužiniai + konsultacija |
+
+Kortelės su realiais produktais imamos iš `data/sapnu-reiksmes/products.json`; jį generuoja
+`scripts/sapnai/fetch_products.py` iš VPS (viešas WC Store API, be auth). Be failo rodomos
+kategorijų plytelės. Kainos nerodomos sąmoningai – jos keičiasi, o straipsniai ne.
+
 ## WP slug'ų schema
 
-- Hub: `/sapnu-reiksmes/` (kategorija: `sapnu-reiksmes`)
+- Hub: `/sapnu-reiksmes/`; kategorijos archyvas: `/kategorija/sapnu-reiksmes/` (aprašymas su nuoroda į hub
+  įrašomas `publish_wp.py` metu, kad archyvo puslapis turėtų ką paspausti)
 - Simboliai: `/sapnuoti-<slug>/` (pvz. `/sapnuoti-gyvate/`), būsenoms – aiškesni: `/kosmarai-ka-reiskia/`,
   `/pasikartojantys-sapnai/`, `/samoningi-sapnai/`, `/miego-paralyzius/`, `/baime-sapne/`, `/klaidingas-pabudimas/`.
 

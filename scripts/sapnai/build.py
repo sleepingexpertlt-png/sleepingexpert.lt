@@ -180,6 +180,19 @@ CSS = """
 .se-sapnai .se-contact p{margin:4px 0}
 .se-sapnai .se-contact a{color:var(--se-yellow)}
 .se-sapnai .se-cta{display:inline-block;background:var(--se-yellow);color:var(--se-blue);font-weight:700;padding:12px 20px;border-radius:10px;text-decoration:none;margin-top:8px}
+.se-sapnai .se-ad{background:linear-gradient(135deg,#142b6f,#1f3a8f);color:#fff;border-radius:12px;padding:20px 24px;margin:28px 0}
+.se-sapnai .se-ad__eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--se-yellow);font-weight:700}
+.se-sapnai .se-ad h3{color:#fff;margin:6px 0 8px;font-size:20px}
+.se-sapnai .se-ad p{margin:0 0 12px;color:#e8eaf6}
+.se-sapnai .se-cards{margin:28px 0}
+.se-sapnai .se-cards__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.se-sapnai .se-card{display:flex;flex-direction:column;gap:8px;border:1px solid var(--se-mauve);border-radius:12px;padding:12px;text-decoration:none;color:var(--se-blue);background:#fff;transition:box-shadow .15s}
+.se-sapnai .se-card:hover{box-shadow:0 10px 15px rgba(20,43,111,.10)}
+.se-sapnai .se-card img{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;border-radius:8px;background:var(--se-bg)}
+.se-sapnai .se-card__name{font-weight:700;line-height:1.3}
+.se-sapnai .se-card__more{color:var(--se-accent);font-weight:500;font-size:14px}
+.se-sapnai .se-card--cat{background:var(--se-bg);min-height:96px;justify-content:center}
+.se-sapnai .se-cards__more{font-size:14px;margin-top:8px}
 @media (max-width:600px){.se-sapnai .se-variants th,.se-sapnai .se-variants td{display:block;width:auto}.se-sapnai .se-variants th{border-bottom:0;padding-bottom:0}.se-sapnai .se-item h4{font-size:18px}}
 """
 
@@ -259,8 +272,124 @@ def json_ld(obj: dict) -> str:
     return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False) + "</script>"
 
 
+
+# --------------------------------------------------------------------------- reklama (produktų blokai)
+PRODUCTS_FILE = os.path.join(ROOT, "data", "sapnu-reiksmes", "products.json")
+CAT_URL = {
+    "pagalves": f"{SITE}/produkto-kategorija/pagalves/",
+    "ciuziniai": f"{SITE}/produkto-kategorija/ciuziniai/",
+    "antklodes": f"{SITE}/produkto-kategorija/antklodes/",
+    "miego-aksesuarai": f"{SITE}/produkto-kategorija/miego-aksesuarai/",
+    "lovos": f"{SITE}/produkto-kategorija/lovos/",
+}
+CAT_LABEL = {"pagalves": "Pagalvės", "ciuziniai": "Čiužiniai", "antklodes": "Antklodės",
+             "miego-aksesuarai": "Miego aksesuarai", "lovos": "Lovos"}
+
+# Kiekvienam reklamos tipui: produktų kategorija, eksperto pastaba (brand voice: pirma padedame, po to parduodame)
+AD_TYPES = {
+    "pozicija": {
+        "cat": "pagalves",
+        "title": "Košmarai ir „negaliu pajudėti“ sapnai dažnesni miegant ant nugaros",
+        "text": "Miego paralyžius ir dusimo sapnai statistiškai dažnesni miegantiems ant nugaros. Pagalvė, kuri laiko galvą šoninėje "
+                "padėtyje ir neleidžia nuslysti, dažnai sumažina tokių naktų skaičių. Sertifikuotas miego konsultantas parduotuvėje "
+                "parenka aukštį pagal pečių plotį – per 15 minučių.",
+        "cta": "Pagalvės šoninei miego padėčiai",
+    },
+    "temperatura": {
+        "cat": "antklodes",
+        "title": "Per šiltas kambarys dažnina neramius sapnus",
+        "text": "REM miegas, kuriame sapnuojame, jautriausias kūno temperatūrai: perkaitus daugėja prabudimų, o sapnai prisimenami "
+                "ryškiau ir nemaloniau. Antklodė pagal sezoną (vasarinė, Outlast temperatūrą reguliuojanti ar natūralaus pūko) "
+                "ir 18–20 °C miegamasis – paprasčiausias pokytis, kurį galite padaryti šią savaitę.",
+        "cta": "Antklodės pagal sezoną",
+    },
+    "kunas": {
+        "cat": "ciuziniai",
+        "title": "Jei pabundate su skausmu, sapnas – ne pirmas klausimas",
+        "text": "Nugaros, kaklo ar sąnarių skausmas ryte reiškia, kad kūnas naktį nesiilsėjo – o neramus kūnas sapnuoja neramiai. "
+                "CE Medical Device klasės čiužinys parenkamas pagal svorį, miego poziciją ir nugaros istoriją, ne pagal kietumo žodį. "
+                "Vilniuje, Klaipėdoje ir Ukmergėje galite išbandyti gyvai.",
+        "cta": "Čiužiniai, kuriuos galima išbandyti parduotuvėje",
+    },
+    "tamsa": {
+        "cat": "miego-aksesuarai",
+        "title": "Šviesa miegamajame keičia ir sapnus, ir jų prisiminimą",
+        "text": "Gatvės žibintas ar ankstyva saulė trumpina gilaus miego fazę ir dažnina prabudimus REM metu – todėl sapnai atrodo "
+                "ryškesni ir neramesni. Miego kaukė arba šviesos nepraleidžiančios užuolaidos yra pigiausias miego kokybės "
+                "patobulinimas, kurį patvirtina ir miego laboratorijos.",
+        "cta": "Miego kaukės ir aksesuarai",
+    },
+    "lova": {
+        "cat": "ciuziniai",
+        "title": "Čiužinys tarnauja apie 8–10 metų. Sapnai apie nepatogią lovą kartais yra tiesiog nepatogi lova",
+        "text": "Dažni prabudimai, įdubos, dulkių erkučių alergija – visa tai trumpina REM fazes ir daro sapnus fragmentiškus. "
+                "Jei čiužiniui daugiau nei 8 metai arba ryte jaučiate įdubimą, verta pasitikrinti. Nuosavi prekės ženklai "
+                "SleepPro ir Softy – be tarpininkų antkainio, su garantija iki 20 metų.",
+        "cta": "Peržiūrėti čiužinius",
+    },
+    "bendras": {
+        "cat": "ciuziniai",
+        "title": "Neramūs sapnai prasideda nuo neramaus miego",
+        "text": "Sapnų turinio nepakeisite, bet galite pakeisti, kiek kartų per naktį prabundate ir kaip giliai miegate. "
+                "Trys dalykai, kuriuos tikrina sertifikuotas miego konsultantas: ar čiužinys atitinka svorį ir miego poziciją, "
+                "ar pagalvės aukštis tinka pečiams, ar antklodė neperkaitina. Konsultacija parduotuvėje nemokama ir trunka 15 minučių.",
+        "cta": "Čiužiniai ir konsultacija parduotuvėje",
+    },
+}
+AD_BY_SLUG = {
+    "kosmaras": "pozicija", "miego-paralyzius": "pozicija", "baime": "pozicija", "skesti": "pozicija",
+    "begti": "pozicija", "pasikartojantis-sapnas": "pozicija", "dantys": "pozicija", "akys": "pozicija",
+    "sniegas": "temperatura", "ugnis": "temperatura", "saule": "temperatura", "audra": "temperatura",
+    "lietus": "temperatura", "potvynis": "temperatura", "jura": "temperatura", "vanduo": "temperatura",
+    "kojos": "kunas", "rankos": "kunas", "zaizda": "kunas", "liga": "kunas", "ligonine": "kunas",
+    "kraujas": "kunas", "kristi": "kunas", "kalnas": "kunas", "laiptai": "kunas", "plaukai": "kunas",
+    "tamsa": "tamsa", "sviesa": "tamsa", "menulis": "tamsa", "dangus-zvaigzdes": "tamsa", "langas": "tamsa",
+    "sapnas-sapne": "tamsa", "samoningas-sapnas": "tamsa", "telefonas": "tamsa",
+    "lova": "lova", "namas": "lova", "vaikystes-namai": "lova", "persikraustyti": "lova", "seksas": "lova",
+    "darbas": "lova", "veluoti": "lova", "laikrodis": "lova",
+}
+AD_BY_CATEGORY = {"busenos": "pozicija", "kunas": "kunas", "gamta": "temperatura", "vietos": "lova",
+                  "daiktai": "bendras", "veiksmai": "bendras", "gyvunai": "bendras", "zmones": "bendras"}
+
+
+def load_products() -> dict:
+    if os.path.exists(PRODUCTS_FILE):
+        with open(PRODUCTS_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def ad_type_for(e: dict) -> str:
+    return AD_BY_SLUG.get(e["slug"]) or AD_BY_CATEGORY.get(e["category"], "bendras")
+
+
+def expert_note_block(ad: dict) -> str:
+    return (f'<div class="se-ad"><div class="se-ad__eyebrow">Miego eksperto pastaba</div>'
+            f'<h3>{esc(ad["title"])}</h3><p>{esc(ad["text"])}</p>'
+            f'<a class="se-cta" href="{CAT_URL[ad["cat"]]}">{esc(ad["cta"])} →</a></div>')
+
+
+def product_cards_block(products: dict, cat: str, heading: str, limit: int = 3) -> str:
+    items = (products.get(cat) or [])[:limit]
+    cards = []
+    if items:
+        for p in items:
+            img = f'<img src="{esc(p["image"])}" alt="{esc(p["name"])}" loading="lazy" width="300" height="300">' if p.get("image") else ""
+            cards.append(f'<a class="se-card" href="{esc(p["permalink"])}">{img}<span class="se-card__name">{esc(p["name"])}</span>'
+                         f'<span class="se-card__more">Žiūrėti</span></a>')
+        more = f'<p class="se-cards__more"><a href="{CAT_URL[cat]}">Visi: {esc(CAT_LABEL[cat].lower())} →</a></p>'
+    else:  # be products.json – kategorijų plytelės
+        for c in [cat] + [x for x in ("pagalves", "ciuziniai", "antklodes") if x != cat][:2]:
+            cards.append(f'<a class="se-card se-card--cat" href="{CAT_URL[c]}"><span class="se-card__name">{esc(CAT_LABEL[c])}</span>'
+                         f'<span class="se-card__more">Žiūrėti →</span></a>')
+        more = ""
+    return f'<div class="se-cards"><h2>{esc(heading)}</h2><div class="se-cards__grid">{"".join(cards)}</div>{more}</div>'
+
+
 # --------------------------------------------------------------------------- spoke page
-def render_post(e: dict, by_slug: dict, link, today: str) -> str:
+def render_post(e: dict, by_slug: dict, link, today: str, products: dict | None = None) -> str:
+    products = products or {}
+    ad = AD_TYPES[ad_type_for(e)]
     url = link(e["slug"])
     hub = link(HUB_SLUG)
     title = post_title(e)
@@ -283,6 +412,7 @@ def render_post(e: dict, by_slug: dict, link, today: str) -> str:
     for v in e["variants"]:
         parts.append(f"<tr><th>{esc(v['situation'])}</th><td>{esc(v['meaning'])}</td></tr>")
     parts.append("</tbody></table>")
+    parts.append(expert_note_block(ad))
     parts.append("<h2>Mindfulness praktika ryte</h2>")
     parts.append(f'<div class="se-box"><p>🌱 {esc(e["mindfulness"])}</p></div>')
     if e["sleep_note"]:
@@ -313,6 +443,7 @@ def render_post(e: dict, by_slug: dict, link, today: str) -> str:
                                     f'<a href="{link("pasikartojantis-sapnas")}">straipsnis apie pasikartojančius sapnus</a>')
         parts.append(f"<h3>{esc(q)}</h3><p>{a_html}</p>")
     parts.append("</div>")
+    parts.append(product_cards_block(products, ad["cat"], "Ramesniam miegui – ką rekomenduoja miego ekspertas"))
     parts.append(sources_block(full=False))
     parts.append(bio_block(short=True))
     parts.append(contact_block(full=False))
@@ -338,7 +469,8 @@ def render_post(e: dict, by_slug: dict, link, today: str) -> str:
 
 
 # --------------------------------------------------------------------------- hub page
-def render_hub(entries: list[dict], categories: dict, link, today: str) -> str:
+def render_hub(entries: list[dict], categories: dict, link, today: str, products: dict | None = None) -> str:
+    products = products or {}
     hub = link(HUB_SLUG)
     parts = [f'<div class="se-sapnai"><style>{CSS}</style>']
     parts.append(
@@ -360,6 +492,7 @@ def render_hub(entries: list[dict], categories: dict, link, today: str) -> str:
                  "<li><strong>Perskaitykite trumpą reikšmę</strong>, o jei norite variantų, praktikos ir miego pastabų – atsidarykite pilną straipsnį.</li>"
                  "<li><strong>Užrašykite sapną ryte.</strong> Sapnų dienoraštis – paprasčiausias būdas pastebėti, kurios temos kartojasi.</li></ol>")
 
+    parts.append(expert_note_block(AD_TYPES["bendras"]))
     parts.append('<div class="se-search"><label for="seSapnaiQ"><strong>Sapnų paieška</strong></label>'
                  '<input id="seSapnaiQ" type="search" autocomplete="off" placeholder="Įveskite žodį, pvz.: gyvatė, dantys, kristi, buvęs…">'
                  f'<div class="se-count" id="seSapnaiCount">Iš viso simbolių: {len(entries)}</div></div>')
@@ -424,6 +557,8 @@ def render_hub(entries: list[dict], categories: dict, link, today: str) -> str:
     for q, a in faq:
         parts.append(f"<h3>{esc(q)}</h3><p>{esc(a)}</p>")
     parts.append("</div>")
+    parts.append(product_cards_block(products, "pagalves", "Ramesniam miegui – pagalvės, kurias dažniausiai renkasi mūsų klientai"))
+    parts.append(product_cards_block(products, "ciuziniai", "Čiužiniai, kuriuos galite išbandyti Vilniuje, Klaipėdoje ir Ukmergėje"))
     parts.append(sources_block(full=True))
     parts.append(bio_block())
     parts.append(contact_block())
@@ -514,6 +649,8 @@ def main() -> int:
 
     entries, categories = load_entries()
     by_slug = {e["slug"]: e for e in entries}
+    products = load_products()
+    print(f"produktai: {sum(len(v) for v in products.values())} iš {PRODUCTS_FILE if products else 'nėra products.json → kategorijų plytelės'}")
 
     os.makedirs(os.path.join(out, "posts"), exist_ok=True)
     os.makedirs(os.path.join(out, "preview", "posts"), exist_ok=True)
@@ -521,13 +658,15 @@ def main() -> int:
 
     # 1) WordPress fragments with placeholders
     wp_link = lambda slug: "{{URL:" + slug + "}}"
-    hub_html = render_hub(entries, categories, wp_link, today)
+    hub_html = render_hub(entries, categories, wp_link, today, products)
     with open(os.path.join(out, "hub.html"), "w", encoding="utf-8") as f:
         f.write(hub_html)
     manifest = {
         "generated": today,
         "category": {"name": CATEGORY_NAME, "slug": CATEGORY_SLUG,
-                     "description": "Sapnų reikšmės psichologijos, miego mokslo ir mindfulness požiūriu. 120 simbolių su paieška."},
+                     "description": "Sapnų reikšmės psichologijos, miego mokslo ir mindfulness požiūriu. 120 simbolių su paieška.",
+                     "description_html": 'Pradėkite nuo žodyno su paieška: <a href="{{URL:' + HUB_SLUG + '}}">Sapnų reikšmės A–Ž</a>. '
+                                         'Kiekvienas simbolis aiškinamas psichologijos ir miego mokslo, ne prietarų, požiūriu.'},
         "hub": {"slug": HUB_SLUG, "key": HUB_SLUG, "title": HUB_TITLE, "file": "hub.html",
                 "excerpt": "Sapnų reikšmių žodynas su paieška: 120 simbolių, aiškinamų psichologijos, miego mokslo ir mindfulness požiūriu.",
                 "focus_keyword": "sapnų reikšmės", "secondary_keywords": "sapnininkas, sapnų aiškinimas, ką reiškia sapnuoti, sapnų žodynas",
@@ -535,7 +674,7 @@ def main() -> int:
         "posts": [],
     }
     for e in entries:
-        body = render_post(e, by_slug, wp_link, today)
+        body = render_post(e, by_slug, wp_link, today, products)
         fn = f"{e['slug']}.html"
         with open(os.path.join(out, "posts", fn), "w", encoding="utf-8") as f:
             f.write(body)
@@ -554,18 +693,18 @@ def main() -> int:
         return lambda slug: f"{prefix}index.html" if slug == HUB_SLUG else f"{prefix}posts/{slug}.html"
 
     with open(os.path.join(out, "preview", "index.html"), "w", encoding="utf-8") as f:
-        f.write(wrap_preview(HUB_TITLE, render_hub(entries, categories, prev_link_factory(0), today),
+        f.write(wrap_preview(HUB_TITLE, render_hub(entries, categories, prev_link_factory(0), today, products),
                              manifest["hub"]["excerpt"], 0))
     for e in entries:
         with open(os.path.join(out, "preview", "posts", f"{e['slug']}.html"), "w", encoding="utf-8") as f:
-            f.write(wrap_preview(post_title(e), render_post(e, by_slug, prev_link_factory(1), today), e["short"], 1))
+            f.write(wrap_preview(post_title(e), render_post(e, by_slug, prev_link_factory(1), today, products), e["short"], 1))
 
     # 3) Artifact (claude.ai) – fragments without document skeleton
     with open(os.path.join(out, "artifact", "index.html"), "w", encoding="utf-8") as f:
-        f.write(wrap_artifact("Sapnų reikšmės A–Ž", render_hub(entries, categories, prev_link_factory(0), today), 0))
+        f.write(wrap_artifact("Sapnų reikšmės A–Ž", render_hub(entries, categories, prev_link_factory(0), today, products), 0))
     for e in entries:
         with open(os.path.join(out, "artifact", "posts", f"{e['slug']}.html"), "w", encoding="utf-8") as f:
-            f.write(wrap_artifact(post_title(e), render_post(e, by_slug, prev_link_factory(1), today), 1))
+            f.write(wrap_artifact(post_title(e), render_post(e, by_slug, prev_link_factory(1), today, products), 1))
 
     words = [p["words"] for p in manifest["posts"]]
     print(f"OK: {len(entries)} simboliai, {len(categories)} kategorijos → {out}")
