@@ -894,7 +894,10 @@ def main() -> int:
             return f"#/p/{slug[len('praktika-'):]}"
         return f"#/s/{slug}"
 
-    frag = lambda html: re.sub(r"<script type=\"application/ld\+json\">.*?</script>", "", re.sub(r"<style>.*?</style>", "", html, flags=re.S), flags=re.S)
+    def frag(html: str) -> str:  # be CSS (bendras), be JSON-LD, be išorinių paveikslėlių (artefakto CSP juos blokuoja)
+        html = re.sub(r"<style>.*?</style>", "", html, flags=re.S)
+        html = re.sub(r"<script type=\"application/ld\+json\">.*?</script>", "", html, flags=re.S)
+        return re.sub(r"<img [^>]*>", "", html)
     pages = {"hub": (HUB_TITLE, frag(render_hub(entries, categories, art_link, today, products, practices, practices_intro)))}
     for e in entries:
         pages[f"s/{e['slug']}"] = (post_title(e), frag(render_post(e, by_slug, art_link, today, products, practices)))
