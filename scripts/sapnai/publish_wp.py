@@ -111,7 +111,7 @@ def main() -> int:
     if requests is None:
         sys.exit("Reikia `pip install requests`")
 
-    posts = m["posts"]
+    posts = m["posts"] + m.get("practices", [])
     if args.only:
         keys = {k.strip() for k in args.only.split(",")}
         posts = [p for p in posts if p["key"] in keys]

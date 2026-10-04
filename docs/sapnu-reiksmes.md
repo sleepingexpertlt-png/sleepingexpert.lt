@@ -1,8 +1,8 @@
 # Sapnų reikšmės — blogo kategorija su paieška (projektas)
 
 **Tikslas (G3 blogas / G4 AI matomumas):** nauja `sleepingexpert.lt` blogo kategorija „Sapnų reikšmės“:
-vienas hub straipsnis su paieška ir A–Ž žodynu + 120 atskirų įrašų (po vieną simboliui), sujungtų
-vidinėmis nuorodomis (hub ↔ įrašas ↔ susiję simboliai). Turinys – originalus lietuviškas tekstas,
+vienas hub straipsnis su paieška ir A–Ž žodynu + 285 atskiri įrašai (po vieną simboliui) + 12 mindfulness
+praktikų straipsnių, sujungtų vidinėmis nuorodomis (hub ↔ įrašas ↔ susiję simboliai ↔ praktika). Turinys – originalus lietuviškas tekstas,
 paremtas viešai prieinama sapnų psichologija (Freudas, Jungas, tęstinumo hipotezė, grėsmės simuliacijos
 teorija, REM emocijų apdorojimas) ir mindfulness praktikomis. Jokių prietarų kaip faktų, jokių
 medicininių teiginių, jokių konkurentų pavadinimų.
@@ -19,7 +19,8 @@ saugus kelias (Google „scaled content abuse“ politika, 2024–2025).
 
 | Kelias | Kas tai |
 |---|---|
-| `data/sapnu-reiksmes/symbols/*.json` | Turinys: 8 kategorijos, 120 simbolių. Vienas šaltinis tiesai. |
+| `data/sapnu-reiksmes/symbols/*.json` | Turinys: 9 kategorijos, 285 simboliai (failai `_2` – antra partija). Vienas šaltinis tiesai. |
+| `data/sapnu-reiksmes/practices.json` | 12 mindfulness praktikų (žingsniai, kada naudoti, mokslas, susiję simboliai). |
 | `scripts/sapnai/build.py` | Generatorius → `build/sapnu-reiksmes/` (WP fragmentai + manifest + peržiūra). |
 | `scripts/sapnai/publish_wp.py` | Publikavimas į WP per REST API (dry-run pagal nutylėjimą, draft statusas). |
 | `scripts/sapnai/fetch_products.py` | Realūs produktai reklamos kortelėms → `data/sapnu-reiksmes/products.json`. |
@@ -65,12 +66,20 @@ Skriptas idempotentiškas: įrašus randa pagal slug, todėl pakartotinis paleid
 Nuorodos tarp įrašų sugeneruojamos kaip `{{URL:slug}}` ir pakeičiamos tikrais permalink'ais tik
 sukūrus įrašus – todėl WP permalink struktūros žinoti iš anksto nereikia.
 
+## Mindfulness praktikos
+
+12 atskirų straipsnių (`/praktika-<slug>/`): sapnų dienoraštis, vaizduotės repeticija košmarams (IRT),
+įžeminimas 5-4-3-2-1, kūno skenavimas, 4-7-8 kvėpavimas, sąmoningas pabudimas, RAIN, mintys kaip debesys,
+vakaro ritualas, dėkingumo praktika, tikrovės testai, rytiniai puslapiai. Kiekvienas simbolis mindfulness
+bloke rodo nuorodą į tinkamą praktiką: pirma pagal praktikos `related` sąrašą, tada pagal kategoriją
+(`PRACTICE_BY_CATEGORY`). Praktikų puslapiai turi HowTo + Article schema.
+
 ## Kokybės vartai (seo-programmatic skill)
 
 - Kiekvienas įrašas ≈ 440–630 žodžių, iš jų 50–57 % unikalaus (ne šabloninio) teksto – virš 40 % slenksčio.
-- Hub ≈ 17 000 žodžių: visų 120 simbolių trumpos reikšmės + „Plačiau“ (psichologinės pastraipos) + paieška.
+- Hub ≈ 20 000 žodžių: visų 285 simbolių trumpos reikšmės + „Plačiau“ (pirma psichologinė pastraipa) + paieška + praktikų sekcija. Pilnos pastraipos – tik simbolių puslapiuose, kad hub liktų lengvas mobiliesiems.
 - Kiekvienas įrašas: Article + FAQPage (3 kl.) + BreadcrumbList schema, 3–6 susiję simboliai, nuoroda į hub.
-- Progressive rollout: pirma partija 50 įrašų, stebėti indeksavimą 1–2 sav., tada likusius.
+- Progressive rollout: pirma partija 50 įrašų + hub + praktikos, stebėti indeksavimą 1–2 sav., tada po 100.
 - Statusas visada `draft`; publish tik rankiniu būdu arba `--publish` po peržiūros.
 - Šaltinių DOI (5 vnt.) šioje sesijoje per tinklą patikrinti nepavyko (doi.org užblokuotas proxy) –
   prieš `--publish` paleisti `curl -I https://doi.org/<doi>` iš VPS.

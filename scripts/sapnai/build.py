@@ -29,7 +29,7 @@ DATA_DIR = os.path.join(ROOT, "data", "sapnu-reiksmes", "symbols")
 
 SITE = "https://sleepingexpert.lt"
 HUB_SLUG = "sapnu-reiksmes"
-HUB_TITLE = "Sapnų reikšmės: 120 simbolių psichologijos ir mindfulness požiūriu"
+HUB_TITLE = "Sapnų reikšmės: sapnininkas psichologijos ir mindfulness požiūriu"
 CATEGORY_NAME = "Sapnų reikšmės"
 CATEGORY_SLUG = "sapnu-reiksmes"
 AUTHOR = "Sleeping Expert komanda"
@@ -45,7 +45,18 @@ WP_SLUG_OVERRIDES = {
     "miego-paralyzius": "miego-paralyzius",
     "baime": "baime-sapne",
     "sapnas-sapne": "klaidingas-pabudimas",
+    "pyktis": "pyktis-sapne", "geda": "geda-sapne", "kalte": "kalte-sapne", "pavydas": "pavydas-sapne",
+    "vienatve": "vienatve-sapne", "deja-vu": "sapnas-issipilde-deja-vu", "pranasiski-sapnai": "pranasiski-sapnai",
+    "neprisimenu-sapnu": "neprisimenu-sapnu", "vanduo-gerti": "sapnuoti-troskuli", "zuvis-valgyti": "sapnuoti-sugedusi-maista",
+    "laukas-ir-derlius": "sapnuoti-derliu", "metu-laikai": "sapnuoti-metu-laikus", "sventes-kaledos": "sapnuoti-kaledas",
+    "negaliu-kalbeti": "negaliu-kalbeti-sapne", "nuzudyti": "sapnuoti-zudyma", "senas-zmogus": "sapnuoti-sena-zmogu",
+    "vyras": "sapnuoti-vyra", "zmona": "sapnuoti-zmona", "partneris": "sapnuoti-mylima-zmogu",
+    "neistikimybe": "sapnuoti-neistikimybe", "dvynys": "sapnuoti-antrininka", "aukstas-pastatas": "sapnuoti-dangoraizi",
 }
+PRACTICES_FILE = os.path.join(ROOT, "data", "sapnu-reiksmes", "practices.json")
+PRACTICE_BY_CATEGORY = {"busenos": "izeminimas-5-4-3-2-1", "kunas": "kuno-skenavimas", "gamta": "kvepavimas-4-7-8",
+                        "vietos": "vakaro-ritualas", "daiktai": "vakaro-ritualas", "veiksmai": "rytiniai-puslapiai",
+                        "gyvunai": "mintys-kaip-debesys", "zmones": "rain-technika", "maistas": "vakaro-ritualas"}
 
 SOURCES = [
     ("Revonsuo A. (2000). The reinterpretation of dreams: An evolutionary hypothesis of the function of dreaming. "
@@ -357,7 +368,12 @@ AD_BY_SLUG = {
     "darbas": "lova", "veluoti": "lova", "laikrodis": "lova",
 }
 AD_BY_CATEGORY = {"busenos": "pozicija", "kunas": "kunas", "gamta": "temperatura", "vietos": "lova",
-                  "daiktai": "bendras", "veiksmai": "bendras", "gyvunai": "bendras", "zmones": "bendras"}
+                  "daiktai": "bendras", "veiksmai": "bendras", "gyvunai": "bendras", "zmones": "bendras", "maistas": "bendras"}
+AD_BY_SLUG.update({"pagalve": "pozicija", "antklode": "temperatura", "miegamasis": "lova", "sirdis": "kunas", "nugara": "kunas",
+                   "galva": "pozicija", "pilvas": "kunas", "oda": "temperatura", "kava": "lova", "vanduo-gerti": "temperatura",
+                   "neigalumas": "kunas", "ezeras": "temperatura", "rusys": "lova", "palepe": "lova", "virtuve": "lova",
+                   "negaliu-kalbeti": "pozicija", "neprisimenu-sapnu": "lova", "pranasiski-sapnai": "lova",
+                   "tyla": "tamsa", "muzika": "tamsa", "juoda-spalva": "tamsa", "balta-spalva": "tamsa"})
 
 
 def load_products() -> dict:
@@ -394,10 +410,92 @@ def product_cards_block(products: dict, cat: str, heading: str, limit: int = 3) 
     return f'<div class="se-cards"><h2>{esc(heading)}</h2><div class="se-cards__grid">{"".join(cards)}</div>{more}</div>'
 
 
+# --------------------------------------------------------------------------- praktikos
+def load_practices() -> tuple[list[dict], str]:
+    if not os.path.exists(PRACTICES_FILE):
+        return [], ""
+    with open(PRACTICES_FILE, encoding="utf-8") as f:
+        d = json.load(f)
+    return d["practices"], d.get("intro", "")
+
+
+def practice_slug(slug: str) -> str:
+    return f"praktika-{slug}"
+
+
+def practice_for(e: dict, practices: list[dict]) -> dict | None:
+    if not practices:
+        return None
+    by_slug = {p["slug"]: p for p in practices}
+    for p in practices:  # tiesioginis ryšys iš praktikos related sąrašo
+        if e["slug"] in p.get("related", []):
+            return p
+    return by_slug.get(PRACTICE_BY_CATEGORY.get(e["category"], "sapnu-dienorastis")) or practices[0]
+
+
+def render_practice(pr: dict, by_slug: dict, link, today: str, practices: list[dict]) -> str:
+    url = link(practice_slug(pr["slug"]))
+    hub = link(HUB_SLUG)
+    parts = [f'<div class="se-sapnai"><style>{CSS}</style>']
+    parts.append(f'<p class="se-crumbs"><a href="{hub}">Sapnų reikšmės</a> › Mindfulness praktikos › {esc(pr["title"].split(":")[0])}</p>')
+    parts.append(f'<a class="se-back" href="{hub}#paieska">🔍 Ieškoti sapno</a>')
+    parts.append(f'<div class="speakable"><p><strong>{esc(pr["short"])}</strong></p></div>')
+    parts.append(f'<div class="se-box"><p>⏱ <strong>Trukmė:</strong> {esc(pr["duration"])}</p><p>🕯 <strong>Kada naudoti:</strong> {esc(pr["when"])}</p></div>')
+    parts.append("<h2>Kaip atlikti: žingsnis po žingsnio</h2><ol>")
+    for st in pr["steps"]:
+        parts.append(f"<li><p>{esc(st)}</p></li>")
+    parts.append("</ol>")
+    parts.append("<h2>Kodėl tai veikia</h2>")
+    parts.append(f"<p>{esc(pr['science'])}</p>")
+    rel = [r for r in pr.get("related", []) if r in by_slug]
+    if rel:
+        parts.append("<h2>Sapnai, kuriems ši praktika tinka</h2>")
+        parts.append('<ul class="se-related">' + "".join(f'<li><a href="{link(r)}">{esc(by_slug[r]["word"])}</a></li>' for r in rel) + "</ul>")
+    others = [o for o in practices if o["slug"] != pr["slug"]][:4]
+    parts.append("<h2>Kitos praktikos</h2>")
+    parts.append('<ul class="se-related">' + "".join(f'<li><a href="{link(practice_slug(o["slug"]))}">{esc(o["title"].split(":")[0])}</a></li>' for o in others) + "</ul>")
+    parts.append(f'<p>Visas žodynas su paieška: <a href="{hub}">Sapnų reikšmės A–Ž</a>.</p>')
+    parts.append(expert_note_block(AD_TYPES["bendras"]))
+    parts.append(bio_block(short=True))
+    parts.append(contact_block(full=False))
+    parts.append(f'<p class="se-sources">Atnaujinta: {today}</p>')
+    parts.append(f'<a class="se-float" href="{hub}#paieska" aria-label="Grįžti į sapnų paiešką">🔍 Sapnų paieška</a>')
+    parts.append(json_ld({
+        "@context": "https://schema.org",
+        "@graph": [
+            {"@type": "HowTo", "name": pr["title"], "description": pr["short"], "inLanguage": "lt",
+             "totalTime": None, "step": [{"@type": "HowToStep", "position": i + 1, "text": st} for i, st in enumerate(pr["steps"])]},
+            {"@type": "Article", "headline": pr["title"], "description": pr["short"], "inLanguage": "lt",
+             "author": {"@type": "Organization", "name": AUTHOR},
+             "publisher": {"@type": "Organization", "name": "Sleeping Expert", "url": SITE},
+             "datePublished": today, "dateModified": today, "mainEntityOfPage": url,
+             "isPartOf": {"@type": "WebPage", "@id": hub, "name": HUB_TITLE}},
+            {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Blogas", "item": f"{SITE}/blogas/"},
+                {"@type": "ListItem", "position": 2, "name": CATEGORY_NAME, "item": hub},
+                {"@type": "ListItem", "position": 3, "name": pr["title"].split(":")[0], "item": url}]},
+        ]}))
+    parts.append("</div>")
+    out = "\n".join(parts)
+    return out.replace('"totalTime": null, ', "")
+
+
+def practices_section(practices: list[dict], intro: str, link) -> str:
+    if not practices:
+        return ""
+    cards = "".join(
+        f'<a class="se-card se-card--cat" href="{link(practice_slug(p["slug"]))}"><span class="se-card__name">{esc(p["title"].split(":")[0])}</span>'
+        f'<span class="se-card__more">{esc(p["duration"])} →</span></a>' for p in practices)
+    return (f'<h2 id="praktikos">Mindfulness praktikos sapnams</h2><p>{esc(intro)}</p>'
+            f'<div class="se-cards"><div class="se-cards__grid">{cards}</div></div>')
+
+
 # --------------------------------------------------------------------------- spoke page
-def render_post(e: dict, by_slug: dict, link, today: str, products: dict | None = None) -> str:
+def render_post(e: dict, by_slug: dict, link, today: str, products: dict | None = None, practices: list[dict] | None = None) -> str:
     products = products or {}
+    practices = practices or []
     ad = AD_TYPES[ad_type_for(e)]
+    pr = practice_for(e, practices)
     url = link(e["slug"])
     hub = link(HUB_SLUG)
     title = post_title(e)
@@ -423,7 +521,8 @@ def render_post(e: dict, by_slug: dict, link, today: str, products: dict | None 
     parts.append("</tbody></table>")
     parts.append(expert_note_block(ad))
     parts.append("<h2>Mindfulness praktika ryte</h2>")
-    parts.append(f'<div class="se-box"><p>🌱 {esc(e["mindfulness"])}</p></div>')
+    pr_link = (f'<p>📘 Pilna praktika: <a href="{link(practice_slug(pr["slug"]))}">{esc(pr["title"])}</a> · {esc(pr["duration"])}</p>' if pr else "")
+    parts.append(f'<div class="se-box"><p>🌱 {esc(e["mindfulness"])}</p>{pr_link}</div>')
     if e["sleep_note"]:
         parts.append("<h2>Miego pastaba</h2>")
         parts.append(f'<div class="se-box se-box--note"><p>🛏️ {esc(e["sleep_note"])}</p></div>')
@@ -434,9 +533,11 @@ def render_post(e: dict, by_slug: dict, link, today: str, products: dict | None 
 
     # FAQ
     v0 = e["variants"][0]
+    q1 = e["title"] if e["title"].endswith("?") else f"Ką reiškia {qp}?"
+    q2 = "Ar tai blogas ženklas?" if e["category"] in ("busenos",) or not e["title"].lower().startswith("sapnuoti") else f"Ar {qp} – blogas ženklas?"
     faq = [
-        (f"Ką reiškia {qp}?", e["short"]),
-        (f"Ar {qp} – blogas ženklas?",
+        (q1, e["short"]),
+        (q2,
          "Ne. Sapnai nepranašauja įvykių – psichologijos požiūriu jie atspindi jūsų dabartinius jausmus ir rūpesčius. "
          f"Svarbiausia yra emocija, kurią jautėte sapne, ir konkreti situacija: pavyzdžiui, jei {v0['situation'][0].lower() + v0['situation'][1:]}, "
          f"tai dažniausiai reiškia štai ką: {v0['meaning'][0].lower() + v0['meaning'][1:]}"),
@@ -479,8 +580,10 @@ def render_post(e: dict, by_slug: dict, link, today: str, products: dict | None 
 
 
 # --------------------------------------------------------------------------- hub page
-def render_hub(entries: list[dict], categories: dict, link, today: str, products: dict | None = None) -> str:
+def render_hub(entries: list[dict], categories: dict, link, today: str, products: dict | None = None,
+               practices: list[dict] | None = None, practices_intro: str = "") -> str:
     products = products or {}
+    practices = practices or []
     hub = link(HUB_SLUG)
     parts = [f'<div class="se-sapnai"><style>{CSS}</style>']
     parts.append(
@@ -500,6 +603,7 @@ def render_hub(entries: list[dict], categories: dict, link, today: str, products
                  "<li><strong>Pirmiausia prisiminkite emociją</strong>, ne siužetą. Ta pati gyvatė gali reikšti baimę arba atsinaujinimą – skiria jausmas.</li>"
                  "<li><strong>Įveskite žodį</strong> (galima be lietuviškų raidžių: „gyvate“, „ziurke“) arba pasirinkite kategoriją.</li>"
                  "<li><strong>Perskaitykite trumpą reikšmę</strong>, o jei norite variantų, praktikos ir miego pastabų – atsidarykite pilną straipsnį.</li>"
+                 "<li><strong>Išbandykite praktiką.</strong> Prie kiekvieno simbolio – rytinė mindfulness užduotis ir nuoroda į pilną praktiką (<a href=\"#praktikos\">12 praktikų</a>).</li>"
                  "<li><strong>Užrašykite sapną ryte.</strong> Sapnų dienoraštis – paprasčiausias būdas pastebėti, kurios temos kartojasi.</li></ol>")
 
     parts.append(expert_note_block(AD_TYPES["bendras"]))
@@ -529,13 +633,13 @@ def render_hub(entries: list[dict], categories: dict, link, today: str, products
         parts.append(f'<h4><a href="{url}">{esc(e["word"])}</a><span class="se-cat">{esc(e["category_name"])}</span></h4>')
         parts.append(f"<p>{esc(e['short'])}</p>")
         parts.append("<details><summary>Plačiau apie šį sapną</summary>")
-        for p in e["psychology"]:
-            parts.append(f"<p>{esc(p)}</p>")
+        parts.append(f"<p>{esc(e['psychology'][0])}</p>")  # tik pirma pastraipa – hub turi likti lengvas mobiliesiems
         parts.append(f'<a class="se-more" href="{url}">Visas straipsnis: {esc(e["title"])} →</a></details></article>')
     parts.append("</section>")
     parts.append('<p class="se-empty" id="seSapnaiEmpty" hidden>Tokio simbolio dar nėra. Pabandykite sinonimą (pvz., „lokys“ vietoj „meška“) '
                  'arba parašykite mums – žodyną nuolat pildome.</p>')
 
+    parts.append(practices_section(practices, practices_intro, link))
     parts.append("<h2>Kodėl sapnuojame: trys teorijos, kuriomis remiasi šis žodynas</h2>")
     parts.append("<p><strong>Tęstinumo hipotezė.</strong> Sapnų turinys atkartoja tai, kas mums rūpi dieną (M. Schredl). Todėl sapnas apie "
                  "darbą po sunkios darbo savaitės nereikalauja simbolinės interpretacijos – jis tiesiog tęsia dieną.</p>"
@@ -579,7 +683,7 @@ def render_hub(entries: list[dict], categories: dict, link, today: str, products
         "@context": "https://schema.org",
         "@graph": [
             {"@type": "Article", "headline": HUB_TITLE, "inLanguage": "lt",
-             "description": "Sapnų reikšmių žodynas su paieška: 120 simbolių, aiškinamų psichologijos, miego mokslo ir mindfulness požiūriu.",
+             "description": f"Sapnų reikšmių žodynas su paieška: {len(entries)} simboliai, aiškinami psichologijos, miego mokslo ir mindfulness požiūriu, ir 12 praktikų.",
              "author": {"@type": "Organization", "name": AUTHOR},
              "publisher": {"@type": "Organization", "name": "Sleeping Expert", "url": SITE},
              "datePublished": today, "dateModified": today, "mainEntityOfPage": hub},
@@ -613,6 +717,51 @@ h1{{color:#142b6f;font-size:clamp(26px,5vw,38px);line-height:1.2;margin:8px 0 16
 <h1>{esc(title)}</h1>
 {body}
 </main>
+"""
+
+
+def wrap_artifact_spa(pages: dict) -> str:
+    """Vienas HTML: visi puslapiai <template> elementuose, hash maršrutizavimas (#/hub, #/s/<slug>, #/p/<slug>)."""
+    tpls = []
+    for key, (title, body) in pages.items():
+        tid = "t-" + key.replace("/", "-")
+        tpls.append(f'<template id="{tid}" data-title="{esc(title)}">{body}</template>')
+    router = """
+(function(){
+  var app=document.getElementById('app'),h1=document.getElementById('pageTitle');
+  function show(){
+    var h=location.hash||'#/hub';
+    if(h.charAt(1)!=='/'){return;}            // vidiniai inkarai (#paieska, #sapnai-a) – natūralus slinkimas
+    var route=h.slice(2).split('#')[0]; var sub=h.indexOf('#',1)>0?h.slice(h.indexOf('#',1)+1):'';
+    var t=document.getElementById('t-'+route.replace(/\//g,'-'))||document.getElementById('t-hub');
+    app.innerHTML=''; app.appendChild(t.content.cloneNode(true)); h1.textContent=t.getAttribute('data-title'); document.title=t.getAttribute('data-title');
+    app.querySelectorAll('script').forEach(function(old){var sc=document.createElement('script');sc.textContent=old.textContent;old.replaceWith(sc);});
+    window.scrollTo(0,0);
+    if(sub==='paieska'){var box=document.getElementById('paieska');if(box){box.scrollIntoView();var q=document.getElementById('seSapnaiQ');if(q)setTimeout(function(){q.focus();},200);}}
+  }
+  window.addEventListener('hashchange',show); show();
+})();"""
+    return f"""<title>Sapnų reikšmės A–Ž</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{{--bg:#ffffff;--fg:#1a1a2e;--head:#142b6f;color-scheme:light}}
+body{{margin:0;background:var(--bg);color:var(--fg);font-family:Outfit,system-ui,sans-serif;font-size:16px}}
+.wrap{{max-width:820px;margin:0 auto;padding-block:24px 64px;padding-inline:16px}}
+.top{{background:#142b6f;color:#fff;padding-block:14px;padding-inline:16px;position:sticky;top:env(safe-area-inset-top,0px);z-index:70}}
+.top .in{{max-width:820px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}}
+.top a{{color:#ffd602;text-decoration:none;font-weight:700}}
+.top small{{opacity:.8}}
+h1{{color:#142b6f;font-size:clamp(26px,5vw,38px);line-height:1.2;margin:8px 0 16px;text-wrap:balance}}
+{CSS}
+</style>
+<div class="top"><div class="in"><a href="#/hub">☾ Sleeping Expert · Sapnų reikšmės</a><small>Peržiūra – taip atrodys WordPress įrašai</small></div></div>
+<main class="wrap">
+<h1 id="pageTitle"></h1>
+<div id="app"></div>
+</main>
+{"".join(tpls)}
+<script>{router}</script>
 """
 
 
@@ -661,15 +810,19 @@ def main() -> int:
     entries, categories = load_entries()
     by_slug = {e["slug"]: e for e in entries}
     products = load_products()
+    practices, practices_intro = load_practices()
+    print(f"praktikos: {len(practices)}")
     print(f"produktai: {sum(len(v) for v in products.values())} iš {PRODUCTS_FILE if products else 'nėra products.json → kategorijų plytelės'}")
 
     os.makedirs(os.path.join(out, "posts"), exist_ok=True)
+    os.makedirs(os.path.join(out, "practices"), exist_ok=True)
+    os.makedirs(os.path.join(out, "preview", "practices"), exist_ok=True)
     os.makedirs(os.path.join(out, "preview", "posts"), exist_ok=True)
-    os.makedirs(os.path.join(out, "artifact", "posts"), exist_ok=True)
+    os.makedirs(os.path.join(out, "artifact"), exist_ok=True)
 
     # 1) WordPress fragments with placeholders
     wp_link = lambda slug: "{{URL:" + slug + "}}"
-    hub_html = render_hub(entries, categories, wp_link, today, products)
+    hub_html = render_hub(entries, categories, wp_link, today, products, practices, practices_intro)
     with open(os.path.join(out, "hub.html"), "w", encoding="utf-8") as f:
         f.write(hub_html)
     manifest = {
@@ -679,13 +832,13 @@ def main() -> int:
                      "description_html": 'Pradėkite nuo žodyno su paieška: <a href="{{URL:' + HUB_SLUG + '}}">Sapnų reikšmės A–Ž</a>. '
                                          'Kiekvienas simbolis aiškinamas psichologijos ir miego mokslo, ne prietarų, požiūriu.'},
         "hub": {"slug": HUB_SLUG, "key": HUB_SLUG, "title": HUB_TITLE, "file": "hub.html",
-                "excerpt": "Sapnų reikšmių žodynas su paieška: 120 simbolių, aiškinamų psichologijos, miego mokslo ir mindfulness požiūriu.",
+                "excerpt": f"Sapnų reikšmių žodynas su paieška: {len(entries)} simboliai, aiškinami psichologijos, miego mokslo ir mindfulness požiūriu, ir 12 praktikų.",
                 "focus_keyword": "sapnų reikšmės", "secondary_keywords": "sapnininkas, sapnų aiškinimas, ką reiškia sapnuoti, sapnų žodynas",
                 "words": word_count(hub_html)},
         "posts": [],
     }
     for e in entries:
-        body = render_post(e, by_slug, wp_link, today, products)
+        body = render_post(e, by_slug, wp_link, today, products, practices)
         fn = f"{e['slug']}.html"
         with open(os.path.join(out, "posts", fn), "w", encoding="utf-8") as f:
             f.write(body)
@@ -695,30 +848,62 @@ def main() -> int:
             "focus_keyword": q_phrase(e), "secondary_keywords": ", ".join(e["aliases"][:5]),
             "words": word_count(body),
         })
+    manifest["practices"] = []
+    for pr in practices:
+        body = render_practice(pr, by_slug, wp_link, today, practices)
+        fn = f"{pr['slug']}.html"
+        with open(os.path.join(out, "practices", fn), "w", encoding="utf-8") as f:
+            f.write(body)
+        manifest["practices"].append({
+            "key": practice_slug(pr["slug"]), "slug": practice_slug(pr["slug"]), "title": pr["title"], "file": f"practices/{fn}",
+            "excerpt": pr["short"], "category": "Mindfulness praktikos",
+            "focus_keyword": pr["title"].split(":")[0].lower(), "secondary_keywords": "mindfulness, sapnai, miegas, praktika",
+            "words": word_count(body),
+        })
+    manifest["hub"]["words"] = word_count(hub_html)
     with open(os.path.join(out, "manifest.json"), "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
     # 2) Preview (relative links)
     def prev_link_factory(depth: int):
         prefix = "../" * depth
-        return lambda slug: f"{prefix}index.html" if slug == HUB_SLUG else f"{prefix}posts/{slug}.html"
+        def _l(slug):
+            if slug == HUB_SLUG:
+                return f"{prefix}index.html"
+            if slug.startswith("praktika-"):
+                return f"{prefix}practices/{slug[len('praktika-'):]}.html"
+            return f"{prefix}posts/{slug}.html"
+        return _l
 
     with open(os.path.join(out, "preview", "index.html"), "w", encoding="utf-8") as f:
-        f.write(wrap_preview(HUB_TITLE, render_hub(entries, categories, prev_link_factory(0), today, products),
+        f.write(wrap_preview(HUB_TITLE, render_hub(entries, categories, prev_link_factory(0), today, products, practices, practices_intro),
                              manifest["hub"]["excerpt"], 0))
     for e in entries:
         with open(os.path.join(out, "preview", "posts", f"{e['slug']}.html"), "w", encoding="utf-8") as f:
-            f.write(wrap_preview(post_title(e), render_post(e, by_slug, prev_link_factory(1), today, products), e["short"], 1))
+            f.write(wrap_preview(post_title(e), render_post(e, by_slug, prev_link_factory(1), today, products, practices), e["short"], 1))
+    for pr in practices:
+        with open(os.path.join(out, "preview", "practices", f"{pr['slug']}.html"), "w", encoding="utf-8") as f:
+            f.write(wrap_preview(pr["title"], render_practice(pr, by_slug, prev_link_factory(1), today, practices), pr["short"], 1))
 
-    # 3) Artifact (claude.ai) – fragments without document skeleton
-    with open(os.path.join(out, "artifact", "index.html"), "w", encoding="utf-8") as f:
-        f.write(wrap_artifact("Sapnų reikšmės A–Ž", render_hub(entries, categories, prev_link_factory(0), today, products), 0))
+    # 3) Artifact (claude.ai) – vienas failas su visais puslapiais ir hash maršrutizavimu
+    #    (artefaktas leidžia ≤255 pagalbinių failų, o puslapių yra ~300)
+    def art_link(slug):
+        if slug == HUB_SLUG:
+            return "#/hub"
+        if slug.startswith("praktika-"):
+            return f"#/p/{slug[len('praktika-'):]}"
+        return f"#/s/{slug}"
+
+    frag = lambda html: re.sub(r"<script type=\"application/ld\+json\">.*?</script>", "", re.sub(r"<style>.*?</style>", "", html, flags=re.S), flags=re.S)
+    pages = {"hub": (HUB_TITLE, frag(render_hub(entries, categories, art_link, today, products, practices, practices_intro)))}
     for e in entries:
-        with open(os.path.join(out, "artifact", "posts", f"{e['slug']}.html"), "w", encoding="utf-8") as f:
-            f.write(wrap_preview(post_title(e), render_post(e, by_slug, prev_link_factory(1), today, products), e["short"], 1))
-
+        pages[f"s/{e['slug']}"] = (post_title(e), frag(render_post(e, by_slug, art_link, today, products, practices)))
+    for pr in practices:
+        pages[f"p/{pr['slug']}"] = (pr["title"], frag(render_practice(pr, by_slug, art_link, today, practices)))
+    with open(os.path.join(out, "artifact", "index.html"), "w", encoding="utf-8") as f:
+        f.write(wrap_artifact_spa(pages))
     words = [p["words"] for p in manifest["posts"]]
-    print(f"OK: {len(entries)} simboliai, {len(categories)} kategorijos → {out}")
+    print(f"OK: {len(entries)} simboliai, {len(categories)} kategorijos, {len(practices)} praktikos → {out}")
     print(f"hub: {manifest['hub']['words']} žodžių; įrašai: min {min(words)} / vid {sum(words)//len(words)} / max {max(words)} žodžių")
     return 0
 
