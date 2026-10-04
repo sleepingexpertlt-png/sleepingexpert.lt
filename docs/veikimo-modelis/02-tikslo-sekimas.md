@@ -317,3 +317,62 @@ ir tada biudžetą padidinti 3 450 000 micros (3,45 €/d) prie esamos reikšmė
 Per 7 dienas (iki 2026-09-25) patikrinti, ar PMax-4 maršrutų kiekis pakilo
 Klaipėdoje ir Vilniuje. Jei bendras paskyros maršrutų skaičius nukrito — grąžinti
 `enable_campaign` 23085196755 ir permąstyti.
+
+## 2026-10-04 — Kur dingo pinigai: patikrinta pačiam, ne klausiant
+
+Savininkas: „pats pasižiūrėkit". Patikrinta viskas, ką pasiekiu.
+
+### Antras apyvartos taškas, rastas Hermès vault'e
+
+`project_typed_judgments_2026-09-30.md` (per `hermes_cag`) turi 2026-09-29
+matavimą. Kartu su šiandienos `hermes_business_metrics`:
+
+| | 2026-09-29 | 2026-10-04 | Pokytis |
+|---|---|---|---|
+| Salonai | 46 556 € / 45 užs. | 38 716 € / 41 užs. | **−7 840 € / −4** |
+| Online | 1 449 € / 5 užs. | 1 089 € / 3 užs. | −360 € / −2 |
+| **Viso 30 d.** | **48 004 € / 50** | **39 806 € / 44** | **−8 198 € / −6** |
+| Salono AOV | 1 034,58 € | 944,30 € | **−8,7 %** |
+
+### Nuostolio išskaidymas
+
+Salonų −7 840 € skyla į du beveik lygius gabalus:
+
+| Šaltinis | Skaičiavimas | Suma |
+|---|---|---|
+| Mažiau užsakymų | 4 × 1 034,58 € | −4 138 € |
+| Mažesnis krepšelis | 41 × (1 034,58 − 944,30) | −3 702 € |
+
+Pusė nuostolio — niekas neatėjo. Kita pusė — atėjo ir nupirko pigiau.
+Reklama neturi įtakos nė vienam iš šių dviejų dydžių: ji atveda žmogų iki durų.
+Tuo pačiu metu maršrutai 7 d. pakilo 63 → 76 (+21 %).
+
+### Ukmergė tempia krepšelį žemyn
+
+| Salonas | Maršrutai 7 d. | Užsak. 30 d. | AOV |
+|---|---|---|---|
+| Klaipėda | 26 | 10 | 1 172 € |
+| Vilnius | 34 | 24 | 970 € |
+| **Ukmergė** | **16** | **3** | **409 €** |
+
+Ukmergė gauna srautą virš savo bazės (16 vs 13) ir paverčia jį trimis
+užsakymais po 409 €. Tai pardavimo, ne reklamos klausimas.
+
+### Ko pasiekti NEPAVYKO ir kodėl (be spėjimų)
+
+| Norėta | Kelias | Rezultatas |
+|---|---|---|
+| Dienos apyvartos eilutė | `dashboard-api` VPS portas 5002 | nėra viešo HTTPS mapping'o |
+| Tas pats per SE domeną | `hermes_fetch_media` | whitelist: tik sleepingexpert.lt, www, lamele.lt, cookking.online |
+| WooCommerce užsakymai | WC REST API | raktai `config/secrets.env` VPS'e, SSH neturiu |
+| Dienos ataskaitos | `hermes_telegram_feed` 168 h | 6 žinutės, visos apie blogą; apyvartos ataskaitų nėra |
+
+### Šalutinis radinys: lokacijų puslapiai VEIKIA
+
+Patikrinta per sitemap + feed probe:
+`/locations/sleeping-expert-klaipeda/` ir `/locations/sleeping-expert-vilnius/`
+atsako 200. Vadinasi Google Ads „Destination Not Accessible" rodo **ne į šiuos**
+puslapius — asset grupėje yra kitas URL. Kuris — be paskyros skaitymo nematau.
+
+Tų pačių puslapių meta aprašas prasideda „Premium čiužiniai" — uždrausta
+rinkodaros formuluotė (Hermès taisyklė Nr. 3). Atskiras taisymas.
