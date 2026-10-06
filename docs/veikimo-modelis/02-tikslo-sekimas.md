@@ -376,3 +376,18 @@ puslapius — asset grupėje yra kitas URL. Kuris — be paskyros skaitymo nemat
 
 Tų pačių puslapių meta aprašas prasideda „Premium čiužiniai" — uždrausta
 rinkodaros formuluotė (Hermès taisyklė Nr. 3). Atskiras taisymas.
+
+## 2026-10-06 — Merchant Center: prekės baigia galioti, ne dingo iš svetainės
+
+GMC alert 10-05 05:10: aktyvios prekės LT **617 → 346 (−43 %)**, Free listings
+ir Shopping ads. Patikrinta pačiam per Store API: svetainėje ~627 matomi
+produktai, 12 outofstock — **svetainė sveika**. Kritimas Google pusėje:
+Content API įrašai (dataSource 10626898137, P-076) galioja 30 d., o
+10-05 − 30 d. = **09-05** — diena, kai užšalo ir metrikų rašymas. Likusios
+346 baigia galioti per 3 d. PMax be prekių — be inventoriaus.
+
+Veiksmas VPS sesijai: `docs/vps-promptai/2026-10-06-merchant-center-expiration.md`
+— perleisti `merchant_agent.py`, grąžinti cron. **P-076 DELETE nevykdyti.**
+
+Šalutinis gedimas: `hermes_cag` grąžina Gemini **403 PERMISSION_DENIED
+„Your project has been denied access"** — Hermès žinių bazė šiuo metu neveikia.
