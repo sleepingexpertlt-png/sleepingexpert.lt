@@ -60,3 +60,32 @@ užšaldė metrikų rašymą; žr. metacog/shared_state rašymo logus tą dieną
 
 5 eilutės: paskutinio sėkmingo push data | kiek prekių Merchant API prieš |
 kiek po | ar cron grąžintas | kas 09-05 sustabdė.
+
+---
+
+## PATAISA 2026-10-07 — 09-05 hipotezė PANEIGTA (VPS faktai)
+
+| Mano prielaida | VPS faktas (tik skaitymas, 2026-10-07 ~06:35) |
+|---|---|
+| `merchant_agent.py` nestumia nuo 09-05 | `--sync` paskutinis sėkmingas **2026-10-05 05:15:28**, 0 klaidų; 7 savaitiniai paleidimai iš eilės nuo 08-24 |
+| Prekės baigia galioti, nes niekas neatnaujina | Feed XML (`generate_shopping_feed.py`) kasdien, paskutinis 10-07 04:15, 625 prekės, HTTP 200 |
+
+Klaida: 10-05 − 30 d. = 09-05 sutapimą su metrikų užšalimu priėmiau kaip
+priežastį, nepatikrinęs, ar sync'as apskritai sustojęs. Nebuvo.
+
+**Nauja hipotezė (netikrinta):** savaitinis `--sync` stumia tik pasikeitusias
+prekes (delta); Content API galiojimas = paskutinis push + 30 d.; nepakeistos
+prekės baigia galioti. 271 nelietos nuo ~09-05 → išnyko 10-05.
+
+**Testas (VPS, skaitymas):**
+1. `merchant_agent.py` — full ar delta? ar nustato `expirationDate`?
+2. Merchant API `productstatuses.list`: kiek `expirationDate` < 2026-10-10,
+   kokie `itemLevelIssues` ant išmestųjų.
+3. Jei delta — pilnas re-push visų 627.
+
+**Atskiri gedimai iš VPS ataskaitos:**
+- Merchant Monitor išjungtas nuo 2026-07-08 — MC būsenos niekas nestebi.
+- VPS nemato šakos `claude/llamamaps-suggestions-opportunities-m1b2tr`
+  (origin'e yra, 6b70a58). Tikrinti `git remote -v`, fetch refspec.
+- WordPress posts turinio REST atnaujinimai tyliai neišsisaugo (L2026-10-07-1).
+- 10 VPS commit'ų nepushinta.
