@@ -120,17 +120,23 @@ def word_count(text_html: str) -> int:
 
 def load_entries() -> tuple[list[dict], dict[str, str]]:
     entries, categories = [], {}
+    raw = []
     for path in sorted(glob.glob(os.path.join(DATA_DIR, "*.json"))):
         with open(path, encoding="utf-8") as f:
             d = json.load(f)
-        categories[d["category"]] = d["category_name"]
+        if d.get("category"):
+            categories[d["category"]] = d["category_name"]
         for e in d["entries"]:
             e = dict(e)
-            e["category"] = d["category"]
-            e["category_name"] = d["category_name"]
+            e.setdefault("category", d.get("category"))
             e.setdefault("aliases", [])
             e.setdefault("sleep_note", "")
-            entries.append(e)
+            raw.append(e)
+    for e in raw:  # kategorijos pavadinimas – iš bet kurio failo, kuris ją apibrėžia
+        if e["category"] not in categories:
+            sys.exit(f"{e['slug']}: nežinoma kategorija '{e['category']}'")
+        e["category_name"] = categories[e["category"]]
+        entries.append(e)
     slugs = [e["slug"] for e in entries]
     dupes = {s for s in slugs if slugs.count(s) > 1}
     if dupes:

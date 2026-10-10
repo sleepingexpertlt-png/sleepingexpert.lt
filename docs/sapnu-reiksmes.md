@@ -1,7 +1,7 @@
 # Sapnų reikšmės — blogo kategorija su paieška (projektas)
 
 **Tikslas (G3 blogas / G4 AI matomumas):** nauja `sleepingexpert.lt` blogo kategorija „Sapnų reikšmės“:
-vienas hub straipsnis su paieška ir A–Ž žodynu + 285 atskiri įrašai (po vieną simboliui) + 12 mindfulness
+vienas hub straipsnis su paieška ir A–Ž žodynu + 305 atskiri įrašai (po vieną simboliui) + 12 mindfulness
 praktikų straipsnių, sujungtų vidinėmis nuorodomis (hub ↔ įrašas ↔ susiję simboliai ↔ praktika). Turinys – originalus lietuviškas tekstas,
 paremtas viešai prieinama sapnų psichologija (Freudas, Jungas, tęstinumo hipotezė, grėsmės simuliacijos
 teorija, REM emocijų apdorojimas) ir mindfulness praktikomis. Jokių prietarų kaip faktų, jokių
@@ -19,7 +19,7 @@ saugus kelias (Google „scaled content abuse“ politika, 2024–2025).
 
 | Kelias | Kas tai |
 |---|---|
-| `data/sapnu-reiksmes/symbols/*.json` | Turinys: 9 kategorijos, 285 simboliai (failai `_2` – antra partija). Vienas šaltinis tiesai. |
+| `data/sapnu-reiksmes/symbols/*.json` | Turinys: 9 kategorijos, 305 simboliai (failai `_2` – antra partija, `papildymai.json` – dažniausiai ieškomi papildymai su `category` lauku). Vienas šaltinis tiesai. |
 | `data/sapnu-reiksmes/practices.json` | 12 mindfulness praktikų (žingsniai, kada naudoti, mokslas, susiję simboliai). |
 | `scripts/sapnai/build.py` | Generatorius → `build/sapnu-reiksmes/` (WP fragmentai + manifest + peržiūra). |
 | `scripts/sapnai/publish_wp.py` | Publikavimas į WP per REST API (dry-run pagal nutylėjimą, draft statusas). |
@@ -77,7 +77,7 @@ bloke rodo nuorodą į tinkamą praktiką: pirma pagal praktikos `related` sąra
 ## Kokybės vartai (seo-programmatic skill)
 
 - Kiekvienas įrašas ≈ 440–630 žodžių, iš jų 50–57 % unikalaus (ne šabloninio) teksto – virš 40 % slenksčio.
-- Hub ≈ 20 000 žodžių: visų 285 simbolių trumpos reikšmės + „Plačiau“ (pirma psichologinė pastraipa) + paieška + praktikų sekcija. Pilnos pastraipos – tik simbolių puslapiuose, kad hub liktų lengvas mobiliesiems.
+- Hub ≈ 20 000 žodžių: visų 305 simbolių trumpos reikšmės + „Plačiau“ (pirma psichologinė pastraipa) + paieška + praktikų sekcija. Pilnos pastraipos – tik simbolių puslapiuose, kad hub liktų lengvas mobiliesiems.
 - Kiekvienas įrašas: Article + FAQPage (3 kl.) + BreadcrumbList schema, 3–6 susiję simboliai, nuoroda į hub.
 - Progressive rollout: pirma partija 50 įrašų + hub + praktikos, stebėti indeksavimą 1–2 sav., tada po 100.
 - Statusas visada `draft`; publish tik rankiniu būdu arba `--publish` po peržiūros.
