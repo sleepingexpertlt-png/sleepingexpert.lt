@@ -108,8 +108,6 @@ def main() -> int:
     dry = not args.apply
     if not dry and (not user or not pw):
         sys.exit("Trūksta WP_USER / WP_APP_PASSWORD (source /root/frontier-agent/config/secrets.env)")
-    if requests is None:
-        sys.exit("Reikia `pip install requests`")
 
     posts = m["posts"] + m.get("practices", [])
     if args.only:
@@ -128,6 +126,8 @@ def main() -> int:
         print("Planas be WP užklausų (nėra kredencialų). Su kredencialais dry-run dar patikrina, kurie įrašai jau yra.")
         return 0
 
+    if requests is None:
+        sys.exit("Reikia `pip install requests`")
     wp = WP(user, pw, dry_run=dry)
     cat_id = ensure_category(wp, m["category"])
 
