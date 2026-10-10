@@ -83,6 +83,24 @@ def ensure_category(wp: WP, cat: dict) -> int:
     return res["id"]
 
 
+def prune_revisions(wp: WP, post_id: int, keep: int) -> int:
+    """Ištrina senas revizijas (WP kiekvieną API atnaujinimą saugo kaip reviziją – DB auga dvigubai)."""
+    try:
+        revs = wp.get(f"posts/{post_id}/revisions", per_page=100, _fields="id,modified")
+    except Exception:  # noqa: BLE001 – revizijos gali būti išjungtos
+        return 0
+    revs = sorted(revs, key=lambda r: r.get("modified", ""), reverse=True)
+    deleted = 0
+    for r in revs[keep:]:
+        try:
+            requests.delete(f"{WP_URL}/posts/{post_id}/revisions/{r['id']}", headers=wp.h, params={"force": "true"}, timeout=60)
+            deleted += 1
+            time.sleep(0.2)
+        except Exception:  # noqa: BLE001
+            break
+    return deleted
+
+
 def find_post(wp: WP, slug: str) -> dict | None:
     # viena užklausa visiems statusams (autentifikuotam vartotojui leidžiamas sąrašas) + pauzė:
     # 2026-09-08 pamoka – bulk WP užklausos be pauzės užblokavo visą domeną (429).
@@ -99,6 +117,7 @@ def main() -> int:
     ap.add_argument("--limit", type=int, default=0, help="publikuoti tik pirmus N simbolių įrašų (partijomis)")
     ap.add_argument("--only", default="", help="kableliais atskirti key'ai, pvz. gyvate,dantys (ir hub visada)")
     ap.add_argument("--skip-hub", action="store_true", help="neatnaujinti hub straipsnio")
+    ap.add_argument("--keep-revisions", type=int, default=1, help="kiek revizijų palikti kiekvienam įrašui (0 = nevalyti)")
     args = ap.parse_args()
 
     with open(os.path.join(BUILD, "manifest.json"), encoding="utf-8") as f:
@@ -179,7 +198,8 @@ def main() -> int:
             # simboliai – po minutę senesni, abėcėlės tvarka
             data["date"] = (now - dt.timedelta(minutes=len(items) - 1 - idx)).isoformat()
         wp.post(f"posts/{ids[p['key']]}", data)
-        print(f"  ✅ {p['slug']} → {links[p['key']]} ({p['words']} ž., {status})")
+        pruned = prune_revisions(wp, ids[p["key"]], args.keep_revisions) if (args.keep_revisions and not dry) else 0
+        print(f"  ✅ {p['slug']} → {links[p['key']]} ({p['words']} ž., {status}{', revizijų ištrinta: ' + str(pruned) if pruned else ''})")
 
     # kategorijos aprašymas su nuoroda į hub – kad /kategorija/sapnu-reiksmes/ turėtų ką paspausti
     desc = m["category"].get("description_html")

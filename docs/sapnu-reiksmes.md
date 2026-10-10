@@ -125,6 +125,12 @@ kategorijų plytelės. Kainos nerodomos sąmoningai – jos keičiasi, o straips
 Be nukreipimo `publish_wp.py` vis tiek palieka du saugiklius: kategorijos aprašymas su nuoroda į hub ir
 hub kaip naujausias įrašas (publikuojant datos išdėstomos taip, kad hub būtų pirmas sąraše).
 
+## Vieta svetainėje
+
+Apie 4 MB `wp_posts` turinio (hub 340 KB, įrašas vid. 13 KB), 0 naujų failų `uploads`. Simbolių ir praktikų
+įrašai turi tik bazinį CSS, hub – visą (paieška, raidės, filtrai). `publish_wp.py` po kiekvieno atnaujinimo
+ištrina senas revizijas (`--keep-revisions`, numatyta 1), kad DB neaugtų dvigubai su kiekvienu `--apply`.
+
 ## WP slug'ų schema
 
 - Hub: `/sapnu-reiksmes/`; kategorijos archyvas: `/kategorija/sapnu-reiksmes/` (aprašymas su nuoroda į hub

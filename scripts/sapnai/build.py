@@ -145,35 +145,13 @@ def load_entries() -> tuple[list[dict], dict[str, str]]:
 
 
 # --------------------------------------------------------------------------- CSS (scoped)
-CSS = """
+CSS_BASE = """
 .se-sapnai{--se-blue:#142b6f;--se-accent:#3b40f0;--se-yellow:#ffd602;--se-mauve:#e1dee7;--se-gray:#6b6b7b;--se-bg:#f7f7f8;font-family:Outfit,system-ui,-apple-system,sans-serif;line-height:1.7;color:#1a1a2e}
 .se-sapnai h2,.se-sapnai h3,.se-sapnai h4{color:var(--se-blue);line-height:1.25;font-weight:700}
 .se-sapnai a{color:var(--se-accent)}
 .se-sapnai .se-box{background:var(--se-bg);border-left:4px solid var(--se-yellow);border-radius:8px;padding:16px 20px;margin:24px 0}
 .se-sapnai .se-box--note{border-left-color:var(--se-accent)}
 .se-sapnai .se-box p:last-child{margin-bottom:0}
-.se-sapnai .se-search{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:#fff;padding:12px 0;margin:16px 0 8px;border-bottom:1px solid var(--se-mauve)}
-.se-sapnai .se-search input{width:100%;box-sizing:border-box;font:inherit;font-size:18px;padding:14px 16px;border:2px solid var(--se-blue);border-radius:12px;outline:none}
-.se-sapnai .se-search input:focus{border-color:var(--se-accent);box-shadow:0 0 0 4px rgba(59,64,240,.15)}
-.se-sapnai .se-count{font-size:14px;color:var(--se-gray);margin-top:6px}
-.se-sapnai .se-letters{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
-.se-sapnai .se-letters a,.se-sapnai .se-letters span{display:inline-block;min-width:34px;text-align:center;padding:6px 8px;border-radius:8px;background:var(--se-mauve);color:var(--se-blue);text-decoration:none;font-weight:700;font-size:14px}
-.se-sapnai .se-letters span{opacity:.35}
-.se-sapnai .se-chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 20px}
-.se-sapnai .se-chips button{font:inherit;font-size:14px;padding:8px 14px;border-radius:999px;border:1px solid var(--se-blue);background:#fff;color:var(--se-blue);cursor:pointer}
-.se-sapnai .se-chips button[aria-pressed=true]{background:var(--se-blue);color:#fff}
-.se-sapnai .se-item{border:1px solid var(--se-mauve);border-radius:12px;padding:16px 20px;margin:12px 0;background:#fff}
-.se-sapnai .se-item h4{margin:0 0 6px;font-size:20px}
-.se-sapnai .se-item h4 a{color:var(--se-blue);text-decoration:none}
-.se-sapnai .se-item h4 a:hover{text-decoration:underline}
-.se-sapnai .se-item .se-cat{display:inline-block;font-size:12px;color:var(--se-gray);background:var(--se-bg);border-radius:6px;padding:2px 8px;margin-left:8px;vertical-align:middle;font-weight:400}
-.se-sapnai .se-item p{margin:6px 0}
-.se-sapnai .se-item details{margin-top:8px}
-.se-sapnai .se-item summary{cursor:pointer;color:var(--se-accent);font-weight:500}
-.se-sapnai .se-item .se-more{display:inline-block;margin-top:8px;font-weight:700}
-.se-sapnai .se-letter{margin-top:32px}
-.se-sapnai .se-letter h3{font-size:28px;border-bottom:2px solid var(--se-yellow);padding-bottom:4px}
-.se-sapnai .se-empty{padding:24px;text-align:center;color:var(--se-gray);background:var(--se-bg);border-radius:12px}
 .se-sapnai .se-variants{width:100%;border-collapse:collapse;margin:16px 0}
 .se-sapnai .se-variants th,.se-sapnai .se-variants td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--se-mauve)}
 .se-sapnai .se-variants th{color:var(--se-blue);width:34%}
@@ -208,8 +186,35 @@ CSS = """
 .se-sapnai .se-back:hover{filter:brightness(.95)}
 .se-float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;display:inline-flex;align-items:center;gap:8px;background:var(--se-yellow,#ffd602);color:#142b6f;font:700 15px/1 Outfit,system-ui,sans-serif;padding:14px 18px;border-radius:999px;text-decoration:none;box-shadow:0 10px 15px rgba(20,43,111,.25)}
 .se-float:hover{filter:brightness(.95)}
-@media (max-width:600px){.se-sapnai .se-variants th,.se-sapnai .se-variants td{display:block;width:auto}.se-sapnai .se-variants th{border-bottom:0;padding-bottom:0}.se-sapnai .se-item h4{font-size:18px}}
+@media (max-width:600px){.se-sapnai .se-variants th,.se-sapnai .se-variants td{display:block;width:auto}.se-sapnai .se-variants th{border-bottom:0;padding-bottom:0}}
 """
+CSS_HUB = """
+.se-sapnai .se-search{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:#fff;padding:12px 0;margin:16px 0 8px;border-bottom:1px solid var(--se-mauve)}
+.se-sapnai .se-search input{width:100%;box-sizing:border-box;font:inherit;font-size:18px;padding:14px 16px;border:2px solid var(--se-blue);border-radius:12px;outline:none}
+.se-sapnai .se-search input:focus{border-color:var(--se-accent);box-shadow:0 0 0 4px rgba(59,64,240,.15)}
+.se-sapnai .se-count{font-size:14px;color:var(--se-gray);margin-top:6px}
+.se-sapnai .se-letters{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+.se-sapnai .se-letters a,.se-sapnai .se-letters span{display:inline-block;min-width:34px;text-align:center;padding:6px 8px;border-radius:8px;background:var(--se-mauve);color:var(--se-blue);text-decoration:none;font-weight:700;font-size:14px}
+.se-sapnai .se-letters span{opacity:.35}
+.se-sapnai .se-chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 20px}
+.se-sapnai .se-chips button{font:inherit;font-size:14px;padding:8px 14px;border-radius:999px;border:1px solid var(--se-blue);background:#fff;color:var(--se-blue);cursor:pointer}
+.se-sapnai .se-chips button[aria-pressed=true]{background:var(--se-blue);color:#fff}
+.se-sapnai .se-item{border:1px solid var(--se-mauve);border-radius:12px;padding:16px 20px;margin:12px 0;background:#fff}
+.se-sapnai .se-item h4{margin:0 0 6px;font-size:20px}
+.se-sapnai .se-item h4 a{color:var(--se-blue);text-decoration:none}
+.se-sapnai .se-item h4 a:hover{text-decoration:underline}
+.se-sapnai .se-item .se-cat{display:inline-block;font-size:12px;color:var(--se-gray);background:var(--se-bg);border-radius:6px;padding:2px 8px;margin-left:8px;vertical-align:middle;font-weight:400}
+.se-sapnai .se-item p{margin:6px 0}
+.se-sapnai .se-item details{margin-top:8px}
+.se-sapnai .se-item summary{cursor:pointer;color:var(--se-accent);font-weight:500}
+.se-sapnai .se-item .se-more{display:inline-block;margin-top:8px;font-weight:700}
+.se-sapnai .se-letter{margin-top:32px}
+.se-sapnai .se-letter h3{font-size:28px;border-bottom:2px solid var(--se-yellow);padding-bottom:4px}
+.se-sapnai .se-empty{padding:24px;text-align:center;color:var(--se-gray);background:var(--se-bg);border-radius:12px}
+@media (max-width:600px){.se-sapnai .se-item h4{font-size:18px}}
+"""
+CSS = CSS_BASE + CSS_HUB  # hub naudoja abu; įrašai – tik CSS_BASE (apie 40 % mažiau kiekviename įraše)
+
 
 SEARCH_JS = """
 (function(){
@@ -288,7 +293,7 @@ def contact_block(full: bool = True) -> str:
 
 
 def json_ld(obj: dict) -> str:
-    return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False) + "</script>"
+    return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False, separators=(",", ":")) + "</script>"
 
 
 
@@ -436,7 +441,7 @@ def practice_for(e: dict, practices: list[dict]) -> dict | None:
 def render_practice(pr: dict, by_slug: dict, link, today: str, practices: list[dict]) -> str:
     url = link(practice_slug(pr["slug"]))
     hub = link(HUB_SLUG)
-    parts = [f'<div class="se-sapnai"><style>{CSS}</style>']
+    parts = [f'<div class="se-sapnai"><style>{CSS_BASE}</style>']
     parts.append(f'<p class="se-crumbs"><a href="{hub}">Sapnų reikšmės</a> › Mindfulness praktikos › {esc(pr["title"].split(":")[0])}</p>')
     parts.append(f'<a class="se-back" href="{hub}#paieska">🔍 Ieškoti sapno</a>')
     parts.append(f'<div class="speakable"><p><strong>{esc(pr["short"])}</strong></p></div>')
@@ -501,7 +506,7 @@ def render_post(e: dict, by_slug: dict, link, today: str, products: dict | None 
     title = post_title(e)
     qp = q_phrase(e)
     parts = []
-    parts.append(f'<div class="se-sapnai"><style>{CSS}</style>')
+    parts.append(f'<div class="se-sapnai"><style>{CSS_BASE}</style>')
     parts.append(f'<p class="se-crumbs"><a href="{hub}">Sapnų reikšmės</a> › {esc(e["category_name"])} › {esc(e["word"])}</p>')
     parts.append(f'<a class="se-back" href="{hub}#paieska">🔍 Ieškoti kito sapno</a>')
     parts.append(f'<div class="speakable"><p><strong>{esc(e["short"])}</strong></p></div>')
