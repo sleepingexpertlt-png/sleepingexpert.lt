@@ -1,17 +1,58 @@
 {
   "measured_at": "2026-10-10T07:20",
   "directions_7d": 4,
-  "impressions_7d": {"klaipeda": 39, "vilnius": 39, "ukmerge": 30},
+  "impressions_7d": {
+    "klaipeda": 39,
+    "vilnius": 39,
+    "ukmerge": 30
+  },
   "revenue_30d_total_eur": 39590.09,
   "orders_30d_total": 52,
-  "aov_30d_salon_eur": 807.80,
+  "aov_30d_salon_eur": 807.8,
   "gsc_measured_at": "2026-10-09T07:30",
-  "telegram_feed_24h": 0,
+  "telegram_feed_24h": "see feed",
   "cag_ok": false,
   "history": [
-    {"date": "2026-10-04", "directions_7d": 76, "impressions": {"klaipeda": 1512, "vilnius": 814, "ukmerge": 269}},
-    {"date": "2026-10-05", "directions_7d": 67, "impressions": {"klaipeda": 1660, "vilnius": 1011, "ukmerge": 294}},
-    {"date": "2026-10-06", "directions_7d": 52, "impressions": {"klaipeda": 1106, "vilnius": 829, "ukmerge": 220}},
-    {"date": "2026-10-10", "directions_7d": 4,  "impressions": {"klaipeda": 39,   "vilnius": 39,  "ukmerge": 30}}
-  ]
+    {
+      "date": "2026-10-04",
+      "directions_7d": 76,
+      "impressions": {
+        "klaipeda": 1512,
+        "vilnius": 814,
+        "ukmerge": 269
+      }
+    },
+    {
+      "date": "2026-10-05",
+      "directions_7d": 67,
+      "impressions": {
+        "klaipeda": 1660,
+        "vilnius": 1011,
+        "ukmerge": 294
+      }
+    },
+    {
+      "date": "2026-10-06",
+      "directions_7d": 52,
+      "impressions": {
+        "klaipeda": 1106,
+        "vilnius": 829,
+        "ukmerge": 220
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "directions_7d": 4,
+      "impressions": {
+        "klaipeda": 39,
+        "vilnius": 39,
+        "ukmerge": 30
+      },
+      "revenue_30d_total_eur": 39590.09,
+      "orders_30d_total": 52,
+      "aov_30d_salon_eur": 807.8,
+      "note": "sargas 10:41: GBP signalas vis dar 4 / 39-39-30; queue task-20261010-2 laukia /queue_approve; CAG 403; blogas pauzeje iki 11-03 (owner)"
+    }
+  ],
+  "blog_paused_until": "2026-11-03"
 }
