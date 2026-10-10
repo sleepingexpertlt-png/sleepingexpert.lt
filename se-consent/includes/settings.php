@@ -124,7 +124,7 @@ function se_consent_services() {
         'omnisend'   => ['Omnisend', 'marketing', ['omnisnippet1.com', 'omnisrc.com'], ['omnisend'], ['omnisendContactID', 'omnisendSessionID', 'soundestID', 'omnisendAnonymousID']],
         'hubspot'    => ['HubSpot', 'marketing', ['js.hs-scripts.com'], [], ['__hstc', 'hubspotutk', '__hssc', '__hssrc']],
         'youtube'    => ['YouTube', 'marketing', ['youtube.com/embed', 'youtube-nocookie.com/embed'], [], []],
-        'maps'       => ['Google Maps', 'marketing', ['google.com/maps/embed', 'maps.googleapis.com'], [], []],
+        'maps'       => ['Google Maps', 'marketing', ['google.com/maps', 'maps.googleapis.com'], [], []],
     ]);
 }
 

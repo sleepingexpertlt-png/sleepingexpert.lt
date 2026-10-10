@@ -76,7 +76,7 @@ function se_consent_log_endpoint(WP_REST_Request $req) {
     if (!preg_match('/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i', $id)) {
         return new WP_REST_Response(['ok' => false], 400);
     }
-    $methods = ['accept_all', 'reject_all', 'custom', 'placeholder', 'withdraw', 'gpc', 'api'];
+    $methods = ['accept_all', 'reject_all', 'custom', 'placeholder', 'withdraw', 'gpc', 'service', 'api'];
     $method  = in_array($data['m'] ?? '', $methods, true) ? $data['m'] : 'api';
     $c       = is_array($data['c'] ?? null) ? $data['c'] : [];
     // Atskirai išjungtos paslaugos (pvz. "meta,tiktok") — tik žinomi ID.

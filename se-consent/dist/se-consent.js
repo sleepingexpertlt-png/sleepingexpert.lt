@@ -1,6 +1,6 @@
 /*! SE Consent standalone — sugeneruota 2026-10-10 */
-window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"adsRedaction":true,"urlPassthrough":false,"gaCookieDays":395,"gpc":true,"uet":true,"clarity":true,"services":[["ga4","Google Analytics","statistics",["_ga","_ga_*","_gid","_gat*"]],["clarity","Microsoft Clarity","statistics",["_clck","_clsk","CLID","MUID"]],["google-ads","Google Ads","marketing",["_gcl_au","_gcl_aw","_gcl_dc","_gcl_gb"]],["meta","Meta (Facebook) Pixel","marketing",["_fbp","_fbc"]],["tiktok","TikTok Pixel","marketing",["_ttp","_tt_enable_cookie","ttcsid*"]],["youtube","YouTube","marketing",[]],["maps","Google Maps","marketing",[]]],"compat":true,"floating":true,"position":"bottom","logUrl":"","privacyUrl":"/privatumo-politika/","colors":["#142b6f","#ffd602"],"rules":{"src":{"google-analytics.com/analytics.js":"statistics:ga4","clarity.ms":"statistics:clarity","static.hotjar.com":"statistics:hotjar","script.hotjar.com":"statistics:hotjar","mc.yandex.ru":"statistics:yandex","player.vimeo.com":"statistics:vimeo","googleadservices.com":"marketing:google-ads","googlesyndication.com":"marketing:google-ads","doubleclick.net":"marketing:google-ads","connect.facebook.net":"marketing:meta","facebook.com/tr":"marketing:meta","analytics.tiktok.com":"marketing:tiktok","bat.bing.com":"marketing:bing","snap.licdn.com":"marketing:linkedin","s.pinimg.com":"marketing:pinterest","static.criteo.net":"marketing:criteo","static.klaviyo.com":"marketing:klaviyo","omnisnippet1.com":"marketing:omnisend","omnisrc.com":"marketing:omnisend","js.hs-scripts.com":"marketing:hubspot","youtube.com/embed":"marketing:youtube","youtube-nocookie.com/embed":"marketing:youtube","google.com/maps/embed":"marketing:maps","maps.googleapis.com":"marketing:maps"},"inline":{"clarity.ms":"statistics:clarity","hotjar.com":"statistics:hotjar","mc.yandex.ru":"statistics:yandex","fbq(":"marketing:meta","ttq.load":"marketing:tiktok","ttq.page":"marketing:tiktok","uetq":"marketing:bing","_linkedin_partner_id":"marketing:linkedin","pintrk(":"marketing:pinterest","klaviyo":"marketing:klaviyo","omnisend":"marketing:omnisend"}},"cookies":{"necessary":[["se_consent","sleepingexpert.lt","Išsaugo jūsų slapukų sutikimą","1 metai"],["woocommerce_cart_hash","sleepingexpert.lt","Krepšelio turinio pakeitimų sekimas","Sesija"],["woocommerce_items_in_cart","sleepingexpert.lt","Ar krepšelyje yra prekių","Sesija"],["wp_woocommerce_session_*","sleepingexpert.lt","Krepšelio sesija","2 dienos"],["wordpress_logged_in_*","sleepingexpert.lt","Prisijungimo sesija","Sesija"]],"statistics":[["_ga","Google","Unikalus lankytojo identifikatorius statistikai","2 metai"],["_ga_*","Google","Sesijos būsena Google Analytics 4","2 metai"],["_clck","Microsoft Clarity","Clarity lankytojo ID","1 metai"],["_clsk","Microsoft Clarity","Clarity sesijos sujungimas","1 diena"]],"marketing":[["_gcl_au","Google","Google Ads konversijų sekimas","3 mėnesiai"],["_fbp","Meta","Meta reklamos ir konversijų sekimas","3 mėnesiai"],["_fbc","Meta","Paspaudimo ant Meta reklamos identifikatorius","3 mėnesiai"],["IDE","Google (doubleclick.net)","Reklamos rodymas ir matavimas","13 mėnesių"]]},"t":{"title":"Mes naudojame slapukus","body":"Būtinieji slapukai užtikrina svetainės ir krepšelio veikimą. Su jūsų sutikimu naudosime ir statistikos bei rinkodaros slapukus, kad tobulintume svetainę ir rodytume aktualius pasiūlymus. Sutikimą galite bet kada pakeisti.","accept_all":"Sutinku su visais","reject_all":"Tik būtinieji","customize":"Nustatymai","save":"Išsaugoti pasirinkimą","privacy":"Privatumo politika","settings_title":"Slapukų nustatymai","always_on":"Visada įjungta","blocked_content":"Šis turinys rodomas tik sutikus su rinkodaros slapukais.","blocked_button":"Leisti ir rodyti","reopen":"Slapukų nustatymai","cookies":"Slapukai","services":"Paslaugos","cat":{"necessary":["Būtinieji","Reikalingi svetainės veikimui: krepšelis, prisijungimas, saugumas, jūsų sutikimo išsaugojimas. Jų išjungti negalima."],"preferences":["Nuostatų","Įsimena jūsų pasirinkimus, pvz. kalbą ar regioną."],"statistics":["Statistikos","Padeda suprasti, kaip lankytojai naudojasi svetaine (anonimizuota statistika)."],"marketing":["Rinkodaros","Naudojami reklamai ir jos efektyvumui matuoti (Google Ads, Meta ir kt.)."]}}};
-(function(d){var s=d.createElement("style");s.id="se-consent-css";s.textContent=".se-c{--se-c1:#142b6f;--se-c2:#ffd602;position:fixed;z-index:2147483646;left:0;right:0;bottom:0;display:flex;justify-content:center;padding:12px;font:14px/1.5 system-ui,-apple-system,\"Segoe UI\",Roboto,sans-serif;color:#1d1d1f;pointer-events:none}\n.se-c--center{top:0;align-items:center;background:rgba(0,0,0,.45);pointer-events:auto}\n.se-c__box{pointer-events:auto;box-sizing:border-box;width:100%;max-width:960px;max-height:calc(100vh - 24px);overflow:auto;background:#fff;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.25);padding:20px 22px}\n.se-c__box:focus{outline:none}\n.se-c--open .se-c__box{max-width:720px}\n.se-c__title{margin:0 0 6px;font-size:18px;line-height:1.3;color:var(--se-c1)}\n.se-c__body{margin:0 0 14px}\n.se-c__body a{color:var(--se-c1);text-decoration:underline}\n.se-c__actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}\n.se-c__btn{flex:1 1 180px;min-height:44px;padding:10px 16px;border-radius:8px;border:2px solid var(--se-c1);font-family:inherit;font-size:15px;font-weight:600;line-height:1.2;cursor:pointer}\n.se-c__btn--1{background:var(--se-c1);color:#fff}\n.se-c__btn--2{background:var(--se-c1);color:#fff}\n.se-c__btn--3{background:#fff;color:var(--se-c1)}\n.se-c__btn:hover{filter:brightness(1.12)}\n.se-c__btn:focus-visible,.se-c__sw:focus-visible,.se-c-fab:focus-visible,.se-c-ph button:focus-visible{outline:3px solid var(--se-c2);outline-offset:2px}\n.se-c__details{margin:0 0 14px}\n.se-c__cat{border-top:1px solid #e5e5ea;padding:10px 0}\n.se-c__cat p{margin:4px 0;color:#48484a}\n.se-c__cat-h{display:flex;justify-content:space-between;align-items:center;gap:12px}\n.se-c__on{font-size:12px;color:#2e7d32;font-weight:600}\n.se-c__sw{appearance:none;-webkit-appearance:none;position:relative;flex:none;width:44px;height:24px;margin:0;border-radius:12px;background:#c7c7cc;cursor:pointer;transition:background .15s}\n.se-c__sw::after{content:\"\";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .15s}\n.se-c__sw:checked{background:var(--se-c1)}\n.se-c__sw:checked::after{transform:translateX(20px)}\n.se-c__svcs{list-style:none;margin:6px 0 4px;padding:0 0 0 12px;border-left:2px solid #e5e5ea}\n.se-c__svcs li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:4px 0;font-size:13px}\n.se-c__sw--svc{width:36px;height:20px}\n.se-c__sw--svc::after{width:14px;height:14px}\n.se-c__sw--svc:checked::after{transform:translateX(16px)}\n.se-c details summary{cursor:pointer;color:var(--se-c1);font-size:13px}\n.se-c table{width:100%;border-collapse:collapse;font-size:12px;margin-top:6px}\n.se-c td{padding:4px 6px;border-bottom:1px solid #f0f0f3;vertical-align:top;word-break:break-word}\n.se-c-fab{--se-c1:#142b6f;position:fixed;z-index:2147483645;left:16px;bottom:16px;width:44px;height:44px;border-radius:50%;border:0;background:var(--se-c1);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.25);opacity:.85}\n.se-c-fab:hover{opacity:1}\n.se-c-fab[hidden]{display:none}\n.se-c-ph{box-sizing:border-box;max-width:100%;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px;background:#f2f2f7;border-radius:8px;text-align:center;font:14px/1.5 system-ui,sans-serif}\n.se-c-ph p{margin:0}\n.se-c-ph button{min-height:40px;padding:8px 16px;border:0;border-radius:8px;background:#142b6f;color:#fff;font-weight:600;cursor:pointer}\n@media (max-width:600px){.se-c{padding:0}.se-c__box{border-radius:12px 12px 0 0;padding:16px}.se-c__btn{flex-basis:100%}.se-c--center .se-c__box{border-radius:12px;margin:12px}}\n@media (prefers-reduced-motion:reduce){.se-c__sw,.se-c__sw::after{transition:none}}";(d.head||d.documentElement).appendChild(s)})(document);
+window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"adsRedaction":true,"urlPassthrough":false,"gaCookieDays":395,"gpc":true,"uet":true,"clarity":true,"services":[["ga4","Google Analytics","statistics",["_ga","_ga_*","_gid","_gat*"]],["clarity","Microsoft Clarity","statistics",["_clck","_clsk","CLID","MUID"]],["google-ads","Google Ads","marketing",["_gcl_au","_gcl_aw","_gcl_dc","_gcl_gb"]],["meta","Meta (Facebook) Pixel","marketing",["_fbp","_fbc"]],["tiktok","TikTok Pixel","marketing",["_ttp","_tt_enable_cookie","ttcsid*"]],["youtube","YouTube","marketing",[]],["maps","Google Maps","marketing",[]]],"compat":true,"floating":true,"position":"bottom","logUrl":"","privacyUrl":"/privatumo-politika/","colors":["#142b6f","#ffd602"],"rules":{"src":{"google-analytics.com/analytics.js":"statistics:ga4","clarity.ms":"statistics:clarity","static.hotjar.com":"statistics:hotjar","script.hotjar.com":"statistics:hotjar","mc.yandex.ru":"statistics:yandex","player.vimeo.com":"statistics:vimeo","googleadservices.com":"marketing:google-ads","googlesyndication.com":"marketing:google-ads","doubleclick.net":"marketing:google-ads","connect.facebook.net":"marketing:meta","facebook.com/tr":"marketing:meta","analytics.tiktok.com":"marketing:tiktok","bat.bing.com":"marketing:bing","snap.licdn.com":"marketing:linkedin","s.pinimg.com":"marketing:pinterest","static.criteo.net":"marketing:criteo","static.klaviyo.com":"marketing:klaviyo","omnisnippet1.com":"marketing:omnisend","omnisrc.com":"marketing:omnisend","js.hs-scripts.com":"marketing:hubspot","youtube.com/embed":"marketing:youtube","youtube-nocookie.com/embed":"marketing:youtube","google.com/maps":"marketing:maps","maps.googleapis.com":"marketing:maps"},"inline":{"clarity.ms":"statistics:clarity","hotjar.com":"statistics:hotjar","mc.yandex.ru":"statistics:yandex","fbq(":"marketing:meta","ttq.load":"marketing:tiktok","ttq.page":"marketing:tiktok","uetq":"marketing:bing","_linkedin_partner_id":"marketing:linkedin","pintrk(":"marketing:pinterest","klaviyo":"marketing:klaviyo","omnisend":"marketing:omnisend"}},"cookies":{"necessary":[["se_consent","sleepingexpert.lt","Išsaugo jūsų slapukų sutikimą","1 metai"],["woocommerce_cart_hash","sleepingexpert.lt","Krepšelio turinio pakeitimų sekimas","Sesija"],["woocommerce_items_in_cart","sleepingexpert.lt","Ar krepšelyje yra prekių","Sesija"],["wp_woocommerce_session_*","sleepingexpert.lt","Krepšelio sesija","2 dienos"],["wordpress_logged_in_*","sleepingexpert.lt","Prisijungimo sesija","Sesija"]],"statistics":[["_ga","Google","Unikalus lankytojo identifikatorius statistikai","2 metai"],["_ga_*","Google","Sesijos būsena Google Analytics 4","2 metai"],["_clck","Microsoft Clarity","Clarity lankytojo ID","1 metai"],["_clsk","Microsoft Clarity","Clarity sesijos sujungimas","1 diena"]],"marketing":[["_gcl_au","Google","Google Ads konversijų sekimas","3 mėnesiai"],["_fbp","Meta","Meta reklamos ir konversijų sekimas","3 mėnesiai"],["_fbc","Meta","Paspaudimo ant Meta reklamos identifikatorius","3 mėnesiai"],["IDE","Google (doubleclick.net)","Reklamos rodymas ir matavimas","13 mėnesių"]]},"t":{"title":"Mes naudojame slapukus","body":"Būtinieji slapukai užtikrina svetainės ir krepšelio veikimą. Su jūsų sutikimu naudosime ir statistikos bei rinkodaros slapukus, kad tobulintume svetainę ir rodytume aktualius pasiūlymus. Sutikimą galite bet kada pakeisti.","accept_all":"Sutinku su visais","reject_all":"Tik būtinieji","customize":"Nustatymai","save":"Išsaugoti pasirinkimą","privacy":"Privatumo politika","settings_title":"Slapukų nustatymai","always_on":"Visada įjungta","blocked_content":"Šis turinys rodomas tik sutikus su rinkodaros slapukais.","blocked_button":"Leisti ir rodyti","reopen":"Slapukų nustatymai","cookies":"Slapukai","services":"Paslaugos","cat":{"necessary":["Būtinieji","Reikalingi svetainės veikimui: krepšelis, prisijungimas, saugumas, jūsų sutikimo išsaugojimas. Jų išjungti negalima."],"preferences":["Nuostatų","Įsimena jūsų pasirinkimus, pvz. kalbą ar regioną."],"statistics":["Statistikos","Padeda suprasti, kaip lankytojai naudojasi svetaine (anonimizuota statistika)."],"marketing":["Rinkodaros","Naudojami reklamai ir jos efektyvumui matuoti (Google Ads, Meta ir kt.)."]}}};
+(function(d){var s=d.createElement("style");s.id="se-consent-css";s.textContent=".se-c{--se-c1:#142b6f;--se-c2:#ffd602;position:fixed;z-index:2147483646;left:0;right:0;bottom:0;display:flex;justify-content:center;padding:12px;font:14px/1.5 system-ui,-apple-system,\"Segoe UI\",Roboto,sans-serif;color:#1d1d1f;pointer-events:none}\n.se-c--center{top:0;align-items:center;background:rgba(0,0,0,.45);pointer-events:auto}\n.se-c__box{pointer-events:auto;box-sizing:border-box;width:100%;max-width:960px;max-height:calc(100vh - 24px);overflow:auto;background:#fff;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.25);padding:20px 22px}\n.se-c__box:focus{outline:none}\n.se-c--open .se-c__box{max-width:720px}\n.se-c__title{margin:0 0 6px;font-size:18px;font-weight:700;line-height:1.3;color:var(--se-c1)}\n.se-c__body{margin:0 0 14px}\n.se-c__body a{color:var(--se-c1);text-decoration:underline}\n.se-c__actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}\n.se-c__btn{flex:1 1 180px;min-height:44px;padding:10px 16px;border-radius:8px;border:2px solid var(--se-c1);font-family:inherit;font-size:15px;font-weight:600;line-height:1.2;cursor:pointer}\n.se-c__btn--1{background:var(--se-c1);color:#fff}\n.se-c__btn--2{background:var(--se-c1);color:#fff}\n.se-c__btn--3{background:#fff;color:var(--se-c1)}\n.se-c__btn:hover{filter:brightness(1.12)}\n.se-c__btn:focus-visible,.se-c__sw:focus-visible,.se-c-fab:focus-visible,.se-c-ph button:focus-visible{outline:3px solid var(--se-c2);outline-offset:2px}\n.se-c__details{margin:0 0 14px}\n.se-c__cat{border-top:1px solid #e5e5ea;padding:10px 0}\n.se-c__cat p{margin:4px 0;color:#48484a}\n.se-c__cat-h{display:flex;justify-content:space-between;align-items:center;gap:12px}\n.se-c__on{font-size:12px;color:#2e7d32;font-weight:600}\n.se-c__sw{appearance:none;-webkit-appearance:none;position:relative;flex:none;width:44px;height:24px;margin:0;border-radius:12px;background:#c7c7cc;cursor:pointer;transition:background .15s}\n.se-c__sw::after{content:\"\";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .15s}\n.se-c__sw:checked{background:var(--se-c1)}\n.se-c__sw:checked::after{transform:translateX(20px)}\n.se-c__svcs{list-style:none;margin:6px 0 4px;padding:0 0 0 12px;border-left:2px solid #e5e5ea}\n.se-c__svcs li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:4px 0;font-size:13px}\n.se-c__sw--svc{width:36px;height:20px}\n.se-c__sw--svc::after{width:14px;height:14px}\n.se-c__sw--svc:checked::after{transform:translateX(16px)}\n.se-c details summary{cursor:pointer;color:var(--se-c1);font-size:13px}\n.se-c table{width:100%;border-collapse:collapse;font-size:12px;margin-top:6px}\n.se-c td{padding:4px 6px;border-bottom:1px solid #f0f0f3;vertical-align:top;word-break:break-word}\n.se-c-fab{--se-c1:#142b6f;position:fixed;z-index:2147483645;left:16px;bottom:16px;width:44px;height:44px;border-radius:50%;border:0;background:var(--se-c1);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.25);opacity:.85}\n.se-c-fab:hover{opacity:1}\n.se-c-fab[hidden]{display:none}\n.se-c-ph{box-sizing:border-box;max-width:100%;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px;background:#f2f2f7;border-radius:8px;text-align:center;font:14px/1.5 system-ui,sans-serif}\n.se-c-ph p{margin:0}\n.se-c-ph button{min-height:40px;padding:8px 16px;border:0;border-radius:8px;background:#142b6f;color:#fff;font-weight:600;cursor:pointer}\n@media (max-width:600px){.se-c{padding:0}.se-c__box{border-radius:12px 12px 0 0;padding:16px}.se-c__btn{flex-basis:100%}.se-c--center .se-c__box{border-radius:12px;margin:12px}}\n@media (prefers-reduced-motion:reduce){.se-c__sw,.se-c__sw::after{transition:none}}";(d.head||d.documentElement).appendChild(s)})(document);
 /*! SE Consent — savas slapukų sutikimų valdiklis. Jokių išorinių priklausomybių. */
 (function (w, d) {
   'use strict';
@@ -9,7 +9,8 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
 
   var CATS = ['necessary', 'preferences', 'statistics', 'marketing'];
   var COOKIE = 'se_consent';
-  var T = C.t;
+  // Tekstai: vienos kalbos (C.t) arba kelių (C.i18n), parenkama pagal <html lang>.
+  var T = C.t || (C.i18n && (C.i18n[(d.documentElement.lang || '').slice(0, 2).toLowerCase()] || C.i18n[C.defaultLang] || C.i18n[Object.keys(C.i18n)[0]]));
   var state = read();          // {id, v, t, m, c:{preferences:bool,...}, s:{paslauga:false}} arba null
   var SVC = C.services || [];  // [[id, pavadinimas, kategorija, [slapukai]], ...]
   var lastFocus = null;
@@ -267,22 +268,24 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
     ph.innerHTML = '<p></p><button type="button"></button>';
     ph.firstChild.textContent = T.blocked_content;
     ph.lastChild.textContent = T.blocked_button;
-    ph.lastChild.onclick = function () {
-      // Leidžiama tik ši paslauga (pvz. YouTube), ne visa rinkodara.
-      var c = current();
-      var sv = currentSvc();
-      cats.split(',').forEach(function (spec) {
-        var p = spec.trim().split(':');
-        if (!c[p[0]]) {
-          SVC.forEach(function (x) { if (x[2] === p[0]) sv[x[0]] = false; });
-          c[p[0]] = true;
-        }
-        if (p[1]) delete sv[p[1]];
-      });
-      save(c, 'placeholder', sv);
-    };
+    ph.lastChild.onclick = function () { allowOnly(cats, 'placeholder'); };
     f.style.display = 'none';
     f.parentNode.insertBefore(ph, f);
+  }
+
+  // Leidžiama tik nurodyta paslauga (pvz. YouTube ar žemėlapis), ne visa jos kategorija.
+  function allowOnly(specs, method) {
+    var c = current();
+    var sv = currentSvc();
+    String(specs).split(',').forEach(function (spec) {
+      var p = spec.trim().split(':');
+      if (!c[p[0]]) {
+        SVC.forEach(function (x) { if (x[2] === p[0]) sv[x[0]] = false; });
+        c[p[0]] = true;
+      }
+      if (p[1]) delete sv[p[1]];
+    });
+    save(c, method, sv);
   }
 
   // ---------------------------------------------------------------- sutikimo išsaugojimas
@@ -375,7 +378,8 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
       });
     }
 
-    // WP Consent API
+    // WP Consent API (tik WordPress; kitose platformose šie slapukai nereikalingi)
+    if (C.wpConsentApi !== false) {
     var wp = { functional: true, preferences: detail.preferences, statistics: detail.statistics, 'statistics-anonymous': detail.statistics, marketing: detail.marketing };
     var ev = {};
     for (var k in wp) {
@@ -384,6 +388,7 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
       ev[k] = val;
     }
     d.dispatchEvent(new CustomEvent('wp_listen_for_consent_change', { detail: ev }));
+    }
 
     w.dataLayer.push({ event: changed ? 'se_consent_update' : 'se_consent_ready', se_consent: detail });
     if (C.compat) {
@@ -446,9 +451,10 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
   function build() {
     var c = current();
     var cats = '';
-    CATS.forEach(function (k) {
+    // Rodomos tik svetainėje naudojamos kategorijos (C.categories); būtinosios — visada.
+    CATS.filter(function (k) { return k === 'necessary' || !C.categories || C.categories.indexOf(k) !== -1; }).forEach(function (k) {
       var info = T.cat[k];
-      var list = (C.cookies && C.cookies[k]) || [];
+      var list = ((T.cookieList || C.cookies || {})[k]) || [];
       var rows = list.map(function (r) {
         return '<tr><td>' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td><td>' + esc(r[3]) + '</td></tr>';
       }).join('');
@@ -477,7 +483,7 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
       '<div class="se-c__box" tabindex="-1">' +
         '<h2 id="se-c-title" class="se-c__title">' + esc(T.title) + '</h2>' +
         '<p id="se-c-body" class="se-c__body">' + esc(T.body) +
-          (C.privacyUrl ? ' <a href="' + esc(C.privacyUrl) + '">' + esc(T.privacy) + '</a>' : '') + '</p>' +
+          ((T.privacyUrl || C.privacyUrl) ? ' <a href="' + esc(T.privacyUrl || C.privacyUrl) + '">' + esc(T.privacy) + '</a>' : '') + '</p>' +
         '<div class="se-c__details" hidden>' + cats + '</div>' +
         '<div class="se-c__actions">' +
           '<button type="button" class="se-c__btn se-c__btn--2" data-a="reject">' + esc(T.reject_all) + '</button>' +
@@ -602,6 +608,13 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
     hide: hideBanner,
     accept: function (c, method, sv) { save(c || { preferences: true, statistics: true, marketing: true }, method || 'api', sv); },
     withdraw: function () { save({}, 'withdraw'); },
+    // Pvz. SEConsent.allowService('maps') paspaudus „Rodyti žemėlapį".
+    allowService: function (id) {
+      var svc = SVC.filter(function (x) { return x[0] === id; })[0];
+      if (!svc) return false;
+      if (!allowed(svc[2] + ':' + id)) allowOnly(svc[2] + ':' + id, 'service');
+      return true;
+    },
     onChange: function (fn) { listeners.push(fn); }
   };
 

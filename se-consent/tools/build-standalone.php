@@ -29,6 +29,9 @@ $cfg = array_replace([
     'rules' => ['src' => $known['src'], 'inline' => $known['inline']],
     'cookies' => $cookies, 't' => se_consent_default_texts()[$lang],
 ], array_diff_key($over, ['lang' => 1, 'services' => 1]));
+if (isset($cfg['i18n'])) {
+    unset($cfg['t']); // kelios kalbos — parenkama naršyklėje pagal <html lang>
+}
 
 $css = trim((string) file_get_contents(__DIR__ . '/../assets/consent.css'));
 echo "/*! SE Consent standalone — sugeneruota " . gmdate('Y-m-d') . " */\n";

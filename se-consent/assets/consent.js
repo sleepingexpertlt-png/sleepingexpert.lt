@@ -6,7 +6,8 @@
 
   var CATS = ['necessary', 'preferences', 'statistics', 'marketing'];
   var COOKIE = 'se_consent';
-  var T = C.t;
+  // Tekstai: vienos kalbos (C.t) arba kelių (C.i18n), parenkama pagal <html lang>.
+  var T = C.t || (C.i18n && (C.i18n[(d.documentElement.lang || '').slice(0, 2).toLowerCase()] || C.i18n[C.defaultLang] || C.i18n[Object.keys(C.i18n)[0]]));
   var state = read();          // {id, v, t, m, c:{preferences:bool,...}, s:{paslauga:false}} arba null
   var SVC = C.services || [];  // [[id, pavadinimas, kategorija, [slapukai]], ...]
   var lastFocus = null;
@@ -264,22 +265,24 @@
     ph.innerHTML = '<p></p><button type="button"></button>';
     ph.firstChild.textContent = T.blocked_content;
     ph.lastChild.textContent = T.blocked_button;
-    ph.lastChild.onclick = function () {
-      // Leidžiama tik ši paslauga (pvz. YouTube), ne visa rinkodara.
-      var c = current();
-      var sv = currentSvc();
-      cats.split(',').forEach(function (spec) {
-        var p = spec.trim().split(':');
-        if (!c[p[0]]) {
-          SVC.forEach(function (x) { if (x[2] === p[0]) sv[x[0]] = false; });
-          c[p[0]] = true;
-        }
-        if (p[1]) delete sv[p[1]];
-      });
-      save(c, 'placeholder', sv);
-    };
+    ph.lastChild.onclick = function () { allowOnly(cats, 'placeholder'); };
     f.style.display = 'none';
     f.parentNode.insertBefore(ph, f);
+  }
+
+  // Leidžiama tik nurodyta paslauga (pvz. YouTube ar žemėlapis), ne visa jos kategorija.
+  function allowOnly(specs, method) {
+    var c = current();
+    var sv = currentSvc();
+    String(specs).split(',').forEach(function (spec) {
+      var p = spec.trim().split(':');
+      if (!c[p[0]]) {
+        SVC.forEach(function (x) { if (x[2] === p[0]) sv[x[0]] = false; });
+        c[p[0]] = true;
+      }
+      if (p[1]) delete sv[p[1]];
+    });
+    save(c, method, sv);
   }
 
   // ---------------------------------------------------------------- sutikimo išsaugojimas
@@ -372,7 +375,8 @@
       });
     }
 
-    // WP Consent API
+    // WP Consent API (tik WordPress; kitose platformose šie slapukai nereikalingi)
+    if (C.wpConsentApi !== false) {
     var wp = { functional: true, preferences: detail.preferences, statistics: detail.statistics, 'statistics-anonymous': detail.statistics, marketing: detail.marketing };
     var ev = {};
     for (var k in wp) {
@@ -381,6 +385,7 @@
       ev[k] = val;
     }
     d.dispatchEvent(new CustomEvent('wp_listen_for_consent_change', { detail: ev }));
+    }
 
     w.dataLayer.push({ event: changed ? 'se_consent_update' : 'se_consent_ready', se_consent: detail });
     if (C.compat) {
@@ -443,9 +448,10 @@
   function build() {
     var c = current();
     var cats = '';
-    CATS.forEach(function (k) {
+    // Rodomos tik svetainėje naudojamos kategorijos (C.categories); būtinosios — visada.
+    CATS.filter(function (k) { return k === 'necessary' || !C.categories || C.categories.indexOf(k) !== -1; }).forEach(function (k) {
       var info = T.cat[k];
-      var list = (C.cookies && C.cookies[k]) || [];
+      var list = ((T.cookieList || C.cookies || {})[k]) || [];
       var rows = list.map(function (r) {
         return '<tr><td>' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td><td>' + esc(r[3]) + '</td></tr>';
       }).join('');
@@ -474,7 +480,7 @@
       '<div class="se-c__box" tabindex="-1">' +
         '<h2 id="se-c-title" class="se-c__title">' + esc(T.title) + '</h2>' +
         '<p id="se-c-body" class="se-c__body">' + esc(T.body) +
-          (C.privacyUrl ? ' <a href="' + esc(C.privacyUrl) + '">' + esc(T.privacy) + '</a>' : '') + '</p>' +
+          ((T.privacyUrl || C.privacyUrl) ? ' <a href="' + esc(T.privacyUrl || C.privacyUrl) + '">' + esc(T.privacy) + '</a>' : '') + '</p>' +
         '<div class="se-c__details" hidden>' + cats + '</div>' +
         '<div class="se-c__actions">' +
           '<button type="button" class="se-c__btn se-c__btn--2" data-a="reject">' + esc(T.reject_all) + '</button>' +
@@ -599,6 +605,13 @@
     hide: hideBanner,
     accept: function (c, method, sv) { save(c || { preferences: true, statistics: true, marketing: true }, method || 'api', sv); },
     withdraw: function () { save({}, 'withdraw'); },
+    // Pvz. SEConsent.allowService('maps') paspaudus „Rodyti žemėlapį".
+    allowService: function (id) {
+      var svc = SVC.filter(function (x) { return x[0] === id; })[0];
+      if (!svc) return false;
+      if (!allowed(svc[2] + ':' + id)) allowOnly(svc[2] + ':' + id, 'service');
+      return true;
+    },
     onChange: function (fn) { listeners.push(fn); }
   };
 
