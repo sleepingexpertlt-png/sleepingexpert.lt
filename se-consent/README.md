@@ -85,3 +85,19 @@ php tests/blocker-test.php
 NODE_PATH=$(npm root -g) node tests/browser-test.mjs
 NODE_PATH=$(npm root -g) node tests/scan-test.mjs
 ```
+
+## Versija be WordPress (bet kuri platforma)
+
+`dist/se-consent.js` — vienas failas (~27 KB, ~9 KB gzip): konfigūracija, stiliai ir logika.
+Sugeneruojamas iš tų pačių nustatymų: `php tools/build-standalone.php [config.json] > dist/se-consent.js`
+(`config.json` pvz.: `{"privacyUrl": "/privatumas", "lang": "lt", "logUrl": ""}`).
+
+Įdėjimas — **pirmas** elementas `<head>`, prieš GTM ir visus kitus scenarijus:
+```html
+<script src="/se-consent.js"></script>
+```
+- Nepažymėti žinomi sekikliai (Meta, Hotjar, TikTok ir kt.) ir iframe (YouTube, Maps) **nepaleidžiami**
+  iki sutikimo. Naršyklė vis tiek gali iš anksto atsisiųsti jų failus (preload) — kad užklausos
+  visai nebūtų, pažymėkite: `<script type="text/plain" data-se-consent="marketing" src="…">`.
+- Sutikimų žurnalui reikia serverio taško (`logUrl`), kuris priima POST JSON; be jo žurnalas nerašomas.
+- Testas: `NODE_PATH=$(npm root -g) node tests/standalone-test.mjs`
