@@ -26,6 +26,7 @@ function se_consent_client_config() {
         'gcm'         => (bool) $s['gcm_enabled'],
         'adsRedaction'=> (bool) $s['gcm_ads_redaction'],
         'urlPassthrough' => (bool) $s['gcm_url_passthrough'],
+        'gaCookieDays' => max(0, min(395, (int) $s['ga_cookie_days'])),
         'compat'      => (bool) $s['cookiebot_compat'],
         'floating'    => (bool) $s['floating_button'],
         'position'    => $s['position'] === 'center' ? 'center' : 'bottom',

@@ -54,6 +54,7 @@ const consentCalls = (page) => page.evaluate(() =>
   check('gtag.js veikia (Consent Mode advanced)', await page.evaluate(() => window.__gtag === 1));
   const calls = await consentCalls(page);
   check('Consent default = denied, pirmas dataLayer įrašas', JSON.stringify(calls) === '[["default","denied","denied"]]', JSON.stringify(calls));
+  check('Google slapukų galiojimas apribotas 395 d.', await page.evaluate(() => window.dataLayer.some((a) => a[0] === 'set' && a[1] && a[1].cookie_expires === 395 * 86400)));
   check('YouTube iframe be src + placeholderis', await page.evaluate(() => !document.querySelector('iframe').getAttribute('src') && !!document.querySelector('.se-c-ph')));
   check('Atmesti ir sutikti mygtukai vienodo dydžio', await page.evaluate(() => {
     const a = document.querySelector('[data-a="accept"]').getBoundingClientRect();

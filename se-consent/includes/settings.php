@@ -22,6 +22,7 @@ function se_consent_defaults() {
         'gcm_mode'          => 'advanced', // advanced: Google žymos neblokuojamos (cookieless pings); basic: blokuojamos
         'gcm_ads_redaction' => 1,
         'gcm_url_passthrough' => 0,
+        'ga_cookie_days'    => 395,       // Google slapukų (_ga, _gcl_au) galiojimas; numatyta Google — 2 metai, leidžiama ≤ 13 mėn.
         'auto_block'        => 1,
         'cookiebot_compat'  => 1,         // window.Cookiebot, CookiebotOnAccept, dataLayer cookie_consent_* įvykiai
         'floating_button'   => 1,

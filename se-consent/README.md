@@ -3,6 +3,7 @@
 WordPress įskiepis slapukų sutikimams valdyti: baneris, sekiklių blokavimas iki
 sutikimo, Google Consent Mode v2, sutikimų žurnalas, slapukų deklaracija, skeneris.
 Funkcijų palyginimas su Cookiebot — [COOKIEBOT_ANALIZE.md](COOKIEBOT_ANALIZE.md).
+Ką perėmėme iš Hugging Face produktų — [HUGGINGFACE_ANALIZE.md](HUGGINGFACE_ANALIZE.md).
 
 ![Baneris](docs/baneris-desktop.png)
 
@@ -18,7 +19,8 @@ includes/declaration.php  [se_cookie_declaration] / [cookie_declaration]
 includes/wp-consent-api.php  WP Consent API
 includes/admin.php        Nustatymai → SE Consent
 assets/consent.js         baneris, aktyvavimas, Consent Mode, Cookiebot API suderinamumas
-tools/scan.mjs            skeneris: pažeidimai be sutikimo + nedeklaruoti slapukai
+tools/scan.mjs            skeneris: 6 atitikties patikrinimai, sekiklių elgsenos įvertinimas,
+                          nedeklaruotų slapukų aprašymas per Open Cookie Database
 tests/                    PHP ir naršyklės (Playwright) testai
 ```
 
@@ -62,6 +64,9 @@ tests/                    PHP ir naršyklės (Playwright) testai
   10 6 * * 1  cd /opt/se-consent && NODE_PATH=$(npm root -g) node tools/scan.mjs https://sleepingexpert.lt --max 80 --json /var/log/se-consent-scan.json
   ```
   Išeities kodas 1 = rasta pažeidimų ar nedeklaruotų slapukų (galima siųsti į Hermès/Telegram).
+  Ataskaitoje: `Atitiktis: N/6`, kas veikia be sutikimo, ar veikia atšaukimas, per ilgai galiojantys
+  slapukai, paruoštos įklijuoti nedeklaruotų slapukų eilutės ir siūlomos blokavimo taisyklės
+  nežinomiems sekikliams.
 
 ## Kūrėjams
 
@@ -78,4 +83,5 @@ Testai:
 ```bash
 php tests/blocker-test.php
 NODE_PATH=$(npm root -g) node tests/browser-test.mjs
+NODE_PATH=$(npm root -g) node tests/scan-test.mjs
 ```

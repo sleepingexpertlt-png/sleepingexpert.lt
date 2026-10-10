@@ -30,6 +30,7 @@ function se_consent_admin_save() {
     $new['position']             = ($in['position'] ?? '') === 'center' ? 'center' : 'bottom';
     $new['expiry_days']          = max(1, min(395, (int) ($in['expiry_days'] ?? 365)));
     $new['log_retention_months'] = max(1, min(120, (int) ($in['log_retention_months'] ?? 24)));
+    $new['ga_cookie_days']       = max(0, min(395, (int) ($in['ga_cookie_days'] ?? 395)));
     $new['cookie_domain']        = preg_replace('/[^a-z0-9.\-]/i', '', (string) ($in['cookie_domain'] ?? ''));
     $new['privacy_url']          = esc_url_raw((string) ($in['privacy_url'] ?? ''));
     $new['color_primary']        = sanitize_hex_color((string) ($in['color_primary'] ?? '')) ?: '#142b6f';
@@ -118,6 +119,8 @@ function se_consent_admin_settings(array $s) {
                 </select><br>
                 <?php $cb('gcm_ads_redaction', 'ads_data_redaction (be sutikimo nesiųsti reklamos identifikatorių)'); ?>
                 <?php $cb('gcm_url_passthrough', 'url_passthrough (gclid perdavimas per URL be slapukų)'); ?>
+                Google slapukų (_ga, _gcl_au) galiojimas <input type="number" name="ga_cookie_days" value="<?php echo (int) $s['ga_cookie_days']; ?>" min="0" max="395" style="width:80px"> d.
+                <span class="description">(Google numatytai — 2 metai; leidžiama ≤ 395 d. = 13 mėn.; 0 — nekeisti)</span>
             </td></tr>
             <tr><th>Blokavimas</th><td>
                 <?php $cb('auto_block', 'Automatiškai blokuoti žinomus sekiklius iki sutikimo'); ?>

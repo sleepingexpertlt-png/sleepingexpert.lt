@@ -35,6 +35,8 @@
     gtag('consent', 'default', def);
     if (C.adsRedaction) gtag('set', 'ads_data_redaction', true);
     if (C.urlPassthrough) gtag('set', 'url_passthrough', true);
+    // Google slapukai pagal nutylėjimą galioja 2 metus; ribojame iki 13 mėn. (taikoma visiems gtag config).
+    if (C.gaCookieDays) gtag('set', { cookie_expires: C.gaCookieDays * 86400 });
     // Grįžtančiam lankytojui sutikimas pritaikomas sinchroniškai — pirmas puslapio peržiūros
     // įvykis jau keliauja su teisinga būsena (kaip Cookiebot).
     if (state) gtag('consent', 'update', gcmState(state.c));
