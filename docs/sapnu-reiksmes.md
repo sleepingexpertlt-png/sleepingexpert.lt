@@ -60,6 +60,7 @@ python3 scripts/sapnai/publish_wp.py                  # dry-run: parodo, kas bus
 python3 scripts/sapnai/publish_wp.py --apply --limit 50   # 1 partija: 50 draft'ų + hub
 # peržiūra WP admin → Posts → Drafts → Publish; po 1–2 sav. indeksavimo – kita partija
 python3 scripts/sapnai/publish_wp.py --apply          # visi likę
+python3 scripts/sapnai/verify_wp.py                   # išorinė patikra: kas realiai yra WP
 ```
 
 Skriptas idempotentiškas: įrašus randa pagal slug, todėl pakartotinis paleidimas tik atnaujina turinį.
