@@ -24,11 +24,11 @@ foreach (se_consent_cookie_list() as $c) {
 }
 $cfg = array_replace([
     'version' => 1, 'expiryDays' => 365, 'domain' => '', 'gcm' => true, 'adsRedaction' => true,
-    'urlPassthrough' => false, 'gaCookieDays' => 395, 'compat' => true, 'floating' => true, 'position' => 'bottom',
+    'urlPassthrough' => false, 'gaCookieDays' => 395, 'gpc' => true, 'uet' => true, 'clarity' => true, 'services' => se_consent_client_services($over['services'] ?? se_consent_defaults()['services_shown']), 'compat' => true, 'floating' => true, 'position' => 'bottom',
     'logUrl' => '', 'privacyUrl' => '/privatumo-politika/', 'colors' => ['#142b6f', '#ffd602'],
     'rules' => ['src' => $known['src'], 'inline' => $known['inline']],
     'cookies' => $cookies, 't' => se_consent_default_texts()[$lang],
-], array_diff_key($over, ['lang' => 1]));
+], array_diff_key($over, ['lang' => 1, 'services' => 1]));
 
 $css = trim((string) file_get_contents(__DIR__ . '/../assets/consent.css'));
 echo "/*! SE Consent standalone — sugeneruota " . gmdate('Y-m-d') . " */\n";

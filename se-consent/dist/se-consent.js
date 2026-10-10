@@ -1,6 +1,6 @@
 /*! SE Consent standalone — sugeneruota 2026-10-10 */
-window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"adsRedaction":true,"urlPassthrough":false,"gaCookieDays":395,"compat":true,"floating":true,"position":"bottom","logUrl":"","privacyUrl":"/privatumo-politika/","colors":["#142b6f","#ffd602"],"rules":{"src":{"connect.facebook.net":"marketing","facebook.com/tr":"marketing","googleadservices.com":"marketing","googlesyndication.com":"marketing","doubleclick.net":"marketing","analytics.tiktok.com":"marketing","snap.licdn.com":"marketing","bat.bing.com":"marketing","s.pinimg.com":"marketing","static.criteo.net":"marketing","static.klaviyo.com":"marketing","omnisnippet1.com":"marketing","omnisrc.com":"marketing","js.hs-scripts.com":"marketing","youtube.com/embed":"marketing","youtube-nocookie.com/embed":"marketing","google.com/maps/embed":"marketing","maps.googleapis.com":"marketing","player.vimeo.com":"statistics","clarity.ms":"statistics","static.hotjar.com":"statistics","script.hotjar.com":"statistics","mc.yandex.ru":"statistics","google-analytics.com/analytics.js":"statistics"},"inline":{"fbq(":"marketing","ttq.load":"marketing","_linkedin_partner_id":"marketing","uetq":"marketing","pintrk(":"marketing","omnisend":"marketing","klaviyo":"marketing","clarity.ms":"statistics","hotjar.com":"statistics","mc.yandex.ru":"statistics"}},"cookies":{"necessary":[["se_consent","sleepingexpert.lt","Išsaugo jūsų slapukų sutikimą","1 metai"],["woocommerce_cart_hash","sleepingexpert.lt","Krepšelio turinio pakeitimų sekimas","Sesija"],["woocommerce_items_in_cart","sleepingexpert.lt","Ar krepšelyje yra prekių","Sesija"],["wp_woocommerce_session_*","sleepingexpert.lt","Krepšelio sesija","2 dienos"],["wordpress_logged_in_*","sleepingexpert.lt","Prisijungimo sesija","Sesija"]],"statistics":[["_ga","Google","Unikalus lankytojo identifikatorius statistikai","2 metai"],["_ga_*","Google","Sesijos būsena Google Analytics 4","2 metai"],["_clck","Microsoft Clarity","Clarity lankytojo ID","1 metai"],["_clsk","Microsoft Clarity","Clarity sesijos sujungimas","1 diena"]],"marketing":[["_gcl_au","Google","Google Ads konversijų sekimas","3 mėnesiai"],["_fbp","Meta","Meta reklamos ir konversijų sekimas","3 mėnesiai"],["_fbc","Meta","Paspaudimo ant Meta reklamos identifikatorius","3 mėnesiai"],["IDE","Google (doubleclick.net)","Reklamos rodymas ir matavimas","13 mėnesių"]]},"t":{"title":"Mes naudojame slapukus","body":"Būtinieji slapukai užtikrina svetainės ir krepšelio veikimą. Su jūsų sutikimu naudosime ir statistikos bei rinkodaros slapukus, kad tobulintume svetainę ir rodytume aktualius pasiūlymus. Sutikimą galite bet kada pakeisti.","accept_all":"Sutinku su visais","reject_all":"Tik būtinieji","customize":"Nustatymai","save":"Išsaugoti pasirinkimą","privacy":"Privatumo politika","settings_title":"Slapukų nustatymai","always_on":"Visada įjungta","blocked_content":"Šis turinys rodomas tik sutikus su rinkodaros slapukais.","blocked_button":"Leisti ir rodyti","reopen":"Slapukų nustatymai","cookies":"Slapukai","cat":{"necessary":["Būtinieji","Reikalingi svetainės veikimui: krepšelis, prisijungimas, saugumas, jūsų sutikimo išsaugojimas. Jų išjungti negalima."],"preferences":["Nuostatų","Įsimena jūsų pasirinkimus, pvz. kalbą ar regioną."],"statistics":["Statistikos","Padeda suprasti, kaip lankytojai naudojasi svetaine (anonimizuota statistika)."],"marketing":["Rinkodaros","Naudojami reklamai ir jos efektyvumui matuoti (Google Ads, Meta ir kt.)."]}}};
-(function(d){var s=d.createElement("style");s.id="se-consent-css";s.textContent=".se-c{--se-c1:#142b6f;--se-c2:#ffd602;position:fixed;z-index:2147483646;left:0;right:0;bottom:0;display:flex;justify-content:center;padding:12px;font:14px/1.5 system-ui,-apple-system,\"Segoe UI\",Roboto,sans-serif;color:#1d1d1f;pointer-events:none}\n.se-c--center{top:0;align-items:center;background:rgba(0,0,0,.45);pointer-events:auto}\n.se-c__box{pointer-events:auto;box-sizing:border-box;width:100%;max-width:960px;max-height:calc(100vh - 24px);overflow:auto;background:#fff;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.25);padding:20px 22px}\n.se-c__box:focus{outline:none}\n.se-c--open .se-c__box{max-width:720px}\n.se-c__title{margin:0 0 6px;font-size:18px;line-height:1.3;color:var(--se-c1)}\n.se-c__body{margin:0 0 14px}\n.se-c__body a{color:var(--se-c1);text-decoration:underline}\n.se-c__actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}\n.se-c__btn{flex:1 1 180px;min-height:44px;padding:10px 16px;border-radius:8px;border:2px solid var(--se-c1);font-family:inherit;font-size:15px;font-weight:600;line-height:1.2;cursor:pointer}\n.se-c__btn--1{background:var(--se-c1);color:#fff}\n.se-c__btn--2{background:var(--se-c1);color:#fff}\n.se-c__btn--3{background:#fff;color:var(--se-c1)}\n.se-c__btn:hover{filter:brightness(1.12)}\n.se-c__btn:focus-visible,.se-c__sw:focus-visible,.se-c-fab:focus-visible,.se-c-ph button:focus-visible{outline:3px solid var(--se-c2);outline-offset:2px}\n.se-c__details{margin:0 0 14px}\n.se-c__cat{border-top:1px solid #e5e5ea;padding:10px 0}\n.se-c__cat p{margin:4px 0;color:#48484a}\n.se-c__cat-h{display:flex;justify-content:space-between;align-items:center;gap:12px}\n.se-c__on{font-size:12px;color:#2e7d32;font-weight:600}\n.se-c__sw{appearance:none;-webkit-appearance:none;position:relative;flex:none;width:44px;height:24px;margin:0;border-radius:12px;background:#c7c7cc;cursor:pointer;transition:background .15s}\n.se-c__sw::after{content:\"\";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .15s}\n.se-c__sw:checked{background:var(--se-c1)}\n.se-c__sw:checked::after{transform:translateX(20px)}\n.se-c details summary{cursor:pointer;color:var(--se-c1);font-size:13px}\n.se-c table{width:100%;border-collapse:collapse;font-size:12px;margin-top:6px}\n.se-c td{padding:4px 6px;border-bottom:1px solid #f0f0f3;vertical-align:top;word-break:break-word}\n.se-c-fab{--se-c1:#142b6f;position:fixed;z-index:2147483645;left:16px;bottom:16px;width:44px;height:44px;border-radius:50%;border:0;background:var(--se-c1);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.25);opacity:.85}\n.se-c-fab:hover{opacity:1}\n.se-c-fab[hidden]{display:none}\n.se-c-ph{box-sizing:border-box;max-width:100%;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px;background:#f2f2f7;border-radius:8px;text-align:center;font:14px/1.5 system-ui,sans-serif}\n.se-c-ph p{margin:0}\n.se-c-ph button{min-height:40px;padding:8px 16px;border:0;border-radius:8px;background:#142b6f;color:#fff;font-weight:600;cursor:pointer}\n@media (max-width:600px){.se-c{padding:0}.se-c__box{border-radius:12px 12px 0 0;padding:16px}.se-c__btn{flex-basis:100%}.se-c--center .se-c__box{border-radius:12px;margin:12px}}\n@media (prefers-reduced-motion:reduce){.se-c__sw,.se-c__sw::after{transition:none}}";(d.head||d.documentElement).appendChild(s)})(document);
+window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"adsRedaction":true,"urlPassthrough":false,"gaCookieDays":395,"gpc":true,"uet":true,"clarity":true,"services":[["ga4","Google Analytics","statistics",["_ga","_ga_*","_gid","_gat*"]],["clarity","Microsoft Clarity","statistics",["_clck","_clsk","CLID","MUID"]],["google-ads","Google Ads","marketing",["_gcl_au","_gcl_aw","_gcl_dc","_gcl_gb"]],["meta","Meta (Facebook) Pixel","marketing",["_fbp","_fbc"]],["tiktok","TikTok Pixel","marketing",["_ttp","_tt_enable_cookie","ttcsid*"]],["youtube","YouTube","marketing",[]],["maps","Google Maps","marketing",[]]],"compat":true,"floating":true,"position":"bottom","logUrl":"","privacyUrl":"/privatumo-politika/","colors":["#142b6f","#ffd602"],"rules":{"src":{"google-analytics.com/analytics.js":"statistics:ga4","clarity.ms":"statistics:clarity","static.hotjar.com":"statistics:hotjar","script.hotjar.com":"statistics:hotjar","mc.yandex.ru":"statistics:yandex","player.vimeo.com":"statistics:vimeo","googleadservices.com":"marketing:google-ads","googlesyndication.com":"marketing:google-ads","doubleclick.net":"marketing:google-ads","connect.facebook.net":"marketing:meta","facebook.com/tr":"marketing:meta","analytics.tiktok.com":"marketing:tiktok","bat.bing.com":"marketing:bing","snap.licdn.com":"marketing:linkedin","s.pinimg.com":"marketing:pinterest","static.criteo.net":"marketing:criteo","static.klaviyo.com":"marketing:klaviyo","omnisnippet1.com":"marketing:omnisend","omnisrc.com":"marketing:omnisend","js.hs-scripts.com":"marketing:hubspot","youtube.com/embed":"marketing:youtube","youtube-nocookie.com/embed":"marketing:youtube","google.com/maps/embed":"marketing:maps","maps.googleapis.com":"marketing:maps"},"inline":{"clarity.ms":"statistics:clarity","hotjar.com":"statistics:hotjar","mc.yandex.ru":"statistics:yandex","fbq(":"marketing:meta","ttq.load":"marketing:tiktok","ttq.page":"marketing:tiktok","uetq":"marketing:bing","_linkedin_partner_id":"marketing:linkedin","pintrk(":"marketing:pinterest","klaviyo":"marketing:klaviyo","omnisend":"marketing:omnisend"}},"cookies":{"necessary":[["se_consent","sleepingexpert.lt","Išsaugo jūsų slapukų sutikimą","1 metai"],["woocommerce_cart_hash","sleepingexpert.lt","Krepšelio turinio pakeitimų sekimas","Sesija"],["woocommerce_items_in_cart","sleepingexpert.lt","Ar krepšelyje yra prekių","Sesija"],["wp_woocommerce_session_*","sleepingexpert.lt","Krepšelio sesija","2 dienos"],["wordpress_logged_in_*","sleepingexpert.lt","Prisijungimo sesija","Sesija"]],"statistics":[["_ga","Google","Unikalus lankytojo identifikatorius statistikai","2 metai"],["_ga_*","Google","Sesijos būsena Google Analytics 4","2 metai"],["_clck","Microsoft Clarity","Clarity lankytojo ID","1 metai"],["_clsk","Microsoft Clarity","Clarity sesijos sujungimas","1 diena"]],"marketing":[["_gcl_au","Google","Google Ads konversijų sekimas","3 mėnesiai"],["_fbp","Meta","Meta reklamos ir konversijų sekimas","3 mėnesiai"],["_fbc","Meta","Paspaudimo ant Meta reklamos identifikatorius","3 mėnesiai"],["IDE","Google (doubleclick.net)","Reklamos rodymas ir matavimas","13 mėnesių"]]},"t":{"title":"Mes naudojame slapukus","body":"Būtinieji slapukai užtikrina svetainės ir krepšelio veikimą. Su jūsų sutikimu naudosime ir statistikos bei rinkodaros slapukus, kad tobulintume svetainę ir rodytume aktualius pasiūlymus. Sutikimą galite bet kada pakeisti.","accept_all":"Sutinku su visais","reject_all":"Tik būtinieji","customize":"Nustatymai","save":"Išsaugoti pasirinkimą","privacy":"Privatumo politika","settings_title":"Slapukų nustatymai","always_on":"Visada įjungta","blocked_content":"Šis turinys rodomas tik sutikus su rinkodaros slapukais.","blocked_button":"Leisti ir rodyti","reopen":"Slapukų nustatymai","cookies":"Slapukai","services":"Paslaugos","cat":{"necessary":["Būtinieji","Reikalingi svetainės veikimui: krepšelis, prisijungimas, saugumas, jūsų sutikimo išsaugojimas. Jų išjungti negalima."],"preferences":["Nuostatų","Įsimena jūsų pasirinkimus, pvz. kalbą ar regioną."],"statistics":["Statistikos","Padeda suprasti, kaip lankytojai naudojasi svetaine (anonimizuota statistika)."],"marketing":["Rinkodaros","Naudojami reklamai ir jos efektyvumui matuoti (Google Ads, Meta ir kt.)."]}}};
+(function(d){var s=d.createElement("style");s.id="se-consent-css";s.textContent=".se-c{--se-c1:#142b6f;--se-c2:#ffd602;position:fixed;z-index:2147483646;left:0;right:0;bottom:0;display:flex;justify-content:center;padding:12px;font:14px/1.5 system-ui,-apple-system,\"Segoe UI\",Roboto,sans-serif;color:#1d1d1f;pointer-events:none}\n.se-c--center{top:0;align-items:center;background:rgba(0,0,0,.45);pointer-events:auto}\n.se-c__box{pointer-events:auto;box-sizing:border-box;width:100%;max-width:960px;max-height:calc(100vh - 24px);overflow:auto;background:#fff;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.25);padding:20px 22px}\n.se-c__box:focus{outline:none}\n.se-c--open .se-c__box{max-width:720px}\n.se-c__title{margin:0 0 6px;font-size:18px;line-height:1.3;color:var(--se-c1)}\n.se-c__body{margin:0 0 14px}\n.se-c__body a{color:var(--se-c1);text-decoration:underline}\n.se-c__actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}\n.se-c__btn{flex:1 1 180px;min-height:44px;padding:10px 16px;border-radius:8px;border:2px solid var(--se-c1);font-family:inherit;font-size:15px;font-weight:600;line-height:1.2;cursor:pointer}\n.se-c__btn--1{background:var(--se-c1);color:#fff}\n.se-c__btn--2{background:var(--se-c1);color:#fff}\n.se-c__btn--3{background:#fff;color:var(--se-c1)}\n.se-c__btn:hover{filter:brightness(1.12)}\n.se-c__btn:focus-visible,.se-c__sw:focus-visible,.se-c-fab:focus-visible,.se-c-ph button:focus-visible{outline:3px solid var(--se-c2);outline-offset:2px}\n.se-c__details{margin:0 0 14px}\n.se-c__cat{border-top:1px solid #e5e5ea;padding:10px 0}\n.se-c__cat p{margin:4px 0;color:#48484a}\n.se-c__cat-h{display:flex;justify-content:space-between;align-items:center;gap:12px}\n.se-c__on{font-size:12px;color:#2e7d32;font-weight:600}\n.se-c__sw{appearance:none;-webkit-appearance:none;position:relative;flex:none;width:44px;height:24px;margin:0;border-radius:12px;background:#c7c7cc;cursor:pointer;transition:background .15s}\n.se-c__sw::after{content:\"\";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:transform .15s}\n.se-c__sw:checked{background:var(--se-c1)}\n.se-c__sw:checked::after{transform:translateX(20px)}\n.se-c__svcs{list-style:none;margin:6px 0 4px;padding:0 0 0 12px;border-left:2px solid #e5e5ea}\n.se-c__svcs li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:4px 0;font-size:13px}\n.se-c__sw--svc{width:36px;height:20px}\n.se-c__sw--svc::after{width:14px;height:14px}\n.se-c__sw--svc:checked::after{transform:translateX(16px)}\n.se-c details summary{cursor:pointer;color:var(--se-c1);font-size:13px}\n.se-c table{width:100%;border-collapse:collapse;font-size:12px;margin-top:6px}\n.se-c td{padding:4px 6px;border-bottom:1px solid #f0f0f3;vertical-align:top;word-break:break-word}\n.se-c-fab{--se-c1:#142b6f;position:fixed;z-index:2147483645;left:16px;bottom:16px;width:44px;height:44px;border-radius:50%;border:0;background:var(--se-c1);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.25);opacity:.85}\n.se-c-fab:hover{opacity:1}\n.se-c-fab[hidden]{display:none}\n.se-c-ph{box-sizing:border-box;max-width:100%;min-height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px;background:#f2f2f7;border-radius:8px;text-align:center;font:14px/1.5 system-ui,sans-serif}\n.se-c-ph p{margin:0}\n.se-c-ph button{min-height:40px;padding:8px 16px;border:0;border-radius:8px;background:#142b6f;color:#fff;font-weight:600;cursor:pointer}\n@media (max-width:600px){.se-c{padding:0}.se-c__box{border-radius:12px 12px 0 0;padding:16px}.se-c__btn{flex-basis:100%}.se-c--center .se-c__box{border-radius:12px;margin:12px}}\n@media (prefers-reduced-motion:reduce){.se-c__sw,.se-c__sw::after{transition:none}}";(d.head||d.documentElement).appendChild(s)})(document);
 /*! SE Consent — savas slapukų sutikimų valdiklis. Jokių išorinių priklausomybių. */
 (function (w, d) {
   'use strict';
@@ -10,7 +10,9 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
   var CATS = ['necessary', 'preferences', 'statistics', 'marketing'];
   var COOKIE = 'se_consent';
   var T = C.t;
-  var state = read();          // {id, v, t, m, c:{preferences:bool,...}} arba null
+  var state = read();          // {id, v, t, m, c:{preferences:bool,...}, s:{paslauga:false}} arba null
+  var SVC = C.services || [];  // [[id, pavadinimas, kategorija, [slapukai]], ...]
+  var lastFocus = null;
   var listeners = [];
   var queue = [];              // aktyvuojami scenarijai, vykdomi griežta DOM tvarka
   var running = false;
@@ -19,13 +21,20 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
   w.dataLayer = w.dataLayer || [];
   function gtag() { w.dataLayer.push(arguments); }
 
-  function gcmState(c) {
+  // Paslauga leidžiama, kai įjungta jos kategorija ir lankytojas jos atskirai neišjungė.
+  function svcOn(st, id, cat) {
+    return !!(st && st.c[cat] && !(st.s && st.s[id] === false));
+  }
+
+  function gcmState(c, s) {
     var g = function (on) { return on ? 'granted' : 'denied'; };
+    var st = { c: c, s: s };
+    var ads = svcOn(st, 'google-ads', 'marketing');
     return {
-      ad_storage: g(c.marketing),
-      ad_user_data: g(c.marketing),
-      ad_personalization: g(c.marketing),
-      analytics_storage: g(c.statistics),
+      ad_storage: g(ads),
+      ad_user_data: g(ads),
+      ad_personalization: g(ads),
+      analytics_storage: g(svcOn(st, 'ga4', 'statistics')),
       functionality_storage: g(c.preferences),
       personalization_storage: g(c.preferences),
       security_storage: 'granted'
@@ -42,7 +51,14 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
     if (C.gaCookieDays) gtag('set', { cookie_expires: C.gaCookieDays * 86400 });
     // Grįžtančiam lankytojui sutikimas pritaikomas sinchroniškai — pirmas puslapio peržiūros
     // įvykis jau keliauja su teisinga būsena (kaip Cookiebot).
-    if (state) gtag('consent', 'update', gcmState(state.c));
+    if (state) gtag('consent', 'update', gcmState(state.c, state.s));
+  }
+
+  // Microsoft UET (Bing Ads) consent mode — tas pats principas kaip Google.
+  if (C.uet) {
+    w.uetq = w.uetq || [];
+    w.uetq.push('consent', 'default', { ad_storage: 'denied' });
+    if (state) w.uetq.push('consent', 'update', { ad_storage: svcOn(state, 'bing', 'marketing') ? 'granted' : 'denied' });
   }
 
   // WP Consent API (WooCommerce, Site Kit ir kt. skaito šias reikšmes).
@@ -78,15 +94,19 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
     });
   }
 
-  function allowed(cats) {
-    var list = String(cats).split(',');
+  // spec: "marketing", "marketing:meta" arba kelios per kablelį.
+  function allowed(spec) {
+    var list = String(spec).split(',');
     for (var i = 0; i < list.length; i++) {
-      var k = list[i].trim();
-      if (k === 'necessary') continue;
-      if (!state || !state.c[k]) return false;
+      var p = list[i].trim().split(':');
+      if (p[0] === 'necessary') continue;
+      if (!state || !state.c[p[0]]) return false;
+      if (p[1] && state.s && state.s[p[1]] === false) return false;
     }
     return true;
   }
+
+  function catOf(spec) { return String(spec).split(':')[0]; }
 
   function matchRule(str, rules) {
     if (!str) return null;
@@ -112,7 +132,7 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
     if (el.hasAttribute('data-se-consent') || el.hasAttribute('data-se-consent-ignore')) return;
     if (!JS_TYPES[(el.getAttribute('type') || '').toLowerCase()]) return;
     var cat = el.src ? matchRule(el.src, C.rules.src) : matchRule(el.textContent, C.rules.inline);
-    if (cat && cat !== 'necessary' && !allowed(cat)) neutralize(el, cat);
+    if (cat && catOf(cat) !== 'necessary' && !allowed(cat)) neutralize(el, cat);
   }
 
   var srcDesc = w.HTMLScriptElement && Object.getOwnPropertyDescriptor(HTMLScriptElement.prototype, 'src');
@@ -125,7 +145,7 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
         get: function () { return srcDesc.get.call(el); },
         set: function (v) {
           var cat = matchRule(v, C.rules.src);
-          if (cat && cat !== 'necessary' && !allowed(cat) && !el.hasAttribute('data-se-consent-ignore')) neutralize(el, cat);
+          if (cat && catOf(cat) !== 'necessary' && !allowed(cat) && !el.hasAttribute('data-se-consent-ignore')) neutralize(el, cat);
           srcDesc.set.call(el, v);
         }
       });
@@ -221,7 +241,7 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
     if (f.hasAttribute('data-se-src') || f.hasAttribute('data-se-consent-ignore')) return;
     var src = f.getAttribute('src');
     var cat = f.getAttribute('data-cookieconsent') || matchRule(src, C.rules.src);
-    if (!src || !cat || cat === 'ignore' || cat === 'necessary' || allowed(cat)) return;
+    if (!src || !cat || cat === 'ignore' || catOf(cat) === 'necessary' || allowed(cat)) return;
     f.setAttribute('data-se-src', src);
     f.setAttribute('data-se-consent', cat);
     f.removeAttribute('src');
@@ -248,9 +268,18 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
     ph.firstChild.textContent = T.blocked_content;
     ph.lastChild.textContent = T.blocked_button;
     ph.lastChild.onclick = function () {
+      // Leidžiama tik ši paslauga (pvz. YouTube), ne visa rinkodara.
       var c = current();
-      cats.split(',').forEach(function (k) { c[k.trim()] = true; });
-      save(c, 'placeholder');
+      var sv = currentSvc();
+      cats.split(',').forEach(function (spec) {
+        var p = spec.trim().split(':');
+        if (!c[p[0]]) {
+          SVC.forEach(function (x) { if (x[2] === p[0]) sv[x[0]] = false; });
+          c[p[0]] = true;
+        }
+        if (p[1]) delete sv[p[1]];
+      });
+      save(c, 'placeholder', sv);
     };
     f.style.display = 'none';
     f.parentNode.insertBefore(ph, f);
@@ -263,19 +292,32 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
     return c;
   }
 
-  function save(c, method) {
+  function currentSvc() {
+    var sv = {};
+    if (state && state.s) for (var k in state.s) sv[k] = state.s[k];
+    return sv;
+  }
+
+  function save(c, method, sv) {
     var prev = state;
     var clean = {};
     for (var i = 1; i < CATS.length; i++) clean[CATS[i]] = !!c[CATS[i]];
-    state = { id: prev ? prev.id : uuid(), v: C.version, t: Date.now(), m: method, c: clean };
+    var off = {};
+    SVC.forEach(function (x) { if (sv && sv[x[0]] === false && clean[x[2]]) off[x[0]] = false; });
+    state = { id: prev ? prev.id : uuid(), v: C.version, t: Date.now(), m: method, c: clean, s: off };
     write(state);
 
-    if (C.gcm) gtag('consent', 'update', gcmState(clean));
+    if (C.gcm) gtag('consent', 'update', gcmState(clean, off));
+    if (C.uet) w.uetq.push('consent', 'update', { ad_storage: svcOn(state, 'bing', 'marketing') ? 'granted' : 'denied' });
     var withdrawn = [];
     if (prev) {
-      for (var k in prev.c) if (prev.c[k] && !clean[k]) withdrawn.push(k);
+      for (var k in prev.c) {
+        if (prev.c[k] && !clean[k]) { withdrawn.push(k); deleteCookies((C.cookies && C.cookies[k] || []).map(function (r) { return r[0]; })); }
+      }
+      SVC.forEach(function (x) {
+        if (svcOn(prev, x[0], x[2]) && !svcOn(state, x[0], x[2])) { withdrawn.push(x[0]); deleteCookies(x[3] || []); }
+      });
     }
-    withdrawn.forEach(deleteCookies);
 
     log(state);
     hideBanner();
@@ -289,16 +331,17 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
     activateAll();
   }
 
-  function deleteCookies(cat) {
-    var defs = (C.cookies && C.cookies[cat]) || [];
+  // Trinama visuose domeno variantuose (be domeno, host, .host, .šakninis) — kitaip _fbp, _ga
+  // ant ".domenas.lt" išgyvena atšaukimą (pastebėta Klaro ir tarteaucitron analizėje).
+  function deleteCookies(patterns) {
     var names = d.cookie.split(';').map(function (p) { return p.split('=')[0].trim(); });
     var host = location.hostname;
     var parts = host.split('.');
     var domains = ['', host, '.' + host];
     if (parts.length > 2) domains.push('.' + parts.slice(-2).join('.'));
     if (parts.length === 2) domains.push('.' + host);
-    defs.forEach(function (def) {
-      var re = new RegExp('^' + def[0].replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*') + '$');
+    patterns.forEach(function (pat) {
+      var re = new RegExp('^' + pat.replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*') + '$');
       names.forEach(function (n) {
         if (!re.test(n)) return;
         domains.forEach(function (dm) {
@@ -310,7 +353,7 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
 
   function log(s) {
     if (!C.logUrl) return;
-    var body = JSON.stringify({ id: s.id, v: s.v, m: s.m, c: s.c, u: location.pathname });
+    var body = JSON.stringify({ id: s.id, v: s.v, m: s.m, c: s.c, s: s.s, u: location.pathname });
     try {
       if (navigator.sendBeacon && navigator.sendBeacon(C.logUrl, new Blob([body], { type: 'application/json' }))) return;
     } catch (e) { /* nukrenta į fetch */ }
@@ -320,7 +363,17 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
   // ---------------------------------------------------------------- pranešimai kitiems
   function announce(changed) {
     var c = state ? state.c : {};
-    var detail = { necessary: true, preferences: !!c.preferences, statistics: !!c.statistics, marketing: !!c.marketing, method: state && state.m, changed: !!changed };
+    var detail = { necessary: true, preferences: !!c.preferences, statistics: !!c.statistics, marketing: !!c.marketing, method: state && state.m, changed: !!changed, services: {} };
+    SVC.forEach(function (x) { detail.services[x[0]] = svcOn(state, x[0], x[2]); });
+
+    // Microsoft Clarity consent API (nuo 2025 m. privaloma EEE); veikia ir prieš Clarity įkėlimą per eilę.
+    if (C.clarity) {
+      w.clarity = w.clarity || function () { (w.clarity.q = w.clarity.q || []).push(arguments); };
+      w.clarity('consentv2', {
+        analytics_Storage: detail.services.clarity ? 'granted' : 'denied',
+        ad_Storage: detail.marketing ? 'granted' : 'denied'
+      });
+    }
 
     // WP Consent API
     var wp = { functional: true, preferences: detail.preferences, statistics: detail.statistics, 'statistics-anonymous': detail.statistics, marketing: detail.marketing };
@@ -399,11 +452,15 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
       var rows = list.map(function (r) {
         return '<tr><td>' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td><td>' + esc(r[3]) + '</td></tr>';
       }).join('');
+      var svcs = SVC.filter(function (x) { return x[2] === k; }).map(function (x) {
+        return '<li><span>' + esc(x[1]) + '</span><input type="checkbox" role="switch" class="se-c__sw se-c__sw--svc" data-svc="' + esc(x[0]) + '" data-svc-cat="' + k + '" aria-label="' + esc(x[1]) + '"' + (svcOn(state, x[0], k) ? ' checked' : '') + '></li>';
+      }).join('');
       var toggle = k === 'necessary'
         ? '<span class="se-c__on">' + esc(T.always_on) + '</span>'
         : '<input type="checkbox" role="switch" class="se-c__sw" data-cat="' + k + '" aria-label="' + esc(info[0]) + '"' + (c[k] ? ' checked' : '') + '>';
       cats += '<div class="se-c__cat"><div class="se-c__cat-h"><strong>' + esc(info[0]) + '</strong>' + toggle + '</div>' +
         '<p>' + esc(info[1]) + '</p>' +
+        (svcs ? '<ul class="se-c__svcs" aria-label="' + esc(T.services || 'Paslaugos') + '">' + svcs + '</ul>' : '') +
         (rows ? '<details><summary>' + esc(T.cookies) + ' (' + list.length + ')</summary><table>' + rows + '</table></details>' : '') +
         '</div>';
     });
@@ -429,9 +486,32 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
         '</div>' +
       '</div>';
     root.addEventListener('click', onClick);
-    root.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && state) hideBanner();
+    root.addEventListener('change', function (e) {
+      var t = e.target;
+      if (t.hasAttribute('data-cat')) {
+        var all = root.querySelectorAll('[data-svc-cat="' + t.getAttribute('data-cat') + '"]');
+        for (var i = 0; i < all.length; i++) all[i].checked = t.checked;
+      } else if (t.hasAttribute('data-svc')) {
+        var cat = t.getAttribute('data-svc-cat');
+        var any = root.querySelectorAll('[data-svc-cat="' + cat + '"]:checked').length > 0;
+        var sw = root.querySelector('[data-cat="' + cat + '"]');
+        if (sw) sw.checked = any;
+      }
     });
+    root.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && state) { hideBanner(); return; }
+      // Fokuso spąstai, kai dialogas modalinis (nustatymai arba langas centre) — EAA / WCAG 2.1.
+      if (e.key === 'Tab' && root.getAttribute('aria-modal') === 'true') {
+        var f = root.querySelectorAll('button,input,a[href],summary');
+        var vis = [];
+        for (var i = 0; i < f.length; i++) if (f[i].offsetParent !== null) vis.push(f[i]);
+        if (!vis.length) return;
+        var first = vis[0], last = vis[vis.length - 1];
+        if (e.shiftKey && (d.activeElement === first || !root.contains(d.activeElement))) { last.focus(); e.preventDefault(); }
+        else if (!e.shiftKey && d.activeElement === last) { first.focus(); e.preventDefault(); }
+      }
+    });
+    if (C.position === 'center') root.setAttribute('aria-modal', 'true');
     d.body.appendChild(root);
   }
 
@@ -442,10 +522,12 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
     else if (a === 'reject') save({}, 'reject_all');
     else if (a === 'customize') openDetails();
     else if (a === 'save') {
-      var c = {};
-      var sw = root.querySelectorAll('.se-c__sw');
+      var c = {}, sv = {};
+      var sw = root.querySelectorAll('[data-cat]');
       for (var i = 0; i < sw.length; i++) c[sw[i].getAttribute('data-cat')] = sw[i].checked;
-      save(c, 'custom');
+      var ss = root.querySelectorAll('[data-svc]');
+      for (var j = 0; j < ss.length; j++) if (!ss[j].checked) sv[ss[j].getAttribute('data-svc')] = false;
+      save(c, 'custom', sv);
     }
   }
 
@@ -453,6 +535,7 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
     var det = root.querySelector('.se-c__details');
     det.hidden = false;
     root.classList.add('se-c--open');
+    root.setAttribute('aria-modal', 'true');
     var b = root.querySelector('[data-a="customize"]');
     b.setAttribute('data-a', 'save');
     b.textContent = T.save;
@@ -468,6 +551,7 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
       return;
     }
     if (root) root.parentNode.removeChild(root);
+    else lastFocus = d.activeElement;
     build();
     if (details) openDetails();
     // Fokusas į patį dialogą, ne į "Sutinku" — joks pasirinkimas nėra peršamas.
@@ -480,6 +564,9 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
     if (root && root.parentNode) root.parentNode.removeChild(root);
     root = null;
     floating();
+    // Fokusas grąžinamas ten, kur buvo prieš atidarant (pvz. poraštės nuoroda).
+    if (lastFocus && lastFocus !== d.body && d.contains(lastFocus) && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+    lastFocus = null;
   }
 
   function floating() {
@@ -510,10 +597,10 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
   // ---------------------------------------------------------------- viešas API
   w.SEConsent = {
     get: function () { return state ? JSON.parse(JSON.stringify(state)) : null; },
-    has: function (cat) { return !!state && allowed(cat); },
+    has: function (spec) { return !!state && allowed(spec); },
     show: showBanner,
     hide: hideBanner,
-    accept: function (c, method) { save(c || { preferences: true, statistics: true, marketing: true }, method || 'api'); },
+    accept: function (c, method, sv) { save(c || { preferences: true, statistics: true, marketing: true }, method || 'api', sv); },
     withdraw: function () { save({}, 'withdraw'); },
     onChange: function (fn) { listeners.push(fn); }
   };
@@ -523,6 +610,9 @@ window.SE_CONSENT_CONFIG={"version":1,"expiryDays":365,"domain":"","gcm":true,"a
     if (state) {
       announce(false);
       floating();
+    } else if (C.gpc && navigator.globalPrivacyControl) {
+      // Global Privacy Control: naršyklė jau pasakė "ne" — banerio nerodome, fiksuojame atsisakymą.
+      save({}, 'gpc');
     } else {
       showBanner(false);
     }

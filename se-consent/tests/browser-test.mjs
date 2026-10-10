@@ -133,6 +133,96 @@ const consentCalls = (page) => page.evaluate(() =>
   await ctx.close();
 }
 
+// 5. Atskira paslauga: rinkodara leidžiama, bet Meta išjungta.
+{
+  const ctx = await browser.newContext();
+  const { page, logs } = await newPage(ctx);
+  await page.goto(ORIGIN + '/');
+  await page.click('[data-a="customize"]');
+  await page.check('[data-cat="marketing"]');
+  check('Kategorijos jungiklis įjungia visas jos paslaugas', await page.evaluate(() => [...document.querySelectorAll('[data-svc-cat="marketing"]')].every((x) => x.checked)));
+  await page.uncheck('[data-svc="meta"]');
+  check('Viena išjungta paslauga kategorijos neišjungia', await page.isChecked('[data-cat="marketing"]'));
+  await page.click('#inject');
+  await page.click('[data-a="save"]');
+  await page.waitForTimeout(600);
+  check('Meta NEpaleista (išjungta atskirai)', await page.evaluate(() => !window.__fb && !window.__fbInline));
+  check('TikTok ir YouTube paleisti (rinkodara leista)', await page.evaluate(() => window.__tiktok === 1 && document.querySelector('iframe').src.includes('youtube')));
+  check('Google Ads Consent Mode granted (paslauga neišjungta)', JSON.stringify((await consentCalls(page)).at(-1)) === '["update","granted","denied"]', JSON.stringify((await consentCalls(page)).at(-1)));
+  check('API: has("marketing:meta") = false, has("marketing:tiktok") = true', await page.evaluate(() => !window.SEConsent.has('marketing:meta') && window.SEConsent.has('marketing:tiktok')));
+  check('Žurnale išjungta paslauga meta', logs.at(-1)?.s?.meta === false, JSON.stringify(logs.at(-1)));
+  check('dataLayer se_consent.services.meta = false', await page.evaluate(() => window.dataLayer.filter((e) => e.event === 'se_consent_update').at(-1).se_consent.services.meta === false));
+  await page.reload();
+  await page.waitForTimeout(500);
+  check('Grįžus Meta lieka išjungta', await page.evaluate(() => !window.__fb && !window.__fbInline));
+  await ctx.close();
+}
+
+// 6. Atšaukiama tik viena paslauga — trinami tik jos slapukai.
+{
+  const ctx = await browser.newContext();
+  const { page } = await newPage(ctx);
+  await page.goto(ORIGIN + '/');
+  await page.click('[data-a="accept"]');
+  await page.waitForTimeout(500);
+  await page.evaluate(() => { document.cookie = '_ga=GA1.1.1;path=/'; document.cookie = '_ttp=x;path=/'; });
+  await page.click('#se-consent-reopen');
+  await page.uncheck('[data-svc="meta"]');
+  await Promise.all([page.waitForEvent('load'), page.click('[data-a="save"]')]);
+  await page.waitForTimeout(400);
+  const names = (await ctx.cookies()).map((c) => c.name);
+  check('Atšaukus Meta: _fbp ištrintas, _ga ir _ttp liko', !names.includes('_fbp') && names.includes('_ga') && names.includes('_ttp'), names.join(','));
+  await ctx.close();
+}
+
+// 7. Placeholderis leidžia TIK tą paslaugą.
+{
+  const ctx = await browser.newContext();
+  const { page } = await newPage(ctx);
+  await page.goto(ORIGIN + '/');
+  await page.click('.se-c-ph button');
+  await page.waitForTimeout(400);
+  check('YouTube įkeltas', await page.evaluate(() => document.querySelector('iframe').src.includes('youtube')));
+  check('Meta per YouTube placeholderį NEleista', await page.evaluate(() => !window.__fb && !window.__fbInline && !window.SEConsent.has('marketing:meta')));
+  await ctx.close();
+}
+
+// 8. Global Privacy Control.
+{
+  const ctx = await browser.newContext();
+  await ctx.addInitScript(() => Object.defineProperty(Navigator.prototype, 'globalPrivacyControl', { get: () => true }));
+  const { page, logs } = await newPage(ctx);
+  await page.goto(ORIGIN + '/');
+  await page.waitForTimeout(300);
+  check('GPC: baneris nerodomas', !(await page.isVisible('#se-consent')));
+  check('GPC: užfiksuotas atsisakymas (m=gpc)', await page.evaluate(() => window.SEConsent.get().m === 'gpc' && !window.SEConsent.has('statistics')) && logs.at(-1)?.m === 'gpc');
+  check('GPC: Meta nepaleista', await page.evaluate(() => !window.__fb));
+  await ctx.close();
+}
+
+// 9. Prieinamumas: fokuso spąstai, Esc, fokuso grąžinimas; UET ir Clarity signalai.
+{
+  const ctx = await browser.newContext();
+  const { page } = await newPage(ctx);
+  await page.goto(ORIGIN + '/');
+  await page.click('[data-a="reject"]');
+  await page.focus('#footer-link');
+  await page.keyboard.press('Enter');
+  await page.waitForTimeout(200);
+  check('Nustatymų dialogas aria-modal', await page.getAttribute('#se-consent', 'aria-modal') === 'true');
+  let inside = true;
+  for (let i = 0; i < 40; i++) {
+    await page.keyboard.press('Tab');
+    if (!(await page.evaluate(() => document.getElementById('se-consent').contains(document.activeElement)))) { inside = false; break; }
+  }
+  check('Tab neišeina iš dialogo (40 paspaudimų)', inside);
+  await page.keyboard.press('Escape');
+  check('Esc uždaro, fokusas grįžta į nuorodą', !(await page.isVisible('#se-consent')) && await page.evaluate(() => document.activeElement.id === 'footer-link'));
+  check('UET consent default denied', await page.evaluate(() => JSON.stringify(window.uetq.slice(0, 3)) === '["consent","default",{"ad_storage":"denied"}]'));
+  check('Clarity consentv2 signalas siunčiamas', await page.evaluate(() => (window.clarity.q || []).some((a) => a[0] === 'consentv2' && a[1].analytics_Storage === 'denied')));
+  await ctx.close();
+}
+
 // 4. Našumas — banerio JS + CSS dydis.
 {
   const kb = (Buffer.byteLength(html.match(/<script id="se-consent-js"[^>]*>([\s\S]*?)<\/script>/)[1]) / 1024).toFixed(1);

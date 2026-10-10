@@ -23,9 +23,10 @@ function se_consent_admin_save() {
     $old = se_consent_settings();
 
     $new = $old;
-    foreach (['gcm_enabled', 'gcm_ads_redaction', 'gcm_url_passthrough', 'auto_block', 'cookiebot_compat', 'floating_button'] as $k) {
+    foreach (['gcm_enabled', 'gcm_ads_redaction', 'gcm_url_passthrough', 'auto_block', 'cookiebot_compat', 'floating_button', 'gpc', 'uet', 'clarity_consent'] as $k) {
         $new[$k] = empty($in[$k]) ? 0 : 1;
     }
+    $new['services_shown']       = array_values(array_intersect(array_keys(se_consent_services()), array_map('sanitize_key', (array) ($in['services_shown'] ?? []))));
     $new['gcm_mode']             = ($in['gcm_mode'] ?? '') === 'basic' ? 'basic' : 'advanced';
     $new['position']             = ($in['position'] ?? '') === 'center' ? 'center' : 'bottom';
     $new['expiry_days']          = max(1, min(395, (int) ($in['expiry_days'] ?? 365)));
@@ -64,10 +65,10 @@ function se_consent_admin_export() {
     header('Content-Type: text/csv; charset=utf-8');
     header('Content-Disposition: attachment; filename="se-consent-log-' . gmdate('Y-m-d') . '.csv"');
     $out = fopen('php://output', 'w');
-    fputcsv($out, ['consent_id', 'created_at_utc', 'version', 'method', 'preferences', 'statistics', 'marketing', 'ip_masked', 'user_agent', 'url']);
+    fputcsv($out, ['consent_id', 'created_at_utc', 'version', 'method', 'preferences', 'statistics', 'marketing', 'services_off', 'ip_masked', 'user_agent', 'url']);
     $last = 0;
     do { // dalimis, kad didelis žurnalas neišnaudotų atminties
-        $rows = $wpdb->get_results($wpdb->prepare("SELECT * FROM {$table} WHERE id > %d ORDER BY id LIMIT 5000", $last), ARRAY_A); // phpcs:ignore
+        $rows = $wpdb->get_results($wpdb->prepare("SELECT id, consent_id, created_at, version, method, preferences, statistics, marketing, services_off, ip_masked, user_agent, url FROM {$table} WHERE id > %d ORDER BY id LIMIT 5000", $last), ARRAY_A); // phpcs:ignore
         foreach ($rows as $r) {
             $last = (int) $r['id'];
             unset($r['id']);
@@ -124,10 +125,19 @@ function se_consent_admin_settings(array $s) {
             </td></tr>
             <tr><th>Blokavimas</th><td>
                 <?php $cb('auto_block', 'Automatiškai blokuoti žinomus sekiklius iki sutikimo'); ?>
+                <?php $cb('gpc', 'Gerbti Global Privacy Control (naršyklės „ne" = atsisakymas, baneris nerodomas)'); ?>
+                <?php $cb('uet', 'Microsoft UET (Bing Ads) consent mode'); ?>
+                <?php $cb('clarity_consent', 'Microsoft Clarity sutikimo signalas (consentv2)'); ?>
                 <?php $cb('cookiebot_compat', 'Cookiebot suderinamumas (window.Cookiebot, data-cookieconsent, GTM cookie_consent_* įvykiai)'); ?>
                 <p class="description">Papildomos taisyklės, po vieną eilutėje: <code>URL ar kodo fragmentas | statistics</code> (kategorijos: preferences, statistics, marketing).</p>
                 <textarea name="extra_rules" rows="4" class="large-text code"><?php echo esc_textarea($s['extra_rules']); ?></textarea>
                 <p class="description">Patikrinti puslapį be blokavimo (tik administratoriui): pridėkite <code>?se_consent_off=1</code>.</p>
+            </td></tr>
+            <tr><th>Naudojamos paslaugos</th><td>
+                <p class="description">Rodomos baneryje su atskirais jungikliais. Pažymėkite tik tas, kurios tikrai veikia svetainėje (jas parodo <code>tools/scan.mjs</code>). Blokuojamos visos, net nepažymėtos.</p>
+                <?php foreach (se_consent_services() as $id => $svc) : ?>
+                    <label style="display:inline-block;min-width:240px"><input type="checkbox" name="services_shown[]" value="<?php echo esc_attr($id); ?>" <?php checked(in_array($id, (array) $s['services_shown'], true)); ?>> <?php echo esc_html($svc[0]); ?> <span class="description">(<?php echo esc_html($svc[1]); ?>)</span></label>
+                <?php endforeach; ?>
             </td></tr>
             <tr><th>Slapukų sąrašas</th><td>
                 <p class="description">Formatas: <code>pavadinimas | tiekėjas | kategorija | paskirtis | galiojimas</code>. <code>*</code> — bet kokie simboliai. Naudojamas deklaracijoje, banerio detalėse ir trinant slapukus atšaukus sutikimą. Naujus slapukus randa <code>tools/scan.mjs</code>.</p>
@@ -190,7 +200,7 @@ function se_consent_admin_log() {
     </form>
     <h2>Paskutiniai 100 įrašų</h2>
     <table class="widefat striped">
-        <thead><tr><th>Laikas (UTC)</th><th>Sutikimo ID</th><th>Būdas</th><th>Nuost.</th><th>Stat.</th><th>Rink.</th><th>Versija</th><th>IP</th><th>Puslapis</th></tr></thead>
+        <thead><tr><th>Laikas (UTC)</th><th>Sutikimo ID</th><th>Būdas</th><th>Nuost.</th><th>Stat.</th><th>Rink.</th><th>Išjungtos paslaugos</th><th>Versija</th><th>IP</th><th>Puslapis</th></tr></thead>
         <tbody>
         <?php foreach ($rows as $r) : ?>
             <tr>
@@ -200,6 +210,7 @@ function se_consent_admin_log() {
                 <td><?php echo $r['preferences'] ? '✓' : '—'; ?></td>
                 <td><?php echo $r['statistics'] ? '✓' : '—'; ?></td>
                 <td><?php echo $r['marketing'] ? '✓' : '—'; ?></td>
+                <td><?php echo esc_html($r['services_off'] ?? ''); ?></td>
                 <td><?php echo (int) $r['version']; ?></td>
                 <td><?php echo esc_html($r['ip_masked']); ?></td>
                 <td><?php echo esc_html($r['url']); ?></td>

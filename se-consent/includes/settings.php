@@ -22,6 +22,12 @@ function se_consent_defaults() {
         'gcm_mode'          => 'advanced', // advanced: Google žymos neblokuojamos (cookieless pings); basic: blokuojamos
         'gcm_ads_redaction' => 1,
         'gcm_url_passthrough' => 0,
+        'gpc'               => 1,         // Global Privacy Control: naršyklės "ne" = atsisakymas be banerio
+        'uet'               => 1,         // Microsoft UET consent mode
+        'clarity_consent'   => 1,         // Microsoft Clarity consentv2 signalas
+        // Baneryje rodomos tik svetainėje naudojamos paslaugos (kurias — parodo skeneris).
+        // Blokavimo taisyklės galioja VISOMS registro paslaugoms, nepriklausomai nuo šio sąrašo.
+        'services_shown'    => ['ga4', 'clarity', 'google-ads', 'meta', 'tiktok', 'youtube', 'maps'],
         'ga_cookie_days'    => 395,       // Google slapukų (_ga, _gcl_au) galiojimas; numatyta Google — 2 metai, leidžiama ≤ 13 mėn.
         'auto_block'        => 1,
         'cookiebot_compat'  => 1,         // window.Cookiebot, CookiebotOnAccept, dataLayer cookie_consent_* įvykiai
@@ -60,6 +66,7 @@ function se_consent_default_texts() {
             'blocked_button'  => 'Leisti ir rodyti',
             'reopen'      => 'Slapukų nustatymai',
             'cookies'     => 'Slapukai',
+            'services'    => 'Paslaugos',
             'cat' => [
                 'necessary'   => ['Būtinieji', 'Reikalingi svetainės veikimui: krepšelis, prisijungimas, saugumas, jūsų sutikimo išsaugojimas. Jų išjungti negalima.'],
                 'preferences' => ['Nuostatų', 'Įsimena jūsų pasirinkimus, pvz. kalbą ar regioną.'],
@@ -81,6 +88,7 @@ function se_consent_default_texts() {
             'blocked_button'  => 'Allow and show',
             'reopen'      => 'Cookie settings',
             'cookies'     => 'Cookies',
+            'services'    => 'Services',
             'cat' => [
                 'necessary'   => ['Necessary', 'Required for the site to work: cart, login, security and storing your consent. They cannot be disabled.'],
                 'preferences' => ['Preferences', 'Remember your choices such as language or region.'],
@@ -92,55 +100,65 @@ function se_consent_default_texts() {
 }
 
 /**
- * Žinomos paslaugos: šablonas (dalis URL arba įterpto scenarijaus teksto) => kategorija.
- * 'src' tikrinamas prieš <script src>/<iframe src>, 'inline' — prieš įterptų scenarijų turinį.
- * Google žymos (gtag.js, GTM) čia nėra: jas valdo Consent Mode. Basic režimu jos pridedamos atskirai.
+ * Paslaugų registras: kiekviena paslauga turi savo jungiklį banerio nustatymuose (kaip Klaro,
+ * tarteaucitron, CookieConsent v3) ir savo slapukų sąrašą, kuris tiksliai ištrinamas atšaukus.
+ * 'src' — URL fragmentai (<script src>, <iframe src>), 'inline' — įterpto kodo fragmentai.
+ * Google gtag.js / GTM čia nėra: juos valdo Consent Mode (basic režimu — 'basic_google').
+ * Slapukų sąrašai — viešai dokumentuoti faktai (tiekėjų dokumentacija, Open Cookie Database).
  */
+function se_consent_services() {
+    return apply_filters('se_consent_services', [
+        'ga4'        => ['Google Analytics', 'statistics', ['google-analytics.com/analytics.js'], [], ['_ga', '_ga_*', '_gid', '_gat*']],
+        'clarity'    => ['Microsoft Clarity', 'statistics', ['clarity.ms'], ['clarity.ms'], ['_clck', '_clsk', 'CLID', 'MUID']],
+        'hotjar'     => ['Hotjar', 'statistics', ['static.hotjar.com', 'script.hotjar.com'], ['hotjar.com'], ['_hj*']],
+        'yandex'     => ['Yandex Metrica', 'statistics', ['mc.yandex.ru'], ['mc.yandex.ru'], ['_ym_*', 'yandexuid']],
+        'vimeo'      => ['Vimeo', 'statistics', ['player.vimeo.com'], [], ['vuid']],
+        'google-ads' => ['Google Ads', 'marketing', ['googleadservices.com', 'googlesyndication.com', 'doubleclick.net'], [], ['_gcl_au', '_gcl_aw', '_gcl_dc', '_gcl_gb']],
+        'meta'       => ['Meta (Facebook) Pixel', 'marketing', ['connect.facebook.net', 'facebook.com/tr'], ['fbq('], ['_fbp', '_fbc']],
+        'tiktok'     => ['TikTok Pixel', 'marketing', ['analytics.tiktok.com'], ['ttq.load', 'ttq.page'], ['_ttp', '_tt_enable_cookie', 'ttcsid*']],
+        'bing'       => ['Microsoft Advertising (Bing)', 'marketing', ['bat.bing.com'], ['uetq'], ['_uetsid', '_uetvid', '_uetmsclkid']],
+        'linkedin'   => ['LinkedIn Insight', 'marketing', ['snap.licdn.com'], ['_linkedin_partner_id'], ['li_fat_id', 'li_sugr', 'lidc']],
+        'pinterest'  => ['Pinterest Tag', 'marketing', ['s.pinimg.com'], ['pintrk('], ['_pin_unauth', '_pinterest_ct_ua', '_epik']],
+        'criteo'     => ['Criteo', 'marketing', ['static.criteo.net'], [], ['cto_bundle', 'cto_bidid']],
+        'klaviyo'    => ['Klaviyo', 'marketing', ['static.klaviyo.com'], ['klaviyo'], ['__kla_id']],
+        'omnisend'   => ['Omnisend', 'marketing', ['omnisnippet1.com', 'omnisrc.com'], ['omnisend'], ['omnisendContactID', 'omnisendSessionID', 'soundestID', 'omnisendAnonymousID']],
+        'hubspot'    => ['HubSpot', 'marketing', ['js.hs-scripts.com'], [], ['__hstc', 'hubspotutk', '__hssc', '__hssrc']],
+        'youtube'    => ['YouTube', 'marketing', ['youtube.com/embed', 'youtube-nocookie.com/embed'], [], []],
+        'maps'       => ['Google Maps', 'marketing', ['google.com/maps/embed', 'maps.googleapis.com'], [], []],
+    ]);
+}
+
+/** Suderinamumas su ankstesne struktūra: šablonas => "kategorija:paslauga". */
 function se_consent_known_services() {
+    $src = $inline = [];
+    foreach (se_consent_services() as $id => $svc) {
+        foreach ($svc[2] as $p) {
+            $src[$p] = $svc[1] . ':' . $id;
+        }
+        foreach ($svc[3] as $p) {
+            $inline[$p] = $svc[1] . ':' . $id;
+        }
+    }
     return [
-        'src' => [
-            'connect.facebook.net'      => 'marketing',
-            'facebook.com/tr'           => 'marketing',
-            'googleadservices.com'      => 'marketing',
-            'googlesyndication.com'     => 'marketing',
-            'doubleclick.net'           => 'marketing',
-            'analytics.tiktok.com'      => 'marketing',
-            'snap.licdn.com'            => 'marketing',
-            'bat.bing.com'              => 'marketing',
-            's.pinimg.com'              => 'marketing',
-            'static.criteo.net'         => 'marketing',
-            'static.klaviyo.com'        => 'marketing',
-            'omnisnippet1.com'          => 'marketing',
-            'omnisrc.com'               => 'marketing',
-            'js.hs-scripts.com'         => 'marketing',
-            'youtube.com/embed'         => 'marketing',
-            'youtube-nocookie.com/embed'=> 'marketing',
-            'google.com/maps/embed'     => 'marketing',
-            'maps.googleapis.com'       => 'marketing',
-            'player.vimeo.com'          => 'statistics',
-            'clarity.ms'                => 'statistics',
-            'static.hotjar.com'         => 'statistics',
-            'script.hotjar.com'         => 'statistics',
-            'mc.yandex.ru'              => 'statistics',
-            'google-analytics.com/analytics.js' => 'statistics',
-        ],
-        'inline' => [
-            'fbq('                      => 'marketing',
-            'ttq.load'                  => 'marketing',
-            '_linkedin_partner_id'      => 'marketing',
-            'uetq'                      => 'marketing',
-            'pintrk('                   => 'marketing',
-            'omnisend'                  => 'marketing',
-            'klaviyo'                   => 'marketing',
-            'clarity.ms'                => 'statistics',
-            'hotjar.com'                => 'statistics',
-            'mc.yandex.ru'              => 'statistics',
-        ],
+        'src'    => $src,
+        'inline' => $inline,
         'basic_google' => [
-            'googletagmanager.com/gtag/js' => 'statistics',
+            'googletagmanager.com/gtag/js' => 'statistics:ga4',
             'googletagmanager.com/gtm.js'  => 'statistics',
         ],
     ];
+}
+
+/** Naršyklei: [[id, pavadinimas, kategorija, [slapukai]], ...] — tik rodomos paslaugos (null = visos). */
+function se_consent_client_services($shown = null) {
+    $out = [];
+    foreach (se_consent_services() as $id => $svc) {
+        if (is_array($shown) && !in_array($id, $shown, true)) {
+            continue;
+        }
+        $out[] = [$id, $svc[0], $svc[1], $svc[4]];
+    }
+    return $out;
 }
 
 /**

@@ -17,7 +17,7 @@ foreach (se_consent_cookie_list() as $c) {
 }
 $cfg = [
     'version' => 1, 'expiryDays' => 365, 'domain' => '', 'gcm' => true, 'adsRedaction' => true,
-    'urlPassthrough' => false, 'gaCookieDays' => 395, 'compat' => true, 'floating' => true, 'position' => 'bottom',
+    'urlPassthrough' => false, 'gaCookieDays' => 395, 'gpc' => true, 'uet' => true, 'clarity' => true, 'services' => se_consent_client_services(), 'compat' => true, 'floating' => true, 'position' => 'bottom',
     'logUrl' => '', 'privacyUrl' => '/privatumo-politika/', 'colors' => ['#142b6f', '#ffd602'],
     'rules' => $rules, 'cookies' => $cookies, 't' => se_consent_default_texts()['lt'],
 ];

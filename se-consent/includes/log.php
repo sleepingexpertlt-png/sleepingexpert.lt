@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-const SE_CONSENT_DB_VERSION = 1;
+const SE_CONSENT_DB_VERSION = 2;
 
 function se_consent_log_table() {
     global $wpdb;
@@ -30,6 +30,7 @@ function se_consent_log_install() {
         preferences tinyint(1) NOT NULL DEFAULT 0,
         statistics tinyint(1) NOT NULL DEFAULT 0,
         marketing tinyint(1) NOT NULL DEFAULT 0,
+        services_off varchar(255) NOT NULL DEFAULT '',
         ip_masked varchar(45) NOT NULL DEFAULT '',
         user_agent varchar(255) NOT NULL DEFAULT '',
         url varchar(255) NOT NULL DEFAULT '',
@@ -75,9 +76,11 @@ function se_consent_log_endpoint(WP_REST_Request $req) {
     if (!preg_match('/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i', $id)) {
         return new WP_REST_Response(['ok' => false], 400);
     }
-    $methods = ['accept_all', 'reject_all', 'custom', 'placeholder', 'withdraw', 'api'];
+    $methods = ['accept_all', 'reject_all', 'custom', 'placeholder', 'withdraw', 'gpc', 'api'];
     $method  = in_array($data['m'] ?? '', $methods, true) ? $data['m'] : 'api';
     $c       = is_array($data['c'] ?? null) ? $data['c'] : [];
+    // Atskirai išjungtos paslaugos (pvz. "meta,tiktok") — tik žinomi ID.
+    $off     = array_intersect(array_keys(is_array($data['s'] ?? null) ? $data['s'] : []), array_keys(se_consent_services()));
 
     $ip = (string) ($_SERVER['REMOTE_ADDR'] ?? '');
     // Dažnio riba: ne daugiau 20 įrašų per minutę iš vieno (maskuoto) IP.
@@ -97,6 +100,7 @@ function se_consent_log_endpoint(WP_REST_Request $req) {
         'preferences' => !empty($c['preferences']) ? 1 : 0,
         'statistics'  => !empty($c['statistics']) ? 1 : 0,
         'marketing'   => !empty($c['marketing']) ? 1 : 0,
+        'services_off'=> substr(implode(',', $off), 0, 255),
         'ip_masked'   => se_consent_mask_ip($ip),
         'user_agent'  => substr(sanitize_text_field((string) ($_SERVER['HTTP_USER_AGENT'] ?? '')), 0, 255),
         'url'         => substr(sanitize_text_field((string) wp_parse_url((string) ($data['u'] ?? '/'), PHP_URL_PATH)), 0, 255),
